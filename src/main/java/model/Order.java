@@ -3,53 +3,24 @@ package model;
 import java.util.HashMap;
 
 public class Order {
-    private HashMap<Product, Integer> productList = new HashMap<>();
     private int id;
     private int customerId;
-    private String productName;
-    private float price;
-    private int saleOff;
-    private double totalPayment;
+    private String createdDate;
     private boolean status;
-    private String createDate;
+    private String consignee;
     private String addressOrder;
     private String phone;
     private String note;
 
-    public Order(HashMap<Product, Integer> productList, int id, int customerId, String productName, float price, int saleOff, double totalPayment, boolean status, String createDate, String addressOrder, String phone, String note) {
-        this.productList = productList;
+    public Order(int id, int customerId, String createdDate, boolean status, String consignee, String addressOrder, String phone, String note) {
         this.id = id;
         this.customerId = customerId;
-        this.productName = productName;
-        this.price = price;
-        this.saleOff = saleOff;
-        this.totalPayment = totalPayment;
+        this.createdDate = createdDate;
         this.status = status;
-        this.createDate = createDate;
+        this.consignee = consignee;
         this.addressOrder = addressOrder;
         this.phone = phone;
         this.note = note;
-    }
-
-    public Order(int id, String productName, float price, int saleOff, boolean status, String createDate, String addressOrder, String phone, String note, int customerId) {
-        this.id = id;
-        this.productName = productName;
-        this.price = price;
-        this.saleOff = saleOff;
-        this.status = status;
-        this.createDate = createDate;
-        this.addressOrder = addressOrder;
-        this.phone = phone;
-        this.note = note;
-        this.customerId = customerId;
-    }
-
-    public HashMap<Product, Integer> getProductList() {
-        return productList;
-    }
-
-    public void setProductList(HashMap<Product, Integer> productList) {
-        this.productList = productList;
     }
 
     public int getId() {
@@ -68,36 +39,12 @@ public class Order {
         this.customerId = customerId;
     }
 
-    public String getProductName() {
-        return productName;
+    public String getCreatedDate() {
+        return createdDate;
     }
 
-    public void setProductName(String productName) {
-        this.productName = productName;
-    }
-
-    public float getPrice() {
-        return price;
-    }
-
-    public void setPrice(float price) {
-        this.price = price;
-    }
-
-    public int getSaleOff() {
-        return saleOff;
-    }
-
-    public void setSaleOff(int saleOff) {
-        this.saleOff = saleOff;
-    }
-
-    public double getTotalPayment() {
-        return totalPayment;
-    }
-
-    public void setTotalPayment(double totalPayment) {
-        this.totalPayment = totalPayment;
+    public void setCreatedDate(String createdDate) {
+        this.createdDate = createdDate;
     }
 
     public boolean isStatus() {
@@ -108,12 +55,12 @@ public class Order {
         this.status = status;
     }
 
-    public String getCreateDate() {
-        return createDate;
+    public String getConsignee() {
+        return consignee;
     }
 
-    public void setCreateDate(String createDate) {
-        this.createDate = createDate;
+    public void setConsignee(String consignee) {
+        this.consignee = consignee;
     }
 
     public String getAddressOrder() {
