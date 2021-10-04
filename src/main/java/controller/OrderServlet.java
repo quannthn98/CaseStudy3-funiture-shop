@@ -12,9 +12,10 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
 
-@WebServlet(name = "OrderServlet", value = "/OrderServlet")
+@WebServlet(name = "OrderServlet", value = "/orders")
 public class OrderServlet extends HttpServlet {
     IOrderService orderService = new OrderService();
     @Override
@@ -26,20 +27,32 @@ public class OrderServlet extends HttpServlet {
         switch (action){
             default:
                 showAll(request, response);
+                break;
         }
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<Order> orderList = orderService.selectAll();
-        List<OrderDetail> orderDetailList = orderService.getDetails();
-        request.setAttribute("orderList", orderList);
-        request.setAttribute("orderDetailList", orderDetailList);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/admin/order/list.jsp");
-        dispatcher.forward(request, response);
+
     }
 
-    public void showAll(HttpServletRequest request, HttpServletResponse response){
-
+    public void showAll(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String style = request.getParameter("view");
+        if (style == null){
+            style = "";
+        }
+        List<Order> orderList = orderService.selectAll();
+        List<OrderDetail> orderDetailList = orderService.getDetails();
+        HashMap<Integer, Double> totalPaymentByOrderId = orderService.getPaymentByOrder();
+        RequestDispatcher dispatcher;
+        if (style.equals("") || style.equals("modal")){
+             dispatcher = request.getRequestDispatcher("order/modalList.jsp");
+        } else {
+             dispatcher = request.getRequestDispatcher("order/list.jsp");
+        }
+            request.setAttribute("orderList", orderList);
+            request.setAttribute("orderDetailList", orderDetailList);
+            request.setAttribute("totalPayment", totalPaymentByOrderId);
+            dispatcher.forward(request, response);
     }
 }

@@ -15,8 +15,9 @@ import java.util.HashMap;
 import java.util.List;
 
 public class OrderDao implements IOrderDao {
-    private final String SELECT_ALL_ORDER = "select * from orderProduct order by orderId";
+    private final String SELECT_ALL_ORDER = "select * from orderProduct order by id";
     private final String SELECT_ALL_ORDER_DETAILS = "select * from orderDetailProduct order by id_Order";
+    private final String SELECT_PAYMENT_BY_ORDER = "select * from totalpaymentbyorder";
 
     private Connection connection = DBConnection.getConnection();
 
@@ -66,6 +67,24 @@ public class OrderDao implements IOrderDao {
         }
         return orderDetailList;
     }
+
+    @Override
+    public HashMap<Integer, Double> getPaymentByOrder() {
+        HashMap<Integer, Double> totalPaymentByOrderId = new HashMap<>();
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(SELECT_PAYMENT_BY_ORDER);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()){
+                int orderId = resultSet.getInt(1);
+                double payment = resultSet.getDouble(2);
+                totalPaymentByOrderId.put(orderId, payment);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return totalPaymentByOrderId;
+    }
+
 
     @Override
     public Order findById(int id) {

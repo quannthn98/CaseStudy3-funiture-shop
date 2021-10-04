@@ -5,6 +5,7 @@ import dao.OrderDao;
 import model.Order;
 import model.OrderDetail;
 
+import java.util.HashMap;
 import java.util.List;
 
 public class OrderService implements IOrderService {
@@ -19,6 +20,11 @@ public class OrderService implements IOrderService {
     public List<OrderDetail> getDetails() {
         List<OrderDetail> orderDetailList = orderDao.getDetails();
         return orderDetailList;
+    }
+
+    @Override
+    public HashMap<Integer, Double> getPaymentByOrder() {
+        return orderDao.getPaymentByOrder();
     }
 
     @Override
