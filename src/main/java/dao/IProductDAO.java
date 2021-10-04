@@ -2,7 +2,7 @@ package dao;
 
 import java.util.List;
 
-public interface IGeneralDao<T> {
+public interface IProductDAO<T> {
     List<T> getAll();
 
     T findById(int id);
