@@ -1,16 +1,7 @@
 package dao;
 
-import java.util.List;
+import model.Product;
 
-public interface IProductDAO<T> {
-    List<T> getAll();
-
-    T findById(int id);
-
-    boolean save(T t);
-
-    boolean delete(int id);
-
-    boolean update(int id);
+public interface IProductDAO extends IGeneralDAO<Product>{
 
 }
