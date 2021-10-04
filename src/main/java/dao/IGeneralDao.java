@@ -9,7 +9,7 @@ public interface IGeneralDao<T> {
 
     boolean save(T t);
 
-    boolean delete(int id);
+    boolean delete(int id, T t);
 
     boolean update(int id);
 
