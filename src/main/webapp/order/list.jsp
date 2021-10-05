@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%--
   Created by IntelliJ IDEA.
   User: quans
@@ -30,10 +32,10 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                 </ul>
-                <form>
+                <form action="/orders">
                     <div class="row">
                         <div class="col">
-                            <input class="form-control mt-3" style="size: 200px" type="text" placeholder="Search" aria-label="Search">
+                            <input class="form-control mt-3 " style="size: 200px" type="text" placeholder="Search" aria-label="Search" name="q">
                         </div>
                         <div class="col">
                             <button type="submit" class="btn btn-outline-primary mt-3">Search</button>
@@ -90,84 +92,141 @@
         </div>
         <div class="col-10">
             <div class="card">
-                <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                    Launch static backdrop modal
-                </button>
-
-                <!-- Modal -->
-                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <table class="table table-striped">
-                                    <tr>
-                                        <th>id</th>
-                                        <th>Name</th>
-                                        <th>Action</th>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Nguyen Quan</td>
-                                        <td> <button type="button" class="btn btn-primary btn-sm" ><a style="color: white" href="#">Edit</a></button>
-                                            <button type="button" class="btn btn-danger btn-sm"><a style="color: white;" href="#">Delete</a></button></td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Understood</button>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="card-header">
                     <div class="row">
                         <div class="col">
-                            <h5 class="mt-2">Set Talbe Name Here</h5>
+                            <h5 class="mt-2">Order Management</h5>
                         </div>
                         <div class="col">
-                            <button type="button" class="btn btn-outline-primary float-end">
-                                <a href="#" style="text-decoration: none">
+                            <button type="button" class="btn btn-outline-primary float-end ">
+                                <a href="/orders?action=create" style="text-decoration: none">
                                     Create
                                 </a>
                             </button>
+                            <div class="dropdown">
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="/orders?view=modal">Modal Details</a></li>
+                                    <li><a class="dropdown-item" href="/orders?view=list">Common List</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="card-body">
                     <table class="table table-striped">
                         <tr>
-                            <th>id</th>
-                            <th>Name</th>
+                            <th>#Id</th>
+                            <th>Order Date</th>
+                            <th>Customer</th>
+                            <th>Phone</th>
+                            <th>Address</th>
+                            <th>Total Payment</th>
+                            <th>Status</th>
                             <th>Action</th>
                         </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Nguyen Quan</td>
-                            <td>
-                                <button type="button" class="btn btn-primary btn-sm" ><a style="color: white" href="#">Edit</a></button>
-                                <button type="button" class="btn btn-danger btn-sm"><a style="color: white;" href="#">Delete</a></button>
-                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                    Detail
-                                </button>
-                            </td>
+                        <c:forEach items="${orderList}" var="order">
+                            <tr>
+                                <td>${order.id}</td>
+                                <td>${order.createdDate}</td>
+                                <td>${order.consignee}</td>
+                                <td>${order.phone}</td>
+                                <td>${order.addressOrder}</td>
+                                <td><fmt:formatNumber type="number" maxFractionDigits = "0"  value="${totalPayment.get(order.id)}"/> </td>
+                                <c:choose>
+                                    <c:when test="${order.status == true}">
+                                        <td>Shipped</td>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <td>Processing</td>
+                                    </c:otherwise>
+                                </c:choose>
 
-                        </tr>
+                                <td>
+                                    <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop${order.id}">
+                                        Details
+                                    </button>
+                                    <button type="button" class="btn btn-warning btn-sm">
+                                        <a style="color: white" href="/orders?action=edit&id=${order.id}">Edit</a>
+                                    </button>
+                                </td>
+                            </tr>
+                        </c:forEach>
+
                     </table>
                 </div>
                 <div class="card-footer">
-                    Phan trang o day
+                    <nav aria-label="Search results pages">
+                        <ul class="pagination">
+                            <li class="page-item ${pre}">
+                                <a class="page-link" href="/orders?page=${selectedPage-1}" tabindex="-1">Previous</a>
+                            </li>
+                            <c:forEach var="i" begin="1" end="${totalPage}" step="1">
+                                <c:choose>
+                                    <c:when test="${i == selectedPage}">
+                                        <li class="page-item active">
+                                            <a class="page-link" href="/orders?page=${i}">${i}</a>
+                                        </li>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <li class="page-item">
+                                            <a class="page-link" href="/orders?page=${i}">${i}</a>
+                                        </li>
+                                    </c:otherwise>
+                                </c:choose>
+
+                            </c:forEach>
+                            <li class="page-item ${next}">
+                                <a class="page-link" href="/orders?page=${selectedPage+1}">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </div>
 
+        <c:forEach items="${orderList}" var="order">
+            <div class="modal fade" id="staticBackdrop${order.id}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel${order.id}">Order #${order.id} Details</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <table class="table table-striped">
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Quantity</th>
+                                    <th>Price</th>
+                                    <th>% Sale Off</th>
+                                    <th>Payment</th>
+                                </tr>
+                                <c:forEach items="${orderDetailList}" var="orderDetail">
+                                    <c:if test="${order.id == orderDetail.orderId}">
+                                        <tr>
+                                            <td>${orderDetail.productName}</td>
+                                            <td>${orderDetail.quantity}</td>
+                                            <td><fmt:formatNumber type="number" maxFractionDigits = "0"  value="${orderDetail.price}"/> </td>
+                                            <td><fmt:formatNumber type="number" maxFractionDigits = "0"  value="${orderDetail.saleOff}"/> </td>
+                                            <td><fmt:formatNumber type="number" maxFractionDigits = "0"  value="${orderDetail.total}"/> </td>
+                                        </tr>
+                                    </c:if>
+                                </c:forEach>
+                                <tr>
+                                    <th colspan="4">Tổng</th>
+                                    <td><fmt:formatNumber type="number" maxFractionDigits = "0"  value="${totalPayment.get(order.id)}"/> </td>
+                                </tr>
+                            </table>
+                            <p>Order note: ${order.note}</p>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </c:forEach>
     </div>
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-2 my-3 border-top">
         <p class="col-md-4 mb-0 text-muted">© 2021 Company, Inc</p>

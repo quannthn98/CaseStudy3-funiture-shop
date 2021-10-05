@@ -1,3 +1,4 @@
 .idea
 .gradle
-DBconnection.java
+build
+src/main/java/config/DBConnection.java
