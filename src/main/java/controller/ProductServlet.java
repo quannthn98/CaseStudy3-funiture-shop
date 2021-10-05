@@ -7,7 +7,6 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet(name = "ProductServlet", value = "/product")
@@ -113,7 +112,9 @@ public class ProductServlet extends HttpServlet {
         String description = request.getParameter("description");
         String createdDate = request.getParameter("createdDate");
         int status = Integer.parseInt(request.getParameter("status"));
-        productDAO.save(new Product(name,image,subImage,price,priceSell,subDescription,description,createdDate,status));
+        String categoryName = request.getParameter("categoryName");
+        String brandName = request.getParameter("brandName");
+        productDAO.save(new Product(name,image,subImage,price,priceSell,subDescription,description,createdDate,status,categoryName,brandName));
         try {
             response.sendRedirect("/product");
         } catch (IOException e) {
@@ -124,15 +125,17 @@ public class ProductServlet extends HttpServlet {
     private void editProduct(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
         String name = request.getParameter("name");
-        String image = request.getParameter("name");
-        String subImage = request.getParameter("name");
-        float price = Float.parseFloat(request.getParameter("name"));
-        int priceSell = Integer.parseInt(request.getParameter("name"));
-        String subDescription = request.getParameter("name");
-        String description = request.getParameter("name");
-        String createdDate = request.getParameter("name");
-        int status = Integer.parseInt(request.getParameter("name"));
-        Product product = new Product(name, image, subImage, price, priceSell, subDescription, description, createdDate, status);
+        String image = request.getParameter("image");
+        String subImage = request.getParameter("subimage");
+        float price = Float.parseFloat(request.getParameter("price"));
+        int priceSell = Integer.parseInt(request.getParameter("prince_sell"));
+        String subDescription = request.getParameter("subdescription");
+        String description = request.getParameter("description");
+        String createdDate = request.getParameter("createdDate");
+        int status = Integer.parseInt(request.getParameter("status"));
+        String categoryName = request.getParameter("categoryName");
+        String brandName = request.getParameter("brandName");
+        Product product = new Product(name, image, subImage, price, priceSell, subDescription, description, createdDate, status,categoryName,brandName);
         productDAO.update(id,product);
         try {
             response.sendRedirect("/product");

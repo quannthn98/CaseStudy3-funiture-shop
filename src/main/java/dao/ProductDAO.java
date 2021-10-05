@@ -14,8 +14,9 @@ public class ProductDAO implements IProductDao {
     public static final String SELECT_ALL_PRODUCT_SQL = "select * from productDetail";
     public static final String FIND_BY_ID_SQL = "select * from product where id = ?";
     public static final String DELETE_PRODUCT_BY_ID = "delete from product where id = ? ;";
-    public static final String UPDATE_PRODUCT_BY_ID_SQL = "update product set name = ? , image = ? , sub_image = ? , price = ? , price_sell = ? , sub_description = ? , description = ? , created_date = ? , status = ?  where id = ?;";
-    public static final String ADD_PRODUCT_BY_ID_SQL = "insert into product(name, image, sub_image, price, price_sell, sub_description, description, created_date, status) values (?,?,?,?,?,?,?,?,?);";
+    public static final String UPDATE_PRODUCT_BY_ID_SQL = "update product set name = ? , image = ? , subimage = ? , price = ? , price_sell = ? , subdescription = ? , description = ? , createdDate = ? , status = ?,id_Category=?,id_Brand=?  where id = ?;";
+    public static final String ADD_PRODUCT_SQL = "insert into product(name, image, subimage, price, price_sell, subdescription, description, createdDate, status,id_Category,id_Brand)values (?,? , ?, ?, ?, ?, ?, ?, ?,?,?);";
+
     Connection connection = DBConnection.getConnection();
 
     @Override
@@ -37,7 +38,7 @@ public class ProductDAO implements IProductDao {
                 int status = rs.getInt("status");
                 String brandName = rs.getString("brand");
                 String categoryName = rs.getString("category");
-                productList.add(new Product(id, name, image, subImage, price, priceSell, subDescription, description, createdDate, status,categoryName,brandName));
+                productList.add(new Product(id, name, image, subImage, price, priceSell, subDescription, description, createdDate, status, categoryName, brandName));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -75,8 +76,10 @@ public class ProductDAO implements IProductDao {
     public boolean save(Product product) {
         boolean rowSaved = false;
         try {
-            PreparedStatement statement = connection.prepareStatement(ADD_PRODUCT_BY_ID_SQL);
+            PreparedStatement statement = connection.prepareStatement(ADD_PRODUCT_SQL);
             getProductDAOStatement(product, statement);
+            statement.setString(10, product.getCategoryName());
+            statement.setString(11, product.getBrandName());
             rowSaved = statement.executeUpdate() > 0;
         } catch (SQLException e) {
             e.printStackTrace();
@@ -103,7 +106,9 @@ public class ProductDAO implements IProductDao {
         try {
             PreparedStatement statement = connection.prepareStatement(UPDATE_PRODUCT_BY_ID_SQL);
             getProductDAOStatement(product, statement);
-            statement.setInt(10, id);
+            statement.setString(10,product.getCategoryName());
+            statement.setString(11,product.getBrandName());
+            statement.setInt(12, id);
             rowUpdated = statement.executeUpdate() > 0;
         } catch (SQLException e) {
             e.printStackTrace();

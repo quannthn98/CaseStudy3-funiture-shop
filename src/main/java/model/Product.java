@@ -17,6 +17,20 @@ public class Product {
     public Product() {
     }
 
+    public Product(String name, String image, String subImage, float price, int priceSell, String subDescription, String description, String createdDate, int status, String categoryName, String brandName) {
+        this.name = name;
+        this.image = image;
+        this.subImage = subImage;
+        this.price = price;
+        this.priceSell = priceSell;
+        this.subDescription = subDescription;
+        Description = description;
+        this.createdDate = createdDate;
+        this.status = status;
+        this.categoryName = categoryName;
+        this.brandName = brandName;
+    }
+
     public Product(int id, String name, String image, String subImage, float price, int priceSell, String subDescription, String description, String createdDate, int status, String categoryName, String brandName) {
         this.id = id;
         this.name = name;

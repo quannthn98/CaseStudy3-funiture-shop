@@ -132,7 +132,7 @@
                         </div>
                         <div class="col">
                             <button type="button" class="btn btn-outline-primary float-end">
-                                <a href="#" style="text-decoration: none">
+                                <a href="/product?action=create" style="text-decoration: none">
                                     Create
                                 </a>
                             </button>
@@ -161,10 +161,10 @@
                                 <td><c:out value="${productList.categoryName}"/></td>
                                 <td>
                                     <button type="button" class="btn btn-primary btn-sm"><a style="color: white"
-                                                                                            href="/product?action=edit">Edit</a>
+                                                                                            href="/product?action=edit&id=${productList.id}">Edit</a>
                                     </button>
                                     <button type="button" class="btn btn-danger btn-sm"><a style="color: white;"
-                                                                                           href="/product?action=delete">Delete</a>
+                                                                                           href="/product?action=delete&id=${productList.id}">Delete</a>
                                     </button>
                                 </td>
                             </tr>
