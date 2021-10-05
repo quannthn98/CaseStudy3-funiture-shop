@@ -124,6 +124,7 @@
                             <th>Phone</th>
                             <th>Address</th>
                             <th>Total Payment</th>
+                            <th>Status</th>
                             <th>Action</th>
                         </tr>
                         <c:forEach items="${orderList}" var="order">
@@ -134,15 +135,21 @@
                                 <td>${order.phone}</td>
                                 <td>${order.addressOrder}</td>
                                 <td><fmt:formatNumber type="number" maxFractionDigits = "0"  value="${totalPayment.get(order.id)}"/> </td>
+                                <c:choose>
+                                    <c:when test="${order.status == true}">
+                                        <td>Shipped</td>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <td>Processing</td>
+                                    </c:otherwise>
+                                </c:choose>
+
                                 <td>
                                     <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop${order.id}">
                                         Details
                                     </button>
                                     <button type="button" class="btn btn-warning btn-sm">
                                         <a style="color: white" href="/orders?action=edit&id=${order.id}">Edit</a>
-                                    </button>
-                                    <button type="button" class="btn btn-danger btn-sm">
-                                        <a style="color: white;" href="/orders?action=delete&id=${order.id}">Delete</a>
                                     </button>
                                 </td>
                             </tr>
@@ -156,30 +163,9 @@
             </div>
         </div>
 
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <table border="1">
-                            <tr>
-                                <th>Hi</th>
-                                <th>Hello</th>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
         <c:forEach items="${orderList}" var="order">
             <div class="modal fade" id="staticBackdrop${order.id}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
+                <div class="modal-dialog modal-xl">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="staticBackdropLabel${order.id}">Order #${order.id} Details</h5>
@@ -193,6 +179,7 @@
                                     <th>Price</th>
                                     <th>% Sale Off</th>
                                     <th>Payment</th>
+                                    <th>Note</th>
                                 </tr>
                                 <c:forEach items="${orderDetailList}" var="orderDetail">
                                     <c:if test="${order.id == orderDetail.orderId}">
@@ -202,13 +189,14 @@
                                             <td><fmt:formatNumber type="number" maxFractionDigits = "0"  value="${orderDetail.price}"/> </td>
                                             <td><fmt:formatNumber type="number" maxFractionDigits = "0"  value="${orderDetail.saleOff}"/> </td>
                                             <td><fmt:formatNumber type="number" maxFractionDigits = "0"  value="${orderDetail.total}"/> </td>
+                                            <td></td>
                                         </tr>
                                     </c:if>
                                 </c:forEach>
                                 <tr>
                                     <th colspan="4">Tổng</th>
-
                                     <td><fmt:formatNumber type="number" maxFractionDigits = "0"  value="${totalPayment.get(order.id)}"/> </td>
+                                    <td>${order.note}</td>
                                 </tr>
                             </table>
                         </div>

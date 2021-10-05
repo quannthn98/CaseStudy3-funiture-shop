@@ -183,9 +183,6 @@
                                     <button type="button" class="btn btn-warning btn-sm">
                                         <a style="color: white" href="/orders?action=edit&id=${order.id}">Edit</a>
                                     </button>
-                                    <button type="button" class="btn btn-danger btn-sm">
-                                        <a style="color: white;" href="/orders?action=delete&id=${order.id}">Delete</a>
-                                    </button>
                                 </td>
                             </tr>
                             <c:forEach items="${orderDetailList}" var="orderDetail">

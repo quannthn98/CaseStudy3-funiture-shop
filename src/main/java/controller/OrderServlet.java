@@ -90,16 +90,23 @@ public class OrderServlet extends HttpServlet {
         int orderId = Integer.parseInt(request.getParameter("id"));
         Order order = orderService.findById(orderId);
 
-        String customerName = request.getParameter("name");
-        String phone = request.getParameter("phone");
-        String address = request.getParameter("address");
+//        String customerName = request.getParameter("name");
+//        String phone = request.getParameter("phone");
+//        String address = request.getParameter("address");
         String note = request.getParameter("note");
-        int saleOff = Integer.parseInt(request.getParameter("saleOff"));
-        order.setConsignee(customerName);
-        order.setPhone(phone);
-        order.setAddressOrder(address);
+//        int saleOff = Integer.parseInt(request.getParameter("saleOff"));
+        int status = Integer.parseInt(request.getParameter("status"));
+
+//        order.setConsignee(customerName);
+//        order.setPhone(phone);
+//        order.setAddressOrder(address);
         order.setNote(note);
-        orderService.updateSaleOff(saleOff, orderId);
+        if (status == 0){
+            order.setStatus(false);
+        } else {
+            order.setStatus(true);
+        }
+//        orderService.updateSaleOff(saleOff, orderId);
         orderService.update(orderId, order);
         response.sendRedirect("/orders");
     }

@@ -18,7 +18,7 @@ public class OrderDao implements IOrderDao {
     private final String SELECT_ALL_ORDER = "select * from orderProduct order by id";
     private final String SELECT_ALL_ORDER_DETAILS = "select * from orderDetailProduct order by id_Order";
     private final String SELECT_PAYMENT_BY_ORDER = "select * from totalpaymentbyorder";
-    private final String UPDATE_ORDER = "update orderProduct set consignee = ?, numberPhone = ?, addressOrder = ?, note = ? where id = ?";
+    private final String UPDATE_ORDER = "update orderProduct set consignee = ?, numberPhone = ?, addressOrder = ?, note = ?, status = ? where id = ?";
     private final String UPDATE_SALE_OFF = "update orderDetailProduct set price_sell = ? where id_Order = ?";
     private final String FIND_ORDER_BY_ID = "select * from orderProduct where id = ?";
     private final String FIND_SALE_OFF_BY_ID = "select price_Sell from orderDetailProduct where id_Order = ? order by price_sell DESC";
@@ -132,7 +132,8 @@ public class OrderDao implements IOrderDao {
             preparedStatement.setString(2, order.getPhone());
             preparedStatement.setString(3, order.getAddressOrder());
             preparedStatement.setString(4, order.getNote());
-            preparedStatement.setInt(5, order.getId());
+            preparedStatement.setBoolean(5, order.isStatus());
+            preparedStatement.setInt(6, order.getId());
             isUpdated = preparedStatement.executeUpdate() > 0;
         } catch (SQLException e) {
             e.printStackTrace();
