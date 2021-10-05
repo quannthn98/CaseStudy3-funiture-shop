@@ -10,7 +10,7 @@ IGeneralService<T> {
 
     boolean save(T t);
 
-    boolean update(int id);
+    boolean update(T t);
 
     boolean delete(int id);
 
