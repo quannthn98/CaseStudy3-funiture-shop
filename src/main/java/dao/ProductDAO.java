@@ -10,7 +10,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProductDAO implements IProductDAO {
+public class ProductDAO implements IProductDao {
     public static final String SELECT_ALL_PRODUCT_SQL = "select  * from product";
     public static final String FIND_BY_ID_SQL = "select * from product where id = ?";
     public static final String DELETE_PRODUCT_BY_ID = "delete from product where id = ? ;";

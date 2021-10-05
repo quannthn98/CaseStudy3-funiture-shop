@@ -9,7 +9,7 @@ public interface IGeneralService<T> {
 
     boolean save(T t);
 
-    boolean update(int id);
+    boolean update(int id, T t);
 
     boolean delete(int id);
 

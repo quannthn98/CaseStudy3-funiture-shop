@@ -94,12 +94,12 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col" style="text-align: center">
-                            <h3 >Customer Update</h3>
+                            <h3 >Set Form Name Here</h3>
                         </div>
                     </div>
                 </div>
                 <div class="card-body">
-                    <form action="/customers?action=insert" method="post">
+                    <form action="/orders?action=create" method="post">
                         <div class="mb-3">
                             <label for="name" class="form-label">Customer Name</label>
                             <input type="text" name="name" class="form-control" id="name" >
@@ -109,14 +109,17 @@
                             <input type="text" name="phone" class="form-control" id="phone" >
                         </div>
                         <div class="mb-3">
-                            <label for="addressLine1" class="form-label">Address Line 1</label>
-                            <input type="text" name="addressLine1" class="form-control" id="addressLine1" >
+                            <label for="address" class="form-label">Order Address</label>
+                            <input type="text" name="address" class="form-control" id="address" >
                         </div>
                         <div class="mb-3">
-                            <label for="city" class="form-label">City</label>
-                            <input type="text" name="city" class="form-control" id="city" >
+                            <label for="customerId" class="form-label">Customer Id</label>
+                            <input type="text" name="customerId" class="form-control" id="customerId" >
                         </div>
-
+                        <div class="mb-3">
+                            <label for="note" class="form-label">Note</label>
+                            <input type="text" name="note" class="form-control" id="note" >
+                        </div>
 
                         <button type="submit" class="btn btn-primary">Create/Save Edit</button>
                     </form>

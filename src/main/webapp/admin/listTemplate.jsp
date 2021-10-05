@@ -83,7 +83,43 @@
         </div>
         <div class="col-10">
             <div class="card">
-                //Content
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Launch static backdrop modal
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <table class="table table-striped">
+                                    <tr>
+                                        <th>id</th>
+                                        <th>Name</th>
+                                        <th>Action</th>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Nguyen Quan</td>
+                                        <td> <button type="button" class="btn btn-primary btn-sm" ><a style="color: white" href="#">Edit</a></button>
+                                            <button type="button" class="btn btn-danger btn-sm"><a style="color: white;" href="#">Delete</a></button></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Understood</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="card-header">
                     <div class="row">
                         <div class="col">
@@ -108,8 +144,14 @@
                         <tr>
                             <td>1</td>
                             <td>Nguyen Quan</td>
-                            <td> <button type="button" class="btn btn-primary btn-sm" ><a style="color: white" href="#">Edit</a></button>
-                                <button type="button" class="btn btn-danger btn-sm"><a style="color: white;" href="#">Delete</a></button></td>
+                            <td>
+                                <button type="button" class="btn btn-primary btn-sm" ><a style="color: white" href="#">Edit</a></button>
+                                <button type="button" class="btn btn-danger btn-sm"><a style="color: white;" href="#">Delete</a></button>
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                    Detail
+                                </button>
+                            </td>
+
                         </tr>
                     </table>
                 </div>
@@ -128,6 +170,7 @@
             <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
         </ul>
     </footer><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
 </div>
 </body>
 </html>
