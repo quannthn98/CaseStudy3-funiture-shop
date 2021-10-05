@@ -9,6 +9,8 @@ import java.util.List;
 
 public interface IOrderDao extends IGeneralDao<Order> {
 
+    List<Order> getOrderByOffset(int offset);
+
     List<OrderDetail> getDetails();
 
     HashMap<Integer, Double> getPaymentByOrder();
@@ -16,4 +18,6 @@ public interface IOrderDao extends IGeneralDao<Order> {
     boolean updateSaleOff(int saleOff, int orderId);
 
     int getSaleOffByOrder(int id);
+
+    int countRecord();
 }

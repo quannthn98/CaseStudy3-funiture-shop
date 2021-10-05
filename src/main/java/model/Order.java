@@ -23,6 +23,14 @@ public class Order {
         this.note = note;
     }
 
+    public Order(int customerId, String consignee, String addressOrder, String phone, String note) {
+        this.customerId = customerId;
+        this.consignee = consignee;
+        this.addressOrder = addressOrder;
+        this.phone = phone;
+        this.note = note;
+    }
+
     public int getId() {
         return id;
     }

@@ -17,11 +17,15 @@ import java.util.List;
 public class OrderDao implements IOrderDao {
     private final String SELECT_ALL_ORDER = "select * from orderProduct order by id";
     private final String SELECT_ALL_ORDER_DETAILS = "select * from orderDetailProduct order by id_Order";
+    private final String SELECT_ORDER_BY_OFFSET = "select * from orderProduct order by id limit ? offset ?";
     private final String SELECT_PAYMENT_BY_ORDER = "select * from totalpaymentbyorder";
     private final String UPDATE_ORDER = "update orderProduct set consignee = ?, numberPhone = ?, addressOrder = ?, note = ?, status = ? where id = ?";
     private final String UPDATE_SALE_OFF = "update orderDetailProduct set price_sell = ? where id_Order = ?";
     private final String FIND_ORDER_BY_ID = "select * from orderProduct where id = ?";
+    private final String COUNT_RECORD = "select count(id) from orderProduct";
+
     private final String FIND_SALE_OFF_BY_ID = "select price_Sell from orderDetailProduct where id_Order = ? order by price_sell DESC";
+    private final String INSERT_NEW_ORDER = "insert into orderProduct(consignee, addressOrder, numberPhone, note, id_Customer) values (?,?,?,?,?)";
     private Connection connection = DBConnection.getConnection();
 
     @Override
@@ -29,6 +33,32 @@ public class OrderDao implements IOrderDao {
         List<Order> orderList = new ArrayList<>();
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_ORDER);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while(resultSet.next()){
+                int orderId = resultSet.getInt("id");
+                int customerId = resultSet.getInt("id_Customer");
+                String date = resultSet.getString("createdDate");
+                Boolean status = resultSet.getBoolean("status");
+                String consignee = resultSet.getString("consignee");
+                String addressOrder = resultSet.getString("addressOrder");
+                String phone = resultSet.getString("numberPhone");
+                String note = resultSet.getString("note");
+                Order order = new Order(orderId, customerId, date, status, consignee, addressOrder, phone, note );
+                orderList.add(order);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return orderList;
+    }
+
+    @Override
+    public List<Order> getOrderByOffset(int offset) {
+        List<Order> orderList = new ArrayList<>();
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ORDER_BY_OFFSET);
+            preparedStatement.setInt(1, 5);
+            preparedStatement.setInt(2, offset);
             ResultSet resultSet = preparedStatement.executeQuery();
             while(resultSet.next()){
                 int orderId = resultSet.getInt("id");
@@ -115,7 +145,19 @@ public class OrderDao implements IOrderDao {
 
     @Override
     public boolean save(Order order) {
-        return false;
+        boolean isSaved = false;
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(INSERT_NEW_ORDER);
+            preparedStatement.setString(1, order.getConsignee());
+            preparedStatement.setString(2, order.getAddressOrder());
+            preparedStatement.setString(3, order.getPhone());
+            preparedStatement.setString(4, order.getNote());
+            preparedStatement.setInt(5, order.getCustomerId());
+            isSaved = preparedStatement.executeUpdate() > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return isSaved;
     }
 
     @Override
@@ -152,11 +194,8 @@ public class OrderDao implements IOrderDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
         return isUpdated;
     }
-
-
 
     @Override
     public int getSaleOffByOrder(int id) {
@@ -171,5 +210,19 @@ public class OrderDao implements IOrderDao {
             e.printStackTrace();
         }
         return saleOff;
+    }
+
+    @Override
+    public int countRecord() {
+        int count = 0;
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(COUNT_RECORD);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            resultSet.next();
+            count = resultSet.getInt(1);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return count;
     }
 }

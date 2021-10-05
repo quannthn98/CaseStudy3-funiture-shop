@@ -17,6 +17,11 @@ public class OrderService implements IOrderService {
     }
 
     @Override
+    public List<Order> getOrderByOffset(int offset) {
+        return orderDao.getOrderByOffset(offset);
+    }
+
+    @Override
     public List<OrderDetail> getDetails() {
         List<OrderDetail> orderDetailList = orderDao.getDetails();
         return orderDetailList;
@@ -45,21 +50,23 @@ public class OrderService implements IOrderService {
     }
 
     @Override
+    public int countRecord() {
+        return orderDao.countRecord();
+    }
+
+    @Override
     public Order findById(int id) {
         return orderDao.findById(id);
     }
 
     @Override
     public boolean save(Order order) {
-        return false;
+        return orderDao.save(order);
     }
-
-
 
     @Override
     public boolean delete(int id) {
         return false;
     }
-
 
 }

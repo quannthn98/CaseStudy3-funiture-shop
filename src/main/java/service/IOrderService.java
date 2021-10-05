@@ -7,6 +7,9 @@ import java.util.HashMap;
 import java.util.List;
 
 public interface IOrderService extends IGeneralService<Order> {
+
+    List<Order> getOrderByOffset(int offset);
+
     List<OrderDetail> getDetails();
 
     HashMap<Integer, Double> getPaymentByOrder();
@@ -16,4 +19,6 @@ public interface IOrderService extends IGeneralService<Order> {
     int getSaleOffByOrder(int id);
 
 
+
+    int countRecord();
 }

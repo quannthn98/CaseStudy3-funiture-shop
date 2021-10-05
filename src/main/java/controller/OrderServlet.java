@@ -18,7 +18,7 @@ import java.util.List;
 @WebServlet(name = "OrderServlet", value = "/orders")
 public class OrderServlet extends HttpServlet {
     IOrderService orderService = new OrderService();
-
+    private final int DEFAULT_LIMIT = 5;
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -32,11 +32,10 @@ public class OrderServlet extends HttpServlet {
                 showEditForm(request, response);
                 break;
             default:
-                showAll(request, response);
+                showByPage(request, response);
                 break;
         }
     }
-
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -57,19 +56,13 @@ public class OrderServlet extends HttpServlet {
     }
 
     public void showAll(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String style = request.getParameter("view");
-        if (style == null) {
-            style = "";
-        }
         List<Order> orderList = orderService.selectAll();
         List<OrderDetail> orderDetailList = orderService.getDetails();
         HashMap<Integer, Double> totalPaymentByOrderId = orderService.getPaymentByOrder();
+
         RequestDispatcher dispatcher;
-        if (style.equals("") || style.equals("modal")) {
-            dispatcher = request.getRequestDispatcher("order/modalList.jsp");
-        } else {
-            dispatcher = request.getRequestDispatcher("order/list.jsp");
-        }
+        dispatcher = request.getRequestDispatcher("order/list.jsp");
+
         request.setAttribute("orderList", orderList);
         request.setAttribute("orderDetailList", orderDetailList);
         request.setAttribute("totalPayment", totalPaymentByOrderId);
@@ -89,7 +82,6 @@ public class OrderServlet extends HttpServlet {
     private void save(HttpServletRequest request, HttpServletResponse response) throws IOException {
         int orderId = Integer.parseInt(request.getParameter("id"));
         Order order = orderService.findById(orderId);
-
 //        String customerName = request.getParameter("name");
 //        String phone = request.getParameter("phone");
 //        String address = request.getParameter("address");
@@ -101,7 +93,7 @@ public class OrderServlet extends HttpServlet {
 //        order.setPhone(phone);
 //        order.setAddressOrder(address);
         order.setNote(note);
-        if (status == 0){
+        if (status == 0) {
             order.setStatus(false);
         } else {
             order.setStatus(true);
@@ -110,5 +102,45 @@ public class OrderServlet extends HttpServlet {
         orderService.update(orderId, order);
         response.sendRedirect("/orders");
     }
+
+    private int pagination(HttpServletRequest request, HttpServletResponse response){
+        int offset = 0;
+        String next = "";
+        String pre = "";
+        int selectedPage;
+        int countRecord = orderService.countRecord();
+        int totalPage = countRecord/DEFAULT_LIMIT + 1;
+        String page = request.getParameter("page");
+        if (page == null){
+            selectedPage = 1;
+        } else {
+            selectedPage = Integer.parseInt(page);
+        }
+        if (selectedPage == 1){
+            pre = "disabled";
+        } else if (selectedPage == totalPage){
+            next = "disabled";
+        }
+        request.setAttribute("selectedPage", selectedPage);
+        request.setAttribute("totalPage", totalPage);
+        request.setAttribute("pre", pre);
+        request.setAttribute("next", next);
+        offset = (selectedPage-1)*DEFAULT_LIMIT;
+        return offset;
+    }
+
+    private void showByPage(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int offset = pagination(request, response);
+        List<Order> orderList = orderService.getOrderByOffset(offset);
+        List<OrderDetail> orderDetailList = orderService.getDetails();
+        HashMap<Integer, Double> totalPaymentByOrderId = orderService.getPaymentByOrder();
+
+        request.setAttribute("orderList", orderList);
+        request.setAttribute("orderDetailList", orderDetailList);
+        request.setAttribute("totalPayment", totalPaymentByOrderId);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/order/list.jsp");
+        dispatcher.forward(request,response);
+    }
+
 
 }
