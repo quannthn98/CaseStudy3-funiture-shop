@@ -110,7 +110,7 @@ public class CustomerServlet extends HttpServlet {
         if (name.equals("") || birthday.equals("") || address.equals("") || phone.equals("") || email.equals("") || password.equals("") || status.equals("")) {
             update = false;
         } else {
-            update = customerDAO.update(new Customer(id, name, birthday, address, phone, email, password, status));
+            update = customerDAO.update(id, new Customer(id, name, birthday, address, phone, email, password, status));
         }
         if (update) {
             try {

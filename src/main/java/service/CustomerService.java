@@ -23,8 +23,8 @@ public class CustomerService implements ICustomerService{
     }
 
     @Override
-    public boolean update(Customer customer) {
-        return customerDAO.update(customer);
+    public boolean update(int id, Customer customer) {
+        return customerDAO.update(id, customer);
     }
 
     @Override

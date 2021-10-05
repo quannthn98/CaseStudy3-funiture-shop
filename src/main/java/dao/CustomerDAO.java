@@ -92,7 +92,7 @@ public class CustomerDAO implements ICustomerDAO {
     }
 
     @Override
-    public boolean update(Customer customer) {
+    public boolean update(int id, Customer customer) {
         boolean isRowUpdate = false;
         try {
             PreparedStatement statement =
