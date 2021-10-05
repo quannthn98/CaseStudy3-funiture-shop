@@ -94,7 +94,7 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col" style="text-align: center">
-                            <h3 >Set Form Name Here</h3>
+                            <h3 >Customer Update</h3>
                         </div>
                     </div>
                 </div>
@@ -116,10 +116,7 @@
                             <label for="city" class="form-label">City</label>
                             <input type="text" name="city" class="form-control" id="city" >
                         </div>
-                        <div class="mb-3">
-                            <label for="country" class="form-label">Country</label>
-                            <input type="text" name="country" class="form-control" id="country" >
-                        </div>
+
 
                         <button type="submit" class="btn btn-primary">Create/Save Edit</button>
                     </form>
