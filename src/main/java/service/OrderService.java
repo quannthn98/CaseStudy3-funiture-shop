@@ -28,8 +28,25 @@ public class OrderService implements IOrderService {
     }
 
     @Override
+    public boolean update(int id, Order order) {
+
+        return orderDao.update(id, order);
+    }
+
+    @Override
+    public boolean updateSaleOff(int saleOff, int orderId) {
+        return orderDao.updateSaleOff(saleOff, orderId);
+    }
+
+    @Override
+    public int getSaleOffByOrder(int id) {
+
+        return orderDao.getSaleOffByOrder(id);
+    }
+
+    @Override
     public Order findById(int id) {
-        return null;
+        return orderDao.findById(id);
     }
 
     @Override
@@ -37,10 +54,7 @@ public class OrderService implements IOrderService {
         return false;
     }
 
-    @Override
-    public boolean update(int id, Order order) {
-        return false;
-    }
+
 
     @Override
     public boolean delete(int id) {

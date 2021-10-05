@@ -143,7 +143,8 @@
                                 </a>
                             </button>
                             <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <button class="btn btn-secondary dropdown-toggle mx-2 float-end" type="button"
+                                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                     View by
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -167,21 +168,26 @@
                             <td>Action</td>
                         </tr>
                         <c:forEach items="${orderList}" var="order">
-                                <tr>
-                                    <td>${order.id}</td>
-                                    <td>${order.createdDate}</td>
-                                    <td>${order.consignee}</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td><fmt:formatNumber type="number" maxFractionDigits = "0"  value="${totalPayment.get(order.id)}"/> </td>
-                                    <td><button type="button" class="btn btn-primary btn-sm">
-                                        <a style="color: white" href="/orders?action=edit">Edit</a>
+                            <tr>
+                                <td>${order.id}</td>
+                                <td>${order.createdDate}</td>
+                                <td>${order.consignee}</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <fmt:formatNumber type="number" maxFractionDigits="0"
+                                                      value="${totalPayment.get(order.id)}"/>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-warning btn-sm">
+                                        <a style="color: white" href="/orders?action=edit&id=${order.id}">Edit</a>
                                     </button>
-                                        <button type="button" class="btn btn-danger btn-sm">
-                                            <a style="color: white;" href="/orders?action=delete">Delete</a>
-                                        </button></td>
-                                </tr>
+                                    <button type="button" class="btn btn-danger btn-sm">
+                                        <a style="color: white;" href="/orders?action=delete&id=${order.id}">Delete</a>
+                                    </button>
+                                </td>
+                            </tr>
                             <c:forEach items="${orderDetailList}" var="orderDetail">
                                 <c:if test="${order.id == orderDetail.orderId}">
                                     <tr>
@@ -190,15 +196,15 @@
                                         <td></td>
                                         <td>${orderDetail.productName}</td>
                                         <td>${orderDetail.quantity}</td>
-                                        <td><fmt:formatNumber type="number" maxFractionDigits = "0"  value="${orderDetail.price}"/> </td>
-                                        <td><fmt:formatNumber type="number" maxFractionDigits = "0"  value="${orderDetail.total}"/> </td>
+                                        <td><fmt:formatNumber type="number" maxFractionDigits="0"
+                                                              value="${orderDetail.price}"/></td>
+                                        <td><fmt:formatNumber type="number" maxFractionDigits="0"
+                                                              value="${orderDetail.total}"/></td>
                                         <td></td>
                                     </tr>
                                 </c:if>
                             </c:forEach>
-
                         </c:forEach>
-
                     </table>
                 </div>
                 <div class="card-footer">

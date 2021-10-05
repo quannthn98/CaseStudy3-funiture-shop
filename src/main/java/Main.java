@@ -7,5 +7,6 @@ public class Main {
         OrderDao orderDao = new OrderDao();
         HashMap<Integer, Double> total = orderDao.getPaymentByOrder();
         System.out.println(total.get(1));
+        System.out.println((float) 20/100);
     }
 }

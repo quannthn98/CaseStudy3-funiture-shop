@@ -12,4 +12,8 @@ public interface IOrderDao extends IGeneralDao<Order> {
     List<OrderDetail> getDetails();
 
     HashMap<Integer, Double> getPaymentByOrder();
+
+    boolean updateSaleOff(int saleOff, int orderId);
+
+    int getSaleOffByOrder(int id);
 }

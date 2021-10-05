@@ -11,5 +11,9 @@ public interface IOrderService extends IGeneralService<Order> {
 
     HashMap<Integer, Double> getPaymentByOrder();
 
+    boolean updateSaleOff(int saleOff, int orderId);
+
+    int getSaleOffByOrder(int id);
+
 
 }
