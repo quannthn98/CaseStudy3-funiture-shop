@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProductDAO implements IProductDao {
-    public static final String SELECT_ALL_PRODUCT_SQL = "select  * from product";
+    public static final String SELECT_ALL_PRODUCT_SQL = "select * from productDetail";
     public static final String FIND_BY_ID_SQL = "select * from product where id = ?";
     public static final String DELETE_PRODUCT_BY_ID = "delete from product where id = ? ;";
     public static final String UPDATE_PRODUCT_BY_ID_SQL = "update product set name = ? , image = ? , sub_image = ? , price = ? , price_sell = ? , sub_description = ? , description = ? , created_date = ? , status = ?  where id = ?;";
@@ -25,17 +25,19 @@ public class ProductDAO implements IProductDao {
             PreparedStatement statement = connection.prepareStatement(SELECT_ALL_PRODUCT_SQL);
             ResultSet rs = statement.executeQuery();
             while (rs.next()) {
-                int id1 = rs.getInt("id");
+                int id = rs.getInt("id");
                 String name = rs.getString("name");
                 String image = rs.getString("image");
-                String subImage = rs.getString("sub_image");
+                String subImage = rs.getString("subimage");
                 float price = rs.getFloat("price");
                 int priceSell = rs.getInt("price_sell");
-                String subDescription = rs.getString("sub_description");
+                String subDescription = rs.getString("subdescription");
                 String description = rs.getString("description");
-                String createdDate = rs.getString("created_date");
+                String createdDate = rs.getString("createdDate");
                 int status = rs.getInt("status");
-                productList.add(new Product(id1, name, image, subImage, price, priceSell, subDescription, description, createdDate, status));
+                String brandName = rs.getString("brand");
+                String categoryName = rs.getString("category");
+                productList.add(new Product(id, name, image, subImage, price, priceSell, subDescription, description, createdDate, status,categoryName,brandName));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -54,10 +56,10 @@ public class ProductDAO implements IProductDao {
                 int id1 = rs.getInt("id");
                 String name = rs.getString("name");
                 String image = rs.getString("image");
-                String subImage = rs.getString("sub_image");
+                String subImage = rs.getString("subimage");
                 float price = rs.getFloat("price");
                 int priceSell = rs.getInt("price_sell");
-                String subDescription = rs.getString("sub_description");
+                String subDescription = rs.getString("subdescription");
                 String description = rs.getString("description");
                 String createdDate = rs.getString("createdDate");
                 int status = rs.getInt("status");

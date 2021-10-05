@@ -52,7 +52,7 @@ public class ProductServlet extends HttpServlet {
     }
 
     private void FormListProduct(HttpServletRequest request, HttpServletResponse response) {
-        List<Product> productList = new ArrayList<>();
+        List<Product> productList = productDAO.getAll();
         request.setAttribute("productList", productList);
         RequestDispatcher dispatcher = request.getRequestDispatcher("product/list.jsp");
         try {

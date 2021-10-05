@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <html>
 <head>
     <title>Title</title>
@@ -143,19 +144,21 @@
                         <tr>
                             <th>id</th>
                             <th>Name</th>
-                            <th>Image</th>
                             <th>Price</th>
                             <th>Price Sell</th>
                             <th>Description</th>
+                            <th>Brand</th>
+                            <th>Category</th>
                         </tr>
                         <c:forEach items="${productList}" var="productList">
                             <tr>
                                 <td><c:out value="${productList.id}"/></td>
                                 <td><c:out value="${productList.name}"/></td>
-                                <td><c:out value="${productList.image}"/></td>
-                                <td><c:out value="${productList.price}"/></td>
+                                <td><fmt:formatNumber type="number" maxFractionDigits = "0"  value="${productList.price}"/> </td>
                                 <td><c:out value="${productList.priceSell}"/></td>
                                 <td><c:out value="${productList.description}"/></td>
+                                <td><c:out value="${productList.brandName}"/></td>
+                                <td><c:out value="${productList.categoryName}"/></td>
                                 <td>
                                     <button type="button" class="btn btn-primary btn-sm"><a style="color: white"
                                                                                             href="/product?action=edit">Edit</a>

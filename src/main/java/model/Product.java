@@ -11,8 +11,25 @@ public class Product {
     private String Description;
     private String createdDate;
     private int status;
+    private String categoryName;
+    private String brandName;
 
     public Product() {
+    }
+
+    public Product(int id, String name, String image, String subImage, float price, int priceSell, String subDescription, String description, String createdDate, int status, String categoryName, String brandName) {
+        this.id = id;
+        this.name = name;
+        this.image = image;
+        this.subImage = subImage;
+        this.price = price;
+        this.priceSell = priceSell;
+        this.subDescription = subDescription;
+        Description = description;
+        this.createdDate = createdDate;
+        this.status = status;
+        this.categoryName = categoryName;
+        this.brandName = brandName;
     }
 
     public Product(int id, String name, float price, int priceSell) {
@@ -125,5 +142,21 @@ public class Product {
 
     public void setStatus(int status) {
         this.status = status;
+    }
+
+    public String getCategoryName() {
+        return categoryName;
+    }
+
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
+    }
+
+    public String getBrandName() {
+        return brandName;
+    }
+
+    public void setBrandName(String brandName) {
+        this.brandName = brandName;
     }
 }
