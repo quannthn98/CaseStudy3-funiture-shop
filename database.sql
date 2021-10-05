@@ -1,5 +1,6 @@
 Create database Project;
 use Project;
+ALTER DATABASE Project CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 /*================Brand===============*/
 
 Create table Brand(

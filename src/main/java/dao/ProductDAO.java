@@ -59,7 +59,7 @@ public class ProductDAO implements IProductDAO {
                 int priceSell = rs.getInt("price_sell");
                 String subDescription = rs.getString("sub_description");
                 String description = rs.getString("description");
-                String createdDate = rs.getString("created_date");
+                String createdDate = rs.getString("createdDate");
                 int status = rs.getInt("status");
                 product = new Product(id1, name, image, subImage, price, priceSell, subDescription, description, createdDate, status);
             }
