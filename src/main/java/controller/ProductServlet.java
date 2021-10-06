@@ -1,6 +1,6 @@
 package controller;
 
-import dao.ProductDAO;
+import dao.ProductDao;
 import model.Product;
 
 import javax.servlet.*;
@@ -11,7 +11,7 @@ import java.util.List;
 
 @WebServlet(name = "ProductServlet", value = "/product")
 public class ProductServlet extends HttpServlet {
-    ProductDAO productDAO = new ProductDAO();
+    ProductDao productDAO = new ProductDao();
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -52,7 +52,7 @@ public class ProductServlet extends HttpServlet {
 
     private void FormListProduct(HttpServletRequest request, HttpServletResponse response) {
         String selection = request.getParameter("select");
-        if (selection == null){
+        if (selection == null) {
             selection = "";
         }
         String searchValue = request.getParameter("q");
@@ -60,10 +60,10 @@ public class ProductServlet extends HttpServlet {
         if (selection.equals("brand")) {
             int id = Integer.parseInt(searchValue);
             productList = productDAO.findByBrand(id);
-        } else if (selection.equals("category")){
+        } else if (selection.equals("category")) {
             int id = Integer.parseInt(searchValue);
             productList = productDAO.findByCategory(id);
-        }else {
+        } else {
             productList = productDAO.getAll();
         }
         request.setAttribute("productList", productList);
