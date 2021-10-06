@@ -14,13 +14,14 @@
 <p id="userAlert"></p>
 <input type="text" id="name" onchange="validation()">
 <script type="text/javascript">
-    function validation(){
-        var username=document.getElementById("name").value;///get id with value
-        var usernamepattern=/^[A-Za-z .]{3,15}$/;////Regular expression
-        if(usernamepattern.test(username)) {
-            document.getElementById("name").style.backgroundColor='yellow';
+    function validation() {
+        var username = document.getElementById("name").value;///get id with value
+        var usernamepattern = /^[A-Za-z .]{3,15}$/;////Regular expression
+        if (usernamepattern.test(username)) {
+            // action if true
         } else {
-            document.getElementById("name").style.backgroundColor='red'; }
+            // action if false
+        }
     }
 </script>
 </body>
