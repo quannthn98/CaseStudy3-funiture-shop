@@ -103,13 +103,13 @@
                             <th>Name</th>
                             <th>Action</th>
                         </tr>
-                        <c:forEach items="${brandList}" var="brandList">
+                        <c:forEach items="${categoryList}" var="categoryList">
                             <tr>
-                                <td><c:out value="${brandList.id}"/></td>
-                                <td><c:out value="${brandList.name}"/></td>
+                                <td><c:out value="${categoryList.id}"/></td>
+                                <td><c:out value="${categoryList.name}"/></td>
                                 <td>
-                                    <a style="color: white" class="btn btn-primary btn-sm" href="/brand?action=edit-brand&id=${brandList.id}">Edit</a>
-                                    <a style="color: white;" class="btn btn-danger btn-sm" href="/brand?action=delete-brand&id=${brandList.id}">Delete</a>
+                                    <a style="color: white" class="btn btn-primary btn-sm" href="/brand?action=edit-brand&id=${categoryList.id}">Edit</a>
+                                    <a style="color: white;" class="btn btn-danger btn-sm" href="/brand?action=delete-brand&id=${categoryList.id}">Delete</a>
                                     <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                                         Detail
                                     </button>
