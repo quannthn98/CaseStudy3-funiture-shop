@@ -20,6 +20,8 @@ public class CustomerServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        request.setCharacterEncoding("utf-8");
         String action = request.getParameter("action");
         if (action == null) {
             action = "";
@@ -45,7 +47,7 @@ public class CustomerServlet extends HttpServlet {
 
     }
 
-    private void deleteJSP(HttpServletRequest request, HttpServletResponse response) throws ServletException {
+    private void deleteJSP(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
         customerDAO.delete(id);
         try {
@@ -81,6 +83,8 @@ public class CustomerServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        request.setCharacterEncoding("utf-8");
         String action = request.getParameter("action");
         if (action == null) {
             action = "";

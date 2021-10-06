@@ -168,10 +168,13 @@
                                 <td>${customer.password}</td>
                                 <td>${customer.status}</td>
                                 <td>
-                                    <button type="button" class="btn btn-primary btn-sm"><a style="color: white"
-                                                                                                href="/customers?action=edit&id=${customer.id}">Edit</a></button>
-                                    <button type="button" class="btn btn-danger btn-sm"><a style="color: white;"
-                                                                                           href="/customers?action=delete&id=${customer.id}">Delete</a></button>
+                                    <button type="button" class="btn btn-primary btn-sm">
+                                        <a style="color: white"
+                                           href="/customers?action=edit&id=${customer.id}">Edit</a>
+                                    </button>
+                                    <button type="button" class="btn btn-danger btn-sm">
+                                        <a style="color: white;" onclick="confirmDelete(${customer.id})">Delete</a>
+                                    </button>
                                 </td>
                             </tr>
                         </c:forEach>
@@ -192,6 +195,17 @@
             <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
         </ul>
     </footer>
+    <script>
+        function confirmDelete(id) {
+            let check = confirm("ban chac chan muon xoa chu?")
+            if (check) {
+                window.location.href = "/customers?action=delete&id=" + id;
+                alert("da xoa thanh cong");
+            } else {
+                alert("khong xoa nua a`");
+            }
+        }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
             crossorigin="anonymous"></script>
