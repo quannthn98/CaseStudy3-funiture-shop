@@ -3,20 +3,20 @@ package model;
 public class Brand {
     private int id;
     private String name;
-    private int status;
-
-    public Brand(int id, String name, int status) {
-        this.id = id;
-        this.name = name;
-        this.status = status;
-    }
+    private int Status;
 
     public Brand() {
     }
 
     public Brand(String name, int status) {
         this.name = name;
-        this.status = status;
+        Status = status;
+    }
+
+    public Brand(int id, String name, int status) {
+        this.id = id;
+        this.name = name;
+        Status = status;
     }
 
     public int getId() {
@@ -35,11 +35,11 @@ public class Brand {
         this.name = name;
     }
 
-    public int getStatus() {
-        return status;
+    public int isStatus() {
+        return Status;
     }
 
     public void setStatus(int status) {
-        this.status = status;
+        Status = status;
     }
 }
