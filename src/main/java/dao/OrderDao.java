@@ -1,10 +1,8 @@
 package dao;
 
-import com.sun.org.apache.xpath.internal.operations.Or;
 import config.DBConnection;
 import model.Order;
 import model.OrderDetail;
-import model.Product;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

@@ -1,9 +1,9 @@
-    <%--
-  Created by IntelliJ IDEA.
-  User: quans
-  Date: 9/29/21
-  Time: 11:17 AM
-  To change this template use File | Settings | File Templates.
+<%--
+Created by IntelliJ IDEA.
+User: quans
+Date: 9/29/21
+Time: 11:17 AM
+To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -94,31 +94,42 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col" style="text-align: center">
-                            <h3 >Customer Update</h3>
+                            <h3 >Edit Customer</h3>
                         </div>
                     </div>
                 </div>
                 <div class="card-body">
-                    <form action="/customers?action=insert" method="post">
+                    <form method="post">
                         <div class="mb-3">
-                            <label for="name" class="form-label">Customer Name</label>
+                            <label for="name" class="form-label">Name</label>
                             <input type="text" name="name" class="form-control" id="name" >
                         </div>
                         <div class="mb-3">
-                            <label for="phone" class="form-label">Phone Number</label>
+                            <label for="birthday" class="form-label">Birth Day</label>
+                            <input type="text" name="birthday" class="form-control" id="birthday" >
+                        </div>
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Address</label>
+                            <input type="text" name="address" class="form-control" id="address" >
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone</label>
                             <input type="text" name="phone" class="form-control" id="phone" >
                         </div>
                         <div class="mb-3">
-                            <label for="addressLine1" class="form-label">Address Line 1</label>
-                            <input type="text" name="addressLine1" class="form-control" id="addressLine1" >
+                            <label for="email" class="form-label">Email</label>
+                            <input type="text" name="email" class="form-control" id="email" >
                         </div>
                         <div class="mb-3">
-                            <label for="city" class="form-label">City</label>
-                            <input type="text" name="city" class="form-control" id="city" >
+                            <label for="password" class="form-label">Password</label>
+                            <input type="text" name="password" class="form-control" id="password" >
+                        </div>
+                        <div class="mb-3">
+                            <label for="status" class="form-label">Status</label>
+                            <input type="text" name="status" class="form-control" id="status" >
                         </div>
 
-
-                        <button type="submit" class="btn btn-primary">Create/Save Edit</button>
+                        <button type="submit" class="btn btn-primary" onclick="editCustomer()">Save Edit</button>
                     </form>
 
                 </div>
@@ -136,5 +147,10 @@
         </ul>
     </footer><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </div>
+<script>
+    function editCustomer(){
+        alert("edit")
+    }
+</script>
 </body>
 </html>
