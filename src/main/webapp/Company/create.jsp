@@ -129,13 +129,13 @@
             </div>
         </div>
         <div class="col-10">
-            <button><a style="text-decoration: none;" href="/Banner">Return</a></button>
-             <h4 style="color: #88d01f">${message}</h4>
+            <button><a style="text-decoration: none;" href="/Company">Return</a></button>
+            <h4 style="color: #88d01f">${message}</h4>
             <div class="card">
                 <div class="card-header">
                     <div class="row">
                         <div class="col" style="text-align: center">
-                            <h3>Banner Add New</h3>
+                            <h3>Company Add New </h3>
                         </div>
                     </div>
                 </div>
@@ -146,12 +146,16 @@
                             <input type="text" name="name" class="form-control" id="name">
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Image</label>
-                            <input type="text" name="image" class="form-control">
+                            <label class="form-label">Address</label>
+                            <input type="text" name="address" class="form-control">
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Location</label>
-                            <input type="text" name="location" class="form-control">
+                            <label class="form-label">Hotline</label>
+                            <input type="text" name="hotline" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Note</label>
+                            <input type="text" name="note" class="form-control">
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Status</label><br>

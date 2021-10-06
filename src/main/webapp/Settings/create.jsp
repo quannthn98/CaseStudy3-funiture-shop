@@ -12,6 +12,11 @@
     <title>Title</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 </head>
+<style>
+    table th,tr,td {
+        text-align: center;
+    }
+</style>
 <body>
 <div class="container">
     <nav class="navbar navbar-expand-lg navbar-light bg-light rounded navbar-padding-0" style="height: 50px" aria-label="Eleventh navbar example">
@@ -90,47 +95,56 @@
             </div>
         </div>
         <div class="col-10">
-            <button><a style="text-decoration: none;" href="/Banner">Return</a></button>
-
+            <button><a style="text-decoration: none;" href="/Settings">Return</a></button>
+            <h4 style="color: #88d01f">${message}</h4>
             <div class="card">
                 <div class="card-header">
                     <div class="row">
                         <div class="col" style="text-align: center">
-                            <h3 >Banner Delete</h3>
+                            <h3 >Settings Add New</h3>
                         </div>
                     </div>
                 </div>
                 <div class="card-body">
                     <form method="post">
                         <div class="mb-3">
-                            <label for="id_banner" class="form-label">Banner Id</label>
-                            <input type="text" name="id" class="form-control" id="id_banner"  value="${banner.id}" readonly>
+                            <label for="name" class="form-label">Title</label>
+                            <input type="text" name="title" class="form-control" id="name">
                         </div>
                         <div class="mb-3">
-                            <label for="name" class="form-label">Name</label>
-                            <input type="text" name="name" class="form-control" id="name"  value="${banner.name}"readonly>
+                            <label class="form-label">Logo</label>
+                            <input type="text" name="logo" class="form-control">
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Image</label>
-                            <input type="text" name="image" class="form-control"  value="${banner.image}"readonly>
+                            <label class="form-label">Hotline</label>
+                            <input type="text" name="hotline" class="form-control">
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Location</label>
-                            <input type="text" name="location" class="form-control" value="${banner.location}"readonly>
+                            <label class="form-label">Address</label>
+                            <input type="text" name="address" class="form-control">
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Status</label><br>
-                            <c:choose>
-                                <c:when test="${banner.status}">
-                                    <input type="radio" name="status"value="true" checked readonly> Hiện
-                                </c:when>
-                                <c:otherwise>
-                                    <input type="radio" name="status" value="false"checked readonly> Ẩn
-                                </c:otherwise>
-                            </c:choose>
+                            <label class="form-label">LinkMap</label>
+                            <input type="text" name="linkMap" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Emai</label>
+                            <input type="text" name="email" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">PageFacebook</label>
+                            <input type="text" name="pageFacebook" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Logo_payment</label>
+                            <input type="text" name="logo_payment" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Note</label>
+                            <input type="text" name="note" class="form-control">
                         </div>
 
-                        <button type="submit" class="btn btn-primary">Delete</button>
+                        <button type="submit" class="btn btn-primary">Add New</button>
                     </form>
 
                 </div>

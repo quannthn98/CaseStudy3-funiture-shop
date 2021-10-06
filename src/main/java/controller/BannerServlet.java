@@ -29,9 +29,11 @@ public class BannerServlet extends HttpServlet {
         switch (action) {
             case "detail":{
                 ShowBannerDetail(request,response);
+                break;
             }
             case "create":{
                 ShowBannerCreate(request,response);
+                break;
             }
             case "delete": {
                 ShowBannerDelete(request, response);

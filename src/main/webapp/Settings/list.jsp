@@ -6,6 +6,14 @@
   To change this template use File | Settings | File Templates.
 --%>
 
+<%--
+  Created by IntelliJ IDEA.
+  User: Dang Hoa
+  Date: 10/3/2021
+  Time: 9:55 PM
+  To change this template use File | Settings | File Templates.
+--%>
+
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
@@ -40,17 +48,6 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                 </ul>
-                <form action="/Banner">
-                    <div class="row">
-                        <div class="col">
-                            <input name="search" class="form-control mt-3" style="size: 200px" type="text" placeholder="Search"
-                                   aria-label="Search">
-                        </div>
-                        <div class="col">
-                            <button type="submit" class="btn btn-outline-primary mt-3">Search</button>
-                        </div>
-                    </div>
-                </form>
             </div>
         </div>
     </nav>
@@ -122,55 +119,17 @@
             <div class="card">
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                    Quản lý Banner
+                    Quản lý cài đặt chung
                 </button>
 
-                <!-- Modal -->
-                <c:forEach items="${banners}" var="banner">
-                    <div class="modal fade" id="staticBackdrop${banner.id}" data-bs-backdrop="static" data-bs-keyboard="false"
-                         tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="staticBackdropLabel">Banner Detail</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <table class="table table-striped">
-                                        <tr>
-                                            <th>Mã Banner</th>
-                                            <th>Tên Banner</th>
-                                            <th>Ảnh</th>
-                                            <th>Vị trí</th>
-                                            <th>Trạng thái</th>
-                                        </tr>
-                                        <tr>
-                                            <td>${banner.id}</td>
-                                            <td>${banner.name}</td>
-                                            <td>
-                                                    ${banner.image}
-                                            </td>
-                                            <td>${banner.location}</td>
-                                            <td>${banner.status?"hiện":"ẩn"}</td>
-                                        </tr>
-                                    </table>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </c:forEach>
                 <div class="card-header">
                     <div class="row">
                         <div class="col">
-                            <h5 class="mt-2">Banner</h5>
+                            <h5 class="mt-2">Settings</h5>
                         </div>
                         <div class="col">
                             <button type="button" class="btn btn-outline-primary float-end">
-                                <a href="/Banner?action=create" style="text-decoration: none">
+                                <a href="/Settings?action=create" style="text-decoration: none">
                                     Add New
                                 </a>
                             </button>
@@ -179,35 +138,45 @@
                 </div>
                 <div class="card-body">
                     <table class="table table-striped">
-                        <h1>${messege}</h1>
                         <tr>
-                            <th>Mã Banner</th>
-                            <th>Name Banner</th>
-                            <th>Image</th>
-                            <th>Location</th>
-                            <th>Status</th>
+                            <th>Title</th>
+                            <th>Link_logo</th>
+                            <th>Hotline</th>
+                            <th>Address</th>
+                            <th>LinkMap</th>
+                            <th>Email</th>
+                            <th>PageFacebook</th>
+                            <th>Logo_payment</th>
+                            <th>Note</th>
                             <th>Edit</th>
-                            <th>Detail</th>
                             <th>Delete</th>
                         </tr>
-                        <c:forEach items="${banners}" var="banner">
+                        <c:forEach items="${settingss}" var="settings">
                             <tr>
-                                <td>${banner.id}</td>
-                                <td>${banner.name}</td>
+                                <td>${settings.title}</td>
+                                <td>${settings.logo}</td>
+                                <td>${settings.hotline}</td>
+                                <td>${settings.address}</td>
+                                <td>${settings.linkMap}</td>
+                                <td>${settings.email}</td>
+                                <td>${settings.pageFacebook}</td>
+                                <td>${settings.logo_payment}</td>
+                                <td>${settings.note}</td>
                                 <td>
-                                        ${banner.image}
+                                    <button type="button" class="btn btn-success btn-sm">
+                                        <a style=" text-decoration: none;color: white"
+                                           href="/Settings?action=detail&id=${settings.id}">Edit</a>
+                                    </button>
                                 </td>
-                                <td>${banner.location}</td>
-                                <td style="text-align: center">${banner.status?"hiện":"ẩn"}</td>
-                                <td><button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop${banner.id}">Detail</button></td>
-                                <td><button type="button" class="btn btn-success btn-sm">
-                                    <a style=" text-decoration: none;color: white" href="/Banner?action=detail&id=${banner.id}">Edit</a>
-                                </button></td>
-                                <td><button type="button" class="btn btn-danger btn-sm">
-                                    <a style=" text-decoration: none;color: white" href="/Banner?action=delete&id=${banner.id}">Delete</a>
-                                </button></td>
+                                <td>
+                                    <button type="button" class="btn btn-danger btn-sm">
+                                        <a style=" text-decoration: none;color: white"
+                                           href="/Settings?action=delete&id=${settings.id}">Delete</a>
+                                    </button>
+                                </td>
                             </tr>
                         </c:forEach>
+
                     </table>
                 </div>
                 <div class="card-footer">
@@ -232,3 +201,5 @@
 
 </div>
 </body>
+</html>
+

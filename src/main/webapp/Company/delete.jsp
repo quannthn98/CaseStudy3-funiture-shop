@@ -90,42 +90,46 @@
             </div>
         </div>
         <div class="col-10">
-            <button><a style="text-decoration: none;" href="/Banner">Return</a></button>
+            <button><a style="text-decoration: none;" href="/Company">Return</a></button>
 
             <div class="card">
                 <div class="card-header">
                     <div class="row">
                         <div class="col" style="text-align: center">
-                            <h3 >Banner Delete</h3>
+                            <h3 >Company Delete</h3>
                         </div>
                     </div>
                 </div>
                 <div class="card-body">
                     <form method="post">
                         <div class="mb-3">
-                            <label for="id_banner" class="form-label">Banner Id</label>
-                            <input type="text" name="id" class="form-control" id="id_banner"  value="${banner.id}" readonly>
+                            <label for="id" class="form-label">Company Id</label>
+                            <input type="text" name="id" class="form-control" id="id"  value="${Company.id}" readonly>
                         </div>
                         <div class="mb-3">
                             <label for="name" class="form-label">Name</label>
-                            <input type="text" name="name" class="form-control" id="name"  value="${banner.name}"readonly>
+                            <input type="text" name="name" class="form-control" id="name"  value="${Company.name}" readonly>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Image</label>
-                            <input type="text" name="image" class="form-control"  value="${banner.image}"readonly>
+                            <label class="form-label">Address</label>
+                            <input type="text" name="address" class="form-control"  value="${Company.address}" readonly>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Location</label>
-                            <input type="text" name="location" class="form-control" value="${banner.location}"readonly>
+                            <label class="form-label">Hotline</label>
+                            <input type="text" name="hotline" class="form-control" value="${Company.hotline}" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Note</label>
+                            <input type="text" name="note" class="form-control" value="${Company.note}" readonly>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Status</label><br>
                             <c:choose>
-                                <c:when test="${banner.status}">
-                                    <input type="radio" name="status"value="true" checked readonly> Hiện
+                                <c:when test="${Company.status}">
+                                    <input type="radio" name="status" value="true" checked readonly> Hiện
                                 </c:when>
                                 <c:otherwise>
-                                    <input type="radio" name="status" value="false"checked readonly> Ẩn
+                                    <input type="radio" name="status" value="false" checked readonly> Ẩn
                                 </c:otherwise>
                             </c:choose>
                         </div>

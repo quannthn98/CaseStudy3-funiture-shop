@@ -61,7 +61,7 @@ public class BannerDao implements IBannerDao {
     public boolean update(int id, Banner banner) {
         Boolean isUpdate =  false;
         try {
-            CallableStatement callableStatement = connection.prepareCall("call updateBannerById(?,?,?,?,?);");
+            CallableStatement callableStatement = connection.prepareCall("call updateBannerById(?,?,?,?,?)");
             callableStatement.setInt(1,id);
             callableStatement.setString(2,banner.getName());
             callableStatement.setString(3,banner.getImage());
