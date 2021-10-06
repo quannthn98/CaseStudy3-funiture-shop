@@ -449,11 +449,11 @@
             <div class="text-sm-left">
 
                 <div class="tt hidden-xs">
-                    <h1 class="title-head margin-top-0">Phòng khách</h1>
+                    <h1 class="title-head margin-top-0">{category.name}</h1>
 
 
                     <span class="hidden-sm hidden-xs">
-						(Tìm thấy 15 sản phẩm)</span>
+						(Tìm thấy {category.totalProduct} sản phẩm)</span>
 
                 </div>
             </div>
@@ -492,20 +492,16 @@
 
 
                 <section class="products-view products-view-grid collection_reponsive">
+                    c:forEach items="{productList}" var="product"
+
                     <div class="row">
-
-
                         <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
                             <div class="product-col">
-
-
                                 <div class="product-box">
                                     <div class="product-thumbnail">
 
                                         <div class="sale-flash new">Mới</div>
-
-
-                                        <a class="image_link display_flex" href="/sofa-da-ma-ntx1824"
+                                        <a class="image_link display_flex" href="{/servlet?id={product.id}"
                                            title="Sofa bộ Italia - Canova">
                                             <img src="image/product-1.png" data-lazyload="Product_image/10.jpg"
                                                  alt="Sofa bộ Italia - Canova">
@@ -515,8 +511,7 @@
                                              onclick="window.location.href='/sofa-da-ma-ntx1824';">
                                             <div class="rte description">
 
-                                                <p>Mặt bàn: 1600 x&nbsp;815 x 30mmH<br/>
-                                                    Sofa bộ Italia :&nbsp;2850x1800x900 mm</p>
+                                                <p>{product.subDescription}</p>
 
                                             </div>
                                         </div>
@@ -527,19 +522,12 @@
 
                                                     <input class="hidden" type="hidden" name="variantId"
                                                            value="14992946"/>
-                                                    <button class="btn-cart button_wh_40 left-to" title="Tùy chọn"
-                                                            type="button"
-                                                            onclick="window.location.href='/sofa-da-ma-ntx1824'">
-                                                        Tùy chọn
-                                                    </button>
 
-
-                                                    <a title="Xem nhanh" href="/sofa-da-ma-ntx1824"
+                                                    <a title="Xem nhanh" href="/servlet?id={product.id}"
                                                        data-handle="sofa-da-ma-ntx1824"
                                                        class="button_wh_40 btn_view right-to quick-view">
                                                         Xem nhanh
                                                     </a>
-
 
                                                 </div>
                                             </form>
@@ -548,25 +536,19 @@
                                     <div class="product-info effect a-left">
 
                                         <div class="info_hhh">
-                                            <h3 class="product-name product-name-hover"><a href="/sofa-da-ma-ntx1824"
-                                                                                           title="Sofa bộ Italia - Canova">Sofa
-                                                bộ Italia - Canova</a></h3>
-
-
+                                            <h3 class="product-name product-name-hover">
+                                                <a href="/sofa-da-ma-ntx1824" title="Sofa bộ Italia - Canova">
+                                                    {product.name}
+                                                </a>
+                                            </h3>
                                             <div class="price-box clearfix">
-                                                <span class="price product-price">40.000.000₫</span>
+                                                <span class="price product-price">{product. price after sale off}</span>
 
-                                                <span class="price product-price-old">
-					75.000.000₫
-				</span>
+                                                <span class="price product-price-old">{product.price}</span>
 
-                                                <span class="sale-off">-
-47%
-</span>
-
+                                                <span class="sale-off">{product.price_sell}</span>
 
                                             </div>
-
 
                                             <div class="reviews-product-grid">
                                                 <div class="bizweb-product-reviews-badge" data-id="9387021"></div>
@@ -578,7 +560,6 @@
                                 </div>
                             </div>
                         </div>
-
 
                         <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
                             <div class="product-col">
@@ -665,815 +646,13 @@
                             </div>
                         </div>
 
-
-                        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-                            <div class="product-col">
-
-
-                                <div class="product-box">
-                                    <div class="product-thumbnail">
-
-                                        <div class="sale-flash new">Mới</div>
-
-
-                                        <a class="image_link display_flex" href="/sofa-da-ma-ntx1824-2"
-                                           title="Sofa da mã NTX1824">
-                                            <img src="image/product-1.png" data-lazyload="Product_image/1.jpg"
-                                                 alt="Sofa da mã NTX1824">
-                                        </a>
-
-                                        <div class="summary_grid hidden-xs hidden-sm hidden-md"
-                                             onclick="window.location.href='/sofa-da-ma-ntx1824-2';">
-                                            <div class="rte description">
-
-                                                <p>Mặt bàn: 1600 x&nbsp;815 x 30mmH<br/>
-                                                    Sofa da mã NTX1824:&nbsp;2850x1800x900 mm</p>
-
-                                                <p>&nbsp;</p>
-
-                                            </div>
-                                        </div>
-                                        <div class="product-action-grid clearfix">
-                                            <form action="/cart/add" method="post" class="variants form-nut-grid"
-                                                  data-id="product-actions-9387019" enctype="multipart/form-data">
-                                                <div>
-
-                                                    <input class="hidden" type="hidden" name="variantId"
-                                                           value="14992940"/>
-                                                    <button class="btn-cart button_wh_40 left-to" title="Tùy chọn"
-                                                            type="button"
-                                                            onclick="window.location.href='/sofa-da-ma-ntx1824-2'">
-                                                        Tùy chọn
-                                                    </button>
-
-
-                                                    <a title="Xem nhanh" href="/sofa-da-ma-ntx1824-2"
-                                                       data-handle="sofa-da-ma-ntx1824-2"
-                                                       class="button_wh_40 btn_view right-to quick-view">
-                                                        Xem nhanh
-                                                    </a>
-
-
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <div class="product-info effect a-left">
-
-                                        <div class="info_hhh">
-                                            <h3 class="product-name product-name-hover"><a href="/sofa-da-ma-ntx1824-2"
-                                                                                           title="Sofa da mã NTX1824">Sofa
-                                                da mã NTX1824</a></h3>
-
-
-                                            <div class="price-box clearfix">
-                                                <span class="price product-price">20.700.000₫</span>
-
-                                                <span class="price product-price-old">
-					25.000.000₫
-				</span>
-
-                                                <span class="sale-off">-
-17%
-</span>
-
-
-                                            </div>
-
-
-                                            <div class="reviews-product-grid">
-                                                <div class="bizweb-product-reviews-badge" data-id="9387019"></div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-                            <div class="product-col">
-
-                                <div class="product-box">
-                                    <div class="product-thumbnail">
-
-                                        <div class="sale-flash new">Mới</div>
-
-
-                                        <a class="image_link display_flex" href="/bo-sofa-da-ni-9230"
-                                           title="Bộ Sofa Da Nỉ 9230">
-                                            <img src="image/product-1.png"
-                                                 data-lazyload="Product_image/e.jpg?v=1513589876907"
-                                                 alt="Bộ Sofa Da Nỉ 9230">
-                                        </a>
-
-                                        <div class="summary_grid hidden-xs hidden-sm hidden-md"
-                                             onclick="window.location.href='/bo-sofa-da-ni-9230';">
-                                            <div class="rte description">
-
-                                                <p>Mặt bàn: 1600 x&nbsp;815 x 30mmH<br/>
-                                                    Sofa da mã NTX1824:&nbsp;2850x1800x900 mm</p>
-
-                                            </div>
-                                        </div>
-                                        <div class="product-action-grid clearfix">
-                                            <form action="/cart/add" method="post" class="variants form-nut-grid"
-                                                  data-id="product-actions-9387016" enctype="multipart/form-data">
-                                                <div>
-
-                                                    <input class="hidden" type="hidden" name="variantId"
-                                                           value="14992934"/>
-                                                    <button class="btn-cart button_wh_40 left-to" title="Tùy chọn"
-                                                            type="button"
-                                                            onclick="window.location.href='/bo-sofa-da-ni-9230'">
-                                                        Tùy chọn
-                                                    </button>
-
-
-                                                    <a title="Xem nhanh" href="/bo-sofa-da-ni-9230"
-                                                       data-handle="bo-sofa-da-ni-9230"
-                                                       class="button_wh_40 btn_view right-to quick-view">
-                                                        Xem nhanh
-                                                    </a>
-
-
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <div class="product-info effect a-left">
-
-                                        <div class="info_hhh">
-                                            <h3 class="product-name product-name-hover"><a href="/bo-sofa-da-ni-9230"
-                                                                                           title="Bộ Sofa Da Nỉ 9230">Bộ
-                                                Sofa Da Nỉ 9230</a></h3>
-
-
-                                            <div class="price-box clearfix">
-                                                <span class="price product-price">59.000.000₫</span>
-
-                                                <span class="price product-price-old">
-					73.000.000₫
-				</span>
-
-                                                <span class="sale-off">-
-19%
-</span>
-
-
-                                            </div>
-
-
-                                            <div class="reviews-product-grid">
-                                                <div class="bizweb-product-reviews-badge" data-id="9387016"></div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-                            <div class="product-col">
-
-
-                                <div class="product-box">
-                                    <div class="product-thumbnail">
-
-                                        <div class="sale-flash new">Mới</div>
-
-
-                                        <a class="image_link display_flex" href="/don-sofa-phong-khach-da-that-9029"
-                                           title="Đôn Sofa Phòng khách da thật 9029">
-                                            <img src="image/product-1.png"
-                                                 data-lazyload="Product_image/18.jpg?v=1513589875233"
-                                                 alt="Đôn Sofa Phòng khách da thật 9029">
-                                        </a>
-
-                                        <div class="summary_grid hidden-xs hidden-sm hidden-md"
-                                             onclick="window.location.href='/don-sofa-phong-khach-da-that-9029';">
-                                            <div class="rte description">
-
-                                                <p>Mặt bàn: 1600 x&nbsp;815 x 30mm&nbsp;(2,300,000đ)<br/>
-                                                    Đôn Sofa Phòng khách da thật 9029: 3000x1800x1000 mm<br/>
-                                                    Kệ Sách: 3000x900...
-
-                                            </div>
-                                        </div>
-                                        <div class="product-action-grid clearfix">
-                                            <form action="/cart/add" method="post" class="variants form-nut-grid"
-                                                  data-id="product-actions-9387015" enctype="multipart/form-data">
-                                                <div>
-
-                                                    <input class="hidden" type="hidden" name="variantId"
-                                                           value="14992931"/>
-                                                    <button class="btn-cart button_wh_40 left-to" title="Tùy chọn"
-                                                            type="button"
-                                                            onclick="window.location.href='/don-sofa-phong-khach-da-that-9029'">
-                                                        Tùy chọn
-                                                    </button>
-
-
-                                                    <a title="Xem nhanh" href="/don-sofa-phong-khach-da-that-9029"
-                                                       data-handle="don-sofa-phong-khach-da-that-9029"
-                                                       class="button_wh_40 btn_view right-to quick-view">
-                                                        Xem nhanh
-                                                    </a>
-
-
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <div class="product-info effect a-left">
-
-                                        <div class="info_hhh">
-                                            <h3 class="product-name product-name-hover"><a
-                                                    href="/don-sofa-phong-khach-da-that-9029"
-                                                    title="Đôn Sofa Phòng khách da thật 9029">Đôn Sofa Phòng khách da
-                                                thật 9029</a></h3>
-
-                                            <div class="price-box clearfix">
-                                                <span class="price product-price">Liên hệ</span>
-                                            </div>
-
-
-                                            <div class="reviews-product-grid">
-                                                <div class="bizweb-product-reviews-badge" data-id="9387015"></div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-                            <div class="product-col">
-
-
-                                <div class="product-box">
-                                    <div class="product-thumbnail">
-
-                                        <div class="sale-flash new">Mới</div>
-
-
-                                        <a class="image_link display_flex" href="/sofa-giuong-215-10"
-                                           title="Sofa Giường 215 - 10">
-                                            <img src="image/product-1.png"
-                                                 data-lazyload="Product_image/9aef54a449d274a48a3934a36391e3.jpg?v=1513589873207"
-                                                 alt="Sofa Giường 215 - 10">
-                                        </a>
-
-                                        <div class="summary_grid hidden-xs hidden-sm hidden-md"
-                                             onclick="window.location.href='/sofa-giuong-215-10';">
-                                            <div class="rte description">
-
-                                                <p>Mặt bàn: 1600 x&nbsp;815 x 30mm&nbsp;(2,300,000đ)<br/>
-                                                    Sofa Giường 215 - 10: 3000x1800x1000 mm (68,000,00đ)<br/>
-                                                    Đèn: 2500mm (700,...
-
-                                            </div>
-                                        </div>
-                                        <div class="product-action-grid clearfix">
-                                            <form action="/cart/add" method="post" class="variants form-nut-grid"
-                                                  data-id="product-actions-9387014" enctype="multipart/form-data">
-                                                <div>
-
-                                                    <input class="hidden" type="hidden" name="variantId"
-                                                           value="14992929"/>
-                                                    <button class="btn-cart button_wh_40 left-to" title="Tùy chọn"
-                                                            type="button"
-                                                            onclick="window.location.href='/sofa-giuong-215-10'">
-                                                        Tùy chọn
-                                                    </button>
-
-
-                                                    <a title="Xem nhanh" href="/sofa-giuong-215-10"
-                                                       data-handle="sofa-giuong-215-10"
-                                                       class="button_wh_40 btn_view right-to quick-view">
-                                                        Xem nhanh
-                                                    </a>
-
-
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <div class="product-info effect a-left">
-
-                                        <div class="info_hhh">
-                                            <h3 class="product-name product-name-hover"><a href="/sofa-giuong-215-10"
-                                                                                           title="Sofa Giường 215 - 10">Sofa
-                                                Giường 215 - 10</a></h3>
-
-
-                                            <div class="price-box clearfix">
-                                                <span class="price product-price">39.000.000₫</span>
-
-                                                <span class="price product-price-old">
-					54.700.000₫
-				</span>
-
-                                                <span class="sale-off">-
-29%
-</span>
-
-
-                                            </div>
-
-
-                                            <div class="reviews-product-grid">
-                                                <div class="bizweb-product-reviews-badge" data-id="9387014"></div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-                            <div class="product-col">
-
-
-                                <div class="product-box">
-                                    <div class="product-thumbnail">
-
-                                        <div class="sale-flash new">Mới</div>
-
-
-                                        <a class="image_link display_flex" href="/sofa-da-mleh-740l"
-                                           title="Sofa Da MLEH-740L">
-                                            <img src="image/product-1.png" data-lazyload="Product_image/g.jpg"
-                                                 alt="Sofa Da MLEH-740L">
-                                        </a>
-
-                                        <div class="summary_grid hidden-xs hidden-sm hidden-md"
-                                             onclick="window.location.href='/sofa-da-mleh-740l';">
-                                            <div class="rte description">
-
-                                                <p>Mặt bàn: 1600 x&nbsp;815 x 30mm&nbsp;(2,300,000đ)<br/>
-                                                    Sofa Da MLEH-740L: 2700 x 780 x 1530 mm (68,000,00đ)<br/>
-                                                    Bình hoa: (300,00...
-
-                                            </div>
-                                        </div>
-                                        <div class="product-action-grid clearfix">
-                                            <form action="/cart/add" method="post" class="variants form-nut-grid"
-                                                  data-id="product-actions-9387012" enctype="multipart/form-data">
-                                                <div>
-
-                                                    <input class="hidden" type="hidden" name="variantId"
-                                                           value="14992926"/>
-                                                    <button class="btn-cart button_wh_40 left-to" title="Tùy chọn"
-                                                            type="button"
-                                                            onclick="window.location.href='/sofa-da-mleh-740l'">
-                                                        Tùy chọn
-                                                    </button>
-
-
-                                                    <a title="Xem nhanh" href="/sofa-da-mleh-740l"
-                                                       data-handle="sofa-da-mleh-740l"
-                                                       class="button_wh_40 btn_view right-to quick-view">
-                                                        Xem nhanh
-                                                    </a>
-
-
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <div class="product-info effect a-left">
-
-                                        <div class="info_hhh">
-                                            <h3 class="product-name product-name-hover"><a href="/sofa-da-mleh-740l"
-                                                                                           title="Sofa Da MLEH-740L">Sofa
-                                                Da MLEH-740L</a></h3>
-
-
-                                            <div class="price-box clearfix">
-                                                <span class="price product-price">40.000.000₫</span>
-                                            </div>
-
-
-                                            <div class="reviews-product-grid">
-                                                <div class="bizweb-product-reviews-badge" data-id="9387012"></div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-                            <div class="product-col">
-
-
-                                <div class="product-box">
-                                    <div class="product-thumbnail">
-
-
-                                        <a class="image_link display_flex" href="/sofa-ban-san-ma-ntx1817"
-                                           title="Sofa bán sẵn mã NTX1817">
-                                            <img src="image/product-1.png"
-                                                 data-lazyload="Product_image/153a7037b636b84fce95af84f976d8.jpg?v=1513589866800"
-                                                 alt="Sofa bán sẵn mã NTX1817">
-                                        </a>
-
-                                        <div class="summary_grid hidden-xs hidden-sm hidden-md"
-                                             onclick="window.location.href='/sofa-ban-san-ma-ntx1817';">
-                                            <div class="rte description">
-
-                                                <p>Khung xương sản xuất từ gỗ Sồi tự nhiên<br/>
-                                                    Kích thước: 2800*1800*1000 mm<br/>
-                                                    Thiết kế kiểu dáng sang trọng</p>
-
-                                            </div>
-                                        </div>
-                                        <div class="product-action-grid clearfix">
-                                            <form action="/cart/add" method="post" class="variants form-nut-grid"
-                                                  data-id="product-actions-9387011" enctype="multipart/form-data">
-                                                <div>
-
-                                                    <input class="hidden" type="hidden" name="variantId"
-                                                           value="14992923"/>
-                                                    <button class="btn-cart button_wh_40 left-to" title="Tùy chọn"
-                                                            type="button"
-                                                            onclick="window.location.href='/sofa-ban-san-ma-ntx1817'">
-                                                        Tùy chọn
-                                                    </button>
-
-
-                                                    <a title="Xem nhanh" href="/sofa-ban-san-ma-ntx1817"
-                                                       data-handle="sofa-ban-san-ma-ntx1817"
-                                                       class="button_wh_40 btn_view right-to quick-view">
-                                                        Xem nhanh
-                                                    </a>
-
-
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <div class="product-info effect a-left">
-
-                                        <div class="info_hhh">
-                                            <h3 class="product-name product-name-hover"><a
-                                                    href="/sofa-ban-san-ma-ntx1817" title="Sofa bán sẵn mã NTX1817">Sofa
-                                                bán sẵn mã NTX1817</a></h3>
-
-
-                                            <div class="price-box clearfix">
-                                                <span class="price product-price">48.000.000₫</span>
-
-                                                <span class="price product-price-old">
-					56.000.000₫
-				</span>
-
-                                                <span class="sale-off">-
-14%
-</span>
-
-
-                                            </div>
-
-
-                                            <div class="reviews-product-grid">
-                                                <div class="bizweb-product-reviews-badge" data-id="9387011"></div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-                            <div class="product-col">
-
-
-                                <div class="product-box">
-                                    <div class="product-thumbnail">
-
-
-                                        <a class="image_link display_flex" href="/ban-lam-viec-hoa-phat-ntm120a"
-                                           title="Bàn làm việc hòa phát NTM120A">
-                                            <img src="image/product-1.png"
-                                                 data-lazyload="Product_image/115412e32731674c0e831c9d9bc2ef.jpg?v=1513589817373"
-                                                 alt="Bàn làm việc hòa phát NTM120A">
-                                        </a>
-
-                                        <div class="summary_grid hidden-xs hidden-sm hidden-md"
-                                             onclick="window.location.href='/ban-lam-viec-hoa-phat-ntm120a';">
-                                            <div class="rte description">
-
-                                                <p>Bảo hành: 12 tháng<br/>
-                                                    Tình trạng: Còn hàng<br/>
-                                                    Danh mục: Bàn làm việc, Bàn làm việc Athena</p>
-
-                                            </div>
-                                        </div>
-                                        <div class="product-action-grid clearfix">
-                                            <form action="/cart/add" method="post" class="variants form-nut-grid"
-                                                  data-id="product-actions-9386983" enctype="multipart/form-data">
-                                                <div>
-
-                                                    <input class="hidden" type="hidden" name="variantId"
-                                                           value="14992878"/>
-                                                    <button class="btn-cart button_wh_40 left-to" title="Tùy chọn"
-                                                            type="button"
-                                                            onclick="window.location.href='/ban-lam-viec-hoa-phat-ntm120a'">
-                                                        Tùy chọn
-                                                    </button>
-
-
-                                                    <a title="Xem nhanh" href="/ban-lam-viec-hoa-phat-ntm120a"
-                                                       data-handle="ban-lam-viec-hoa-phat-ntm120a"
-                                                       class="button_wh_40 btn_view right-to quick-view">
-                                                        Xem nhanh
-                                                    </a>
-
-
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <div class="product-info effect a-left">
-
-                                        <div class="info_hhh">
-                                            <h3 class="product-name product-name-hover"><a
-                                                    href="/ban-lam-viec-hoa-phat-ntm120a"
-                                                    title="Bàn làm việc hòa phát NTM120A">Bàn làm việc hòa phát
-                                                NTM120A</a></h3>
-
-
-                                            <div class="price-box clearfix">
-                                                <span class="price product-price">3.300.000₫</span>
-
-                                                <span class="price product-price-old">
-					4.900.000₫
-				</span>
-
-                                                <span class="sale-off">-
-33%
-</span>
-
-
-                                            </div>
-
-
-                                            <div class="reviews-product-grid">
-                                                <div class="bizweb-product-reviews-badge" data-id="9386983"></div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-                            <div class="product-col">
-
-
-                                <div class="product-box">
-                                    <div class="product-thumbnail">
-
-
-                                        <a class="image_link display_flex" href="/ban-lam-viec-hoa-phat-at204hl"
-                                           title="Bàn làm việc hòa phát AT204HL">
-                                            <img src="image/product-1.png"
-                                                 data-lazyload="Product_image/b.jpg?v=1513589815887"
-                                                 alt="Bàn làm việc hòa phát AT204HL">
-                                        </a>
-
-                                        <div class="summary_grid hidden-xs hidden-sm hidden-md"
-                                             onclick="window.location.href='/ban-lam-viec-hoa-phat-at204hl';">
-                                            <div class="rte description">
-
-                                                <p>Bảo hành: 12 tháng<br/>
-                                                    Tình trạng: Còn hàng<br/>
-                                                    Danh mục: Bàn làm việc, Bàn làm việc Athena</p>
-
-                                            </div>
-                                        </div>
-                                        <div class="product-action-grid clearfix">
-                                            <form action="/cart/add" method="post" class="variants form-nut-grid"
-                                                  data-id="product-actions-9386981" enctype="multipart/form-data">
-                                                <div>
-
-                                                    <input class="hidden" type="hidden" name="variantId"
-                                                           value="14992875"/>
-                                                    <button class="btn-cart button_wh_40 left-to" title="Tùy chọn"
-                                                            type="button"
-                                                            onclick="window.location.href='/ban-lam-viec-hoa-phat-at204hl'">
-                                                        Tùy chọn
-                                                    </button>
-
-
-                                                    <a title="Xem nhanh" href="/ban-lam-viec-hoa-phat-at204hl"
-                                                       data-handle="ban-lam-viec-hoa-phat-at204hl"
-                                                       class="button_wh_40 btn_view right-to quick-view">
-                                                        Xem nhanh
-                                                    </a>
-
-
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <div class="product-info effect a-left">
-
-                                        <div class="info_hhh">
-                                            <h3 class="product-name product-name-hover"><a
-                                                    href="/ban-lam-viec-hoa-phat-at204hl"
-                                                    title="Bàn làm việc hòa phát AT204HL">Bàn làm việc hòa phát
-                                                AT204HL</a></h3>
-
-
-                                            <div class="price-box clearfix">
-                                                <span class="price product-price">2.650.000₫</span>
-                                            </div>
-
-
-                                            <div class="reviews-product-grid">
-                                                <div class="bizweb-product-reviews-badge" data-id="9386981"></div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-                            <div class="product-col">
-
-
-                                <div class="product-box">
-                                    <div class="product-thumbnail">
-
-
-                                        <a class="image_link display_flex" href="/ba-n-la-m-vie-c-ho-a-pha-t-hp120hl3c"
-                                           title="Bàn làm việc hòa phát HP120HL3C">
-                                            <img src="image/product-1.png"
-                                                 data-lazyload="Product_image/m.jpg?v=1513589812243"
-                                                 alt="Bàn làm việc hòa phát HP120HL3C">
-                                        </a>
-
-                                        <div class="summary_grid hidden-xs hidden-sm hidden-md"
-                                             onclick="window.location.href='/ba-n-la-m-vie-c-ho-a-pha-t-hp120hl3c';">
-                                            <div class="rte description">
-
-                                                <p>Mã: HP120HL3C<br/>
-                                                    Bảo hành: 12 tháng<br/>
-                                                    Tình trạng: Còn hàng<br/>
-                                                    Danh mục: Bàn làm việc, Bàn làm việc HP</p>
-
-                                            </div>
-                                        </div>
-                                        <div class="product-action-grid clearfix">
-                                            <form action="/cart/add" method="post" class="variants form-nut-grid"
-                                                  data-id="product-actions-9386978" enctype="multipart/form-data">
-                                                <div>
-
-                                                    <input class="hidden" type="hidden" name="variantId"
-                                                           value="14992869"/>
-                                                    <button class="btn-cart button_wh_40 left-to" title="Tùy chọn"
-                                                            type="button"
-                                                            onclick="window.location.href='/ba-n-la-m-vie-c-ho-a-pha-t-hp120hl3c'">
-                                                        Tùy chọn
-                                                    </button>
-
-
-                                                    <a title="Xem nhanh" href="/ba-n-la-m-vie-c-ho-a-pha-t-hp120hl3c"
-                                                       data-handle="ba-n-la-m-vie-c-ho-a-pha-t-hp120hl3c"
-                                                       class="button_wh_40 btn_view right-to quick-view">
-                                                        Xem nhanh
-                                                    </a>
-
-
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <div class="product-info effect a-left">
-
-                                        <div class="info_hhh">
-                                            <h3 class="product-name product-name-hover"><a
-                                                    href="/ba-n-la-m-vie-c-ho-a-pha-t-hp120hl3c"
-                                                    title="Bàn làm việc hòa phát HP120HL3C">Bàn làm việc hòa
-                                                phát HP120HL3C</a></h3>
-
-
-                                            <div class="price-box clearfix">
-                                                <span class="price product-price">2.700.000₫</span>
-                                            </div>
-
-
-                                            <div class="reviews-product-grid">
-                                                <div class="bizweb-product-reviews-badge" data-id="9386978"></div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-                            <div class="product-col">
-
-
-                                <div class="product-box">
-                                    <div class="product-thumbnail">
-
-
-                                        <a class="image_link display_flex" href="/ba-n-la-m-vie-c-ho-a-pha-t-ntm120"
-                                           title="Bàn làm việc hòa phát NTM120">
-                                            <img src="image/product-1.png"
-                                                 data-lazyload="Product_image/x.jpg?v=1513589810150"
-                                                 alt="Bàn làm việc hòa phát NTM120">
-                                        </a>
-
-                                        <div class="summary_grid hidden-xs hidden-sm hidden-md"
-                                             onclick="window.location.href='/ba-n-la-m-vie-c-ho-a-pha-t-ntm120';">
-                                            <div class="rte description">
-
-                                                Bàn làm việc văn phòng hòa phát NTM120 thuộc dòng sản phẩm bàn văn
-                                                phòng NEWTREND với kiểu dáng thiết kế tiện ích khi sử dụng. Mặt...
-
-                                            </div>
-                                        </div>
-                                        <div class="product-action-grid clearfix">
-                                            <form action="/cart/add" method="post" class="variants form-nut-grid"
-                                                  data-id="product-actions-9386977" enctype="multipart/form-data">
-                                                <div>
-
-
-                                                    <a title="Xem nhanh" href="/ba-n-la-m-vie-c-ho-a-pha-t-ntm120"
-                                                       data-handle="ba-n-la-m-vie-c-ho-a-pha-t-ntm120"
-                                                       class="button_wh_40 btn_view right-to quick-view">
-                                                        Xem nhanh
-                                                    </a>
-
-
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <div class="product-info effect a-left">
-
-                                        <div class="info_hhh">
-                                            <h3 class="product-name product-name-hover"><a
-                                                    href="/ba-n-la-m-vie-c-ho-a-pha-t-ntm120"
-                                                    title="Bàn làm việc hòa phát NTM120">Bàn làm việc hòa phát
-                                                NTM120</a></h3>
-
-                                            <div class="price-box clearfix">
-                                                <span class="price product-price">Liên hệ</span>
-                                            </div>
-
-
-                                            <div class="reviews-product-grid">
-                                                <div class="bizweb-product-reviews-badge" data-id="9386977"></div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
                     <div class="text-right">
 
                         <nav class="clearfix">
                             <ul class="pagination clearfix">
 
-                                <li class="page-item disabled"><a class="page-link" href="#">«</a></li>
+                                <li class="page-i   tem disabled"><a class="page-link" href="#">«</a></li>
 
 
                                 <li class="active page-item disabled"><a class="page-link" href="javascript:;">1</a>
@@ -1519,46 +698,60 @@
                                             class="count_x">(15)</span></a>
                                     <i class="fa fa-angle-right"></i>
                                     <ul class="dropdown-menu">
-
+                                        c:forEach items="{categoryList}" var="category"
                                         <li class="nav-item lv2">
-                                            <a class="nav-link" href="/tham-trang-tri">Thảm trang trí <span
-                                                    class="count_x">(4)</span></a>
-                                        </li>
-
-                                        <li class="nav-item lv2">
-                                            <a class="nav-link" href="/ban-lam-viec">Bàn làm việc <span class="count_x">(9)</span></a>
-                                        </li>
-                                        <li class="nav-item lv2">
-                                            <a class="nav-link" href="/ban-tra">Bàn trà <span
-                                                    class="count_x">(12)</span></a>
-                                        </li>
-
-                                        <li class="nav-item lv2">
-                                            <a class="nav-link" href="/ghe-sofa">Ghế sofa <span
-                                                    class="count_x">(10)</span></a>
+                                            <a class="nav-link" href="/tham-trang-tri">href=/servlet?id={category.id} //
+                                                {category.name}<span
+                                                        class="count_x">(4)</span></a>
                                         </li>
 
                                     </ul>
                                 </li>
 
                                 <li class="nav-item lv1">
-                                    <a class="nav-link" href="/phong-bep">Phòng bếp <span
-                                            class="count_x">(14)</span></a>
+                                    <a href="/phong-khach" class="nav-link">Phòng ngủ <span
+                                            class="count_x">(15)</span></a>
+                                    <i class="fa fa-angle-right"></i>
+                                    <ul class="dropdown-menu">
+                                        c:forEach items="{categoryList}" var="category"
+                                        <li class="nav-item lv2">
+                                            <a class="nav-link" href="/tham-trang-tri">href=/servlet?id={category.id} //
+                                                {category.name}<span
+                                                        class="count_x">(4)</span></a>
+                                        </li>
+
+                                    </ul>
+                                </li>
 
                                 <li class="nav-item lv1">
-                                    <a class="nav-link" href="/phong-lam-viec">Phòng làm việc <span
-                                            class="count_x">(18)</span></a>
+                                    <a href="/phong-khach" class="nav-link">Phòng bếp <span
+                                            class="count_x">(15)</span></a>
+                                    <i class="fa fa-angle-right"></i>
+                                    <ul class="dropdown-menu">
+                                        c:forEach items="{categoryList}" var="category"
+                                        <li class="nav-item lv2">
+                                            <a class="nav-link" href="/tham-trang-tri">href=/servlet?id={category.id} //
+                                                {category.name}<span
+                                                        class="count_x">(4)</span></a>
+                                        </li>
+
+                                    </ul>
+                                </li>
 
                                 <li class="nav-item lv1">
-                                    <a class="nav-link" href="/chan-ga-dem">Chăn ga đệm <span
-                                            class="count_x">(16)</span></a>
-
-                                <li class="nav-item lv1">
-                                    <a class="nav-link" href="/ngoai-that">Ngoại thất <span class="count_x">(12)</span></a>
-
-                                <li class="nav-item lv1">
-                                    <a class="nav-link" href="/do-trang-tri">Đồ trang trí <span
-                                            class="count_x">(14)</span></a>
+                                    <a href="/phong-khach" class="nav-link">Phòng làm việc <span
+                                            class="count_x">(15)</span></a>
+                                    <i class="fa fa-angle-right"></i>
+                                    <ul class="dropdown-menu">
+                                        c:forEach items="{categoryList}" var="category"
+                                        <li class="nav-item lv2">
+                                            <a class="nav-link" href="/tham-trang-tri">href=/servlet?id={category.id} //
+                                                {category.name}<span
+                                                        class="count_x">(4)</span></a>
+                                        </li>
+                                        /c:forEacth
+                                    </ul>
+                                </li>
 
                             </ul>
                         </nav>

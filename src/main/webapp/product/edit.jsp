@@ -94,7 +94,7 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col" style="text-align: center">
-                            <h3 >Customer Edit</h3>
+                            <h3 >Product Edit</h3>
                         </div>
                     </div>
                 </div>
@@ -102,39 +102,39 @@
                     <form  method="post">
                         <div class="mb-3">
                             <label for="name" class="form-label">Customer Name</label>
-                            <input type="text" name="name" class="form-control" id="name" value="${productList.name}">
+                            <input type="text" name="name" class="form-control" id="name" value="${product.name}">
                         </div>
                         <div class="mb-3">
                             <label for="image" class="form-label">Image</label>
-                            <input type="text" name="image" class="form-control" id="image" >
+                            <input type="text" name="image" class="form-control" id="image" value="${product.image}">
                         </div>
                         <div class="mb-3">
                             <label for="subimage" class="form-label">Sub Image</label>
-                            <input type="text" name="subimage" class="form-control" id="subimage" >
+                            <input type="text" name="subimage" class="form-control" id="subimage" value="${product.subImage}">
                         </div>
                         <div class="mb-3">
                             <label for="price" class="form-label">Price</label>
-                            <input type="text" name="price" class="form-control" id="price" >
+                            <input type="text" name="price" class="form-control" id="price" value="${product.price}" >
                         </div>
                         <div class="mb-3">
                             <label for="price_sell" class="form-label">Price Sell</label>
-                            <input type="text" name="prince_sell" class="form-control" id="price_sell" >
+                            <input type="text" name="prince_sell" class="form-control" id="price_sell" value="${product.priceSell}">
                         </div>
                         <div class="mb-3">
                             <label for="subdescription" class="form-label">Sub Description</label>
-                            <input type="text" name="subdescription" class="form-control" id="subdescription" >
+                            <input type="text" name="subdescription" class="form-control" id="subdescription" value="${product.subDescription}" >
                         </div>
                         <div class="mb-3">
                             <label for="description" class="form-label">Description</label>
-                            <input type="text" name="description" class="form-control" id="description" >
+                            <input type="text" name="description" class="form-control" id="description" value="${product.description}">
                         </div>
                         <div class="mb-3">
                             <label for="createdDate" class="form-label">Create Date</label>
-                            <input type="text" name="createdDate" class="form-control" id="createdDate" >
+                            <input type="text" name="createdDate" class="form-control" id="createdDate" value="${product.createDate}" >
                         </div>
                         <div class="mb-3">
                             <label for="status" class="form-label">Status</label>
-                            <input type="text" name="status" class="form-control" id="status" >
+                            <input type="text" name="status" class="form-control" id="status" value="${product.status}">
                         </div>
                         <div class="mb-3">
                             <label for="status" class="form-label">Category</label>
