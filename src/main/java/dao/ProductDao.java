@@ -162,9 +162,9 @@ public class ProductDao implements IProductDao {
         List<Product> productList = new ArrayList<>();
         try {
             PreparedStatement statement = connection.prepareStatement("select * from productDetail where id_Brand = ?;");
-            statement.setInt(1,brandId);
+            statement.setInt(1, brandId);
             ResultSet rs = statement.executeQuery();
-            while (rs.next()){
+            while (rs.next()) {
                 int id = rs.getInt("id");
                 String name = rs.getString("name");
                 String image = rs.getString("image");

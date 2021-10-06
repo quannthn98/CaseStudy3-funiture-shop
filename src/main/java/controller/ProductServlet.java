@@ -52,7 +52,7 @@ public class ProductServlet extends HttpServlet {
 
     private void FormListProduct(HttpServletRequest request, HttpServletResponse response) {
         String selection = request.getParameter("select");
-        if (selection == null){
+        if (selection == null) {
             selection = "";
         }
         String searchValue = request.getParameter("q");
@@ -60,10 +60,10 @@ public class ProductServlet extends HttpServlet {
         if (selection.equals("brand")) {
             int id = Integer.parseInt(searchValue);
             productList = productDAO.findByBrand(id);
-        } else if (selection.equals("category")){
+        } else if (selection.equals("category")) {
             int id = Integer.parseInt(searchValue);
             productList = productDAO.findByCategory(id);
-        }else {
+        } else {
             productList = productDAO.getAll();
         }
         request.setAttribute("productList", productList);
