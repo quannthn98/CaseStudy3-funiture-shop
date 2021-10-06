@@ -20,7 +20,5 @@ public interface IOrderService extends IGeneralService<Order> {
 
     int getSaleOffByOrder(int id);
 
-
-
     int countRecord();
 }
