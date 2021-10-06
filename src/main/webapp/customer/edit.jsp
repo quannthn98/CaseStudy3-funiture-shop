@@ -149,7 +149,7 @@ To change this template use File | Settings | File Templates.
 </div>
 <script>
     function editCustomer(){
-        alert("edit")
+        alert("Cập nhật thành công.")
     }
 </script>
 </body>

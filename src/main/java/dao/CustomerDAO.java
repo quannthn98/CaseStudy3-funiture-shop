@@ -110,4 +110,24 @@ public class CustomerDAO implements ICustomerDAO {
         }
         return isRowUpdate;
     }
+
+    @Override
+    public List<Customer> findByEmail(String email) throws SQLException, NullPointerException {
+        List<Customer> customers =new ArrayList<>();
+        PreparedStatement statement = connection.prepareStatement("select * from customer where email like ?");
+        statement.setString(1,email);
+        ResultSet resultSet = statement.executeQuery();
+        while (resultSet.next()) {
+            String name = resultSet.getString("name");
+            String birthday = resultSet.getString("birthday");
+            String address = resultSet.getString("address");
+            String phone = resultSet.getString("phone");
+            String email1 = resultSet.getString("email");
+            String password = resultSet.getString("password");
+            String status = resultSet.getString("status");
+            Customer customer = new Customer(name, birthday, address, phone, email1, password, status);
+            customers.add(customer);
+        }
+        return customers;
+    }
 }
