@@ -88,14 +88,14 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col" style="text-align: center">
-                            <h3 >Create Customer</h3>
+                            <h3 >Create Product</h3>
                         </div>
                     </div>
                 </div>
                 <div class="card-body">
                     <form  method="post">
                         <div class="mb-3">
-                            <label for="name" class="form-label">Customer Name</label>
+                            <label for="name" class="form-label">Product Name</label>
                             <input type="text" name="name" class="form-control" id="name" >
                         </div>
                         <div class="mb-3">

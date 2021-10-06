@@ -90,7 +90,7 @@
                             <h5 class="mt-2">Brand Management</h5>
                         </div>
                         <div class="col">
-                                <a href="/brand?action=create-brand" class="btn btn-outline-primary float-end" style="text-decoration: none">
+                                <a href="/category?action=create-category" class="btn btn-outline-primary float-end" style="text-decoration: none">
                                     Create
                                 </a>
                         </div>
@@ -108,8 +108,8 @@
                                 <td><c:out value="${categoryList.id}"/></td>
                                 <td><c:out value="${categoryList.name}"/></td>
                                 <td>
-                                    <a style="color: white" class="btn btn-primary btn-sm" href="/brand?action=edit-brand&id=${categoryList.id}">Edit</a>
-                                    <a style="color: white;" class="btn btn-danger btn-sm" href="/brand?action=delete-brand&id=${categoryList.id}">Delete</a>
+                                    <a style="color: white" class="btn btn-primary btn-sm" href="/category?action=edit-category&id=${categoryList.id}">Edit</a>
+                                    <a style="color: white;" class="btn btn-danger btn-sm" href="/category?action=delete-category&id=${categoryList.id}">Delete</a>
                                     <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                                         Detail
                                     </button>

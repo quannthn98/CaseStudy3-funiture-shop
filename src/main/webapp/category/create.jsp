@@ -87,22 +87,26 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col" style="text-align: center">
-                            <h3 >Customer Update</h3>
+                            <h3 >Create Category</h3>
                         </div>
                     </div>
                 </div>
                 <div class="card-body">
                     <form method="post">
                         <div class="mb-3">
-                            <label for="name" class="form-label">Brand Name</label>
+                            <label for="name" class="form-label">Category Name</label>
                             <input type="text" name="name" class="form-control" id="name" >
+                        </div>
+                        <div class="mb-3">
+                            <label for="location" class="form-label">Location</label>
+                            <input type="text" name="location" class="form-control" id="location">
                         </div>
                         <div class="mb-3">
                             <label for="status" class="form-label">Status</label>
                             <input type="text" name="status" class="form-control" id="status">
                         </div>
                         <button type="submit" class="btn btn-primary">Create</button>
-                        <a href="/brand" class="btn btn-outline-danger">Cancel</a>
+                        <a href="/category" class="btn btn-outline-danger">Cancel</a>
                     </form>
                 </div>
                 <div class="card-footer">

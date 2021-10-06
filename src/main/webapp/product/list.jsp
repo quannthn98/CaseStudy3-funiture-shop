@@ -131,11 +131,9 @@
                             <h5 class="mt-2">List Product</h5>
                         </div>
                         <div class="col">
-                            <button type="button" class="btn btn-outline-primary float-end">
-                                <a href="/product?action=create" style="text-decoration: none">
+                                <a href="/product?action=create" style="text-decoration: none" class="btn btn-outline-primary float-end">
                                     Create
                                 </a>
-                            </button>
                         </div>
                     </div>
                 </div>

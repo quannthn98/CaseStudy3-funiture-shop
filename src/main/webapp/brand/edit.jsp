@@ -95,11 +95,11 @@
                     <form method="post">
                         <div class="mb-3">
                             <label for="name" class="form-label">Brand Name</label>
-                            <input type="text" name="name" class="form-control" id="name" value="${brandList.name}">
+                            <input type="text" name="name" class="form-control" id="name" value="${brand.name}">
                         </div>
                         <div class="mb-3">
                             <label for="status" class="form-label">Status</label>
-                            <input type="text" name="status" class="form-control" id="status" value="${brandList.status}" >
+                            <input type="text" name="status" class="form-control" id="status" value="${brand.status}" >
                         </div>
                         <button type="submit" class="btn btn-primary">Save</button>
                         <a href="/brand" class="btn btn-outline-danger">Cancel</a>
