@@ -30,8 +30,8 @@ public class ProductServlet extends HttpServlet {
                 showFormEditProduct(request, response);
                 break;
             }
-            case "delete":{
-                showFormDeleteProduct(request,response);
+            case "delete": {
+                showFormDeleteProduct(request, response);
                 break;
             }
             default:
@@ -44,14 +44,28 @@ public class ProductServlet extends HttpServlet {
         productDAO.delete(id);
         RequestDispatcher dispatcher = request.getRequestDispatcher("product/delete.jsp");
         try {
-            dispatcher.forward(request,response);
+            dispatcher.forward(request, response);
         } catch (ServletException | IOException e) {
             e.printStackTrace();
         }
     }
 
     private void FormListProduct(HttpServletRequest request, HttpServletResponse response) {
-        List<Product> productList = productDAO.getAll();
+        String selection = request.getParameter("select");
+        if (selection == null){
+            selection = "";
+        }
+        String searchValue = request.getParameter("q");
+        List<Product> productList;
+        if (selection.equals("brand")) {
+            int id = Integer.parseInt(searchValue);
+            productList = productDAO.findByBrand(id);
+        } else if (selection.equals("category")){
+            int id = Integer.parseInt(searchValue);
+            productList = productDAO.findByCategory(id);
+        }else {
+            productList = productDAO.getAll();
+        }
         request.setAttribute("productList", productList);
         RequestDispatcher dispatcher = request.getRequestDispatcher("product/list.jsp");
         try {
@@ -76,7 +90,7 @@ public class ProductServlet extends HttpServlet {
     private void showFormCrateProduct(HttpServletRequest request, HttpServletResponse response) {
         RequestDispatcher dispatcher = request.getRequestDispatcher("product/create.jsp");
         try {
-            dispatcher.forward(request,response);
+            dispatcher.forward(request, response);
         } catch (ServletException | IOException e) {
             e.printStackTrace();
         }
@@ -95,8 +109,8 @@ public class ProductServlet extends HttpServlet {
                 editProduct(request, response);
                 break;
             }
-            case "create":{
-                addProduct(request,response);
+            case "create": {
+                addProduct(request, response);
                 break;
             }
         }
@@ -114,7 +128,7 @@ public class ProductServlet extends HttpServlet {
         int status = Integer.parseInt(request.getParameter("status"));
         String categoryName = request.getParameter("categoryName");
         String brandName = request.getParameter("brandName");
-        productDAO.save(new Product(name,image,subImage,price,priceSell,subDescription,description,createdDate,status,categoryName,brandName));
+        productDAO.save(new Product(name, image, subImage, price, priceSell, subDescription, description, createdDate, status, categoryName, brandName));
         try {
             response.sendRedirect("/product");
         } catch (IOException e) {
@@ -135,8 +149,8 @@ public class ProductServlet extends HttpServlet {
         int status = Integer.parseInt(request.getParameter("status"));
         String categoryName = request.getParameter("categoryName");
         String brandName = request.getParameter("brandName");
-        Product product = new Product(name, image, subImage, price, priceSell, subDescription, description, createdDate, status,categoryName,brandName);
-        productDAO.update(id,product);
+        Product product = new Product(name, image, subImage, price, priceSell, subDescription, description, createdDate, status, categoryName, brandName);
+        productDAO.update(id, product);
         try {
             response.sendRedirect("/product");
         } catch (IOException e) {

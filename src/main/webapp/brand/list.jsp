@@ -27,6 +27,13 @@
                 <form>
                     <div class="row">
                         <div class="col">
+                            <select class="form-select" aria-label="Default select example" name="select">
+                                <option selected>Search</option>
+                                <option value="brand">Brand</option>
+                                <option value="category">Category</option>
+                            </select>
+                        </div>
+                        <div class="col">
                             <input class="form-control mt-3" style="size: 200px" type="text" placeholder="Search" aria-label="Search">
                         </div>
                         <div class="col">

@@ -31,8 +31,15 @@
                 <form>
                     <div class="row">
                         <div class="col">
+                            <select class="form-select mt-3" aria-label="Default select example" name="select">
+                                <option selected>Search By</option>
+                                <option value="brand">Brand Id</option>
+                                <option value="category">Category Id</option>
+                            </select>
+                        </div>
+                        <div class="col">
                             <input class="form-control mt-3" style="size: 200px" type="text" placeholder="Search"
-                                   aria-label="Search">
+                                   aria-label="Search" name="q">
                         </div>
                         <div class="col">
                             <button type="submit" class="btn btn-outline-primary mt-3">Search</button>
@@ -131,9 +138,10 @@
                             <h5 class="mt-2">List Product</h5>
                         </div>
                         <div class="col">
-                                <a href="/product?action=create" style="text-decoration: none" class="btn btn-outline-primary float-end">
-                                    Create
-                                </a>
+                            <a href="/product?action=create" style="text-decoration: none"
+                               class="btn btn-outline-primary float-end">
+                                Create
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -147,23 +155,25 @@
                             <th>Description</th>
                             <th>Brand</th>
                             <th>Category</th>
+                            <th>Action</th>
                         </tr>
                         <c:forEach items="${productList}" var="productList">
                             <tr>
                                 <td><c:out value="${productList.id}"/></td>
                                 <td><c:out value="${productList.name}"/></td>
-                                <td><fmt:formatNumber type="number" maxFractionDigits = "0"  value="${productList.price}"/> </td>
+                                <td><fmt:formatNumber type="number" maxFractionDigits="0"
+                                                      value="${productList.price}"/></td>
                                 <td><c:out value="${productList.priceSell}"/></td>
                                 <td><c:out value="${productList.description}"/></td>
                                 <td><c:out value="${productList.brandName}"/></td>
                                 <td><c:out value="${productList.categoryName}"/></td>
                                 <td>
-                                    <button type="button" class="btn btn-primary btn-sm"><a style="color: white"
-                                                                                            href="/product?action=edit&id=${productList.id}">Edit</a>
-                                    </button>
-                                    <button type="button" class="btn btn-danger btn-sm"><a style="color: white;"
-                                                                                           href="/product?action=delete&id=${productList.id}">Delete</a>
-                                    </button>
+                                    <a style="color: white" class="btn btn-primary btn-sm"
+                                       href="/product?action=edit&id=${productList.id}">Edit</a>
+
+                                    <a style="color: white;" class="btn btn-danger btn-sm"
+                                       href="/product?action=delete&id=${productList.id}">Delete</a>
+
                                 </td>
                             </tr>
                         </c:forEach>

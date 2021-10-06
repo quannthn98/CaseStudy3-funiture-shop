@@ -16,6 +16,7 @@ public class ProductDAO implements IProductDao {
     public static final String DELETE_PRODUCT_BY_ID = "delete from product where id = ? ;";
     public static final String UPDATE_PRODUCT_BY_ID_SQL = "update product set name = ? , image = ? , subimage = ? , price = ? , price_sell = ? , subdescription = ? , description = ? , createdDate = ? , status = ?,id_Category=?,id_Brand=?  where id = ?;";
     public static final String ADD_PRODUCT_SQL = "insert into product(name, image, subimage, price, price_sell, subdescription, description, createdDate, status,id_Category,id_Brand)values (?,? , ?, ?, ?, ?, ?, ?, ?,?,?);";
+    public static final String SELECT_PRODUCT_BY_CATEGORY_ID_SQL = "select * from productDetail where id_Category = ?;";
 
     Connection connection = DBConnection.getConnection();
 
@@ -106,8 +107,8 @@ public class ProductDAO implements IProductDao {
         try {
             PreparedStatement statement = connection.prepareStatement(UPDATE_PRODUCT_BY_ID_SQL);
             getProductDAOStatement(product, statement);
-            statement.setString(10,product.getCategoryName());
-            statement.setString(11,product.getBrandName());
+            statement.setString(10, product.getCategoryName());
+            statement.setString(11, product.getBrandName());
             statement.setInt(12, id);
             rowUpdated = statement.executeUpdate() > 0;
         } catch (SQLException e) {
@@ -126,5 +127,61 @@ public class ProductDAO implements IProductDao {
         statement.setString(7, product.getDescription());
         statement.setString(8, product.getCreatedDate());
         statement.setInt(9, product.getStatus());
+    }
+
+    @Override
+    public List<Product> findByCategory(int categoryId) {
+        List<Product> productList = new ArrayList<>();
+        try {
+            PreparedStatement statement = connection.prepareStatement(SELECT_PRODUCT_BY_CATEGORY_ID_SQL);
+            statement.setInt(1, categoryId);
+            ResultSet rs = statement.executeQuery();
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                String name = rs.getString("name");
+                String image = rs.getString("image");
+                String subImage = rs.getString("subimage");
+                float price = rs.getFloat("price");
+                int priceSell = rs.getInt("price_sell");
+                String subDescription = rs.getString("subdescription");
+                String description = rs.getString("description");
+                String createdDate = rs.getString("createdDate");
+                int status = rs.getInt("status");
+                String brandName = rs.getString("brand");
+                String categoryName = rs.getString("category");
+                productList.add(new Product(id, name, image, subImage, price, priceSell, subDescription, description, createdDate, status, categoryName, brandName));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return productList;
+    }
+
+    @Override
+    public List<Product> findByBrand(int brandId) {
+        List<Product> productList = new ArrayList<>();
+        try {
+            PreparedStatement statement = connection.prepareStatement("select * from productDetail where id_Brand = ?;");
+            statement.setInt(1,brandId);
+            ResultSet rs = statement.executeQuery();
+            while (rs.next()){
+                int id = rs.getInt("id");
+                String name = rs.getString("name");
+                String image = rs.getString("image");
+                String subImage = rs.getString("subimage");
+                float price = rs.getFloat("price");
+                int priceSell = rs.getInt("price_sell");
+                String subDescription = rs.getString("subdescription");
+                String description = rs.getString("description");
+                String createdDate = rs.getString("createdDate");
+                int status = rs.getInt("status");
+                String brandName = rs.getString("brand");
+                String categoryName = rs.getString("category");
+                productList.add(new Product(id, name, image, subImage, price, priceSell, subDescription, description, createdDate, status, categoryName, brandName));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return productList;
     }
 }
