@@ -1,7 +1,7 @@
 package controller;
 
-import dao.CustomerDAO;
-import dao.ICustomerDAO;
+import dao.CustomerDao;
+import dao.ICustomerDao;
 import model.Customer;
 import service.CustomerService;
 import service.ICustomerService;
@@ -10,13 +10,12 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet(name = "CustomerServlet", value = "/customers")
 public class CustomerServlet extends HttpServlet {
     ICustomerService customerService = new CustomerService();
-    ICustomerDAO customerDAO = new CustomerDAO();
+    ICustomerDao customerDAO = new CustomerDao();
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

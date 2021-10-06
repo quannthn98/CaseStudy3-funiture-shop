@@ -1,9 +1,7 @@
 package controller;
 
 import dao.BrandDao;
-import dao.ProductDAO;
 import model.Brand;
-import model.Product;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

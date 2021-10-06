@@ -1,6 +1,6 @@
 package controller;
 
-import dao.ProductDAO;
+import dao.ProductDao;
 import model.Product;
 
 import javax.servlet.*;
@@ -11,7 +11,7 @@ import java.util.List;
 
 @WebServlet(name = "ProductServlet", value = "/product")
 public class ProductServlet extends HttpServlet {
-    ProductDAO productDAO = new ProductDAO();
+    ProductDao productDAO = new ProductDao();
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

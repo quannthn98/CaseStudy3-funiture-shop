@@ -10,7 +10,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CustomerDAO implements ICustomerDAO {
+public class CustomerDao implements ICustomerDao {
     Connection connection = DBConnection.getConnection();
 
     @Override
