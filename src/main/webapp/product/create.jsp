@@ -1,3 +1,4 @@
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -87,31 +88,63 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col" style="text-align: center">
-                            <h3 >Customer Update</h3>
+                            <h3 >Create Product</h3>
                         </div>
                     </div>
                 </div>
                 <div class="card-body">
-                    <form action="/customers?action=insert" method="post">
+                    <form  method="post">
                         <div class="mb-3">
-                            <label for="name" class="form-label">Customer Name</label>
+                            <label for="name" class="form-label">Product Name</label>
                             <input type="text" name="name" class="form-control" id="name" >
                         </div>
                         <div class="mb-3">
-                            <label for="phone" class="form-label">Phone Number</label>
-                            <input type="text" name="phone" class="form-control" id="phone" >
+                            <label for="image" class="form-label">Image</label>
+                            <input type="text" name="image" class="form-control" id="image" >
                         </div>
                         <div class="mb-3">
-                            <label for="addressLine1" class="form-label">Address Line 1</label>
-                            <input type="text" name="addressLine1" class="form-control" id="addressLine1" >
+                            <label for="subimage" class="form-label">Sub Image</label>
+                            <input type="text" name="subimage" class="form-control" id="subimage" >
                         </div>
                         <div class="mb-3">
-                            <label for="city" class="form-label">City</label>
-                            <input type="text" name="city" class="form-control" id="city" >
+                            <label for="price" class="form-label">Price</label>
+                            <input type="text" name="price" class="form-control" id="price" >
                         </div>
-
-
-                        <button type="submit" class="btn btn-primary">Create/Save Edit</button>
+                        <div class="mb-3">
+                            <label for="price_sell" class="form-label">Price Sell</label>
+                            <input type="text" name="prince_sell" class="form-control" id="price_sell" >
+                        </div>
+                        <div class="mb-3">
+                            <label for="subdescription" class="form-label">Sub Description</label>
+                            <input type="text" name="subdescription" class="form-control" id="subdescription" >
+                        </div>
+                        <div class="mb-3">
+                            <label for="description" class="form-label">Description</label>
+                            <input type="text" name="description" class="form-control" id="description" >
+                        </div>
+                        <div class="mb-3">
+                            <label for="createdDate" class="form-label">Create Date</label>
+                            <input type="text" name="createdDate" class="form-control" id="createdDate" >
+                        </div>
+                        <div class="mb-3">
+                            <label for="status" class="form-label">Status</label>
+                            <input type="text" name="status" class="form-control" id="status" >
+                        </div>
+                        <div class="mb-3">
+                            <label for="status" class="form-label">Category</label>
+                            <select name="categoryName">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="status" class="form-label">Brand</label>
+                            <select name="brandName">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Create</button>
                     </form>
 
                 </div>

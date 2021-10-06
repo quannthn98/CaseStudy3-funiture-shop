@@ -87,33 +87,23 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col" style="text-align: center">
-                            <h3 >Customer Update</h3>
+                            <h3 >Brand Update</h3>
                         </div>
                     </div>
                 </div>
                 <div class="card-body">
-                    <form action="/customers?action=insert" method="post">
+                    <form method="post">
                         <div class="mb-3">
-                            <label for="name" class="form-label">Customer Name</label>
-                            <input type="text" name="name" class="form-control" id="name" >
+                            <label for="name" class="form-label">Brand Name</label>
+                            <input type="text" name="name" class="form-control" id="name" value="${brand.name}">
                         </div>
                         <div class="mb-3">
-                            <label for="phone" class="form-label">Phone Number</label>
-                            <input type="text" name="phone" class="form-control" id="phone" >
+                            <label for="status" class="form-label">Status</label>
+                            <input type="text" name="status" class="form-control" id="status" value="${brand.status}" >
                         </div>
-                        <div class="mb-3">
-                            <label for="addressLine1" class="form-label">Address Line 1</label>
-                            <input type="text" name="addressLine1" class="form-control" id="addressLine1" >
-                        </div>
-                        <div class="mb-3">
-                            <label for="city" class="form-label">City</label>
-                            <input type="text" name="city" class="form-control" id="city" >
-                        </div>
-
-
-                        <button type="submit" class="btn btn-primary">Create/Save Edit</button>
+                        <button type="submit" class="btn btn-primary">Save</button>
+                        <a href="/brand" class="btn btn-outline-danger">Cancel</a>
                     </form>
-
                 </div>
                 <div class="card-footer">
                 </div>

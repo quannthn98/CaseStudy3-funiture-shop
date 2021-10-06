@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
     <title>Title</title>
@@ -82,40 +83,43 @@
             </div>
         </div>
         <div class="col-10">
-            //Content
             <div class="card">
                 <div class="card-header">
                     <div class="row">
-                        <div class="col" style="text-align: center">
-                            <h3 >Customer Update</h3>
+                        <div class="col">
+                            <h5 class="mt-2">Brand Management</h5>
+                        </div>
+                        <div class="col">
+                                <a href="/brand?action=create-brand" class="btn btn-outline-primary float-end" style="text-decoration: none">
+                                    Create
+                                </a>
                         </div>
                     </div>
                 </div>
                 <div class="card-body">
-                    <form action="/customers?action=insert" method="post">
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Customer Name</label>
-                            <input type="text" name="name" class="form-control" id="name" >
-                        </div>
-                        <div class="mb-3">
-                            <label for="phone" class="form-label">Phone Number</label>
-                            <input type="text" name="phone" class="form-control" id="phone" >
-                        </div>
-                        <div class="mb-3">
-                            <label for="addressLine1" class="form-label">Address Line 1</label>
-                            <input type="text" name="addressLine1" class="form-control" id="addressLine1" >
-                        </div>
-                        <div class="mb-3">
-                            <label for="city" class="form-label">City</label>
-                            <input type="text" name="city" class="form-control" id="city" >
-                        </div>
-
-
-                        <button type="submit" class="btn btn-primary">Create/Save Edit</button>
-                    </form>
-
+                    <table class="table table-striped">
+                        <tr>
+                            <th>id</th>
+                            <th>Name</th>
+                            <th>Action</th>
+                        </tr>
+                        <c:forEach items="${brandList}" var="brandList">
+                            <tr>
+                                <td><c:out value="${brandList.id}"/></td>
+                                <td><c:out value="${brandList.name}"/></td>
+                                <td>
+                                    <a style="color: white" class="btn btn-primary btn-sm" href="/brand?action=edit-brand&id=${brandList.id}">Edit</a>
+                                    <a style="color: white;" class="btn btn-danger btn-sm" href="/brand?action=delete-brand&id=${brandList.id}">Delete</a>
+                                    <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                        Detail
+                                    </button>
+                                </td>
+                            </tr>
+                        </c:forEach>
+                    </table>
                 </div>
                 <div class="card-footer">
+                    Phan trang o day
                 </div>
             </div>
         </div>
@@ -123,11 +127,13 @@
     </div>
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-2 my-3 border-top">
         <p class="col-md-4 mb-0 text-muted">© 2021 Company, Inc</p>
+
         <ul class="nav col-md-4 justify-content-end">
             <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
             <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
         </ul>
     </footer><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
 </div>
 </body>
 </html>

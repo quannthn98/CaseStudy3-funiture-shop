@@ -1,10 +1,8 @@
 package dao;
 
-import model.Product;
-
 import java.util.List;
 
-public interface IGeneralDao<T> {
+public interface IGeneralDAO<T> {
     List<T> getAll();
 
     T findById(int id);
@@ -13,6 +11,5 @@ public interface IGeneralDao<T> {
 
     boolean delete(int id);
 
-    boolean update(int id, T t);
-
+    boolean update(int id,T t);
 }
