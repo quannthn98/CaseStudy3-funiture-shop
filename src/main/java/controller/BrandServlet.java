@@ -80,7 +80,7 @@ public class BrandServlet extends HttpServlet {
     }
 
     private void showFormCreateBrand(HttpServletRequest request, HttpServletResponse response) {
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/brand/create.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("brand/create.jsp");
         try {
             dispatcher.forward(request, response);
         } catch (ServletException | IOException e) {
@@ -96,6 +96,40 @@ public class BrandServlet extends HttpServlet {
         if (action == null) {
             action = "";
         }
+        switch (action) {
+            case "create-brand": {
+                createBrand(request, response);
+                break;
+            }
+            case "edit-brand": {
+                editBrand(request,response);
+                break;
+            }
+        }
 
+    }
+
+    private void createBrand(HttpServletRequest request, HttpServletResponse response) {
+        String name = request.getParameter("name");
+        int status = Integer.parseInt(request.getParameter("status"));
+        brandDao.save(new Brand(name,status));
+        try {
+            response.sendRedirect("/brand");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void editBrand(HttpServletRequest request, HttpServletResponse response) {
+        int id = Integer.parseInt(request.getParameter("id"));
+        String name = request.getParameter("name");
+        int status = Integer.parseInt(request.getParameter("status"));
+        Brand brand = new Brand(name,status);
+        brandDao.update(id,brand);
+        try {
+            response.sendRedirect("/brand");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

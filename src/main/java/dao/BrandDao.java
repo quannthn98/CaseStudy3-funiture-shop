@@ -14,7 +14,7 @@ public class BrandDao implements IBrandDao {
     public static final String SELECT_BRAND_SQL = "select * from  brand where id = ?";
     public static final String ADD_BRAND_SQL = "insert into brand(name,status) values (?,?);";
     public static final String DELETE_BRAND_SQL = "delete from brand where id = ?";
-    public static final String UPDATE_BRAND_SQL = "update from brand set name = ? , status = ? where  id = ?";
+    public static final String UPDATE_BRAND_SQL = "update brand set name = ? , status = ? where  id = ?";
     Connection connection = DBConnection.getConnection();
 
     @Override
