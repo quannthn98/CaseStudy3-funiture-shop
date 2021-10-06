@@ -14,11 +14,11 @@ public interface IOrderService extends IGeneralService<Order> {
 
     HashMap<Integer, Double> getPaymentByOrder();
 
+    List<Order> findOrderByPayment(double targetValue, String direction);
+
     boolean updateSaleOff(int saleOff, int orderId);
 
     int getSaleOffByOrder(int id);
-
-
 
     int countRecord();
 }

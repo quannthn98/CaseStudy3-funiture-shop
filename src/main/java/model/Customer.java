@@ -1,22 +1,30 @@
 package model;
 
-import java.util.Date;
-
 public class Customer {
-    private int id ;
+    private int id;
     private String name;
-    private Date birthday;
+    private String birthday;
     private String address;
     private String phone;
     private String email;
     private String password;
-    private boolean status;
+    private String status;
 
     public Customer() {
     }
 
-    public Customer(int id, String name, Date birthday, String address, String phone, String email, String password, boolean status) {
+    public Customer(int id, String name, String birthday, String address, String phone, String email, String password, String status) {
         this.id = id;
+        this.name = name;
+        this.birthday = birthday;
+        this.address = address;
+        this.phone = phone;
+        this.email = email;
+        this.password = password;
+        this.status = status;
+    }
+
+    public Customer(String name, String birthday, String address, String phone, String email, String password, String status) {
         this.name = name;
         this.birthday = birthday;
         this.address = address;
@@ -42,11 +50,11 @@ public class Customer {
         this.name = name;
     }
 
-    public Date getBirthday() {
+    public String getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Date birthday) {
+    public void setBirthday(String birthday) {
         this.birthday = birthday;
     }
 
@@ -82,11 +90,11 @@ public class Customer {
         this.password = password;
     }
 
-    public boolean isStatus() {
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(boolean status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 }

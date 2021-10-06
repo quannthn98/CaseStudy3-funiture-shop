@@ -5,8 +5,10 @@ import dao.OrderDao;
 import model.Order;
 import model.OrderDetail;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Set;
 
 public class OrderService implements IOrderService {
     IOrderDao orderDao = new OrderDao();
@@ -31,6 +33,24 @@ public class OrderService implements IOrderService {
     public HashMap<Integer, Double> getPaymentByOrder() {
         return orderDao.getPaymentByOrder();
     }
+
+    @Override
+    public List<Order> findOrderByPayment(double targetValue, String direction) {
+        HashMap<Integer, Double> orderByPayment = orderDao.findOrderByPayment(targetValue, direction);
+        List<Order> targetOrderList = new ArrayList<>();
+        List<Order> allOrderList = orderDao.getAll();
+        Set<Integer> keySet = orderByPayment.keySet();
+        for (Integer key: keySet){
+            for (Order order: allOrderList){
+                if (key == order.getId()){
+                    targetOrderList.add(order);
+                    continue;
+                }
+            }
+        }
+        return targetOrderList;
+    }
+
 
     @Override
     public boolean update(int id, Order order) {
