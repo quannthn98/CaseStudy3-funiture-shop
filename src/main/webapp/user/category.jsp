@@ -8,34 +8,34 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>
         Theme Sunmax dành cho website bán nội thất văn phòng
 
 
-
     </title>
 
     <!-- ================= Page description ================== -->
-    <meta name="description" content="Sunmax sẽ là một trong những sự lựa chọn hoàn hảo cho các website thương mại kinh doanh các mặt hàng. Giao diện đơn giản nhưng vô cùng tinh tế.">
+    <meta name="description"
+          content="Sunmax sẽ là một trong những sự lựa chọn hoàn hảo cho các website thương mại kinh doanh các mặt hàng. Giao diện đơn giản nhưng vô cùng tinh tế.">
     <!-- ================= Meta ================== -->
     <meta name="keywords" content="Sunmax , Sunmax theme, theme noi that dep, responsive, Awesome team"/>
     <link rel="canonical" href="https://sunmax.bizwebvietnam.net"/>
-    <meta name='revisit-after' content='1 days' />
-    <meta name="robots" content="noodp,index,follow" />
+    <meta name='revisit-after' content='1 days'/>
+    <meta name="robots" content="noodp,index,follow"/>
     <!-- ================= Favicon ================== -->
 
-    <link rel="icon" href="image/favicon.png" type="image/x-icon" />
+    <link rel="icon" href="image/favicon.png" type="image/x-icon"/>
 
     <!-- ================= Google Fonts ================== -->
 
 
+    <link href="css/font-Roboto.css?family=Roboto:400,700" rel="stylesheet" type="text/css"/>
 
-    <link href="css/font-Roboto.css?family=Roboto:400,700" rel="stylesheet" type="text/css" />
 
-
-    <link href="css/font-YesevaOne.css?family=Yeseva+One&amp;subset=cyrillic,cyrillic-ext,latin-ext,vietnamese" rel="stylesheet">
+    <link href="css/font-YesevaOne.css?family=Yeseva+One&amp;subset=cyrillic,cyrillic-ext,latin-ext,vietnamese"
+          rel="stylesheet">
     <!-- Facebook Open Graph meta tags -->
 
 
@@ -44,32 +44,31 @@
     <meta property="og:image" content="image/logo.png">
     <meta property="og:image:secure_url" content="image/logo.png">
 
-    <meta property="og:description" content="Sunmax sẽ là một trong những sự lựa chọn hoàn hảo cho các website thương mại kinh doanh các mặt hàng. Giao diện đơn giản nhưng vô cùng tinh tế.">
+    <meta property="og:description"
+          content="Sunmax sẽ là một trong những sự lựa chọn hoàn hảo cho các website thương mại kinh doanh các mặt hàng. Giao diện đơn giản nhưng vô cùng tinh tế.">
     <meta property="og:url" content="https://sunmax.bizwebvietnam.net">
     <meta property="og:site_name" content="Sunmax">
 
     <!-- Plugin CSS -->
-    <link rel="stylesheet" href="css/themify-icons.css" >
+    <link rel="stylesheet" href="css/themify-icons.css">
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link href="css/owl.carousel.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/owl.carousel.min.css" rel="stylesheet" type="text/css"/>
 
     <!-- Build Main CSS -->
-    <link href="css/base.scss.css" rel="stylesheet" type="text/css" />
-    <link href="css/style.scss.css" rel="stylesheet" type="text/css" />
-    <link href="css/module.scss.css" rel="stylesheet" type="text/css" />
-    <link href="css/responsive.scss.css" rel="stylesheet" type="text/css" />
+    <link href="css/base.scss.css" rel="stylesheet" type="text/css"/>
+    <link href="css/style.scss.css" rel="stylesheet" type="text/css"/>
+    <link href="css/module.scss.css" rel="stylesheet" type="text/css"/>
+    <link href="css/responsive.scss.css" rel="stylesheet" type="text/css"/>
 
     <!-- Header JS -->
     <script src="js/jquery-2.2.3.min.js" type="text/javascript"></script>
     <!-- Bizweb javascript customer -->
 
 
-
-
-    <link href="css/iwish.css" />
-    <script>var ProductReviewsAppUtil=ProductReviewsAppUtil || {};</script>
+    <link href="css/iwish.css"/>
+    <script>var ProductReviewsAppUtil = ProductReviewsAppUtil || {};</script>
 </head>
 <body>
 <div class="hidden-md hidden-lg opacity_menu"></div>
@@ -204,7 +203,7 @@
                 <div class="content_header">
                     <div class="header-main">
                         <div class="menu-bar-h nav-mobile-button hidden-md hidden-lg">
-                            <a href="#nav-mobile"><img src="image/i_menubar.png" alt="menu bar" /></a>
+                            <a href="#nav-mobile"><img src="image/i_menubar.png" alt="menu bar"/></a>
                         </div>
                         <div class="col-lg-3 col-md-3">
                             <div class="logo">
@@ -256,10 +255,12 @@
                                                 <div class="search_item active" data-coll-id="0">Tất cả</div>
                                             </div>
                                         </div>
-                                        <input type="search" name="query" value="" placeholder="Bạn muốn tìm gì... " class="input-group-field st-default-search-input search-text" autocomplete="off">
+                                        <input type="search" name="query" value="" placeholder="Bạn muốn tìm gì... "
+                                               class="input-group-field st-default-search-input search-text"
+                                               autocomplete="off">
                                         <span class="input-group-btn">
 			<button class="btn icon-fallback-text">
-				<span class="fa fa-search" ></span>
+				<span class="fa fa-search"></span>
 			</button>
 		</span>
                                     </form>
@@ -273,7 +274,8 @@
 
                                         <div class="img_hotline"><img alt="Wishlist" src="image/icon_phone.png"/></div>
 
-                                        <span class="text_hotline">Hotline:</span> <a class="hai01" href="tel:0165939688">0165939688</a>
+                                        <span class="text_hotline">Hotline:</span> <a class="hai01"
+                                                                                      href="tel:0165939688">0165939688</a>
 
 
                                     </div>
@@ -301,10 +303,13 @@
                                                             </li>
                                                             <li class="li-fix-2" style="">
                                                                 <div class="actions">
-                                                                    <a href="/cart" class="btn btn-primary" title="Giỏ hàng">
+                                                                    <a href="/cart" class="btn btn-primary"
+                                                                       title="Giỏ hàng">
                                                                         <span>Giỏ hàng</span>
                                                                     </a>
-                                                                    <a href="/checkout" class="btn btn-checkout btn-gray" title="Thanh toán">
+                                                                    <a href="/checkout"
+                                                                       class="btn btn-checkout btn-gray"
+                                                                       title="Thanh toán">
                                                                         <span>Thanh toán</span>
                                                                     </a>
                                                                 </div>
@@ -334,10 +339,11 @@
                             <form action="/search" method="get" class="input-group search-bar" role="search">
                                 <input type="hidden" name="type" value="product">
 
-                                <input type="search" name="query" value="" placeholder="Tìm kiếm sản phẩm..." class="input-group-field">
+                                <input type="search" name="query" value="" placeholder="Tìm kiếm sản phẩm..."
+                                       class="input-group-field">
                                 <span class="input-group-btn">
 									<button type="submit" class="btn icon-fallback-text">
-										<span class="fa fa-search" ></span>
+										<span class="fa fa-search"></span>
 									</button>
 								</span>
                             </form>
@@ -350,15 +356,14 @@
 
     <div class="bg-header-nav hidden-xs hidden-sm">
         <div class="container relative">
-            <div class= "row row-noGutter-2">
+            <div class="row row-noGutter-2">
                 <nav class="header-nav">
                     <ul class="item_big">
 
 
-
-
                         <li class="nav-item ">
-                            <a class="a-img" href="/phong-khach"><span>Phòng khách</span><i class="fa fa-caret-down"></i></a>
+                            <a class="a-img" href="/phong-khach"><span>Phòng khách</span><i
+                                    class="fa fa-caret-down"></i></a>
                             <ul class="item_small hidden-sm hidden-xs">
 
                                 <li>
@@ -385,14 +390,9 @@
                         </li>
 
 
-
-
-
                         <li class="nav-item ">
                             <a class="a-img" href="/phong-bep"><span>Phòng bếp</span></a>
                         </li>
-
-
 
 
                         <li class="nav-item ">
@@ -400,20 +400,14 @@
                         </li>
 
 
-
-
                         <li class="nav-item ">
                             <a class="a-img" href="/chan-ga-dem"><span>Chăn ga đệm</span></a>
                         </li>
 
 
-
-
                         <li class="nav-item ">
                             <a class="a-img" href="/ngoai-that"><span>Ngoại thất</span></a>
                         </li>
-
-
 
 
                         <li class="nav-item ">
@@ -435,12 +429,12 @@
             <div class="col-xs-12">
                 <ul class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
                     <li class="home">
-                        <a itemprop="url" href="/" ><span itemprop="title">Trang chủ</span></a>
+                        <a itemprop="url" href="/"><span itemprop="title">Trang chủ</span></a>
                         <span><i class="fa">/</i></span>
                     </li>
 
 
-                    <li><strong ><span itemprop="title"> Phòng khách</strong></li>
+                    <li><strong><span itemprop="title"> Phòng khách</strong></li>
 
 
                 </ul>
@@ -475,12 +469,18 @@
                                         <li><span>Thứ tự</span>
                                             <ul>
                                                 <li><a href="javascript:;" onclick="sortby('default')">Mặc định</a></li>
-                                                <li><a href="javascript:;" onclick="sortby('alpha-asc')">A &rarr; Z</a></li>
-                                                <li><a href="javascript:;" onclick="sortby('alpha-desc')">Z &rarr; A</a></li>
-                                                <li><a href="javascript:;" onclick="sortby('price-asc')">Giá tăng dần</a></li>
-                                                <li><a href="javascript:;" onclick="sortby('price-desc')">Giá giảm dần</a></li>
-                                                <li><a href="javascript:;" onclick="sortby('created-desc')">Hàng mới nhất</a></li>
-                                                <li><a href="javascript:;" onclick="sortby('created-asc')">Hàng cũ nhất</a></li>
+                                                <li><a href="javascript:;" onclick="sortby('alpha-asc')">A &rarr; Z</a>
+                                                </li>
+                                                <li><a href="javascript:;" onclick="sortby('alpha-desc')">Z &rarr; A</a>
+                                                </li>
+                                                <li><a href="javascript:;" onclick="sortby('price-asc')">Giá tăng
+                                                    dần</a></li>
+                                                <li><a href="javascript:;" onclick="sortby('price-desc')">Giá giảm
+                                                    dần</a></li>
+                                                <li><a href="javascript:;" onclick="sortby('created-desc')">Hàng mới
+                                                    nhất</a></li>
+                                                <li><a href="javascript:;" onclick="sortby('created-asc')">Hàng cũ
+                                                    nhất</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -491,15 +491,12 @@
                 </div>
 
 
-
                 <section class="products-view products-view-grid collection_reponsive">
                     <div class="row">
 
 
-
                         <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
                             <div class="product-col">
-
 
 
                                 <div class="product-box">
@@ -508,32 +505,40 @@
                                         <div class="sale-flash new">Mới</div>
 
 
-                                        <a class="image_link display_flex" href="/sofa-da-ma-ntx1824" title="Sofa bộ Italia - Canova">
-                                            <img src="image/product-1.png"  data-lazyload="Product_image/10.jpg" alt="Sofa bộ Italia - Canova">
+                                        <a class="image_link display_flex" href="/sofa-da-ma-ntx1824"
+                                           title="Sofa bộ Italia - Canova">
+                                            <img src="image/product-1.png" data-lazyload="Product_image/10.jpg"
+                                                 alt="Sofa bộ Italia - Canova">
                                         </a>
 
-                                        <div class="summary_grid hidden-xs hidden-sm hidden-md" onclick="window.location.href='/sofa-da-ma-ntx1824';">
+                                        <div class="summary_grid hidden-xs hidden-sm hidden-md"
+                                             onclick="window.location.href='/sofa-da-ma-ntx1824';">
                                             <div class="rte description">
 
-                                                <p>Mặt bàn: 1600 x&nbsp;815 x 30mmH<br />
+                                                <p>Mặt bàn: 1600 x&nbsp;815 x 30mmH<br/>
                                                     Sofa bộ Italia :&nbsp;2850x1800x900 mm</p>
 
                                             </div>
                                         </div>
                                         <div class="product-action-grid clearfix">
-                                            <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9387021" enctype="multipart/form-data">
+                                            <form action="/cart/add" method="post" class="variants form-nut-grid"
+                                                  data-id="product-actions-9387021" enctype="multipart/form-data">
                                                 <div>
 
-                                                    <input class="hidden" type="hidden" name="variantId" value="14992946" />
-                                                    <button class="btn-cart button_wh_40 left-to" title="Tùy chọn"  type="button" onclick="window.location.href='/sofa-da-ma-ntx1824'" >
+                                                    <input class="hidden" type="hidden" name="variantId"
+                                                           value="14992946"/>
+                                                    <button class="btn-cart button_wh_40 left-to" title="Tùy chọn"
+                                                            type="button"
+                                                            onclick="window.location.href='/sofa-da-ma-ntx1824'">
                                                         Tùy chọn
                                                     </button>
 
 
-                                                    <a title="Xem nhanh" href="/sofa-da-ma-ntx1824" data-handle="sofa-da-ma-ntx1824" class="button_wh_40 btn_view right-to quick-view">
+                                                    <a title="Xem nhanh" href="/sofa-da-ma-ntx1824"
+                                                       data-handle="sofa-da-ma-ntx1824"
+                                                       class="button_wh_40 btn_view right-to quick-view">
                                                         Xem nhanh
                                                     </a>
-
 
 
                                                 </div>
@@ -543,7 +548,9 @@
                                     <div class="product-info effect a-left">
 
                                         <div class="info_hhh">
-                                            <h3 class="product-name product-name-hover"><a href="/sofa-da-ma-ntx1824" title="Sofa bộ Italia - Canova">Sofa bộ Italia - Canova</a></h3>
+                                            <h3 class="product-name product-name-hover"><a href="/sofa-da-ma-ntx1824"
+                                                                                           title="Sofa bộ Italia - Canova">Sofa
+                                                bộ Italia - Canova</a></h3>
 
 
                                             <div class="price-box clearfix">
@@ -577,40 +584,47 @@
                             <div class="product-col">
 
 
-
                                 <div class="product-box">
                                     <div class="product-thumbnail">
 
                                         <div class="sale-flash new">Mới</div>
 
 
-                                        <a class="image_link display_flex" href="/sofa-da-ma-ntx1824-1" title="Sofa bộ Hugo 8979">
-                                            <img src="image/product-1.png"  data-lazyload="Product_image/4.jpg" alt="Sofa bộ Hugo 8979">
+                                        <a class="image_link display_flex" href="/sofa-da-ma-ntx1824-1"
+                                           title="Sofa bộ Hugo 8979">
+                                            <img src="image/product-1.png" data-lazyload="Product_image/4.jpg"
+                                                 alt="Sofa bộ Hugo 8979">
                                         </a>
 
-                                        <div class="summary_grid hidden-xs hidden-sm hidden-md" onclick="window.location.href='/sofa-da-ma-ntx1824-1';">
+                                        <div class="summary_grid hidden-xs hidden-sm hidden-md"
+                                             onclick="window.location.href='/sofa-da-ma-ntx1824-1';">
                                             <div class="rte description">
 
-                                                <p>Kích thước: 2850x1800x900 mm<br />
-                                                    Bảo hành: 6 Năm<br />
+                                                <p>Kích thước: 2850x1800x900 mm<br/>
+                                                    Bảo hành: 6 Năm<br/>
                                                     Nguồn gốc: Hugo, Malaysia</p>
 
                                             </div>
                                         </div>
                                         <div class="product-action-grid clearfix">
-                                            <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9387020" enctype="multipart/form-data">
+                                            <form action="/cart/add" method="post" class="variants form-nut-grid"
+                                                  data-id="product-actions-9387020" enctype="multipart/form-data">
                                                 <div>
 
-                                                    <input class="hidden" type="hidden" name="variantId" value="14992943" />
-                                                    <button class="btn-cart button_wh_40 left-to" title="Tùy chọn"  type="button" onclick="window.location.href='/sofa-da-ma-ntx1824-1'" >
+                                                    <input class="hidden" type="hidden" name="variantId"
+                                                           value="14992943"/>
+                                                    <button class="btn-cart button_wh_40 left-to" title="Tùy chọn"
+                                                            type="button"
+                                                            onclick="window.location.href='/sofa-da-ma-ntx1824-1'">
                                                         Tùy chọn
                                                     </button>
 
 
-                                                    <a title="Xem nhanh" href="/sofa-da-ma-ntx1824-1" data-handle="sofa-da-ma-ntx1824-1" class="button_wh_40 btn_view right-to quick-view">
+                                                    <a title="Xem nhanh" href="/sofa-da-ma-ntx1824-1"
+                                                       data-handle="sofa-da-ma-ntx1824-1"
+                                                       class="button_wh_40 btn_view right-to quick-view">
                                                         Xem nhanh
                                                     </a>
-
 
 
                                                 </div>
@@ -620,7 +634,9 @@
                                     <div class="product-info effect a-left">
 
                                         <div class="info_hhh">
-                                            <h3 class="product-name product-name-hover"><a href="/sofa-da-ma-ntx1824-1" title="Sofa bộ Hugo 8979">Sofa bộ Hugo 8979</a></h3>
+                                            <h3 class="product-name product-name-hover"><a href="/sofa-da-ma-ntx1824-1"
+                                                                                           title="Sofa bộ Hugo 8979">Sofa
+                                                bộ Hugo 8979</a></h3>
 
 
                                             <div class="price-box clearfix">
@@ -650,20 +666,8 @@
                         </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
                         <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
                             <div class="product-col">
-
 
 
                                 <div class="product-box">
@@ -672,14 +676,17 @@
                                         <div class="sale-flash new">Mới</div>
 
 
-                                        <a class="image_link display_flex" href="/sofa-da-ma-ntx1824-2" title="Sofa da mã NTX1824">
-                                            <img src="image/product-1.png"  data-lazyload="Product_image/1.jpg" alt="Sofa da mã NTX1824">
+                                        <a class="image_link display_flex" href="/sofa-da-ma-ntx1824-2"
+                                           title="Sofa da mã NTX1824">
+                                            <img src="image/product-1.png" data-lazyload="Product_image/1.jpg"
+                                                 alt="Sofa da mã NTX1824">
                                         </a>
 
-                                        <div class="summary_grid hidden-xs hidden-sm hidden-md" onclick="window.location.href='/sofa-da-ma-ntx1824-2';">
+                                        <div class="summary_grid hidden-xs hidden-sm hidden-md"
+                                             onclick="window.location.href='/sofa-da-ma-ntx1824-2';">
                                             <div class="rte description">
 
-                                                <p>Mặt bàn: 1600 x&nbsp;815 x 30mmH<br />
+                                                <p>Mặt bàn: 1600 x&nbsp;815 x 30mmH<br/>
                                                     Sofa da mã NTX1824:&nbsp;2850x1800x900 mm</p>
 
                                                 <p>&nbsp;</p>
@@ -687,19 +694,24 @@
                                             </div>
                                         </div>
                                         <div class="product-action-grid clearfix">
-                                            <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9387019" enctype="multipart/form-data">
+                                            <form action="/cart/add" method="post" class="variants form-nut-grid"
+                                                  data-id="product-actions-9387019" enctype="multipart/form-data">
                                                 <div>
 
-                                                    <input class="hidden" type="hidden" name="variantId" value="14992940" />
-                                                    <button class="btn-cart button_wh_40 left-to" title="Tùy chọn"  type="button" onclick="window.location.href='/sofa-da-ma-ntx1824-2'" >
+                                                    <input class="hidden" type="hidden" name="variantId"
+                                                           value="14992940"/>
+                                                    <button class="btn-cart button_wh_40 left-to" title="Tùy chọn"
+                                                            type="button"
+                                                            onclick="window.location.href='/sofa-da-ma-ntx1824-2'">
                                                         Tùy chọn
                                                     </button>
 
 
-                                                    <a title="Xem nhanh" href="/sofa-da-ma-ntx1824-2" data-handle="sofa-da-ma-ntx1824-2" class="button_wh_40 btn_view right-to quick-view">
+                                                    <a title="Xem nhanh" href="/sofa-da-ma-ntx1824-2"
+                                                       data-handle="sofa-da-ma-ntx1824-2"
+                                                       class="button_wh_40 btn_view right-to quick-view">
                                                         Xem nhanh
                                                     </a>
-
 
 
                                                 </div>
@@ -709,7 +721,9 @@
                                     <div class="product-info effect a-left">
 
                                         <div class="info_hhh">
-                                            <h3 class="product-name product-name-hover"><a href="/sofa-da-ma-ntx1824-2" title="Sofa da mã NTX1824">Sofa da mã NTX1824</a></h3>
+                                            <h3 class="product-name product-name-hover"><a href="/sofa-da-ma-ntx1824-2"
+                                                                                           title="Sofa da mã NTX1824">Sofa
+                                                da mã NTX1824</a></h3>
 
 
                                             <div class="price-box clearfix">
@@ -739,17 +753,6 @@
                         </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
                         <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
                             <div class="product-col">
 
@@ -759,32 +762,41 @@
                                         <div class="sale-flash new">Mới</div>
 
 
-                                        <a class="image_link display_flex" href="/bo-sofa-da-ni-9230" title="Bộ Sofa Da Nỉ 9230">
-                                            <img src="image/product-1.png"  data-lazyload="Product_image/e.jpg?v=1513589876907" alt="Bộ Sofa Da Nỉ 9230">
+                                        <a class="image_link display_flex" href="/bo-sofa-da-ni-9230"
+                                           title="Bộ Sofa Da Nỉ 9230">
+                                            <img src="image/product-1.png"
+                                                 data-lazyload="Product_image/e.jpg?v=1513589876907"
+                                                 alt="Bộ Sofa Da Nỉ 9230">
                                         </a>
 
-                                        <div class="summary_grid hidden-xs hidden-sm hidden-md" onclick="window.location.href='/bo-sofa-da-ni-9230';">
+                                        <div class="summary_grid hidden-xs hidden-sm hidden-md"
+                                             onclick="window.location.href='/bo-sofa-da-ni-9230';">
                                             <div class="rte description">
 
-                                                <p>Mặt bàn: 1600 x&nbsp;815 x 30mmH<br />
+                                                <p>Mặt bàn: 1600 x&nbsp;815 x 30mmH<br/>
                                                     Sofa da mã NTX1824:&nbsp;2850x1800x900 mm</p>
 
                                             </div>
                                         </div>
                                         <div class="product-action-grid clearfix">
-                                            <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9387016" enctype="multipart/form-data">
+                                            <form action="/cart/add" method="post" class="variants form-nut-grid"
+                                                  data-id="product-actions-9387016" enctype="multipart/form-data">
                                                 <div>
 
-                                                    <input class="hidden" type="hidden" name="variantId" value="14992934" />
-                                                    <button class="btn-cart button_wh_40 left-to" title="Tùy chọn"  type="button" onclick="window.location.href='/bo-sofa-da-ni-9230'" >
+                                                    <input class="hidden" type="hidden" name="variantId"
+                                                           value="14992934"/>
+                                                    <button class="btn-cart button_wh_40 left-to" title="Tùy chọn"
+                                                            type="button"
+                                                            onclick="window.location.href='/bo-sofa-da-ni-9230'">
                                                         Tùy chọn
                                                     </button>
 
 
-                                                    <a title="Xem nhanh" href="/bo-sofa-da-ni-9230" data-handle="bo-sofa-da-ni-9230" class="button_wh_40 btn_view right-to quick-view">
+                                                    <a title="Xem nhanh" href="/bo-sofa-da-ni-9230"
+                                                       data-handle="bo-sofa-da-ni-9230"
+                                                       class="button_wh_40 btn_view right-to quick-view">
                                                         Xem nhanh
                                                     </a>
-
 
 
                                                 </div>
@@ -794,7 +806,9 @@
                                     <div class="product-info effect a-left">
 
                                         <div class="info_hhh">
-                                            <h3 class="product-name product-name-hover"><a href="/bo-sofa-da-ni-9230" title="Bộ Sofa Da Nỉ 9230">Bộ Sofa Da Nỉ 9230</a></h3>
+                                            <h3 class="product-name product-name-hover"><a href="/bo-sofa-da-ni-9230"
+                                                                                           title="Bộ Sofa Da Nỉ 9230">Bộ
+                                                Sofa Da Nỉ 9230</a></h3>
 
 
                                             <div class="price-box clearfix">
@@ -824,103 +838,8 @@
                         </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
                         <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
                             <div class="product-col">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
                                 <div class="product-box">
@@ -929,33 +848,42 @@
                                         <div class="sale-flash new">Mới</div>
 
 
-                                        <a class="image_link display_flex" href="/don-sofa-phong-khach-da-that-9029" title="Đôn Sofa Phòng khách da thật 9029">
-                                            <img src="image/product-1.png"  data-lazyload="Product_image/18.jpg?v=1513589875233" alt="Đôn Sofa Phòng khách da thật 9029">
+                                        <a class="image_link display_flex" href="/don-sofa-phong-khach-da-that-9029"
+                                           title="Đôn Sofa Phòng khách da thật 9029">
+                                            <img src="image/product-1.png"
+                                                 data-lazyload="Product_image/18.jpg?v=1513589875233"
+                                                 alt="Đôn Sofa Phòng khách da thật 9029">
                                         </a>
 
-                                        <div class="summary_grid hidden-xs hidden-sm hidden-md" onclick="window.location.href='/don-sofa-phong-khach-da-that-9029';">
+                                        <div class="summary_grid hidden-xs hidden-sm hidden-md"
+                                             onclick="window.location.href='/don-sofa-phong-khach-da-that-9029';">
                                             <div class="rte description">
 
-                                                <p>Mặt bàn: 1600 x&nbsp;815 x 30mm&nbsp;(2,300,000đ)<br />
-                                                    Đôn Sofa Phòng khách da thật 9029: 3000x1800x1000 mm<br />
+                                                <p>Mặt bàn: 1600 x&nbsp;815 x 30mm&nbsp;(2,300,000đ)<br/>
+                                                    Đôn Sofa Phòng khách da thật 9029: 3000x1800x1000 mm<br/>
                                                     Kệ Sách: 3000x900...
 
                                             </div>
                                         </div>
                                         <div class="product-action-grid clearfix">
-                                            <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9387015" enctype="multipart/form-data">
+                                            <form action="/cart/add" method="post" class="variants form-nut-grid"
+                                                  data-id="product-actions-9387015" enctype="multipart/form-data">
                                                 <div>
 
-                                                    <input class="hidden" type="hidden" name="variantId" value="14992931" />
-                                                    <button class="btn-cart button_wh_40 left-to" title="Tùy chọn"  type="button" onclick="window.location.href='/don-sofa-phong-khach-da-that-9029'" >
+                                                    <input class="hidden" type="hidden" name="variantId"
+                                                           value="14992931"/>
+                                                    <button class="btn-cart button_wh_40 left-to" title="Tùy chọn"
+                                                            type="button"
+                                                            onclick="window.location.href='/don-sofa-phong-khach-da-that-9029'">
                                                         Tùy chọn
                                                     </button>
 
 
-                                                    <a title="Xem nhanh" href="/don-sofa-phong-khach-da-that-9029" data-handle="don-sofa-phong-khach-da-that-9029" class="button_wh_40 btn_view right-to quick-view">
+                                                    <a title="Xem nhanh" href="/don-sofa-phong-khach-da-that-9029"
+                                                       data-handle="don-sofa-phong-khach-da-that-9029"
+                                                       class="button_wh_40 btn_view right-to quick-view">
                                                         Xem nhanh
                                                     </a>
-
 
 
                                                 </div>
@@ -965,7 +893,10 @@
                                     <div class="product-info effect a-left">
 
                                         <div class="info_hhh">
-                                            <h3 class="product-name product-name-hover"><a href="/don-sofa-phong-khach-da-that-9029" title="Đôn Sofa Phòng khách da thật 9029">Đôn Sofa Phòng khách da thật 9029</a></h3>
+                                            <h3 class="product-name product-name-hover"><a
+                                                    href="/don-sofa-phong-khach-da-that-9029"
+                                                    title="Đôn Sofa Phòng khách da thật 9029">Đôn Sofa Phòng khách da
+                                                thật 9029</a></h3>
 
                                             <div class="price-box clearfix">
                                                 <span class="price product-price">Liên hệ</span>
@@ -984,97 +915,8 @@
                         </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
                         <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
                             <div class="product-col">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
                                 <div class="product-box">
@@ -1083,33 +925,42 @@
                                         <div class="sale-flash new">Mới</div>
 
 
-                                        <a class="image_link display_flex" href="/sofa-giuong-215-10" title="Sofa Giường 215 - 10">
-                                            <img src="image/product-1.png"  data-lazyload="Product_image/9aef54a449d274a48a3934a36391e3.jpg?v=1513589873207" alt="Sofa Giường 215 - 10">
+                                        <a class="image_link display_flex" href="/sofa-giuong-215-10"
+                                           title="Sofa Giường 215 - 10">
+                                            <img src="image/product-1.png"
+                                                 data-lazyload="Product_image/9aef54a449d274a48a3934a36391e3.jpg?v=1513589873207"
+                                                 alt="Sofa Giường 215 - 10">
                                         </a>
 
-                                        <div class="summary_grid hidden-xs hidden-sm hidden-md" onclick="window.location.href='/sofa-giuong-215-10';">
+                                        <div class="summary_grid hidden-xs hidden-sm hidden-md"
+                                             onclick="window.location.href='/sofa-giuong-215-10';">
                                             <div class="rte description">
 
-                                                <p>Mặt bàn: 1600 x&nbsp;815 x 30mm&nbsp;(2,300,000đ)<br />
-                                                    Sofa Giường 215 - 10: 3000x1800x1000 mm (68,000,00đ)<br />
+                                                <p>Mặt bàn: 1600 x&nbsp;815 x 30mm&nbsp;(2,300,000đ)<br/>
+                                                    Sofa Giường 215 - 10: 3000x1800x1000 mm (68,000,00đ)<br/>
                                                     Đèn: 2500mm (700,...
 
                                             </div>
                                         </div>
                                         <div class="product-action-grid clearfix">
-                                            <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9387014" enctype="multipart/form-data">
+                                            <form action="/cart/add" method="post" class="variants form-nut-grid"
+                                                  data-id="product-actions-9387014" enctype="multipart/form-data">
                                                 <div>
 
-                                                    <input class="hidden" type="hidden" name="variantId" value="14992929" />
-                                                    <button class="btn-cart button_wh_40 left-to" title="Tùy chọn"  type="button" onclick="window.location.href='/sofa-giuong-215-10'" >
+                                                    <input class="hidden" type="hidden" name="variantId"
+                                                           value="14992929"/>
+                                                    <button class="btn-cart button_wh_40 left-to" title="Tùy chọn"
+                                                            type="button"
+                                                            onclick="window.location.href='/sofa-giuong-215-10'">
                                                         Tùy chọn
                                                     </button>
 
 
-                                                    <a title="Xem nhanh" href="/sofa-giuong-215-10" data-handle="sofa-giuong-215-10" class="button_wh_40 btn_view right-to quick-view">
+                                                    <a title="Xem nhanh" href="/sofa-giuong-215-10"
+                                                       data-handle="sofa-giuong-215-10"
+                                                       class="button_wh_40 btn_view right-to quick-view">
                                                         Xem nhanh
                                                     </a>
-
 
 
                                                 </div>
@@ -1119,7 +970,9 @@
                                     <div class="product-info effect a-left">
 
                                         <div class="info_hhh">
-                                            <h3 class="product-name product-name-hover"><a href="/sofa-giuong-215-10" title="Sofa Giường 215 - 10">Sofa Giường 215 - 10</a></h3>
+                                            <h3 class="product-name product-name-hover"><a href="/sofa-giuong-215-10"
+                                                                                           title="Sofa Giường 215 - 10">Sofa
+                                                Giường 215 - 10</a></h3>
 
 
                                             <div class="price-box clearfix">
@@ -1149,81 +1002,8 @@
                         </div>
 
 
-
-
-
-
-
-
-
-
-
                         <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
                             <div class="product-col">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
                                 <div class="product-box">
@@ -1232,33 +1012,41 @@
                                         <div class="sale-flash new">Mới</div>
 
 
-                                        <a class="image_link display_flex" href="/sofa-da-mleh-740l" title="Sofa Da MLEH-740L">
-                                            <img src="image/product-1.png"  data-lazyload="Product_image/g.jpg" alt="Sofa Da MLEH-740L">
+                                        <a class="image_link display_flex" href="/sofa-da-mleh-740l"
+                                           title="Sofa Da MLEH-740L">
+                                            <img src="image/product-1.png" data-lazyload="Product_image/g.jpg"
+                                                 alt="Sofa Da MLEH-740L">
                                         </a>
 
-                                        <div class="summary_grid hidden-xs hidden-sm hidden-md" onclick="window.location.href='/sofa-da-mleh-740l';">
+                                        <div class="summary_grid hidden-xs hidden-sm hidden-md"
+                                             onclick="window.location.href='/sofa-da-mleh-740l';">
                                             <div class="rte description">
 
-                                                <p>Mặt bàn: 1600 x&nbsp;815 x 30mm&nbsp;(2,300,000đ)<br />
-                                                    Sofa Da MLEH-740L: 2700 x 780 x 1530 mm (68,000,00đ)<br />
+                                                <p>Mặt bàn: 1600 x&nbsp;815 x 30mm&nbsp;(2,300,000đ)<br/>
+                                                    Sofa Da MLEH-740L: 2700 x 780 x 1530 mm (68,000,00đ)<br/>
                                                     Bình hoa: (300,00...
 
                                             </div>
                                         </div>
                                         <div class="product-action-grid clearfix">
-                                            <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9387012" enctype="multipart/form-data">
+                                            <form action="/cart/add" method="post" class="variants form-nut-grid"
+                                                  data-id="product-actions-9387012" enctype="multipart/form-data">
                                                 <div>
 
-                                                    <input class="hidden" type="hidden" name="variantId" value="14992926" />
-                                                    <button class="btn-cart button_wh_40 left-to" title="Tùy chọn"  type="button" onclick="window.location.href='/sofa-da-mleh-740l'" >
+                                                    <input class="hidden" type="hidden" name="variantId"
+                                                           value="14992926"/>
+                                                    <button class="btn-cart button_wh_40 left-to" title="Tùy chọn"
+                                                            type="button"
+                                                            onclick="window.location.href='/sofa-da-mleh-740l'">
                                                         Tùy chọn
                                                     </button>
 
 
-                                                    <a title="Xem nhanh" href="/sofa-da-mleh-740l" data-handle="sofa-da-mleh-740l" class="button_wh_40 btn_view right-to quick-view">
+                                                    <a title="Xem nhanh" href="/sofa-da-mleh-740l"
+                                                       data-handle="sofa-da-mleh-740l"
+                                                       class="button_wh_40 btn_view right-to quick-view">
                                                         Xem nhanh
                                                     </a>
-
 
 
                                                 </div>
@@ -1268,7 +1056,9 @@
                                     <div class="product-info effect a-left">
 
                                         <div class="info_hhh">
-                                            <h3 class="product-name product-name-hover"><a href="/sofa-da-mleh-740l" title="Sofa Da MLEH-740L">Sofa Da MLEH-740L</a></h3>
+                                            <h3 class="product-name product-name-hover"><a href="/sofa-da-mleh-740l"
+                                                                                           title="Sofa Da MLEH-740L">Sofa
+                                                Da MLEH-740L</a></h3>
 
 
                                             <div class="price-box clearfix">
@@ -1288,125 +1078,50 @@
                         </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
                         <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
                             <div class="product-col">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
                                 <div class="product-box">
                                     <div class="product-thumbnail">
 
 
-
-
-                                        <a class="image_link display_flex" href="/sofa-ban-san-ma-ntx1817" title="Sofa bán sẵn mã NTX1817">
-                                            <img src="image/product-1.png"  data-lazyload="Product_image/153a7037b636b84fce95af84f976d8.jpg?v=1513589866800" alt="Sofa bán sẵn mã NTX1817">
+                                        <a class="image_link display_flex" href="/sofa-ban-san-ma-ntx1817"
+                                           title="Sofa bán sẵn mã NTX1817">
+                                            <img src="image/product-1.png"
+                                                 data-lazyload="Product_image/153a7037b636b84fce95af84f976d8.jpg?v=1513589866800"
+                                                 alt="Sofa bán sẵn mã NTX1817">
                                         </a>
 
-                                        <div class="summary_grid hidden-xs hidden-sm hidden-md" onclick="window.location.href='/sofa-ban-san-ma-ntx1817';">
+                                        <div class="summary_grid hidden-xs hidden-sm hidden-md"
+                                             onclick="window.location.href='/sofa-ban-san-ma-ntx1817';">
                                             <div class="rte description">
 
-                                                <p>Khung xương sản xuất từ gỗ Sồi tự nhiên<br />
-                                                    Kích thước: 2800*1800*1000 mm<br />
+                                                <p>Khung xương sản xuất từ gỗ Sồi tự nhiên<br/>
+                                                    Kích thước: 2800*1800*1000 mm<br/>
                                                     Thiết kế kiểu dáng sang trọng</p>
 
                                             </div>
                                         </div>
                                         <div class="product-action-grid clearfix">
-                                            <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9387011" enctype="multipart/form-data">
+                                            <form action="/cart/add" method="post" class="variants form-nut-grid"
+                                                  data-id="product-actions-9387011" enctype="multipart/form-data">
                                                 <div>
 
-                                                    <input class="hidden" type="hidden" name="variantId" value="14992923" />
-                                                    <button class="btn-cart button_wh_40 left-to" title="Tùy chọn"  type="button" onclick="window.location.href='/sofa-ban-san-ma-ntx1817'" >
+                                                    <input class="hidden" type="hidden" name="variantId"
+                                                           value="14992923"/>
+                                                    <button class="btn-cart button_wh_40 left-to" title="Tùy chọn"
+                                                            type="button"
+                                                            onclick="window.location.href='/sofa-ban-san-ma-ntx1817'">
                                                         Tùy chọn
                                                     </button>
 
 
-                                                    <a title="Xem nhanh" href="/sofa-ban-san-ma-ntx1817" data-handle="sofa-ban-san-ma-ntx1817" class="button_wh_40 btn_view right-to quick-view">
+                                                    <a title="Xem nhanh" href="/sofa-ban-san-ma-ntx1817"
+                                                       data-handle="sofa-ban-san-ma-ntx1817"
+                                                       class="button_wh_40 btn_view right-to quick-view">
                                                         Xem nhanh
                                                     </a>
-
 
 
                                                 </div>
@@ -1416,7 +1131,9 @@
                                     <div class="product-info effect a-left">
 
                                         <div class="info_hhh">
-                                            <h3 class="product-name product-name-hover"><a href="/sofa-ban-san-ma-ntx1817" title="Sofa bán sẵn mã NTX1817">Sofa bán sẵn mã NTX1817</a></h3>
+                                            <h3 class="product-name product-name-hover"><a
+                                                    href="/sofa-ban-san-ma-ntx1817" title="Sofa bán sẵn mã NTX1817">Sofa
+                                                bán sẵn mã NTX1817</a></h3>
 
 
                                             <div class="price-box clearfix">
@@ -1446,133 +1163,50 @@
                         </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
                         <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
                             <div class="product-col">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
                                 <div class="product-box">
                                     <div class="product-thumbnail">
 
 
-
-
-                                        <a class="image_link display_flex" href="/ban-lam-viec-hoa-phat-ntm120a" title="Bàn làm việc hòa phát NTM120A">
-                                            <img src="image/product-1.png"  data-lazyload="Product_image/115412e32731674c0e831c9d9bc2ef.jpg?v=1513589817373" alt="Bàn làm việc hòa phát NTM120A">
+                                        <a class="image_link display_flex" href="/ban-lam-viec-hoa-phat-ntm120a"
+                                           title="Bàn làm việc hòa phát NTM120A">
+                                            <img src="image/product-1.png"
+                                                 data-lazyload="Product_image/115412e32731674c0e831c9d9bc2ef.jpg?v=1513589817373"
+                                                 alt="Bàn làm việc hòa phát NTM120A">
                                         </a>
 
-                                        <div class="summary_grid hidden-xs hidden-sm hidden-md" onclick="window.location.href='/ban-lam-viec-hoa-phat-ntm120a';">
+                                        <div class="summary_grid hidden-xs hidden-sm hidden-md"
+                                             onclick="window.location.href='/ban-lam-viec-hoa-phat-ntm120a';">
                                             <div class="rte description">
 
-                                                <p>Bảo hành: 12 tháng<br />
-                                                    Tình trạng: Còn hàng<br />
+                                                <p>Bảo hành: 12 tháng<br/>
+                                                    Tình trạng: Còn hàng<br/>
                                                     Danh mục: Bàn làm việc, Bàn làm việc Athena</p>
 
                                             </div>
                                         </div>
                                         <div class="product-action-grid clearfix">
-                                            <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9386983" enctype="multipart/form-data">
+                                            <form action="/cart/add" method="post" class="variants form-nut-grid"
+                                                  data-id="product-actions-9386983" enctype="multipart/form-data">
                                                 <div>
 
-                                                    <input class="hidden" type="hidden" name="variantId" value="14992878" />
-                                                    <button class="btn-cart button_wh_40 left-to" title="Tùy chọn"  type="button" onclick="window.location.href='/ban-lam-viec-hoa-phat-ntm120a'" >
+                                                    <input class="hidden" type="hidden" name="variantId"
+                                                           value="14992878"/>
+                                                    <button class="btn-cart button_wh_40 left-to" title="Tùy chọn"
+                                                            type="button"
+                                                            onclick="window.location.href='/ban-lam-viec-hoa-phat-ntm120a'">
                                                         Tùy chọn
                                                     </button>
 
 
-                                                    <a title="Xem nhanh" href="/ban-lam-viec-hoa-phat-ntm120a" data-handle="ban-lam-viec-hoa-phat-ntm120a" class="button_wh_40 btn_view right-to quick-view">
+                                                    <a title="Xem nhanh" href="/ban-lam-viec-hoa-phat-ntm120a"
+                                                       data-handle="ban-lam-viec-hoa-phat-ntm120a"
+                                                       class="button_wh_40 btn_view right-to quick-view">
                                                         Xem nhanh
                                                     </a>
-
 
 
                                                 </div>
@@ -1582,7 +1216,10 @@
                                     <div class="product-info effect a-left">
 
                                         <div class="info_hhh">
-                                            <h3 class="product-name product-name-hover"><a href="/ban-lam-viec-hoa-phat-ntm120a" title="Bàn làm việc hòa phát NTM120A">Bàn làm việc hòa phát NTM120A</a></h3>
+                                            <h3 class="product-name product-name-hover"><a
+                                                    href="/ban-lam-viec-hoa-phat-ntm120a"
+                                                    title="Bàn làm việc hòa phát NTM120A">Bàn làm việc hòa phát
+                                                NTM120A</a></h3>
 
 
                                             <div class="price-box clearfix">
@@ -1612,117 +1249,50 @@
                         </div>
 
 
-
-
-
-
-
-
-
-
-
                         <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
                             <div class="product-col">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
                                 <div class="product-box">
                                     <div class="product-thumbnail">
 
 
-
-
-                                        <a class="image_link display_flex" href="/ban-lam-viec-hoa-phat-at204hl" title="Bàn làm việc hòa phát AT204HL">
-                                            <img src="image/product-1.png"  data-lazyload="Product_image/b.jpg?v=1513589815887" alt="Bàn làm việc hòa phát AT204HL">
+                                        <a class="image_link display_flex" href="/ban-lam-viec-hoa-phat-at204hl"
+                                           title="Bàn làm việc hòa phát AT204HL">
+                                            <img src="image/product-1.png"
+                                                 data-lazyload="Product_image/b.jpg?v=1513589815887"
+                                                 alt="Bàn làm việc hòa phát AT204HL">
                                         </a>
 
-                                        <div class="summary_grid hidden-xs hidden-sm hidden-md" onclick="window.location.href='/ban-lam-viec-hoa-phat-at204hl';">
+                                        <div class="summary_grid hidden-xs hidden-sm hidden-md"
+                                             onclick="window.location.href='/ban-lam-viec-hoa-phat-at204hl';">
                                             <div class="rte description">
 
-                                                <p>Bảo hành: 12 tháng<br />
-                                                    Tình trạng: Còn hàng<br />
+                                                <p>Bảo hành: 12 tháng<br/>
+                                                    Tình trạng: Còn hàng<br/>
                                                     Danh mục: Bàn làm việc, Bàn làm việc Athena</p>
 
                                             </div>
                                         </div>
                                         <div class="product-action-grid clearfix">
-                                            <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9386981" enctype="multipart/form-data">
+                                            <form action="/cart/add" method="post" class="variants form-nut-grid"
+                                                  data-id="product-actions-9386981" enctype="multipart/form-data">
                                                 <div>
 
-                                                    <input class="hidden" type="hidden" name="variantId" value="14992875" />
-                                                    <button class="btn-cart button_wh_40 left-to" title="Tùy chọn"  type="button" onclick="window.location.href='/ban-lam-viec-hoa-phat-at204hl'" >
+                                                    <input class="hidden" type="hidden" name="variantId"
+                                                           value="14992875"/>
+                                                    <button class="btn-cart button_wh_40 left-to" title="Tùy chọn"
+                                                            type="button"
+                                                            onclick="window.location.href='/ban-lam-viec-hoa-phat-at204hl'">
                                                         Tùy chọn
                                                     </button>
 
 
-                                                    <a title="Xem nhanh" href="/ban-lam-viec-hoa-phat-at204hl" data-handle="ban-lam-viec-hoa-phat-at204hl" class="button_wh_40 btn_view right-to quick-view">
+                                                    <a title="Xem nhanh" href="/ban-lam-viec-hoa-phat-at204hl"
+                                                       data-handle="ban-lam-viec-hoa-phat-at204hl"
+                                                       class="button_wh_40 btn_view right-to quick-view">
                                                         Xem nhanh
                                                     </a>
-
 
 
                                                 </div>
@@ -1732,7 +1302,10 @@
                                     <div class="product-info effect a-left">
 
                                         <div class="info_hhh">
-                                            <h3 class="product-name product-name-hover"><a href="/ban-lam-viec-hoa-phat-at204hl" title="Bàn làm việc hòa phát AT204HL">Bàn làm việc hòa phát AT204HL</a></h3>
+                                            <h3 class="product-name product-name-hover"><a
+                                                    href="/ban-lam-viec-hoa-phat-at204hl"
+                                                    title="Bàn làm việc hòa phát AT204HL">Bàn làm việc hòa phát
+                                                AT204HL</a></h3>
 
 
                                             <div class="price-box clearfix">
@@ -1752,113 +1325,51 @@
                         </div>
 
 
-
-
-
-
-
-
-
-
-
                         <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
                             <div class="product-col">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
                                 <div class="product-box">
                                     <div class="product-thumbnail">
 
 
-
-
-                                        <a class="image_link display_flex" href="/ba-n-la-m-vie-c-ho-a-pha-t-hp120hl3c" title="Bàn làm việc hòa phát HP120HL3C">
-                                            <img src="image/product-1.png"  data-lazyload="Product_image/m.jpg?v=1513589812243" alt="Bàn làm việc hòa phát HP120HL3C">
+                                        <a class="image_link display_flex" href="/ba-n-la-m-vie-c-ho-a-pha-t-hp120hl3c"
+                                           title="Bàn làm việc hòa phát HP120HL3C">
+                                            <img src="image/product-1.png"
+                                                 data-lazyload="Product_image/m.jpg?v=1513589812243"
+                                                 alt="Bàn làm việc hòa phát HP120HL3C">
                                         </a>
 
-                                        <div class="summary_grid hidden-xs hidden-sm hidden-md" onclick="window.location.href='/ba-n-la-m-vie-c-ho-a-pha-t-hp120hl3c';">
+                                        <div class="summary_grid hidden-xs hidden-sm hidden-md"
+                                             onclick="window.location.href='/ba-n-la-m-vie-c-ho-a-pha-t-hp120hl3c';">
                                             <div class="rte description">
 
-                                                <p>Mã: HP120HL3C<br />
-                                                    Bảo hành: 12 tháng<br />
-                                                    Tình trạng: Còn hàng<br />
+                                                <p>Mã: HP120HL3C<br/>
+                                                    Bảo hành: 12 tháng<br/>
+                                                    Tình trạng: Còn hàng<br/>
                                                     Danh mục: Bàn làm việc, Bàn làm việc HP</p>
 
                                             </div>
                                         </div>
                                         <div class="product-action-grid clearfix">
-                                            <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9386978" enctype="multipart/form-data">
+                                            <form action="/cart/add" method="post" class="variants form-nut-grid"
+                                                  data-id="product-actions-9386978" enctype="multipart/form-data">
                                                 <div>
 
-                                                    <input class="hidden" type="hidden" name="variantId" value="14992869" />
-                                                    <button class="btn-cart button_wh_40 left-to" title="Tùy chọn"  type="button" onclick="window.location.href='/ba-n-la-m-vie-c-ho-a-pha-t-hp120hl3c'" >
+                                                    <input class="hidden" type="hidden" name="variantId"
+                                                           value="14992869"/>
+                                                    <button class="btn-cart button_wh_40 left-to" title="Tùy chọn"
+                                                            type="button"
+                                                            onclick="window.location.href='/ba-n-la-m-vie-c-ho-a-pha-t-hp120hl3c'">
                                                         Tùy chọn
                                                     </button>
 
 
-                                                    <a title="Xem nhanh" href="/ba-n-la-m-vie-c-ho-a-pha-t-hp120hl3c" data-handle="ba-n-la-m-vie-c-ho-a-pha-t-hp120hl3c" class="button_wh_40 btn_view right-to quick-view">
+                                                    <a title="Xem nhanh" href="/ba-n-la-m-vie-c-ho-a-pha-t-hp120hl3c"
+                                                       data-handle="ba-n-la-m-vie-c-ho-a-pha-t-hp120hl3c"
+                                                       class="button_wh_40 btn_view right-to quick-view">
                                                         Xem nhanh
                                                     </a>
-
 
 
                                                 </div>
@@ -1868,7 +1379,10 @@
                                     <div class="product-info effect a-left">
 
                                         <div class="info_hhh">
-                                            <h3 class="product-name product-name-hover"><a href="/ba-n-la-m-vie-c-ho-a-pha-t-hp120hl3c" title="Bàn làm việc hòa phát HP120HL3C">Bàn làm việc hòa phát HP120HL3C</a></h3>
+                                            <h3 class="product-name product-name-hover"><a
+                                                    href="/ba-n-la-m-vie-c-ho-a-pha-t-hp120hl3c"
+                                                    title="Bàn làm việc hòa phát HP120HL3C">Bàn làm việc hòa
+                                                phát HP120HL3C</a></h3>
 
 
                                             <div class="price-box clearfix">
@@ -1888,102 +1402,41 @@
                         </div>
 
 
-
-
-
-
-
-
-
-
-
                         <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
                             <div class="product-col">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
                                 <div class="product-box">
                                     <div class="product-thumbnail">
 
 
-
-
-                                        <a class="image_link display_flex" href="/ba-n-la-m-vie-c-ho-a-pha-t-ntm120" title="Bàn làm việc hòa phát NTM120">
-                                            <img src="image/product-1.png"  data-lazyload="Product_image/x.jpg?v=1513589810150" alt="Bàn làm việc hòa phát NTM120">
+                                        <a class="image_link display_flex" href="/ba-n-la-m-vie-c-ho-a-pha-t-ntm120"
+                                           title="Bàn làm việc hòa phát NTM120">
+                                            <img src="image/product-1.png"
+                                                 data-lazyload="Product_image/x.jpg?v=1513589810150"
+                                                 alt="Bàn làm việc hòa phát NTM120">
                                         </a>
 
-                                        <div class="summary_grid hidden-xs hidden-sm hidden-md" onclick="window.location.href='/ba-n-la-m-vie-c-ho-a-pha-t-ntm120';">
+                                        <div class="summary_grid hidden-xs hidden-sm hidden-md"
+                                             onclick="window.location.href='/ba-n-la-m-vie-c-ho-a-pha-t-ntm120';">
                                             <div class="rte description">
 
-                                                Bàn làm việc văn phòng hòa phát NTM120 thuộc dòng sản phẩm bàn văn phòng NEWTREND với kiểu dáng thiết kế tiện ích khi sử dụng. Mặt...
+                                                Bàn làm việc văn phòng hòa phát NTM120 thuộc dòng sản phẩm bàn văn
+                                                phòng NEWTREND với kiểu dáng thiết kế tiện ích khi sử dụng. Mặt...
 
                                             </div>
                                         </div>
                                         <div class="product-action-grid clearfix">
-                                            <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9386977" enctype="multipart/form-data">
+                                            <form action="/cart/add" method="post" class="variants form-nut-grid"
+                                                  data-id="product-actions-9386977" enctype="multipart/form-data">
                                                 <div>
 
 
-
-                                                    <a title="Xem nhanh" href="/ba-n-la-m-vie-c-ho-a-pha-t-ntm120" data-handle="ba-n-la-m-vie-c-ho-a-pha-t-ntm120" class="button_wh_40 btn_view right-to quick-view">
+                                                    <a title="Xem nhanh" href="/ba-n-la-m-vie-c-ho-a-pha-t-ntm120"
+                                                       data-handle="ba-n-la-m-vie-c-ho-a-pha-t-ntm120"
+                                                       class="button_wh_40 btn_view right-to quick-view">
                                                         Xem nhanh
                                                     </a>
-
 
 
                                                 </div>
@@ -1993,7 +1446,10 @@
                                     <div class="product-info effect a-left">
 
                                         <div class="info_hhh">
-                                            <h3 class="product-name product-name-hover"><a href="/ba-n-la-m-vie-c-ho-a-pha-t-ntm120" title="Bàn làm việc hòa phát NTM120">Bàn làm việc hòa phát NTM120</a></h3>
+                                            <h3 class="product-name product-name-hover"><a
+                                                    href="/ba-n-la-m-vie-c-ho-a-pha-t-ntm120"
+                                                    title="Bàn làm việc hòa phát NTM120">Bàn làm việc hòa phát
+                                                NTM120</a></h3>
 
                                             <div class="price-box clearfix">
                                                 <span class="price product-price">Liên hệ</span>
@@ -2020,20 +1476,17 @@
                                 <li class="page-item disabled"><a class="page-link" href="#">«</a></li>
 
 
+                                <li class="active page-item disabled"><a class="page-link" href="javascript:;">1</a>
+                                </li>
 
 
-
-                                <li class="active page-item disabled"><a class="page-link" href="javascript:;">1</a></li>
-
-
+                                <li class="page-item"><a class="page-link" onclick="doSearch(2)"
+                                                         href="javascript:;">2</a></li>
 
 
-                                <li class="page-item"><a class="page-link" onclick="doSearch(2)" href="javascript:;">2</a></li>
-
-
-
-
-                                <li class="page-item hidden-xs"><a class="page-link" onclick="doSearch(2)" href="javascript:;"><i class="fa fa-angle-right" aria-hidden="true"></i>
+                                <li class="page-item hidden-xs"><a class="page-link" onclick="doSearch(2)"
+                                                                   href="javascript:;"><i class="fa fa-angle-right"
+                                                                                          aria-hidden="true"></i>
                                 </a></li>
 
                             </ul>
@@ -2061,454 +1514,51 @@
                     <div class="aside-content">
                         <nav class="nav-category navbar-toggleable-md">
                             <ul class="nav navbar-pills">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                                 <li class="nav-item lv1">
-                                    <a href="/phong-khach" class="nav-link">Phòng khách <span class="count_x">(15)</span></a>
+                                    <a href="/phong-khach" class="nav-link">Phòng khách <span
+                                            class="count_x">(15)</span></a>
                                     <i class="fa fa-angle-right"></i>
                                     <ul class="dropdown-menu">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                                         <li class="nav-item lv2">
-                                            <a class="nav-link" href="/tham-trang-tri">Thảm trang trí <span class="count_x">(4)</span></a>
+                                            <a class="nav-link" href="/tham-trang-tri">Thảm trang trí <span
+                                                    class="count_x">(4)</span></a>
                                         </li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
                                         <li class="nav-item lv2">
                                             <a class="nav-link" href="/ban-lam-viec">Bàn làm việc <span class="count_x">(9)</span></a>
                                         </li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                                         <li class="nav-item lv2">
-                                            <a class="nav-link" href="/ban-tra">Bàn trà <span class="count_x">(12)</span></a>
+                                            <a class="nav-link" href="/ban-tra">Bàn trà <span
+                                                    class="count_x">(12)</span></a>
                                         </li>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                                         <li class="nav-item lv2">
-                                            <a class="nav-link" href="/ghe-sofa">Ghế sofa <span class="count_x">(10)</span></a>
+                                            <a class="nav-link" href="/ghe-sofa">Ghế sofa <span
+                                                    class="count_x">(10)</span></a>
                                         </li>
-
-
 
                                     </ul>
                                 </li>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                                <li class="nav-item lv1">
+                                    <a class="nav-link" href="/phong-bep">Phòng bếp <span
+                                            class="count_x">(14)</span></a>
 
                                 <li class="nav-item lv1">
-                                    <a class="nav-link" href="/phong-bep">Phòng bếp <span class="count_x">(14)</span></a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                                    <a class="nav-link" href="/phong-lam-viec">Phòng làm việc <span
+                                            class="count_x">(18)</span></a>
 
                                 <li class="nav-item lv1">
-                                    <a class="nav-link" href="/phong-lam-viec">Phòng làm việc <span class="count_x">(18)</span></a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                <li class="nav-item lv1">
-                                    <a class="nav-link" href="/chan-ga-dem">Chăn ga đệm <span class="count_x">(16)</span></a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                                    <a class="nav-link" href="/chan-ga-dem">Chăn ga đệm <span
+                                            class="count_x">(16)</span></a>
 
                                 <li class="nav-item lv1">
                                     <a class="nav-link" href="/ngoai-that">Ngoại thất <span class="count_x">(12)</span></a>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                                 <li class="nav-item lv1">
-                                    <a class="nav-link" href="/do-trang-tri">Đồ trang trí <span class="count_x">(14)</span></a>
-
+                                    <a class="nav-link" href="/do-trang-tri">Đồ trang trí <span
+                                            class="count_x">(14)</span></a>
 
                             </ul>
                         </nav>
@@ -2521,8 +1571,10 @@
                     <div class="filter-container">
                         <div class="filter-container__selected-filter" style="display: none;">
                             <div class="filter-container__selected-filter-header clearfix">
-                                <span class="filter-container__selected-filter-header-title"><i class="fa fa-arrow-left hidden-sm-up"></i> Bạn chọn</span>
-                                <a href="javascript:void(0)" onclick="clearAllFiltered()" class="filter-container__clear-all">Bỏ hết <i class="fa fa-angle-right"></i></a>
+                                <span class="filter-container__selected-filter-header-title"><i
+                                        class="fa fa-arrow-left hidden-sm-up"></i> Bạn chọn</span>
+                                <a href="javascript:void(0)" onclick="clearAllFiltered()"
+                                   class="filter-container__clear-all">Bỏ hết <i class="fa fa-angle-right"></i></a>
                             </div>
                             <div class="filter-container__selected-filter-list">
                                 <ul></ul>
@@ -2539,13 +1591,12 @@
                             <ul>
 
 
-
-
-
                                 <li class="filter-item filter-item--check-box filter-item--green">
 					<span>
 						<label for="filter-duoi-100-000d">
-							<input type="checkbox" id="filter-duoi-100-000d" onchange="toggleFilter(this);" data-group="Khoảng giá" data-field="price_min" data-text="Dưới 100.000đ" value="(<100000)" data-operator="OR">
+							<input type="checkbox" id="filter-duoi-100-000d" onchange="toggleFilter(this);"
+                                   data-group="Khoảng giá" data-field="price_min" data-text="Dưới 100.000đ"
+                                   value="(<100000)" data-operator="OR">
 							<i class="fa"></i>
 							Giá dưới 100.000đ
 						</label>
@@ -2553,14 +1604,12 @@
                                 </li>
 
 
-
-
-
-
                                 <li class="filter-item filter-item--check-box filter-item--green">
 					<span>
 						<label for="filter-100-000d-200-000d">
-							<input type="checkbox" id="filter-100-000d-200-000d" onchange="toggleFilter(this)" data-group="Khoảng giá" data-field="price_min" data-text="100.000đ - 200.000đ" value="(>=100000 AND <200000)" data-operator="OR">
+							<input type="checkbox" id="filter-100-000d-200-000d" onchange="toggleFilter(this)"
+                                   data-group="Khoảng giá" data-field="price_min" data-text="100.000đ - 200.000đ"
+                                   value="(>=100000 AND <200000)" data-operator="OR">
 							<i class="fa"></i>
 							100.000đ - 200.000đ
 						</label>
@@ -2568,14 +1617,12 @@
                                 </li>
 
 
-
-
-
-
                                 <li class="filter-item filter-item--check-box filter-item--green">
 					<span>
 						<label for="filter-200-000d-300-000d">
-							<input type="checkbox" id="filter-200-000d-300-000d" onchange="toggleFilter(this)" data-group="Khoảng giá" data-field="price_min" data-text="200.000đ - 300.000đ" value="(>=200000 AND <300000)" data-operator="OR">
+							<input type="checkbox" id="filter-200-000d-300-000d" onchange="toggleFilter(this)"
+                                   data-group="Khoảng giá" data-field="price_min" data-text="200.000đ - 300.000đ"
+                                   value="(>=200000 AND <300000)" data-operator="OR">
 							<i class="fa"></i>
 							200.000đ - 300.000đ
 						</label>
@@ -2583,14 +1630,12 @@
                                 </li>
 
 
-
-
-
-
                                 <li class="filter-item filter-item--check-box filter-item--green">
 					<span>
 						<label for="filter-300-000d-500-000d">
-							<input type="checkbox" id="filter-300-000d-500-000d" onchange="toggleFilter(this)" data-group="Khoảng giá" data-field="price_min" data-text="300.000đ - 500.000đ" value="(>=300000 AND <500000)" data-operator="OR">
+							<input type="checkbox" id="filter-300-000d-500-000d" onchange="toggleFilter(this)"
+                                   data-group="Khoảng giá" data-field="price_min" data-text="300.000đ - 500.000đ"
+                                   value="(>=300000 AND <500000)" data-operator="OR">
 							<i class="fa"></i>
 							300.000đ - 500.000đ
 						</label>
@@ -2598,14 +1643,12 @@
                                 </li>
 
 
-
-
-
-
                                 <li class="filter-item filter-item--check-box filter-item--green">
 					<span>
 						<label for="filter-500-000d-1-000-000d">
-							<input type="checkbox" id="filter-500-000d-1-000-000d" onchange="toggleFilter(this)" data-group="Khoảng giá" data-field="price_min" data-text="500.000đ - 1.000.000đ" value="(>500000 AND <1000000)" data-operator="OR">
+							<input type="checkbox" id="filter-500-000d-1-000-000d" onchange="toggleFilter(this)"
+                                   data-group="Khoảng giá" data-field="price_min" data-text="500.000đ - 1.000.000đ"
+                                   value="(>500000 AND <1000000)" data-operator="OR">
 							<i class="fa"></i>
 							500.000đ - 1.000.000đ
 						</label>
@@ -2614,7 +1657,9 @@
                                 <li class="filter-item filter-item--check-box filter-item--green">
 					<span>
 						<label for="filter-tren1-000-000d">
-							<input type="checkbox" id="filter-tren1-000-000d" onchange="toggleFilter(this)" data-group="Khoảng giá" data-field="price_min" data-text="Trên 1.000.000đ" value="(>1000000)" data-operator="OR">
+							<input type="checkbox" id="filter-tren1-000-000d" onchange="toggleFilter(this)"
+                                   data-group="Khoảng giá" data-field="price_min" data-text="Trên 1.000.000đ"
+                                   value="(>1000000)" data-operator="OR">
 							<i class="fa"></i>
 							Giá trên 1.000.000đ
 						</label>
@@ -2622,13 +1667,9 @@
                                 </li>
 
 
-
                             </ul>
                         </div>
                     </aside>
-
-
-
 
 
                     <aside class="aside-item filter-vendor">
@@ -2642,7 +1683,8 @@
                                 <li class="filter-item filter-item--check-box filter-item--green ">
 					<span>
 						<label class="label_relative" for="filter-canifa">
-							<input type="checkbox" id="filter-canifa" onchange="toggleFilter(this)"  data-group="Hãng" data-field="vendor" data-text="Canifa" value="(Canifa)" data-operator="OR">
+							<input type="checkbox" id="filter-canifa" onchange="toggleFilter(this)" data-group="Hãng"
+                                   data-field="vendor" data-text="Canifa" value="(Canifa)" data-operator="OR">
 							<i class="fa"></i>
 							<span class="filter_tt">Canifa</span>
 						</label>
@@ -2650,11 +1692,11 @@
                                 </li>
 
 
-
                                 <li class="filter-item filter-item--check-box filter-item--green ">
 					<span>
 						<label class="label_relative" for="filter-canova">
-							<input type="checkbox" id="filter-canova" onchange="toggleFilter(this)"  data-group="Hãng" data-field="vendor" data-text="Canova" value="(Canova)" data-operator="OR">
+							<input type="checkbox" id="filter-canova" onchange="toggleFilter(this)" data-group="Hãng"
+                                   data-field="vendor" data-text="Canova" value="(Canova)" data-operator="OR">
 							<i class="fa"></i>
 							<span class="filter_tt">Canova</span>
 						</label>
@@ -2662,11 +1704,11 @@
                                 </li>
 
 
-
                                 <li class="filter-item filter-item--check-box filter-item--green ">
 					<span>
 						<label class="label_relative" for="filter-hatatu">
-							<input type="checkbox" id="filter-hatatu" onchange="toggleFilter(this)"  data-group="Hãng" data-field="vendor" data-text="Hatatu" value="(Hatatu)" data-operator="OR">
+							<input type="checkbox" id="filter-hatatu" onchange="toggleFilter(this)" data-group="Hãng"
+                                   data-field="vendor" data-text="Hatatu" value="(Hatatu)" data-operator="OR">
 							<i class="fa"></i>
 							<span class="filter_tt">Hatatu</span>
 						</label>
@@ -2674,11 +1716,11 @@
                                 </li>
 
 
-
                                 <li class="filter-item filter-item--check-box filter-item--green ">
 					<span>
 						<label class="label_relative" for="filter-hugo">
-							<input type="checkbox" id="filter-hugo" onchange="toggleFilter(this)"  data-group="Hãng" data-field="vendor" data-text="Hugo" value="(Hugo)" data-operator="OR">
+							<input type="checkbox" id="filter-hugo" onchange="toggleFilter(this)" data-group="Hãng"
+                                   data-field="vendor" data-text="Hugo" value="(Hugo)" data-operator="OR">
 							<i class="fa"></i>
 							<span class="filter_tt">Hugo</span>
 						</label>
@@ -2686,11 +1728,11 @@
                                 </li>
 
 
-
                                 <li class="filter-item filter-item--check-box filter-item--green ">
 					<span>
 						<label class="label_relative" for="filter-kimana">
-							<input type="checkbox" id="filter-kimana" onchange="toggleFilter(this)"  data-group="Hãng" data-field="vendor" data-text="Kimana" value="(Kimana)" data-operator="OR">
+							<input type="checkbox" id="filter-kimana" onchange="toggleFilter(this)" data-group="Hãng"
+                                   data-field="vendor" data-text="Kimana" value="(Kimana)" data-operator="OR">
 							<i class="fa"></i>
 							<span class="filter_tt">Kimana</span>
 						</label>
@@ -2698,11 +1740,11 @@
                                 </li>
 
 
-
                                 <li class="filter-item filter-item--check-box filter-item--green ">
 					<span>
 						<label class="label_relative" for="filter-mleh">
-							<input type="checkbox" id="filter-mleh" onchange="toggleFilter(this)"  data-group="Hãng" data-field="vendor" data-text="MLEH" value="(MLEH)" data-operator="OR">
+							<input type="checkbox" id="filter-mleh" onchange="toggleFilter(this)" data-group="Hãng"
+                                   data-field="vendor" data-text="MLEH" value="(MLEH)" data-operator="OR">
 							<i class="fa"></i>
 							<span class="filter_tt">MLEH</span>
 						</label>
@@ -2710,11 +1752,11 @@
                                 </li>
 
 
-
                                 <li class="filter-item filter-item--check-box filter-item--green ">
 					<span>
 						<label class="label_relative" for="filter-victory">
-							<input type="checkbox" id="filter-victory" onchange="toggleFilter(this)"  data-group="Hãng" data-field="vendor" data-text="Victory" value="(Victory)" data-operator="OR">
+							<input type="checkbox" id="filter-victory" onchange="toggleFilter(this)" data-group="Hãng"
+                                   data-field="vendor" data-text="Victory" value="(Victory)" data-operator="OR">
 							<i class="fa"></i>
 							<span class="filter_tt">Victory</span>
 						</label>
@@ -2727,10 +1769,7 @@
                     </aside>
 
 
-
-
                 </div>
-
 
 
                 <div class="banner-right margin-top-20">
@@ -2760,8 +1799,7 @@
 </script>
 
 
-
-<link href="css/bpr-products-module.css" rel="stylesheet" type="text/css" />
+<link href="css/bpr-products-module.css" rel="stylesheet" type="text/css"/>
 <div class="bizweb-product-reviews-module"></div>
 
 <footer class="footer">
@@ -2779,12 +1817,6 @@
                             <div>
                                 <div class="list-menu">
                                     <div class="widget-ft wg-logo">
-
-
-
-
-
-
 
 
                                         <div class="item">
@@ -2808,12 +1840,6 @@
                                         </div>
 
 
-
-
-
-
-
-
                                         <div class="item">
                                             <h4 class="title-menu4 icon_none_first">
                                                 <a>Sunmax Đội Cấn</a>
@@ -2833,12 +1859,6 @@
 
                                             </ul>
                                         </div>
-
-
-
-
-
-
 
 
                                         <div class="item">
@@ -2862,9 +1882,6 @@
                                         </div>
 
 
-
-
-
                                     </div>
                                 </div>
                             </div>
@@ -2873,7 +1890,8 @@
                     <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2">
                         <div class="widget-ft">
                             <h4 class="title-menu">
-                                <a role="button" class="collapsed" data-toggle="collapse" aria-expanded="false" data-target="#collapseListMenu02" aria-controls="collapseListMenu02">
+                                <a role="button" class="collapsed" data-toggle="collapse" aria-expanded="false"
+                                   data-target="#collapseListMenu02" aria-controls="collapseListMenu02">
                                     Chính sách <i class="fa fa-plus" aria-hidden="true"></i>
                                 </a>
                             </h4>
@@ -2905,7 +1923,7 @@
                             </h4>
                             <div class="footer-widget">
                                 <div class="payment">
-                                    <img src="image/payment.png" alt="Payment" />
+                                    <img src="image/payment.png" alt="Payment"/>
                                 </div>
                             </div>
                             <h4 class="title-menu tittle_time">
@@ -2937,15 +1955,19 @@
 
                                 <div class="facebook">
                                     <div id="fb-root"></div>
-                                    <script>(function(d, s, id) {
+                                    <script>(function (d, s, id) {
                                         var js, fjs = d.getElementsByTagName(s)[0];
                                         if (d.getElementById(id)) return;
-                                        js = d.createElement(s); js.id = id;
+                                        js = d.createElement(s);
+                                        js.id = id;
                                         js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7&appId=631942543575730";
                                         fjs.parentNode.insertBefore(js, fjs);
                                     }(document, 'script', 'facebook-jssdk'));
                                     </script>
-                                    <div class="fb-page" data-href="https://www.facebook.com/sapo.vn" data-tabs="timeline" data-height="150" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                                    <div class="fb-page" data-href="https://www.facebook.com/sapo.vn"
+                                         data-tabs="timeline" data-height="150" data-small-header="true"
+                                         data-adapt-container-width="true" data-hide-cover="false"
+                                         data-show-facepile="true">
                                         <div class="fb-xfbml-parse-ignore">
                                             <blockquote cite="https://www.facebook.com/sapo.vn">
                                                 <a href="https://www.facebook.com/sapo.vn">Facebook</a>
@@ -2965,13 +1987,17 @@
                 <div class="inner clearfix">
                     <div class="row tablet">
                         <div id="copyright" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 a-center fot_copyright">
-                            <span class="wsp"><span class="mobile">© Bản quyền thuộc về <b>Jupitter Team</b></span><span class="hidden-xs"> | </span><span class="mobile">Cung cấp bởi <a href="https://www.sapo.vn/?utm_campaign=cpn:site_khach_hang-plm:footer&utm_source=site_khach_hang&utm_medium=referral&utm_content=fm:text_link-km:-sz:&utm_term=&campaign=site_khach_hang/" rel="nofollow" title="Sapo" target="_blank">Sapo</a></span></span>
+                            <span class="wsp"><span class="mobile">© Bản quyền thuộc về <b>Jupitter Team</b></span><span
+                                    class="hidden-xs"> | </span><span class="mobile">Cung cấp bởi <a
+                                    href="https://www.sapo.vn/?utm_campaign=cpn:site_khach_hang-plm:footer&utm_source=site_khach_hang&utm_medium=referral&utm_content=fm:text_link-km:-sz:&utm_term=&campaign=site_khach_hang/"
+                                    rel="nofollow" title="Sapo" target="_blank">Sapo</a></span></span>
 
                         </div>
                     </div>
                 </div>
 
-                <a href="#" id="back-to-top" class="backtop"  title="Lên đầu trang"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
+                <a href="#" id="back-to-top" class="backtop" title="Lên đầu trang"><i class="fa fa-angle-up"
+                                                                                      aria-hidden="true"></i></a>
 
 
             </div>
@@ -2985,7 +2011,8 @@
 <script src="js/api.jquery.js?4" type="text/javascript"></script>
 <!-- Plugin JS -->
 <script src="js/owl.carousel.min.js" type="text/javascript"></script>
-<script src="js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
 <!-- Add to cart -->
 
 
@@ -2994,7 +2021,8 @@
     <div class="content">
         <div class="row row-noGutter">
             <div class="col-xl-6 col-xs-12">
-                <div class="btn btn-full btn-primary a-left popup-title"><i class="fa fa-check"></i>Thêm vào giỏ hàng thành công
+                <div class="btn btn-full btn-primary a-left popup-title"><i class="fa fa-check"></i>Thêm vào giỏ hàng
+                    thành công
                 </div>
                 <a href="javascript:void(0)" class="close-window close-popup"><i class="fa fa-close"></i></a>
                 <div class="info clearfix">
@@ -3009,7 +2037,8 @@
                     </div>
                     <div class="actions">
                         <button class="btn  btn-primary  margin-top-5 btn-continue">Tiếp tục mua hàng</button>
-                        <button class="btn btn-gray margin-top-5" onclick="window.location='/cart'">Kiểm tra giỏ hàng</button>
+                        <button class="btn btn-gray margin-top-5" onclick="window.location='/cart'">Kiểm tra giỏ hàng
+                        </button>
                     </div>
                 </div>
 
@@ -3028,11 +2057,15 @@
 <div id="popup-cart" class="modal fade" role="dialog">
     <div id="popup-cart-desktop" class="clearfix">
         <div class="title-popup-cart">
-            <img src="image/icon-check.png"  alt="Sunmax"/> <span class="your_product">Bạn đã thêm <span class="cart_name_style">[ <span class="cart-popup-name"></span>]</span> vào giỏ hàng thành công ! </span>
+            <img src="image/icon-check.png" alt="Sunmax"/> <span class="your_product">Bạn đã thêm <span
+                class="cart_name_style">[ <span
+                class="cart-popup-name"></span>]</span> vào giỏ hàng thành công ! </span>
         </div>
         <div class="wrap_popup">
-            <div class="title-quantity-popup" >
-                <span class="cart_status" onclick="window.location.href='/cart';">Giỏ hàng của bạn có <span class="cart-popup-count"></span> sản phẩm </span> <i class="fa fa-caret-right" aria-hidden="true"></i>
+            <div class="title-quantity-popup">
+                <span class="cart_status" onclick="window.location.href='/cart';">Giỏ hàng của bạn có <span
+                        class="cart-popup-count"></span> sản phẩm </span> <i class="fa fa-caret-right"
+                                                                             aria-hidden="true"></i>
             </div>
             <div class="content-popup-cart">
                 <div class="thead-popup">
@@ -3048,13 +2081,16 @@
                         <span class="total-p popup-total">Tổng tiền thanh toán: <span class="total-price"></span></span>
                     </div>
                     <div class="tfoot-popup-2 clearfix">
-                        <a class="button checkout_ btn-proceed-checkout" title="Thực hiện thanh toán" href="/checkout"><span>Thực hiện thanh toán</span></a>
-                        <a class="button buy_ btn-continus-h" title="Tiếp tục mua hàng" onclick="$('#popup-cart').modal('hide');"><span><span>Tiếp tục mua hàng</span></span></a>
+                        <a class="button checkout_ btn-proceed-checkout" title="Thực hiện thanh toán"
+                           href="/checkout"><span>Thực hiện thanh toán</span></a>
+                        <a class="button buy_ btn-continus-h" title="Tiếp tục mua hàng"
+                           onclick="$('#popup-cart').modal('hide');"><span><span>Tiếp tục mua hàng</span></span></a>
 
                     </div>
                 </div>
             </div>
-            <a title="Close" class="quickview-close close-window" href="javascript:;" onclick="$('#popup-cart').modal('hide');"><i class="fa  fa-close"></i></a>
+            <a title="Close" class="quickview-close close-window" href="javascript:;"
+               onclick="$('#popup-cart').modal('hide');"><i class="fa  fa-close"></i></a>
         </div>
     </div>
 
@@ -3067,7 +2103,6 @@
 <!-- Quick view -->
 
 
-
 <div id="quick-view-product" class="quickview-product" style="display:none;">
     <div class="quickview-overlay fancybox-overlay fancybox-overlay-fixed"></div>
     <div class="quick-view-product"></div>
@@ -3078,7 +2113,9 @@
                 <div class="clearfix image-block">
 					<span class="view_full_size">
 						<a class="img-product" title="" href="#">
-							<img id="product-featured-image-quickview" class="img-responsive product-featured-image-quickview" src="image/logo.png" alt="quickview"  />
+							<img id="product-featured-image-quickview"
+                                 class="img-responsive product-featured-image-quickview" src="image/logo.png"
+                                 alt="quickview"/>
 						</a>
 					</span>
                     <div class="loading-imgquickview" style="display:none;"></div>
@@ -3119,7 +2156,8 @@
 
                 </div>
 
-                <form action="/cart/add" method="post" enctype="multipart/form-data" class="quick_option variants form-ajaxtocart">
+                <form action="/cart/add" method="post" enctype="multipart/form-data"
+                      class="quick_option variants form-ajaxtocart">
 					<span class="price-product-detail hidden" style="opacity: 0;">
 						<span class=""></span>
 					</span>
@@ -3127,13 +2165,19 @@
                     <div class="clearfix"></div>
                     <div class="quantity_wanted_p">
                         <div class="input_qty_qv">
-                            <a class="btn_num num_1 button button_qty" onClick="var result = document.getElementById('quantity-detail'); var qtyqv = result.value; if( !isNaN( qtyqv ) &amp;&amp; qtyqv &gt; 1 ) result.value--;return false;" >-</a>
-                            <input type="text" id="quantity-detail" name="quantity" value="1" onkeypress='validate(event)' onkeyup="valid(this,'numbers')" onblur="valid(this,'numbers')" class="form-control prd_quantity">
-                            <a class="btn_num num_2 button button_qty" onClick="var result = document.getElementById('quantity-detail'); var qtyqv = result.value; if( !isNaN( qtyqv )) result.value++;return false;" >+</a>
+                            <a class="btn_num num_1 button button_qty"
+                               onClick="var result = document.getElementById('quantity-detail'); var qtyqv = result.value; if( !isNaN( qtyqv ) &amp;&amp; qtyqv &gt; 1 ) result.value--;return false;">-</a>
+                            <input type="text" id="quantity-detail" name="quantity" value="1"
+                                   onkeypress='validate(event)' onkeyup="valid(this,'numbers')"
+                                   onblur="valid(this,'numbers')" class="form-control prd_quantity">
+                            <a class="btn_num num_2 button button_qty"
+                               onClick="var result = document.getElementById('quantity-detail'); var qtyqv = result.value; if( !isNaN( qtyqv )) result.value++;return false;">+</a>
                         </div>
 
                         <div class="button_actions">
-                            <button type="submit" class="btn btn-lg fix_add_to_cart  btn-cart button_cart_buy_enable add_to_cart btn_buy add_to_cart_detail ajax_addtocart" title="Cho vào giỏ hàng">
+                            <button type="submit"
+                                    class="btn btn-lg fix_add_to_cart  btn-cart button_cart_buy_enable add_to_cart btn_buy add_to_cart_detail ajax_addtocart"
+                                    title="Cho vào giỏ hàng">
                                 <span class="btn-content">Thêm vào giỏ hàng</span>
                             </button>
                         </div>
@@ -3153,114 +2197,111 @@
     </div>
 </div>
 
-// 		<script src="js/quickview.js" type="text/javascript"></script>
+//
+<script src="js/quickview.js" type="text/javascript"></script>
 
 
-// 		<div class='jas-sale-pop flex pf middle-xs'></div>
+//
+<div class='jas-sale-pop flex pf middle-xs'></div>
 
 
-
-
-
-
-// <script type="text/javascript">
+//
+<script type="text/javascript">
     $(document).ready(function ($) {
-        if ($(window).width() >= 768 ){
+        if ($(window).width() >= 768) {
             SalesPop();
         }
     });
-    function fisherYates ( myArray ) {
+
+    function fisherYates(myArray) {
         var i = myArray.length, j, temp;
-        if ( i === 0 ) return false;
-        while ( --i ) {
-            j = Math.floor( Math.random() * ( i + 1 ) );
+        if (i === 0) return false;
+        while (--i) {
+            j = Math.floor(Math.random() * (i + 1));
             temp = myArray[i];
             myArray[i] = myArray[j];
             myArray[j] = temp;
         }
     }
+
     var collection = new Array();
 
 
-    collection[0]="<a href='/ban-giam-doc-hoa-phat-ntp1890t1' class='jas-sale-pop-img mr__20'>"
-        +                                    "<img src='Product_image/r8abaa3a825074cd8855f02e71efc8.jpg' alt='Bàn giám đốc hòa phát NTP1890T1'/>"
-        +                                "</a>"
-        +                                "<div class='jas-sale-pop-content'>"
+    collection[0] = "<a href='/ban-giam-doc-hoa-phat-ntp1890t1' class='jas-sale-pop-img mr__20'>"
+        + "<img src='Product_image/r8abaa3a825074cd8855f02e71efc8.jpg' alt='Bàn giám đốc hòa phát NTP1890T1'/>"
+        + "</a>"
+        + "<div class='jas-sale-pop-content'>"
         //+                                    "<h4 class='fs__12 fwm mg__0'>Sản phẩm</h4>"
-        +                                    "<h3 class='mg__0 mt__5 mb__5 fs__18'>"
-        +                                        "<a href='/ban-giam-doc-hoa-phat-ntp1890t1' title='Bàn giám đốc hòa phát NTP1890T1'>Bàn giám đốc hòa phát NTP1890T1</a>"
-        +                                    "</h3>"
-        +                                    "<span class='fs__12 jas-sale-pop-timeago'></span>"
-        +                                "</div>"
-        +                                "<span class='pe-7s-close pa fs__20'></span>";
+        + "<h3 class='mg__0 mt__5 mb__5 fs__18'>"
+        + "<a href='/ban-giam-doc-hoa-phat-ntp1890t1' title='Bàn giám đốc hòa phát NTP1890T1'>Bàn giám đốc hòa phát NTP1890T1</a>"
+        + "</h3>"
+        + "<span class='fs__12 jas-sale-pop-timeago'></span>"
+        + "</div>"
+        + "<span class='pe-7s-close pa fs__20'></span>";
 
 
-
-    collection[1]="<a href='/ba-n-la-m-vie-c-van-pho-ng-ho-a-pha-t-sv204hl' class='jas-sale-pop-img mr__20'>"
-        +                                    "<img src='Product_image/8e72d1df4f29e47c29efe8d482d473.jpg' alt='Bàn làm việc hòa phát SV204HL'/>"
-        +                                "</a>"
-        +                                "<div class='jas-sale-pop-content'>"
+    collection[1] = "<a href='/ba-n-la-m-vie-c-van-pho-ng-ho-a-pha-t-sv204hl' class='jas-sale-pop-img mr__20'>"
+        + "<img src='Product_image/8e72d1df4f29e47c29efe8d482d473.jpg' alt='Bàn làm việc hòa phát SV204HL'/>"
+        + "</a>"
+        + "<div class='jas-sale-pop-content'>"
         //+                                    "<h4 class='fs__12 fwm mg__0'>Sản phẩm</h4>"
-        +                                    "<h3 class='mg__0 mt__5 mb__5 fs__18'>"
-        +                                        "<a href='/ba-n-la-m-vie-c-van-pho-ng-ho-a-pha-t-sv204hl' title='Bàn làm việc hòa phát SV204HL'>Bàn làm việc hòa phát SV204HL</a>"
-        +                                    "</h3>"
-        +                                    "<span class='fs__12 jas-sale-pop-timeago'></span>"
-        +                                "</div>"
-        +                                "<span class='pe-7s-close pa fs__20'></span>";
+        + "<h3 class='mg__0 mt__5 mb__5 fs__18'>"
+        + "<a href='/ba-n-la-m-vie-c-van-pho-ng-ho-a-pha-t-sv204hl' title='Bàn làm việc hòa phát SV204HL'>Bàn làm việc hòa phát SV204HL</a>"
+        + "</h3>"
+        + "<span class='fs__12 jas-sale-pop-timeago'></span>"
+        + "</div>"
+        + "<span class='pe-7s-close pa fs__20'></span>";
 
 
-
-    collection[2]="<a href='/bo-vo-chan-ra-goi-cotton-nhung-cao-cap' class='jas-sale-pop-img mr__20'>"
-        +                                    "<img src='Product_image/6e4b0d120477740078be37a750e7ba.jpg' alt='Bộ vỏ chăn ra gối cotton nhung'/>"
-        +                                "</a>"
-        +                                "<div class='jas-sale-pop-content'>"
+    collection[2] = "<a href='/bo-vo-chan-ra-goi-cotton-nhung-cao-cap' class='jas-sale-pop-img mr__20'>"
+        + "<img src='Product_image/6e4b0d120477740078be37a750e7ba.jpg' alt='Bộ vỏ chăn ra gối cotton nhung'/>"
+        + "</a>"
+        + "<div class='jas-sale-pop-content'>"
         //+                                    "<h4 class='fs__12 fwm mg__0'>Sản phẩm</h4>"
-        +                                    "<h3 class='mg__0 mt__5 mb__5 fs__18'>"
-        +                                        "<a href='/bo-vo-chan-ra-goi-cotton-nhung-cao-cap' title='Bộ vỏ chăn ra gối cotton nhung'>Bộ vỏ chăn ra gối cotton nhung</a>"
-        +                                    "</h3>"
-        +                                    "<span class='fs__12 jas-sale-pop-timeago'></span>"
-        +                                "</div>"
-        +                                "<span class='pe-7s-close pa fs__20'></span>";
+        + "<h3 class='mg__0 mt__5 mb__5 fs__18'>"
+        + "<a href='/bo-vo-chan-ra-goi-cotton-nhung-cao-cap' title='Bộ vỏ chăn ra gối cotton nhung'>Bộ vỏ chăn ra gối cotton nhung</a>"
+        + "</h3>"
+        + "<span class='fs__12 jas-sale-pop-timeago'></span>"
+        + "</div>"
+        + "<span class='pe-7s-close pa fs__20'></span>";
 
 
-
-    collection[3]="<a href='/bo-vo-chan-ga-goi-cotton-ai-cap-hoa-xanh' class='jas-sale-pop-img mr__20'>"
-        +                                    "<img src='Product_image/59a01658825c7468aa6a84dac7dc80.jpg' alt='Bộ vỏ chăn ga gối cotton Ai Cập'/>"
-        +                                "</a>"
-        +                                "<div class='jas-sale-pop-content'>"
+    collection[3] = "<a href='/bo-vo-chan-ga-goi-cotton-ai-cap-hoa-xanh' class='jas-sale-pop-img mr__20'>"
+        + "<img src='Product_image/59a01658825c7468aa6a84dac7dc80.jpg' alt='Bộ vỏ chăn ga gối cotton Ai Cập'/>"
+        + "</a>"
+        + "<div class='jas-sale-pop-content'>"
         //+                                    "<h4 class='fs__12 fwm mg__0'>Sản phẩm</h4>"
-        +                                    "<h3 class='mg__0 mt__5 mb__5 fs__18'>"
-        +                                        "<a href='/bo-vo-chan-ga-goi-cotton-ai-cap-hoa-xanh' title='Bộ vỏ chăn ga gối cotton Ai Cập'>Bộ vỏ chăn ga gối cotton Ai Cập</a>"
-        +                                    "</h3>"
-        +                                    "<span class='fs__12 jas-sale-pop-timeago'></span>"
-        +                                "</div>"
-        +                                "<span class='pe-7s-close pa fs__20'></span>";
+        + "<h3 class='mg__0 mt__5 mb__5 fs__18'>"
+        + "<a href='/bo-vo-chan-ga-goi-cotton-ai-cap-hoa-xanh' title='Bộ vỏ chăn ga gối cotton Ai Cập'>Bộ vỏ chăn ga gối cotton Ai Cập</a>"
+        + "</h3>"
+        + "<span class='fs__12 jas-sale-pop-timeago'></span>"
+        + "</div>"
+        + "<span class='pe-7s-close pa fs__20'></span>";
 
 
-
-    collection[4]="<a href='/bo-chan-ga-goi-cotton-ai-cap-ma-cat17' class='jas-sale-pop-img mr__20'>"
-        +                                    "<img src='Product_image/12684e083a683e4fc1afd8c1688b16.jpg' alt='Bộ chăn ga gối cotton Ai Cập'/>"
-        +                                "</a>"
-        +                                "<div class='jas-sale-pop-content'>"
+    collection[4] = "<a href='/bo-chan-ga-goi-cotton-ai-cap-ma-cat17' class='jas-sale-pop-img mr__20'>"
+        + "<img src='Product_image/12684e083a683e4fc1afd8c1688b16.jpg' alt='Bộ chăn ga gối cotton Ai Cập'/>"
+        + "</a>"
+        + "<div class='jas-sale-pop-content'>"
         //+                                    "<h4 class='fs__12 fwm mg__0'>Sản phẩm</h4>"
-        +                                    "<h3 class='mg__0 mt__5 mb__5 fs__18'>"
-        +                                        "<a href='/bo-chan-ga-goi-cotton-ai-cap-ma-cat17' title='Bộ chăn ga gối cotton Ai Cập'>Bộ chăn ga gối cotton Ai Cập</a>"
-        +                                    "</h3>"
-        +                                    "<span class='fs__12 jas-sale-pop-timeago'></span>"
-        +                                "</div>"
-        +                                "<span class='pe-7s-close pa fs__20'></span>";
-
+        + "<h3 class='mg__0 mt__5 mb__5 fs__18'>"
+        + "<a href='/bo-chan-ga-goi-cotton-ai-cap-ma-cat17' title='Bộ chăn ga gối cotton Ai Cập'>Bộ chăn ga gối cotton Ai Cập</a>"
+        + "</h3>"
+        + "<span class='fs__12 jas-sale-pop-timeago'></span>"
+        + "</div>"
+        + "<span class='pe-7s-close pa fs__20'></span>";
 
 
     fisherYates(collection);
+
     function SalesPop() {
         if ($('.jas-sale-pop').length < 0)
             return;
-        setInterval(function() {
-            $('.jas-sale-pop').fadeIn(function() {
+        setInterval(function () {
+            $('.jas-sale-pop').fadeIn(function () {
                 $(this).removeClass('slideUp');
-            }).delay(10000).fadeIn(function() {
-                var randomTime =['1 phút','2 phút','3 phút','4 phút','5 phút','6 phút','7 phút','8 phút','9 phút','10 phút','11 phút','12 phút','13 phút','14 phút','15 phút','16 phút','17 phút','18 phút','19 phút','20 phút','21 phút','22 phút','23 phút','24 phút','25 phút','26 phút','27 phút','28 phút','29 phút','30 phút','31 phút','32 phút','33 phút','34 phút','35 phút','36 phút','37 phút','38 phút','39 phút','40 phút','41 phút','42 phút','43 phút','44 phút','45 phút','46 phút','47 phút','48 phút','49 phút','50 phút','51 phút','52 phút','53 phút','54 phút','55 phút','56 phút','57 phút','58 phút','59 phút',],
+            }).delay(10000).fadeIn(function () {
+                var randomTime = ['1 phút', '2 phút', '3 phút', '4 phút', '5 phút', '6 phút', '7 phút', '8 phút', '9 phút', '10 phút', '11 phút', '12 phút', '13 phút', '14 phút', '15 phút', '16 phút', '17 phút', '18 phút', '19 phút', '20 phút', '21 phút', '22 phút', '23 phút', '24 phút', '25 phút', '26 phút', '27 phút', '28 phút', '29 phút', '30 phút', '31 phút', '32 phút', '33 phút', '34 phút', '35 phút', '36 phút', '37 phút', '38 phút', '39 phút', '40 phút', '41 phút', '42 phút', '43 phút', '44 phút', '45 phút', '46 phút', '47 phút', '48 phút', '49 phút', '50 phút', '51 phút', '52 phút', '53 phút', '54 phút', '55 phút', '56 phút', '57 phút', '58 phút', '59 phút',],
                     randomTimeAgo = Math.floor(Math.random() * randomTime.length),
                     randomProduct = Math.floor(Math.random() * collection.length),
                     randomShowP = collection[randomProduct],
@@ -3268,7 +2309,7 @@
                 $(".jas-sale-pop").html(randomShowP);
                 $('.jas-sale-pop-timeago').text('Một khách hàng vừa đặt mua cách đây ' + TimeAgo);
                 $(this).addClass('slideUp');
-                $('.pe-7s-close').on('click', function() {
+                $('.pe-7s-close').on('click', function () {
                     $('.jas-sale-pop').remove();
                 });
             }).delay(6000);
