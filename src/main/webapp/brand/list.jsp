@@ -27,7 +27,7 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                 </ul>
-                <form>
+                <form action="/product?" method="get" >
                     <div class="row">
                         <div class="col">
                             <select class="form-select" aria-label="Default select example" name="select">
@@ -37,7 +37,7 @@
                             </select>
                         </div>
                         <div class="col">
-                            <input class="form-control mt-3" style="size: 200px" type="text" placeholder="Search"
+                            <input name="q" class="form-control mt-3" style="size: 200px" type="text" placeholder="Search"
                                    aria-label="Search">
                         </div>
                         <div class="col">
