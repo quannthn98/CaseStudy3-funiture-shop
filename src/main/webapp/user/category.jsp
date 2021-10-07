@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%--
   Created by IntelliJ IDEA.
   User: quans
@@ -12,8 +14,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>
         Theme Sunmax dành cho website bán nội thất văn phòng
-
-
     </title>
 
     <!-- ================= Page description ================== -->
@@ -31,10 +31,10 @@
     <!-- ================= Google Fonts ================== -->
 
 
-    <link href="css/font-Roboto.css?family=Roboto:400,700" rel="stylesheet" type="text/css"/>
+    <link href="user/css/font-Roboto.css?family=Roboto:400,700" rel="stylesheet" type="text/css"/>
 
 
-    <link href="css/font-YesevaOne.css?family=Yeseva+One&amp;subset=cyrillic,cyrillic-ext,latin-ext,vietnamese"
+    <link href="user/css/font-YesevaOne.css?family=Yeseva+One&amp;subset=cyrillic,cyrillic-ext,latin-ext,vietnamese"
           rel="stylesheet">
     <!-- Facebook Open Graph meta tags -->
 
@@ -50,24 +50,24 @@
     <meta property="og:site_name" content="Sunmax">
 
     <!-- Plugin CSS -->
-    <link rel="stylesheet" href="css/themify-icons.css">
-    <link rel="stylesheet" href="css/all.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link href="css/owl.carousel.min.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="user/css/themify-icons.css">
+    <link rel="stylesheet" href="user/css/all.css">
+    <link rel="stylesheet" href="user/css/bootstrap.min.css">
+    <link rel="stylesheet" href="user/css/font-awesome.min.css">
+    <link href="user/css/owl.carousel.min.css" rel="stylesheet" type="text/css"/>
 
     <!-- Build Main CSS -->
-    <link href="css/base.scss.css" rel="stylesheet" type="text/css"/>
-    <link href="css/style.scss.css" rel="stylesheet" type="text/css"/>
-    <link href="css/module.scss.css" rel="stylesheet" type="text/css"/>
-    <link href="css/responsive.scss.css" rel="stylesheet" type="text/css"/>
+    <link href="user/css/base.scss.css" rel="stylesheet" type="text/css"/>
+    <link href="user/css/style.scss.css" rel="stylesheet" type="text/css"/>
+    <link href="user/css/module.scss.css" rel="stylesheet" type="text/css"/>
+    <link href="user/css/responsive.scss.css" rel="stylesheet" type="text/css"/>
 
     <!-- Header JS -->
-    <script src="js/jquery-2.2.3.min.js" type="text/javascript"></script>
+    <script src="user/js/jquery-2.2.3.min.js" type="text/javascript"></script>
     <!-- Bizweb javascript customer -->
 
 
-    <link href="css/iwish.css"/>
+    <link href="user/css/iwish.css"/>
     <script>var ProductReviewsAppUtil = ProductReviewsAppUtil || {};</script>
 </head>
 <body>
@@ -91,37 +91,19 @@
 
                 <li class="level0 level-top parent level_ico">
                     <a href="/phong-khach">Phòng khách</a>
-
                     <i class="ti-plus hide_close"></i>
                     <ul class="level0 sub-menu" style="display:none;">
-
-                        <li class="level1">
-                            <a href="/tham-trang-tri"><span>Thảm trang trí</span></a>
-
-                        </li>
-
-                        <li class="level1">
-                            <a href="/ban-lam-viec"><span>Bàn làm việc</span></a>
-
-                        </li>
-
-                        <li class="level1">
-                            <a href="/ban-tra"><span>Bàn trà</span></a>
-
-                        </li>
-
-                        <li class="level1">
-                            <a href="/ghe-sofa"><span>Ghế sofa</span></a>
-
-                        </li>
-
+                        <c:forEach items="${categoryList}" var="category">
+                            <c:if test="${category.location == 1}">
+                            <li class="level1">
+                                <a href="/user?action=category&categoryId=${category.id}"><span>${category.name}</span></a>
+                            </li>
+                            </c:if>
+                        </c:forEach>
                     </ul>
-
                 </li>
-
                 <li class="level0 level-top parent level_ico">
-                    <a href="/phong-bep">Phòng bếp</a>
-
+                    <a href="/phong">bếp</a>
                 </li>
 
                 <li class="level0 level-top parent level_ico">
@@ -434,7 +416,7 @@
                     </li>
 
 
-                    <li><strong><span itemprop="title"> Phòng khách</strong></li>
+                    <li><strong><span itemprop="title"> Phòng khách</span></strong></li>
 
 
                 </ul>
@@ -449,8 +431,8 @@
             <div class="text-sm-left">
 
                 <div class="tt hidden-xs">
-                    <h1 class="title-head margin-top-0">{category.name}</h1>
 
+                    <h1 class="title-head margin-top-0">Name</h1>
 
                     <span class="hidden-sm hidden-xs">
 						(Tìm thấy {category.totalProduct} sản phẩm)</span>
@@ -458,7 +440,6 @@
                 </div>
             </div>
             <div class="category-products products">
-
                 <div class="sortPagiBar">
                     <div class="srt">
                         <div class="wr_sort col-sm-12">
@@ -492,199 +473,102 @@
 
 
                 <section class="products-view products-view-grid collection_reponsive">
-                    c:forEach items="{productList}" var="product"
+                    <%--                    c:forEach items="{productList}" var="product"--%>
 
                     <div class="row">
-                        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-                            <div class="product-col">
-                                <div class="product-box">
-                                    <div class="product-thumbnail">
+                        <c:forEach items="${productList}" var="product">
+                            <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                                <div class="product-col">
+                                    <div class="product-box">
+                                        <div class="product-thumbnail">
 
-                                        <div class="sale-flash new">Mới</div>
-                                        <a class="image_link display_flex" href="{/servlet?id={product.id}"
-                                           title="Sofa bộ Italia - Canova">
-                                            <img src="image/product-1.png" data-lazyload="Product_image/10.jpg"
-                                                 alt="Sofa bộ Italia - Canova">
-                                        </a>
+                                            <div class="sale-flash new">Mới</div>
+                                            <a class="image_link display_flex" href="{/servlet?id={product.id}"
+                                               title="Sofa bộ Italia - Canova">
+                                                <img src="${product.image}" data-lazyload="${product.image}"
+                                                     alt="Sofa bộ Italia - Canova">
+                                            </a>
 
-                                        <div class="summary_grid hidden-xs hidden-sm hidden-md"
-                                             onclick="window.location.href='/sofa-da-ma-ntx1824';">
-                                            <div class="rte description">
+                                            <div class="summary_grid hidden-xs hidden-sm hidden-md"
+                                                 onclick="window.location.href='/sofa-da-ma-ntx1824';">
+                                                <div class="rte description">
 
-                                                <p>{product.subDescription}</p>
-
-                                            </div>
-                                        </div>
-                                        <div class="product-action-grid clearfix">
-                                            <form action="/cart/add" method="post" class="variants form-nut-grid"
-                                                  data-id="product-actions-9387021" enctype="multipart/form-data">
-                                                <div>
-
-                                                    <input class="hidden" type="hidden" name="variantId"
-                                                           value="14992946"/>
-
-                                                    <a title="Xem nhanh" href="/servlet?id={product.id}"
-                                                       data-handle="sofa-da-ma-ntx1824"
-                                                       class="button_wh_40 btn_view right-to quick-view">
-                                                        Xem nhanh
-                                                    </a>
+                                                    <p>${product.subDescription}</p>
 
                                                 </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <div class="product-info effect a-left">
-
-                                        <div class="info_hhh">
-                                            <h3 class="product-name product-name-hover">
-                                                <a href="/sofa-da-ma-ntx1824" title="Sofa bộ Italia - Canova">
-                                                    {product.name}
-                                                </a>
-                                            </h3>
-                                            <div class="price-box clearfix">
-                                                <span class="price product-price">{product. price after sale off}</span>
-
-                                                <span class="price product-price-old">{product.price}</span>
-
-                                                <span class="sale-off">{product.price_sell}</span>
-
                                             </div>
+                                            <div class="product-action-grid clearfix">
+                                                <form action="/cart/add" method="post" class="variants form-nut-grid"
+                                                      data-id="product-actions-9387021" enctype="multipart/form-data">
+                                                    <div>
 
-                                            <div class="reviews-product-grid">
-                                                <div class="bizweb-product-reviews-badge" data-id="9387021"></div>
+                                                        <input class="hidden" type="hidden" name="variantId"
+                                                               value="14992946"/>
+
+                                                        <a title="Xem nhanh" href="/servlet?id={product.id}"
+                                                           data-handle="sofa-da-ma-ntx1824"
+                                                           class="button_wh_40 btn_view right-to quick-view">
+                                                            Xem nhanh
+                                                        </a>
+
+                                                    </div>
+                                                </form>
                                             </div>
                                         </div>
+                                        <div class="product-info effect a-left">
 
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-                            <div class="product-col">
-
-
-                                <div class="product-box">
-                                    <div class="product-thumbnail">
-
-                                        <div class="sale-flash new">Mới</div>
-
-
-                                        <a class="image_link display_flex" href="/sofa-da-ma-ntx1824-1"
-                                           title="Sofa bộ Hugo 8979">
-                                            <img src="image/product-1.png" data-lazyload="Product_image/4.jpg"
-                                                 alt="Sofa bộ Hugo 8979">
-                                        </a>
-
-                                        <div class="summary_grid hidden-xs hidden-sm hidden-md"
-                                             onclick="window.location.href='/sofa-da-ma-ntx1824-1';">
-                                            <div class="rte description">
-
-                                                <p>Kích thước: 2850x1800x900 mm<br/>
-                                                    Bảo hành: 6 Năm<br/>
-                                                    Nguồn gốc: Hugo, Malaysia</p>
-
-                                            </div>
-                                        </div>
-                                        <div class="product-action-grid clearfix">
-                                            <form action="/cart/add" method="post" class="variants form-nut-grid"
-                                                  data-id="product-actions-9387020" enctype="multipart/form-data">
-                                                <div>
-
-                                                    <input class="hidden" type="hidden" name="variantId"
-                                                           value="14992943"/>
-                                                    <button class="btn-cart button_wh_40 left-to" title="Tùy chọn"
-                                                            type="button"
-                                                            onclick="window.location.href='/sofa-da-ma-ntx1824-1'">
-                                                        Tùy chọn
-                                                    </button>
-
-
-                                                    <a title="Xem nhanh" href="/sofa-da-ma-ntx1824-1"
-                                                       data-handle="sofa-da-ma-ntx1824-1"
-                                                       class="button_wh_40 btn_view right-to quick-view">
-                                                        Xem nhanh
+                                            <div class="info_hhh">
+                                                <h3 class="product-name product-name-hover">
+                                                    <a href="/sofa-da-ma-ntx1824" title="Sofa bộ Italia - Canova">
+                                                            ${product.name}
                                                     </a>
-
-
+                                                </h3>
+                                                <div class="price-box clearfix">
+                                                    <span class="price product-price"><fmt:formatNumber type="number"
+                                                                                                        maxFractionDigits="0"
+                                                                                                        value="${product.priceSell}"/></span>
+                                                    <span class="price product-price-old"><fmt:formatNumber
+                                                            type="number" maxFractionDigits="0"
+                                                            value="${product.price}"/></span>
+                                                    <span class="sale-off">- <fmt:formatNumber type="number"
+                                                                                               maxFractionDigits="0"
+                                                                                               value="${(1-(product.priceSell / product.price))*100}"/>%</span>
                                                 </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <div class="product-info effect a-left">
-
-                                        <div class="info_hhh">
-                                            <h3 class="product-name product-name-hover"><a href="/sofa-da-ma-ntx1824-1"
-                                                                                           title="Sofa bộ Hugo 8979">Sofa
-                                                bộ Hugo 8979</a></h3>
-
-
-                                            <div class="price-box clearfix">
-                                                <span class="price product-price">59.000.000₫</span>
-
-                                                <span class="price product-price-old">
-					70.000.000₫
-				</span>
-
-                                                <span class="sale-off">-
-16%
-</span>
-
-
-                                            </div>
-
-
-                                            <div class="reviews-product-grid">
-                                                <div class="bizweb-product-reviews-badge" data-id="9387020"></div>
+                                                <div class="reviews-product-grid">
+                                                    <div class="bizweb-product-reviews-badge" data-id="9387021"></div>
+                                                </div>
                                             </div>
                                         </div>
-
                                     </div>
-
                                 </div>
                             </div>
-                        </div>
-
+                        </c:forEach>
                     </div>
                     <div class="text-right">
-
                         <nav class="clearfix">
                             <ul class="pagination clearfix">
-
                                 <li class="page-i   tem disabled"><a class="page-link" href="#">«</a></li>
-
-
                                 <li class="active page-item disabled"><a class="page-link" href="javascript:;">1</a>
                                 </li>
-
-
                                 <li class="page-item"><a class="page-link" onclick="doSearch(2)"
                                                          href="javascript:;">2</a></li>
-
-
                                 <li class="page-item hidden-xs"><a class="page-link" onclick="doSearch(2)"
                                                                    href="javascript:;"><i class="fa fa-angle-right"
-                                                                                          aria-hidden="true"></i>
-                                </a></li>
-
+                                                                                          aria-hidden="true"></i></a>
+                                </li>
                             </ul>
                         </nav>
                         <script>
                             var cuPage = 1
                         </script>
-
                     </div>
                 </section>
-
-
             </div>
         </section>
 
         <div class="col-lg-3 col-md-3 margin-bottom-50 col-lg-pull-9 col-md-pull-9">
-
             <aside class="dqdt-sidebar sidebar left-content">
-                <script src="js/search_filter.js" type="text/javascript"></script>
+                <script src="user/js/search_filter.js" type="text/javascript"></script>
 
                 <aside class="aside-item sidebar-category collection-category">
                     <div class="aside-title">
@@ -695,61 +579,52 @@
                             <ul class="nav navbar-pills">
                                 <li class="nav-item lv1">
                                     <a href="/phong-khach" class="nav-link">Phòng khách <span
-                                            class="count_x">(15)</span></a>
+                                            class="count_x">(4)</span></a>
                                     <i class="fa fa-angle-right"></i>
                                     <ul class="dropdown-menu">
-                                        c:forEach items="{categoryList}" var="category"
-                                        <li class="nav-item lv2">
-                                            <a class="nav-link" href="/tham-trang-tri">href=/servlet?id={category.id} //
-                                                {category.name}<span
-                                                        class="count_x">(4)</span></a>
-                                        </li>
-
+                                        <c:forEach items="${categoryList}" var="category">
+                                            <c:if test="${category.location == 1}">
+                                                <li class="nav-item lv2">
+                                                    <a class="nav-link"
+                                                       href="/user?action=category&categoryId=${category.id}">
+                                                            ${category.name}
+                                                    </a>
+                                                </li>
+                                            </c:if>
+                                        </c:forEach>
                                     </ul>
                                 </li>
-
                                 <li class="nav-item lv1">
                                     <a href="/phong-khach" class="nav-link">Phòng ngủ <span
-                                            class="count_x">(15)</span></a>
+                                            class="count_x">(4)</span></a>
                                     <i class="fa fa-angle-right"></i>
                                     <ul class="dropdown-menu">
-                                        c:forEach items="{categoryList}" var="category"
-                                        <li class="nav-item lv2">
-                                            <a class="nav-link" href="/tham-trang-tri">href=/servlet?id={category.id} //
-                                                {category.name}<span
-                                                        class="count_x">(4)</span></a>
-                                        </li>
-
+                                        <c:forEach items="${categoryList}" var="category">
+                                            <c:if test="${category.location == 3 }">
+                                                <li class="nav-item lv2">
+                                                    <a class="nav-link"
+                                                       href="/user?action=category&categoryId=${category.id}">
+                                                            ${category.name}
+                                                    </a>
+                                                </li>
+                                            </c:if>
+                                        </c:forEach>
                                     </ul>
                                 </li>
 
                                 <li class="nav-item lv1">
                                     <a href="/phong-khach" class="nav-link">Phòng bếp <span
-                                            class="count_x">(15)</span></a>
+                                            class="count_x">(4)</span></a>
                                     <i class="fa fa-angle-right"></i>
                                     <ul class="dropdown-menu">
-                                        c:forEach items="{categoryList}" var="category"
-                                        <li class="nav-item lv2">
-                                            <a class="nav-link" href="/tham-trang-tri">href=/servlet?id={category.id} //
-                                                {category.name}<span
-                                                        class="count_x">(4)</span></a>
-                                        </li>
-
-                                    </ul>
-                                </li>
-
-                                <li class="nav-item lv1">
-                                    <a href="/phong-khach" class="nav-link">Phòng làm việc <span
-                                            class="count_x">(15)</span></a>
-                                    <i class="fa fa-angle-right"></i>
-                                    <ul class="dropdown-menu">
-                                        c:forEach items="{categoryList}" var="category"
-                                        <li class="nav-item lv2">
-                                            <a class="nav-link" href="/tham-trang-tri">href=/servlet?id={category.id} //
-                                                {category.name}<span
-                                                        class="count_x">(4)</span></a>
-                                        </li>
-                                        /c:forEacth
+                                        <c:forEach items="${categoryList}" var="category">
+                                            <c:if test="${category.location == 2}">
+                                                <li class="nav-item lv2">
+                                                    <a class="nav-link"
+                                                       href="/user?action=category&categoryId=${category.id}">${category.name}</a>
+                                                </li>
+                                            </c:if>
+                                        </c:forEach>
                                     </ul>
                                 </li>
 
@@ -759,7 +634,7 @@
                 </aside>
 
 
-                <script src="js/search_filter.js" type="text/javascript"></script>
+                <script src="user/js/search_filter.js" type="text/javascript"></script>
                 <div class="aside-filter">
                     <div class="filter-container">
                         <div class="filter-container__selected-filter" style="display: none;">
@@ -992,7 +867,7 @@
 </script>
 
 
-<link href="css/bpr-products-module.css" rel="stylesheet" type="text/css"/>
+<link href="user/css/bpr-products-module.css" rel="stylesheet" type="text/css"/>
 <div class="bizweb-product-reviews-module"></div>
 
 <footer class="footer">
@@ -1197,14 +1072,15 @@
         </div>
     </div>
 </footer>
-<script src='js/api_js.js?sensor=false' type='text/javascript'></script>
-<script src="js/jquery.gmap.min.js" type="text/javascript"></script>
+<script src='user/js/api_js.js?sensor=false' type='text/javascript'></script>
+<script src="user/js/jquery.gmap.min.js" type="text/javascript"></script>
 <!-- Bizweb javascript -->
-<script src="js/option-selectors.js" type="text/javascript"></script>
-<script src="js/api.jquery.js?4" type="text/javascript"></script>
+<script src="user/js/option-selectors.js" type="text/javascript"></script>
+<script src="user/js/api.jquery.js?4" type="text/javascript"></script>
 <!-- Plugin JS -->
-<script src="js/owl.carousel.min.js" type="text/javascript"></script>
-<script src="js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+<script src="user/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="user/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
 <!-- Add to cart -->
 
@@ -1290,9 +1166,9 @@
 </div>
 <div id="myModal" class="modal fade" role="dialog">
 </div>
-<script src="js/cs.script.js" type="text/javascript"></script>
-<script src="js/double_tab_togo.js" type="text/javascript"></script>
-<script src="js/appear.js" type="text/javascript"></script>
+<script src="user/js/cs.script.js" type="text/javascript"></script>
+<script src="user/js/double_tab_togo.js" type="text/javascript"></script>
+<script src="user/js/appear.js" type="text/javascript"></script>
 <!-- Quick view -->
 
 
@@ -1391,7 +1267,7 @@
 </div>
 
 //
-<script src="js/quickview.js" type="text/javascript"></script>
+<script src="user/js/quickview.js" type="text/javascript"></script>
 
 
 //
@@ -1421,7 +1297,7 @@
 
 
     collection[0] = "<a href='/ban-giam-doc-hoa-phat-ntp1890t1' class='jas-sale-pop-img mr__20'>"
-        + "<img src='Product_image/r8abaa3a825074cd8855f02e71efc8.jpg' alt='Bàn giám đốc hòa phát NTP1890T1'/>"
+        + "<img src='user/Product_image/r8abaa3a825074cd8855f02e71efc8.jpg' alt='Bàn giám đốc hòa phát NTP1890T1'/>"
         + "</a>"
         + "<div class='jas-sale-pop-content'>"
         //+                                    "<h4 class='fs__12 fwm mg__0'>Sản phẩm</h4>"
@@ -1434,7 +1310,7 @@
 
 
     collection[1] = "<a href='/ba-n-la-m-vie-c-van-pho-ng-ho-a-pha-t-sv204hl' class='jas-sale-pop-img mr__20'>"
-        + "<img src='Product_image/8e72d1df4f29e47c29efe8d482d473.jpg' alt='Bàn làm việc hòa phát SV204HL'/>"
+        + "<img src='user/Product_image/8e72d1df4f29e47c29efe8d482d473.jpg' alt='Bàn làm việc hòa phát SV204HL'/>"
         + "</a>"
         + "<div class='jas-sale-pop-content'>"
         //+                                    "<h4 class='fs__12 fwm mg__0'>Sản phẩm</h4>"
@@ -1447,7 +1323,7 @@
 
 
     collection[2] = "<a href='/bo-vo-chan-ra-goi-cotton-nhung-cao-cap' class='jas-sale-pop-img mr__20'>"
-        + "<img src='Product_image/6e4b0d120477740078be37a750e7ba.jpg' alt='Bộ vỏ chăn ra gối cotton nhung'/>"
+        + "<img src='user/Product_image/6e4b0d120477740078be37a750e7ba.jpg' alt='Bộ vỏ chăn ra gối cotton nhung'/>"
         + "</a>"
         + "<div class='jas-sale-pop-content'>"
         //+                                    "<h4 class='fs__12 fwm mg__0'>Sản phẩm</h4>"
@@ -1460,7 +1336,7 @@
 
 
     collection[3] = "<a href='/bo-vo-chan-ga-goi-cotton-ai-cap-hoa-xanh' class='jas-sale-pop-img mr__20'>"
-        + "<img src='Product_image/59a01658825c7468aa6a84dac7dc80.jpg' alt='Bộ vỏ chăn ga gối cotton Ai Cập'/>"
+        + "<img src='user/Product_image/59a01658825c7468aa6a84dac7dc80.jpg' alt='Bộ vỏ chăn ga gối cotton Ai Cập'/>"
         + "</a>"
         + "<div class='jas-sale-pop-content'>"
         //+                                    "<h4 class='fs__12 fwm mg__0'>Sản phẩm</h4>"
@@ -1473,7 +1349,7 @@
 
 
     collection[4] = "<a href='/bo-chan-ga-goi-cotton-ai-cap-ma-cat17' class='jas-sale-pop-img mr__20'>"
-        + "<img src='Product_image/12684e083a683e4fc1afd8c1688b16.jpg' alt='Bộ chăn ga gối cotton Ai Cập'/>"
+        + "<img src='user/Product_image/12684e083a683e4fc1afd8c1688b16.jpg' alt='Bộ chăn ga gối cotton Ai Cập'/>"
         + "</a>"
         + "<div class='jas-sale-pop-content'>"
         //+                                    "<h4 class='fs__12 fwm mg__0'>Sản phẩm</h4>"
@@ -1512,7 +1388,7 @@
 
 
 <!-- Main JS -->
-<script src="js/main.js" type="text/javascript"></script>
+<script src="user/js/main.js" type="text/javascript"></script>
 
 
 <!-- Product detail JS,CSS -->

@@ -12,7 +12,7 @@ import java.util.List;
 
 public class ProductDao implements IProductDao {
     public static final String SELECT_ALL_PRODUCT_SQL = "select * from productDetail";
-    public static final String FIND_BY_ID_SQL = "select * from productDetail where id = ?";
+    public static final String FIND_BY_ID_SQL = "select * from product where id = ?";
     public static final String DELETE_PRODUCT_BY_ID = "delete from product where id = ? ;";
     public static final String UPDATE_PRODUCT_BY_ID_SQL = "update product set name = ? , image = ? , subimage = ? , price = ? , price_sell = ? , subdescription = ? , description = ? , createdDate = ? , status = ?,id_Category=?,id_Brand=?  where id = ?;";
     public static final String ADD_PRODUCT_SQL = "insert into product(name, image, subimage, price, price_sell, subdescription, description, createdDate, status,id_Category,id_Brand)values (?,? , ?, ?, ?, ?, ?, ?, ?,?,?);";
