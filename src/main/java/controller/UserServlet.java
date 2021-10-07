@@ -32,6 +32,9 @@ public class UserServlet extends HttpServlet {
             case "detail":
                 showProductDetail(request, response);
                 break;
+            case "category":
+                showCategory(request ,response);
+                break;
             default:
                 showHome(request, response);
                 break;
@@ -50,11 +53,15 @@ public class UserServlet extends HttpServlet {
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/productDetail.jsp");
         dispatcher.forward(request, response);
 //        response.sendRedirect("user/productDetailTemplate.jsp");
-
     }
 
     private void showHome(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/home.jsp");
+        dispatcher.forward(request,response);
+    }
+
+    private void showCategory(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        RequestDispatcher dispatcher = request.getRequestDispatcher("user/category.jsp");
         dispatcher.forward(request,response);
     }
 

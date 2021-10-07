@@ -454,11 +454,11 @@
 
 
                     <li>
-                        <a itemprop="url" href="/ghe-sofa"><span itemprop="title">Ghế sofa</span></a>
+                        <a itemprop="url" href="/ghe-sofa"><span itemprop="title">{category.name}</span></a>
                         <span><i class="fa">/</i></span>
                     </li>
 
-                    <li><strong><span itemprop="title">Sofa bộ Hugo 8979</span></strong>
+                    <li><strong><span itemprop="title">${product.name}</span></strong>
                     <li>
 
                 </ul>
@@ -479,12 +479,9 @@
                         <div class="product-detail-left product-images col-xs-12 col-sm-6 col-md-5 col-lg-5">
                             <div class="row">
                                 <div class="col_large_default large-image">
-                                    <a href="user/Product_image/sofahugo.jpg?v=1513589881417"
-                                       class="large_image_url checkurl" data-rel="prettyPhoto[product-gallery]">
                                         <img id="img_01" class="img-responsive" alt="Sofa bộ Hugo 8979"
                                              src="${product.image}"
                                              data-zoom-image="user/Product_image/4.jpg?v=1513589881417"/>
-                                    </a>
                                     <div class="hidden">
                                         <div class="item">
                                             <a href="user/Product_image/13.jpg?v=1513589881417"
@@ -510,46 +507,46 @@
                                     </div>
                                 </div>
 
-                                <div class="aaa">
-                                    <div id="gallery_02"
-                                         class="owl-carousel owl-theme thumbnail-product thumb_product_details not-dqowl"
-                                         data-loop="false" data-lg-items="3" data-md-items="3" data-sm-items="3"
-                                         data-xs-items="3" data-xxs-items="3">
-                                        <div class="item">
-                                            <a href="#" data-image="user/Product_image/4.jpg?v=1513589881417"
-                                               data-zoom-image="user/Product_image/4.jpg?v=1513589881417">
-                                                <img data-img="user/Product_image/4.jpg?v=1513589881417"
-                                                     src="user/Product_image/sofahugo.jpg?v=1513589881417"
-                                                     alt="{product.name}}">
-                                            </a>
-                                        </div>
+<%--                                <div class="aaa">--%>
+<%--                                    <div id="gallery_02"--%>
+<%--                                         class="owl-carousel owl-theme thumbnail-product thumb_product_details not-dqowl"--%>
+<%--                                         data-loop="false" data-lg-items="3" data-md-items="3" data-sm-items="3"--%>
+<%--                                         data-xs-items="3" data-xxs-items="3">--%>
+<%--                                        <div class="item">--%>
+<%--                                            <a href="#" data-image="user/Product_image/4.jpg?v=1513589881417"--%>
+<%--                                               data-zoom-image="user/Product_image/4.jpg?v=1513589881417">--%>
+<%--                                                <img data-img="user/Product_image/4.jpg?v=1513589881417"--%>
+<%--                                                     src="user/Product_image/sofahugo.jpg?v=1513589881417"--%>
+<%--                                                     alt="{product.name}}">--%>
+<%--                                            </a>--%>
+<%--                                        </div>--%>
 
-                                        <div class="item">
-                                            <a href="#" data-image="user/Product_image/13.jpg?v=1513589881417"
-                                               data-zoom-image="user/Product_image/13.jpg?v=1513589881417">
-                                                <img data-img="user/Product_image/13.jpg?v=1513589881417"
-                                                     src="user/Product_image/13.jpg?v=1513589881417" alt="Sofa bộ Hugo 8979">
-                                            </a>
-                                        </div>
+<%--                                        <div class="item">--%>
+<%--                                            <a href="#" data-image="user/Product_image/13.jpg?v=1513589881417"--%>
+<%--                                               data-zoom-image="user/Product_image/13.jpg?v=1513589881417">--%>
+<%--                                                <img data-img="user/Product_image/13.jpg?v=1513589881417"--%>
+<%--                                                     src="user/Product_image/13.jpg?v=1513589881417" alt="Sofa bộ Hugo 8979">--%>
+<%--                                            </a>--%>
+<%--                                        </div>--%>
 
-                                        <div class="item">
-                                            <a href="#" data-image="user/Product_image/2.jpg?v=1513589881417"
-                                               data-zoom-image="user/Product_image/2.jpg?v=1513589881417">
-                                                <img data-img="user/Product_image/2.jpg?v=1513589881417"
-                                                     src="user/Product_image/2.jpg?v=1513589881417" alt="Sofa bộ Hugo 8979">
-                                            </a>
-                                        </div>
+<%--                                        <div class="item">--%>
+<%--                                            <a href="#" data-image="user/Product_image/2.jpg?v=1513589881417"--%>
+<%--                                               data-zoom-image="user/Product_image/2.jpg?v=1513589881417">--%>
+<%--                                                <img data-img="user/Product_image/2.jpg?v=1513589881417"--%>
+<%--                                                     src="user/Product_image/2.jpg?v=1513589881417" alt="Sofa bộ Hugo 8979">--%>
+<%--                                            </a>--%>
+<%--                                        </div>--%>
 
-                                        <div class="item">
-                                            <a href="#" data-image="user/Product_image/8.jpg?v=1513589881417"
-                                               data-zoom-image="user/Product_image/8.jpg?v=1513589881417">
-                                                <img data-img="user/Product_image/8.jpg?v=1513589881417"
-                                                     src="user/Product_image/8.jpg?v=1513589881417" alt="Sofa bộ Hugo 8979">
-                                            </a>
-                                        </div>
+<%--                                        <div class="item">--%>
+<%--                                            <a href="#" data-image="user/Product_image/8.jpg?v=1513589881417"--%>
+<%--                                               data-zoom-image="user/Product_image/8.jpg?v=1513589881417">--%>
+<%--                                                <img data-img="user/Product_image/8.jpg?v=1513589881417"--%>
+<%--                                                     src="user/Product_image/8.jpg?v=1513589881417" alt="Sofa bộ Hugo 8979">--%>
+<%--                                            </a>--%>
+<%--                                        </div>--%>
 
-                                    </div>
-                                </div>
+<%--                                    </div>--%>
+<%--                                </div>--%>
 
                             </div>
                         </div>
@@ -598,85 +595,6 @@
                             <div class="form-product col-sm-12">
                                 <form enctype="multipart/form-data" id="add-to-cart-form" action="/cart/add"
                                       method="post" class="form-inline margin-bottom-0">
-
-
-                                    <div class="swatch-color swatch clearfix" data-option-index="0">
-                                        <div class="header">Màu sắc:</div>
-
-
-                                        <div data-value="Trắng" class="swatch-element color Trắng available">
-
-
-                                            <div class="tooltip">Trắng</div>
-
-                                            <input class="swatch-hai" id="swatch-0-Trắng" type="radio" name="option-0"
-                                                   data-value="Trắng" value="Trắng" checked/>
-
-
-<%--                                            <label for="swatch-0-Trắng"--%>
-<%--                                                   style="background-color: trang;background-image: url(user/Product_image/13.jpg?v=1513589881417);background-size: contain; background-repeat: no-repeat; background-position: center;">--%>
-<%--                                            </label>--%>
-
-
-                                        </div>
-
-
-                                        <script>
-                                            jQuery('.swatch[data-option-index="0"] .Trắng').removeClass('soldout').addClass('available').find(':radio').removeAttr('disabled');
-
-                                        </script>
-
-
-                                        <div data-value="X&#225;m" class="swatch-element color Xám available">
-
-
-                                            <div class="tooltip">Xám</div>
-
-                                            <input class="swatch-hai" id="swatch-0-Xám" type="radio" name="option-0"
-                                                   data-value="X&#225;m" value="X&#225;m"/>
-
-
-                                            <label for="swatch-0-Xám"
-                                                   style="background-color: #615a5a; background-image: url(user/Product_image/sofahugo.jpg?v=1513589881417);background-size: contain; background-repeat: no-repeat; background-position: center;">
-
-                                            </label>
-
-
-                                        </div>
-
-
-                                        <script>
-                                            jQuery('.swatch[data-option-index="0"] .Xám').removeClass('soldout').addClass('available').find(':radio').removeAttr('disabled');
-
-                                        </script>
-
-
-                                        <div data-value="N&#226;u" class="swatch-element color Nâu available">
-
-
-                                            <div class="tooltip">Nâu</div>
-
-                                            <input class="swatch-hai" id="swatch-0-Nâu" type="radio" name="option-0"
-                                                   data-value="N&#226;u" value="N&#226;u"/>
-
-
-<%--                                            <label for="swatch-0-Nâu"--%>
-<%--                                                   style="background-color: nau;background-image: url(user/Product_image/8.jpg?v=1513589881417);background-size: contain; background-repeat: no-repeat; background-position: center;">--%>
-
-<%--                                            </label>--%>
-
-
-                                        </div>
-
-
-                                        <script>
-                                            jQuery('.swatch[data-option-index="0"] .Nâu').removeClass('soldout').addClass('available').find(':radio').removeAttr('disabled');
-
-                                        </script>
-
-
-                                    </div>
-
 
                                     <div class="box-variant clearfix  hidden ">
 
@@ -738,45 +656,6 @@
                                     </ul>
                                 </div>
                             </div>
-
-
-                            <div class="social-sharing ">
-
-
-                                <div class="social-media"
-                                     data-permalink="https://sunmax.bizwebvietnam.net/sofa-da-ma-ntx1824-1">
-                                    <label>Chia sẻ: </label>
-
-                                    <a target="_blank"
-                                       href="//www.facebook.com/sharer.php?u=https://sunmax.bizwebvietnam.net/sofa-da-ma-ntx1824-1"
-                                       class="share-facebook" title="Chia sẻ lên Facebook">
-                                        <i class="fa fa-facebook"></i>
-                                    </a>
-
-
-                                    <a target="_blank"
-                                       href="//twitter.com/share?text=SofabộHugo8979&amp;url=https://sunmax.bizwebvietnam.net/sofa-da-ma-ntx1824-1"
-                                       class="share-twitter" title="Chia sẻ lên Twitter">
-                                        <i class="fa fa-twitter"></i>
-                                    </a>
-
-
-                                    <a target="_blank"
-                                       href="//pinterest.com/pin/create/button/?url=https://sunmax.bizwebvietnam.net/sofa-da-ma-ntx1824-1&amp;media=http://bizweb.dktcdn.net/thumb/1024x1024/100/284/162/products/4.jpg?v=1513589881417&amp;description=SofabộHugo8979"
-                                       class="share-pinterest" title="Chia sẻ lên pinterest">
-                                        <i class="fa fa-pinterest"></i>
-                                    </a>
-
-
-                                    <a target="_blank"
-                                       href="//plus.google.com/share?url=https://sunmax.bizwebvietnam.net/sofa-da-ma-ntx1824-1"
-                                       class="share-google" title="+1">
-                                        <i class="fa fa-google-plus"></i>
-                                    </a>
-
-                                </div>
-                            </div>
-
                         </div>
                     </div>
 
@@ -807,38 +686,8 @@
 
                                     <div id="tab-1" class="tab-content">
                                         <div class="rte">
-                                            <p><strong>Sofa bộ Hugo 8979</strong></p>
-                                            <p>Sofa bộ 8979 là sản phẩm được thiệt kế dựa trên ý tưởng hiện đại, phong
-                                                cách thời trang, đồng thời giá cả phải chăng để đáp ứng nhu cầu tiêu
-                                                dùng của đại đa số khách hàng trên thị trường. Đây cũng là một trong số
-                                                những mẫu sofa hot trên thị trường cả về thiết kế lẫn giá cả.<br/>
-                                                <strong>Ưu điểm của bộ Sofa bộ 8979</strong><br/>
-                                                + Mang tới không gian tiện nghi hơn<br/>
-                                                + Cảm nhận giây phút êm ái khi sử dụng với chất liệu da Microfiber cao
-                                                cấp<br/>
-                                                + Thiết kế kiểu chữ U&nbsp;giúp tiết kiệm diện tích bày trí<br/>
-                                                + Màu sắc đa dạng cho quý vị chọn lựa<br/>
-                                                + Miễn phí giao hàng trong bán kính 200km</p>
-                                            <p><strong>Thông tin về bộ Sofa bộ 8979</strong><br/>
-                                                Kích thước: 2850x1800x900 mm</p>
-                                            <p>Bảo hành: 6 Năm</p>
-                                            <p>Nguồn gốc: Hugo, Malaysia<br/>
-                                                Chất liệu:&nbsp;Da bò 100% + khung sườn sofa bằng gỗ dầu Malaysia<br/>
-                                                Kich thước:&nbsp;&nbsp; &nbsp;<br/>
-                                                + Ghế 3 : Dài 214 x Cao 79 x Sâu 105&nbsp;<br/>
-                                                + Ghế 2,5 : Dài 194 x Cao 79 x Sâu 105&nbsp;<br/>
-                                                + Ghế 1.25: Dài 127 x Cao 79 xSâu105 &nbsp;</p>
-                                            <p><strong>Một số hình ảnh về SP&nbsp;</strong></p>
-                                            <p><img data-thumb="original" original-height="400" original-width="600"
-                                                    src="user/Product_image/2.jpg"/></p>
-                                            <p><em>Hình 1:&nbsp;Chất liệu da thật cùng đệm mút 3 lớp tạo nên 1 sự đàn
-                                                hồi cao</em></p>
-                                            <p>&nbsp;</p>
-                                            <p><img data-thumb="original" original-height="400" original-width="600"
-                                                    src="user/Product_image/sofahugo.jpg"/></p>
-                                            <p><em>Hình 2:&nbsp;Tựa lưng và hông ghế được nhấn bằng những múi chia đẹp
-                                                mắt với nguyên bản từ chính những chiếc ghế da cao cấp trên dòng xe hơi
-                                                BMW hay Lexus</em></p>
+                                            <p><strong>${product.name}</strong></p>
+                                            <p>${product.description}</p>
 
 
                                         </div>
