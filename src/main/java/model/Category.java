@@ -1,21 +1,24 @@
 package model;
 
-public class Brand {
+public class Category {
     private int id;
     private String name;
+    private int location;
     private int status;
 
-    public Brand(int id, String name, int status) {
+    public Category() {
+    }
+
+    public Category(int id, String name, int location, int status) {
         this.id = id;
         this.name = name;
+        this.location = location;
         this.status = status;
     }
 
-    public Brand() {
-    }
-
-    public Brand(String name, int status) {
+    public Category(String name, int location, int status) {
         this.name = name;
+        this.location = location;
         this.status = status;
     }
 
@@ -33,6 +36,14 @@ public class Brand {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getLocation() {
+        return location;
+    }
+
+    public void setLocation(int location) {
+        this.location = location;
     }
 
     public int getStatus() {
