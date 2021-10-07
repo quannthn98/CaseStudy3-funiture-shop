@@ -26,46 +26,46 @@
   <meta name="robots" content="noodp,index,follow" />
   <!-- ================= Favicon ================== -->
 
-  <<link rel="icon" href="image/favicon.png" type="image/x-icon" />
+  <<link rel="icon" href="user/image/favicon.png" type="user/image/x-icon" />
 
   <!-- ================= Google Fonts ================== -->
 
 
 
-  <link href="css/font-Roboto.css?family=Roboto:400,700" rel="stylesheet" type="text/css" />
+  <link href="user/css/font-Roboto.css?family=Roboto:400,700" rel="stylesheet" type="text/css" />
 
 
-  <link href="css/font-YesevaOne.css?family=Yeseva+One&amp;subset=cyrillic,cyrillic-ext,latin-ext,vietnamese" rel="stylesheet">
+  <link href="user/css/font-YesevaOne.css?family=Yeseva+One&amp;subset=cyrillic,cyrillic-ext,latin-ext,vietnamese" rel="stylesheet">
   <!-- Facebook Open Graph meta tags -->
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Đăng nhập tài khoản">
-  <<meta property="og:image" content="image/logo.png">
-  <meta property="og:image:secure_url" content="image/logo.png">
+  <<meta property="og:image" content="user/image/logo.png">
+  <meta property="og:image:secure_url" content="user/image/logo.png">
 
   <meta property="og:description" content="">
   <meta property="og:url" content="https://sunmax.bizwebvietnam.net/account/login">
   <meta property="og:site_name" content="Sunmax">
 
-  link rel="stylesheet" href="css/themify-icons.css" >
-  <link rel="stylesheet" href="css/all.css">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/font-awesome.min.css">
-  <link href="css/owl.carousel.min.css" rel="stylesheet" type="text/css" />
+  link rel="stylesheet" href="user/css/themify-icons.css" >
+  <link rel="stylesheet" href="user/css/all.css">
+  <link rel="stylesheet" href="user/css/bootstrap.min.css">
+  <link rel="stylesheet" href="user/css/font-awesome.min.css">
+  <link href="user/css/owl.carousel.min.css" rel="stylesheet" type="text/css" />
 
   <!-- Build Main CSS -->
-  <link href="css/base.scss.css" rel="stylesheet" type="text/css" />
-  <link href="css/style.scss.css" rel="stylesheet" type="text/css" />
-  <link href="css/module.scss.css" rel="stylesheet" type="text/css" />
-  <link href="css/responsive.scss.css" rel="stylesheet" type="text/css" />
+  <link href="user/css/base.scss.css" rel="stylesheet" type="text/css" />
+  <link href="user/css/style.scss.css" rel="stylesheet" type="text/css" />
+  <link href="user/css/module.scss.css" rel="stylesheet" type="text/css" />
+  <link href="user/css/responsive.scss.css" rel="stylesheet" type="text/css" />
 
   <!-- Header JS -->
-  <script src="js/jquery-2.2.3.min.js" type="text/javascript"></script>
+  <script src="user/js/jquery-2.2.3.min.js" type="text/javascript"></script>
   <!-- Bizweb javascript customer -->
 
-  <script src="js/bizweb-api.js?4" type="text/javascript"></script>
-  <script src="js/common.js?4" type="text/javascript"></script>
-  <script src="js/customer.js?4" type="text/javascript"></script>
+  <script src="user/js/bizweb-api.js?4" type="text/javascript"></script>
+  <script src="user/js/common.js?4" type="text/javascript"></script>
+  <script src="user/js/customer.js?4" type="text/javascript"></script>
 
 
 
@@ -76,7 +76,7 @@
 
 
 
-  <link href="css/iwish.css" />
+  <link href="user/css/iwish.css" />
 </head>
 <body>
 <div class="hidden-md hidden-lg opacity_menu"></div>
@@ -211,14 +211,14 @@
         <div class="content_header">
           <div class="header-main">
             <div class="menu-bar-h nav-mobile-button hidden-md hidden-lg">
-              <a href="#nav-mobile"><img src="image/i_menubar.png" alt="menu bar" /></a>
+              <a href="#nav-mobile"><img src="user/image/i_menubar.png" alt="menu bar" /></a>
             </div>
             <div class="col-lg-3 col-md-3">
               <div class="logo">
 
 
                 <a href="/" class="logo-wrapper ">
-                  <img src="image/logo.png" alt="logo ">
+                  <img src="user/image/logo.png" alt="logo ">
                 </a>
 
               </div>
@@ -278,7 +278,7 @@
                 <div class="header-acount hidden-lg-down">
                   <div class="wishlist_header hidden-xs hidden-sm">
 
-                    <div class="img_hotline"><img alt="Wishlist" src="image/icon_phone.png"/></div>
+                    <div class="img_hotline"><img alt="Wishlist" src="user/image/icon_phone.png"/></div>
 
                     <span class="text_hotline">Hotline:</span> <a class="hai01" href="tel:0165939688">0165939688</a>
 
@@ -288,7 +288,7 @@
                     <div class="mini-cart text-xs-center">
                       <div class="heading-cart">
                         <a class="bg_cart" href="/cart" title="Giỏ hàng">
-                          <img alt="Giỏ hàng" src="image/icon_hovercart.png"/>
+                          <img alt="Giỏ hàng" src="user/image/icon_hovercart.png"/>
                           <span class="text-giohang hidden-xs">Giỏ hàng:</span>
                           (<span class="count_item count_item_pr">0</span>)
                         </a>
@@ -326,7 +326,7 @@
                     <div class="mini-cart text-xs-center">
                       <div class="heading-cart-mobi">
                         <a class="bg_cart" href="/cart" title="Giỏ hàng">
-                          <img alt="Giỏ hàng" src="image/icon_cart_mobi.png"/>
+                          <img alt="Giỏ hàng" src="user/image/icon_cart_mobi.png"/>
                           <span class="count_item count_item_pr"></span>
                         </a>
                       </div>
@@ -464,8 +464,8 @@
 					</span>
           <div class="social-login text-left margin-top-15 margin-bottom-0">
             <script>function loginFacebook(){var a={client_id:"947410958642584",redirect_uri:"https://store.bizwebvietnam.net/account/facebook_account_callback",state:JSON.stringify({redirect_url:window.location.href}),scope:"email",response_type:"code"},b="https://www.facebook.com/v3.2/dialog/oauth"+encodeURIParams(a,!0);window.location.href=b}function loginGoogle(){var a={client_id:"885968593373-197u9i4pte44vmvcc0j50pvhlfvl27ds.apps.googleusercontent.com",redirect_uri:"https://store.bizwebvietnam.net/account/google_account_callback",scope:"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile",access_type:"online",state:JSON.stringify({redirect_url:window.location.href}),response_type:"code"},b="https://accounts.google.com/o/oauth2/v2/auth"+encodeURIParams(a,!0);window.location.href=b}function encodeURIParams(a,b){var c=[];for(var d in a)if(a.hasOwnProperty(d)){var e=a[d];null!=e&&c.push(encodeURIComponent(d)+"="+encodeURIComponent(e))}return 0==c.length?"":(b?"?":"")+c.join("&")}</script>
-            <a href="javascript:void(0)" class="social-login--facebook" onclick="loginFacebook()"><img width="129px" height="37px" alt="facebook-login-button" src="image/fb-btn.svg"></a>
-            <a href="javascript:void(0)" class="social-login--google" onclick="loginGoogle()"><img width="129px" height="37px" alt="google-login-button" src="image/gp-btn.svg"></a>
+            <a href="javascript:void(0)" class="social-login--facebook" onclick="loginFacebook()"><img width="129px" height="37px" alt="facebook-login-button" src="user/image/fb-btn.svg"></a>
+            <a href="javascript:void(0)" class="social-login--google" onclick="loginGoogle()"><img width="129px" height="37px" alt="google-login-button" src="user/image/gp-btn.svg"></a>
           </div>
           <form accept-charset="UTF-8" action="/account/login" id="customer_login" method="post">
             <input name="FormType" type="hidden" value="customer_login" />
@@ -540,7 +540,7 @@
 
 </script>
 
-<link href="css/bpr-products-module.css?1564624970765" rel="stylesheet" type="text/css" />
+<link href="user/css/bpr-products-module.css?1564624970765" rel="stylesheet" type="text/css" />
 <div class="bizweb-product-reviews-module"></div>
 
 
@@ -702,7 +702,7 @@
               </h4>
               <div class="footer-widget">
                 <div class="payment">
-                  <img src="image/payment.png?1564624970765" alt="Payment" />
+                  <img src="user/image/payment.png?1564624970765" alt="Payment" />
                 </div>
               </div>
               <h4 class="title-menu tittle_time">
@@ -775,14 +775,14 @@
     </div>
   </div>
 </footer>
-<script src='js/api_js.js?sensor=false' type='text/javascript'></script>
-<script src="js/jquery.gmap.min.js" type="text/javascript"></script>
+<script src='user/js/api_js.js?sensor=false' type='text/javascript'></script>
+<script src="user/js/jquery.gmap.min.js" type="text/javascript"></script>
 <!-- Bizweb javascript -->
-<script src="js/option-selectors.js" type="text/javascript"></script>
-<script src="js/api.jquery.js?4" type="text/javascript"></script>
+<script src="user/js/option-selectors.js" type="text/javascript"></script>
+<script src="user/js/api.jquery.js?4" type="text/javascript"></script>
 <!-- Plugin JS -->
-<script src="js/owl.carousel.min.js" type="text/javascript"></script>
-<script src="js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="user/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="user/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <!-- Add to cart -->
 
 
@@ -797,7 +797,7 @@
         <a href="javascript:void(0)" class="close-window close-popup"><i class="fa fa-close"></i></a>
         <div class="info clearfix">
           <div class="product-image margin-top-5">
-            <img alt="popup" src="image/logo.png" style="max-width:150px; height:auto"/>
+            <img alt="popup" src="user/image/logo.png" style="max-width:150px; height:auto"/>
           </div>
           <div class="product-info">
             <p class="product-name"></p>
@@ -826,7 +826,7 @@
 <div id="popup-cart" class="modal fade" role="dialog">
   <div id="popup-cart-desktop" class="clearfix">
     <div class="title-popup-cart">
-      <img src="image/icon-check.png"  alt="Sunmax"/> <span class="your_product">Bạn đã thêm <span class="cart_name_style">[ <span class="cart-popup-name"></span>]</span> vào giỏ hàng thành công ! </span>
+      <img src="user/image/icon-check.png"  alt="Sunmax"/> <span class="your_product">Bạn đã thêm <span class="cart_name_style">[ <span class="cart-popup-name"></span>]</span> vào giỏ hàng thành công ! </span>
     </div>
     <div class="wrap_popup">
       <div class="title-quantity-popup" >
@@ -859,9 +859,9 @@
 </div>
 <div id="myModal" class="modal fade" role="dialog">
 </div>
-<script src="js/cs.script.js" type="text/javascript"></script>
-<script src="js/double_tab_togo.js" type="text/javascript"></script>
-<script src="js/appear.js" type="text/javascript"></script>
+<script src="user/js/cs.script.js" type="text/javascript"></script>
+<script src="user/js/double_tab_togo.js" type="text/javascript"></script>
+<script src="user/js/appear.js" type="text/javascript"></script>
 <!-- Quick view -->
 
 
@@ -876,7 +876,7 @@
         <div class="clearfix image-block">
 					<span class="view_full_size">
 						<a class="img-product" title="" href="#">
-							<img id="product-featured-image-quickview" class="img-responsive product-featured-image-quickview" src="image/logo.png" alt="quickview"  />
+							<img id="product-featured-image-quickview" class="img-responsive product-featured-image-quickview" src="user/image/logo.png" alt="quickview"  />
 						</a>
 					</span>
           <div class="loading-imgquickview" style="display:none;"></div>
@@ -951,7 +951,7 @@
   </div>
 </div>
 
-<script src="js/quickview.js" type="text/javascript"></script>
+<script src="user/js/quickview.js" type="text/javascript"></script>
 
 
 <div class='jas-sale-pop flex pf middle-xs'></div>
@@ -981,7 +981,7 @@
 
 
   collection[0]="<a href='/ban-giam-doc-hoa-phat-ntp1890t1' class='jas-sale-pop-img mr__20'>"
-          +                                    "<img src='Product_image/r8abaa3a825074cd8855f02e71efc8.jpg' alt='Bàn giám đốc hòa phát NTP1890T1'/>"
+          +                                    "<img src='Product_user/image/r8abaa3a825074cd8855f02e71efc8.jpg' alt='Bàn giám đốc hòa phát NTP1890T1'/>"
           +                                "</a>"
           +                                "<div class='jas-sale-pop-content'>"
           //+                                    "<h4 class='fs__12 fwm mg__0'>Sản phẩm</h4>"
@@ -995,7 +995,7 @@
 
 
   collection[1]="<a href='/ba-n-la-m-vie-c-van-pho-ng-ho-a-pha-t-sv204hl' class='jas-sale-pop-img mr__20'>"
-          +                                    "<img src='Product_image/8e72d1df4f29e47c29efe8d482d473.jpg' alt='Bàn làm việc hòa phát SV204HL'/>"
+          +                                    "<img src='Product_user/image/8e72d1df4f29e47c29efe8d482d473.jpg' alt='Bàn làm việc hòa phát SV204HL'/>"
           +                                "</a>"
           +                                "<div class='jas-sale-pop-content'>"
           //+                                    "<h4 class='fs__12 fwm mg__0'>Sản phẩm</h4>"
@@ -1009,7 +1009,7 @@
 
 
   collection[2]="<a href='/bo-vo-chan-ra-goi-cotton-nhung-cao-cap' class='jas-sale-pop-img mr__20'>"
-          +                                    "<img src='Product_image/6e4b0d120477740078be37a750e7ba.jpg' alt='Bộ vỏ chăn ra gối cotton nhung'/>"
+          +                                    "<img src='Product_user/image/6e4b0d120477740078be37a750e7ba.jpg' alt='Bộ vỏ chăn ra gối cotton nhung'/>"
           +                                "</a>"
           +                                "<div class='jas-sale-pop-content'>"
           //+                                    "<h4 class='fs__12 fwm mg__0'>Sản phẩm</h4>"
@@ -1023,7 +1023,7 @@
 
 
   collection[3]="<a href='/bo-vo-chan-ga-goi-cotton-ai-cap-hoa-xanh' class='jas-sale-pop-img mr__20'>"
-          +                                    "<img src='Product_image/59a01658825c7468aa6a84dac7dc80.jpg' alt='Bộ vỏ chăn ga gối cotton Ai Cập'/>"
+          +                                    "<img src='Product_user/image/59a01658825c7468aa6a84dac7dc80.jpg' alt='Bộ vỏ chăn ga gối cotton Ai Cập'/>"
           +                                "</a>"
           +                                "<div class='jas-sale-pop-content'>"
           //+                                    "<h4 class='fs__12 fwm mg__0'>Sản phẩm</h4>"
@@ -1037,7 +1037,7 @@
 
 
   collection[4]="<a href='/bo-chan-ga-goi-cotton-ai-cap-ma-cat17' class='jas-sale-pop-img mr__20'>"
-          +                                    "<img src='Product_image/12684e083a683e4fc1afd8c1688b16.jpg' alt='Bộ chăn ga gối cotton Ai Cập'/>"
+          +                                    "<img src='Product_user/image/12684e083a683e4fc1afd8c1688b16.jpg' alt='Bộ chăn ga gối cotton Ai Cập'/>"
           +                                "</a>"
           +                                "<div class='jas-sale-pop-content'>"
           //+                                    "<h4 class='fs__12 fwm mg__0'>Sản phẩm</h4>"
@@ -1076,7 +1076,7 @@
 
 
 <!-- Main JS -->
-<script src="js/main.js" type="text/javascript"></script>
+<script src="user/js/main.js" type="text/javascript"></script>
 
 
 <!-- Product detail JS,CSS -->

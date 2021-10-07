@@ -16,15 +16,15 @@
     <title>Sunmax - Thanh toán đơn hàng</title>
 
 
-    <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="user/image/favicon.ico" type="user/image/x-icon" />
 
-    <script src="js/jquery-2.1.3.min.js?4" type="text/javascript"></script>
-    <link href="css/bootstrap.min.css?20171025" rel="stylesheet" type="text/css" />
-    <link href="css/nprogress.css?20171025" rel="stylesheet" type="text/css" />
-    <link href="css/font-awesome.min.css?20171025" rel="stylesheet" type="text/css" />
-    <link href="css/select2-min.css?20171025" rel="stylesheet" type="text/css" />
-    <link href="css/checkout.css?20190719" rel="stylesheet" type="text/css" />
-    <link href="css/checkout.css?1564624970765" rel="stylesheet" type="text/css" />
+    <script src="user/js/jquery-2.1.3.min.js?4" type="text/javascript"></script>
+    <link href="user/css/bootstrap.min.css?20171025" rel="stylesheet" type="text/css" />
+    <link href="user/css/nprogress.css?20171025" rel="stylesheet" type="text/css" />
+    <link href="user/css/font-awesome.min.css?20171025" rel="stylesheet" type="text/css" />
+    <link href="user/css/select2-min.css?20171025" rel="stylesheet" type="text/css" />
+    <link href="user/css/checkout.css?20190719" rel="stylesheet" type="text/css" />
+    <link href="user/css/checkout.css?1564624970765" rel="stylesheet" type="text/css" />
 
 
 </head>
@@ -91,7 +91,7 @@
                                         <div class="product-thumbnail">
                                             <div class="product-thumbnail__wrapper">
 
-                                                <img src="Product_image/g5908114397da4c59b81bc6d7310fc.jpg?v=1513589879583" class="product-thumbnail__image" />
+                                                <img src="Product_user/image/g5908114397da4c59b81bc6d7310fc.jpg?v=1513589879583" class="product-thumbnail__image" />
 
                                             </div>
                                             <span class="product-thumbnail__quantity" aria-hidden="true">1</span>
@@ -119,7 +119,7 @@
                                         <div class="product-thumbnail">
                                             <div class="product-thumbnail__wrapper">
 
-                                                <img src="Product_image/7.jpg?v=1513589835350" class="product-thumbnail__image" />
+                                                <img src="Product_user/image/7.jpg?v=1513589835350" class="product-thumbnail__image" />
 
                                             </div>
                                             <span class="product-thumbnail__quantity" aria-hidden="true">1</span>
@@ -817,7 +817,7 @@
                                                         <div class="qr-guide-content">
                                                             <p><b>Thực hiện theo hướng dẫn sau để thanh toán:</b></p>
                                                             <p>Bước 1: Mở ứng dụng ZaloPay</p>
-                                                            <p>Bước 2: Chọn "Thanh Toán" <img src="image/barcode-zalo.png" class="zalopay-qr-payment-icon"></img> và quét mã QR code bên cạnh</p>
+                                                            <p>Bước 2: Chọn "Thanh Toán" <img src="user/image/barcode-zalo.png" class="zalopay-qr-payment-icon"></img> và quét mã QR code bên cạnh</p>
                                                             <p>Bước 3: Hoàn thành các bước thanh toán theo hướng dẫn trên ứng dụng</p>
                                                         </div>
                                                     </div>
@@ -895,16 +895,16 @@
     </div>
 </form>
 
-<script src="js/jquery-2.1.3.min.js?20171025" type="text/javascript"></script>
-<script src="js/bootstrap.min.js?20171025" type="text/javascript"></script>
-<script src="js/twine.min.js?20171025" type="text/javascript"></script>
-<script src="js/validator.min.js?20171025" type="text/javascript"></script>
-<script src="js/nprogress.js?20171025" type="text/javascript"></script>
-<script src="js/money-helper.js?20171025" type="text/javascript"></script>
-<script src="js/select2-full-min.js?20171025" type="text/javascript"></script>
+<script src="user/js/jquery-2.1.3.min.js?20171025" type="text/javascript"></script>
+<script src="user/js/bootstrap.min.js?20171025" type="text/javascript"></script>
+<script src="user/js/twine.min.js?20171025" type="text/javascript"></script>
+<script src="user/js/validator.min.js?20171025" type="text/javascript"></script>
+<script src="user/js/nprogress.js?20171025" type="text/javascript"></script>
+<script src="user/js/money-helper.js?20171025" type="text/javascript"></script>
+<script src="user/js/select2-full-min.js?20171025" type="text/javascript"></script>
 
-<script src="js/ua-parser.pack.js?20180611" type='text/javascript'></script>
-<script src="js/checkout.js?20190701" type="text/javascript"></script>
+<script src="user/js/ua-parser.pack.js?20180611" type='text/javascript'></script>
+<script src="user/js/checkout.js?20190701" type="text/javascript"></script>
 
 
 
