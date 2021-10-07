@@ -23,46 +23,44 @@
     <meta name="robots" content="noodp,index,follow" />
     <!-- ================= Favicon ================== -->
 
-    <link rel="icon" href="image/favicon.png" type="image/x-icon" />
+    <link rel="icon" href="user/js/favicon.png" type="user/js/x-icon" />
 
     <!-- ================= Google Fonts ================== -->
+    
+    <link href="user/css/font-Roboto.css?family=Roboto:400,700" rel="stylesheet" type="text/css" />
 
 
-
-    <link href="css/font-Roboto.css?family=Roboto:400,700" rel="stylesheet" type="text/css" />
-
-
-    <link href="css/font-YesevaOne.css?family=Yeseva+One&amp;subset=cyrillic,cyrillic-ext,latin-ext,vietnamese" rel="stylesheet">
+    <link href="user/css/font-YesevaOne.css?family=Yeseva+One&amp;subset=cyrillic,cyrillic-ext,latin-ext,vietnamese" rel="stylesheet">
     <!-- Facebook Open Graph meta tags -->
 
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="Theme Sunmax dành cho website bán nội thất văn phòng">
-    <meta property="og:image" content="image/logo.png">
-    <meta property="og:image:secure_url" content="image/logo.png">
+    <meta property="og:image" content="user/js/logo.png">
+    <meta property="og:image:secure_url" content="user/js/logo.png">
 
     <meta property="og:description" content="Sunmax sẽ là một trong những sự lựa chọn hoàn hảo cho các website thương mại kinh doanh các mặt hàng. Giao diện đơn giản nhưng vô cùng tinh tế.">
     <meta property="og:url" content="https://sunmax.bizwebvietnam.net">
     <meta property="og:site_name" content="Sunmax">
 
     <!-- Plugin CSS -->
-    <link rel="stylesheet" href="css/themify-icons.css" >
-    <link rel="stylesheet" href="css/all.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link href="css/owl.carousel.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="user/css/themify-icons.css" >
+    <link rel="stylesheet" href="user/css/all.css">
+    <link rel="stylesheet" href="user/css/bootstrap.min.css">
+    <link rel="stylesheet" href="user/css/font-awesome.min.css">
+    <link href="user/css/owl.carousel.min.css" rel="stylesheet" type="text/css" />
 
     <!-- Build Main CSS -->
-    <link href="css/base.scss.css" rel="stylesheet" type="text/css" />
-    <link href="css/style.scss.css" rel="stylesheet" type="text/css" />
-    <link href="css/module.scss.css" rel="stylesheet" type="text/css" />
-    <link href="css/responsive.scss.css" rel="stylesheet" type="text/css" />
+    <link href="user/css/base.scss.css" rel="stylesheet" type="text/css" />
+    <link href="user/css/style.scss.css" rel="stylesheet" type="text/css" />
+    <link href="user/css/module.scss.css" rel="stylesheet" type="text/css" />
+    <link href="user/css/responsive.scss.css" rel="stylesheet" type="text/css" />
 
     <!-- Header JS -->
-    <script src="js/jquery-2.2.3.min.js" type="text/javascript"></script>
+    <script src="user/js/jquery-2.2.3.min.js" type="text/javascript"></script>
 
 
-    <link href="css/iwish.css" />
+    <link href="user/css/iwish.css" />
 
 </head>
 <body>
@@ -198,14 +196,14 @@
                 <div class="content_header">
                     <div class="header-main">
                         <div class="menu-bar-h nav-mobile-button hidden-md hidden-lg">
-                            <a href="#nav-mobile"><img src="image/i_menubar.png" alt="menu bar" /></a>
+                            <a href="#nav-mobile"><img src="user/js/i_menubar.png" alt="menu bar" /></a>
                         </div>
                         <div class="col-lg-3 col-md-3">
                             <div class="logo">
 
 
                                 <a href="/" class="logo-wrapper ">
-                                    <img src="image/logo.png" alt="logo ">
+                                    <img src="user/js/logo.png" alt="logo ">
                                 </a>
 
                             </div>
@@ -265,7 +263,7 @@
                                 <div class="header-acount hidden-lg-down">
                                     <div class="wishlist_header hidden-xs hidden-sm">
 
-                                        <div class="img_hotline"><img alt="Wishlist" src="image/icon_phone.png"/></div>
+                                        <div class="img_hotline"><img alt="Wishlist" src="user/js/icon_phone.png"/></div>
 
                                         <span class="text_hotline">Hotline:</span> <a class="hai01" href="tel:0165939688">0165939688</a>
 
@@ -275,7 +273,7 @@
                                         <div class="mini-cart text-xs-center">
                                             <div class="heading-cart">
                                                 <a class="bg_cart" href="/cart" title="Giỏ hàng">
-                                                    <img alt="Giỏ hàng" src="image/icon_hovercart.png"/>
+                                                    <img alt="Giỏ hàng" src="user/js/icon_hovercart.png"/>
                                                     <span class="text-giohang hidden-xs">Giỏ hàng:</span>
                                                     (<span class="count_item count_item_pr">0</span>)
                                                 </a>
@@ -313,7 +311,7 @@
                                         <div class="mini-cart text-xs-center">
                                             <div class="heading-cart-mobi">
                                                 <a class="bg_cart" href="/cart" title="Giỏ hàng">
-                                                    <img alt="Giỏ hàng" src="image/icon_cart_mobi.png"/>
+                                                    <img alt="Giỏ hàng" src="user/js/icon_cart_mobi.png"/>
                                                     <span class="count_item count_item_pr"></span>
                                                 </a>
                                             </div>
@@ -436,7 +434,7 @@
 
         <div class="item">
             <a href="#" class="clearfix">
-                <img src="image/slider_1.png" alt="Slider 1">
+                <img src="user/js/slider_1.png" alt="Slider 1">
             </a>
         </div>
 
@@ -448,7 +446,7 @@
 
         <div class="item">
             <a href="#" class="clearfix">
-                <img src="image/slider_2.png" alt="Slider 2">
+                <img src="user/js/slider_2.png" alt="Slider 2">
             </a>
         </div>
 
@@ -494,7 +492,7 @@
                                                         <h3 class="banner-title">Phòng ngủ</h3>
                                                         <span class="sum-banner-title"></span>
                                                         <div class="overlay-bg"></div>
-                                                        <img class="img-responsive" src="image/bg_phongngu.png" alt="Phòng ngủ">
+                                                        <img class="img-responsive" src="user/js/bg_phongngu.png" alt="Phòng ngủ">
                                                     </a>
                                                 </div>
                                             </div>
@@ -510,7 +508,7 @@
                                                         <h3 class="banner-title">Phòng khách</h3>
                                                         <span class="sum-banner-title"></span>
                                                         <div class="overlay-bg"></div>
-                                                        <img class="img-responsive" src="image/bg_phongkhach.png" alt="Phòng khách">
+                                                        <img class="img-responsive" src="user/js/bg_phongkhach.png" alt="Phòng khách">
                                                     </a>
                                                 </div>
                                             </div>
@@ -528,7 +526,7 @@
                                                         <h3 class="banner-title">Phòng bếp</h3>
                                                         <span class="sum-banner-title"></span>
                                                         <div class="overlay-bg"></div>
-                                                        <img class="img-responsive pk" src="image/bg_phongbep.png" alt="Phòng bếp">
+                                                        <img class="img-responsive pk" src="user/js/bg_phongbep.png" alt="Phòng bếp">
                                                     </a>
                                                 </div>
                                             </div>
@@ -544,7 +542,7 @@
                                                         <h3 class="banner-title">Chăn ga đệm</h3>
                                                         <span class="sum-banner-title"></span>
                                                         <div class="overlay-bg"></div>
-                                                        <img class="img-responsive" src="image/bg_changadem.png" alt="Chăn ga đệm">
+                                                        <img class="img-responsive" src="user/js/bg_changadem.png" alt="Chăn ga đệm">
                                                     </a>
                                                 </div>
                                             </div>
@@ -560,7 +558,7 @@
                                                         <h3 class="banner-title">Đồ trang trí</h3>
                                                         <span class="sum-banner-title"></span>
                                                         <div class="overlay-bg"></div>
-                                                        <img class="img-responsive" src="image/bg_dotrangtri.png" alt="Đồ trang trí">
+                                                        <img class="img-responsive" src="user/js/bg_dotrangtri.png" alt="Đồ trang trí">
                                                     </a>
                                                 </div>
                                             </div>
@@ -646,7 +644,7 @@
 
 
                                                 <a class="image_link display_flex" href="/sofa-da-ma-ntx1824" title="Sofa bộ Italia - Canova">
-                                                    <img src="image/product-1.png"  data-lazyload="Product_image/10.jpg?v=1513589883463" alt="Sofa bộ Italia - Canova">
+                                                    <img src="user/js/product-1.png"  data-lazyload="Product_user/js/10.jpg?v=1513589883463" alt="Sofa bộ Italia - Canova">
                                                 </a>
 
                                                 <div class="summary_grid hidden-xs hidden-sm hidden-md" onclick="window.location.href='/sofa-da-ma-ntx1824';">
@@ -723,7 +721,7 @@
 
 
                                                 <a class="image_link display_flex" href="/sofa-da-ma-ntx1824-1" title="Sofa bộ Hugo 8979">
-                                                    <img src="image/product-1.png"  data-lazyload="Product_image/4.jpg" alt="Sofa bộ Hugo 8979">
+                                                    <img src="user/js/product-1.png"  data-lazyload="Product_user/js/4.jpg" alt="Sofa bộ Hugo 8979">
                                                 </a>
 
                                                 <div class="summary_grid hidden-xs hidden-sm hidden-md" onclick="window.location.href='/sofa-da-ma-ntx1824-1';">
@@ -799,7 +797,7 @@
 
 
                                                 <a class="image_link display_flex" href="/sofa-da-ma-ntx1824-2" title="Sofa da mã NTX1824">
-                                                    <img src="image/product-1.png"  data-lazyload="Product_image/1.jpg" alt="Sofa da mã NTX1824">
+                                                    <img src="user/js/product-1.png"  data-lazyload="Product_user/js/1.jpg" alt="Sofa da mã NTX1824">
                                                 </a>
 
                                                 <div class="summary_grid hidden-xs hidden-sm hidden-md" onclick="window.location.href='/sofa-da-ma-ntx1824-2';">
@@ -876,7 +874,7 @@
 
 
                                                 <a class="image_link display_flex" href="/bo-sofa-da-ni-9230" title="Bộ Sofa Da Nỉ 9230">
-                                                    <img src="image/product-1.png"  data-lazyload="Product_image/e.jpg" alt="Bộ Sofa Da Nỉ 9230">
+                                                    <img src="user/js/product-1.png"  data-lazyload="Product_user/js/e.jpg" alt="Bộ Sofa Da Nỉ 9230">
                                                 </a>
 
                                                 <div class="summary_grid hidden-xs hidden-sm hidden-md" onclick="window.location.href='/bo-sofa-da-ni-9230';">
@@ -952,7 +950,7 @@
 
 
                                                 <a class="image_link display_flex" href="/don-sofa-phong-khach-da-that-9029" title="Đôn Sofa Phòng khách da thật 9029">
-                                                    <img src="image/product-1.png"  data-lazyload="Product_image/18.jpg" alt="Đôn Sofa Phòng khách da thật 9029">
+                                                    <img src="user/js/product-1.png"  data-lazyload="Product_user/js/18.jpg" alt="Đôn Sofa Phòng khách da thật 9029">
                                                 </a>
 
                                                 <div class="summary_grid hidden-xs hidden-sm hidden-md" onclick="window.location.href='/don-sofa-phong-khach-da-that-9029';">
@@ -1017,7 +1015,7 @@
 
 
                                                 <a class="image_link display_flex" href="/sofa-giuong-215-10" title="Sofa Giường 215 - 10">
-                                                    <img src="image/product-1.png"  data-lazyload="Product_image/9aef54a449d274a48a3934a36391e3.jpg" alt="Sofa Giường 215 - 10">
+                                                    <img src="user/js/product-1.png"  data-lazyload="Product_user/js/9aef54a449d274a48a3934a36391e3.jpg" alt="Sofa Giường 215 - 10">
                                                 </a>
 
                                                 <div class="summary_grid hidden-xs hidden-sm hidden-md" onclick="window.location.href='/sofa-giuong-215-10';">
@@ -1091,7 +1089,7 @@
 
 
                                                 <a class="image_link display_flex" href="/sofa-da-mleh-740l" title="Sofa Da MLEH-740L">
-                                                    <img src="image/product-1.png"  data-lazyload="Product_image/g.jpg" alt="Sofa Da MLEH-740L">
+                                                    <img src="user/js/product-1.png"  data-lazyload="Product_user/js/g.jpg" alt="Sofa Da MLEH-740L">
                                                 </a>
 
                                                 <div class="summary_grid hidden-xs hidden-sm hidden-md" onclick="window.location.href='/sofa-da-mleh-740l';">
@@ -1157,7 +1155,7 @@
 
 
                                                 <a class="image_link display_flex" href="/sofa-ban-san-ma-ntx1817" title="Sofa bán sẵn mã NTX1817">
-                                                    <img src="image/product-1.png"  data-lazyload="Product_image/153a7037b636b84fce95af84f976d8.jpg" alt="Sofa bán sẵn mã NTX1817">
+                                                    <img src="user/js/product-1.png"  data-lazyload="Product_user/js/153a7037b636b84fce95af84f976d8.jpg" alt="Sofa bán sẵn mã NTX1817">
                                                 </a>
 
                                                 <div class="summary_grid hidden-xs hidden-sm hidden-md" onclick="window.location.href='/sofa-ban-san-ma-ntx1817';">
@@ -1258,7 +1256,7 @@
 
 
                                                 <a class="image_link display_flex" href="/giuong-ngu-nguoi-lon-scandinavian" title="Giường ngủ người lớn Scandinavian">
-                                                    <img src="image/product-1.png"  data-lazyload="Product_image/1f9368946b9de4d46bd5377d4386fe.jpg" alt="Giường ngủ người lớn Scandinavian">
+                                                    <img src="user/js/product-1.png"  data-lazyload="Product_user/js/1f9368946b9de4d46bd5377d4386fe.jpg" alt="Giường ngủ người lớn Scandinavian">
                                                 </a>
 
                                                 <div class="summary_grid hidden-xs hidden-sm hidden-md" onclick="window.location.href='/giuong-ngu-nguoi-lon-scandinavian';">
@@ -1336,7 +1334,7 @@
 
 
                                                 <a class="image_link display_flex" href="/giuong-ngu-nguoi-lon-harvey" title="Giường ngủ người lớn Harvey">
-                                                    <img src="image/product-1.png"  data-lazyload="Product_image/17.jpg" alt="Giường ngủ người lớn Harvey">
+                                                    <img src="user/js/product-1.png"  data-lazyload="Product_user/js/17.jpg" alt="Giường ngủ người lớn Harvey">
                                                 </a>
 
                                                 <div class="summary_grid hidden-xs hidden-sm hidden-md" onclick="window.location.href='/giuong-ngu-nguoi-lon-harvey';">
@@ -1398,7 +1396,7 @@
 
 
                                                 <a class="image_link display_flex" href="/giuong-barcelona" title="Giường Barcelona">
-                                                    <img src="image/product-1.png"  data-lazyload="Product_image/10c1fdc33c2f8d4cfa91102e7a53a0.jpg?v=1513589856423" alt="Giường Barcelona">
+                                                    <img src="user/js/product-1.png"  data-lazyload="Product_user/js/10c1fdc33c2f8d4cfa91102e7a53a0.jpg?v=1513589856423" alt="Giường Barcelona">
                                                 </a>
 
                                                 <div class="summary_grid hidden-xs hidden-sm hidden-md" onclick="window.location.href='/giuong-barcelona';">
@@ -1475,7 +1473,7 @@
 
 
                                                 <a class="image_link display_flex" href="/giuong-bianca" title="Giường Bianca">
-                                                    <img src="image/product-1.png"  data-lazyload="Product_image/e38bcbe0e12d64d2dbe1276282a429.jpg?v=1513589854443" alt="Giường Bianca">
+                                                    <img src="user/js/product-1.png"  data-lazyload="Product_user/js/e38bcbe0e12d64d2dbe1276282a429.jpg?v=1513589854443" alt="Giường Bianca">
                                                 </a>
 
                                                 <div class="summary_grid hidden-xs hidden-sm hidden-md" onclick="window.location.href='/giuong-bianca';">
@@ -1552,7 +1550,7 @@
 
 
                                                 <a class="image_link display_flex" href="/giuong-azura" title="Giường Azura">
-                                                    <img src="image/product-1.png"  data-lazyload="Product_image/gaa790205662a4457a90c595eada13.jpg?v=1513589852397" alt="Giường Azura">
+                                                    <img src="user/js/product-1.png"  data-lazyload="Product_user/js/gaa790205662a4457a90c595eada13.jpg?v=1513589852397" alt="Giường Azura">
                                                 </a>
 
                                                 <div class="summary_grid hidden-xs hidden-sm hidden-md" onclick="window.location.href='/giuong-azura';">
@@ -1629,7 +1627,7 @@
 
 
                                                 <a class="image_link display_flex" href="/giuong-blue-panda" title="Giường Blue Panda">
-                                                    <img src="image/product-1.png"  data-lazyload="Product_image/45d42ff1063c0443fae62f6803d010.jpg?v=1513589850593" alt="Giường Blue Panda">
+                                                    <img src="user/js/product-1.png"  data-lazyload="Product_user/js/45d42ff1063c0443fae62f6803d010.jpg?v=1513589850593" alt="Giường Blue Panda">
                                                 </a>
 
                                                 <div class="summary_grid hidden-xs hidden-sm hidden-md" onclick="window.location.href='/giuong-blue-panda';">
@@ -1696,7 +1694,7 @@
 
 
                                                 <a class="image_link display_flex" href="/giuong-ngu-ma-xgn03" title="Giường ngủ mã XGN03">
-                                                    <img src="image/product-1.png"  data-lazyload="Product_image/2e6d39f48463148db85c93b0a27d30.jpg?v=1513589845293" alt="Giường ngủ mã XGN03">
+                                                    <img src="user/js/product-1.png"  data-lazyload="Product_user/js/2e6d39f48463148db85c93b0a27d30.jpg?v=1513589845293" alt="Giường ngủ mã XGN03">
                                                 </a>
 
                                                 <div class="summary_grid hidden-xs hidden-sm hidden-md" onclick="window.location.href='/giuong-ngu-ma-xgn03';">
@@ -1771,7 +1769,7 @@
 
 
                                                 <a class="image_link display_flex" href="/giuong-ngu-ma-gn37" title="Giường ngủ mã GN37">
-                                                    <img src="image/product-1.png"  data-lazyload="Product_image/7.png?v=1513589843527" alt="Giường ngủ mã GN37">
+                                                    <img src="user/js/product-1.png"  data-lazyload="Product_user/js/7.png?v=1513589843527" alt="Giường ngủ mã GN37">
                                                 </a>
 
                                                 <div class="summary_grid hidden-xs hidden-sm hidden-md" onclick="window.location.href='/giuong-ngu-ma-gn37';">
@@ -1872,7 +1870,7 @@
 
 
                                                 <a class="image_link display_flex" href="/ban-ghe-an-ma-xba181-1" title="Bàn ghế ăn mã XBA181">
-                                                    <img src="image/product-1.png"  data-lazyload="Product_image/1fc5df896ffe74b3390d3b4226fad3.jpg?v=1513589837603" alt="Bàn ghế ăn mã XBA181">
+                                                    <img src="user/js/product-1.png"  data-lazyload="Product_user/js/1fc5df896ffe74b3390d3b4226fad3.jpg?v=1513589837603" alt="Bàn ghế ăn mã XBA181">
                                                 </a>
 
                                                 <div class="summary_grid hidden-xs hidden-sm hidden-md" onclick="window.location.href='/ban-ghe-an-ma-xba181-1';">
@@ -1935,7 +1933,7 @@
 
 
                                                 <a class="image_link display_flex" href="/ban-ghe-an-ma-xba184" title="Bàn ghế ăn mã XBA184">
-                                                    <img src="image/product-1.png"  data-lazyload="Product_image/115cb4ad89d21e4ba6bfe2562da9b3.jpg?v=1513589833020" alt="Bàn ghế ăn mã XBA184">
+                                                    <img src="user/js/product-1.png"  data-lazyload="Product_user/js/115cb4ad89d21e4ba6bfe2562da9b3.jpg?v=1513589833020" alt="Bàn ghế ăn mã XBA184">
                                                 </a>
 
                                                 <div class="summary_grid hidden-xs hidden-sm hidden-md" onclick="window.location.href='/ban-ghe-an-ma-xba184';">
@@ -1998,7 +1996,7 @@
 
 
                                                 <a class="image_link display_flex" href="/ban-ghe-an-ma-xba185" title="Bàn ghế ăn mã XBA185">
-                                                    <img src="image/product-1.png"  data-lazyload="Product_image/1200bc0cd87d724b26889a71d5edd6.jpg?v=1513589831030" alt="Bàn ghế ăn mã XBA185">
+                                                    <img src="user/js/product-1.png"  data-lazyload="Product_user/js/1200bc0cd87d724b26889a71d5edd6.jpg?v=1513589831030" alt="Bàn ghế ăn mã XBA185">
                                                 </a>
 
                                                 <div class="summary_grid hidden-xs hidden-sm hidden-md" onclick="window.location.href='/ban-ghe-an-ma-xba185';">
@@ -2073,7 +2071,7 @@
 
 
                                                 <a class="image_link display_flex" href="/ban-ghe-an-ma-xba186" title="Bàn ghế ăn mã XBA186">
-                                                    <img src="image/product-1.png"  data-lazyload="Product_image/109f6c495a156b435e81e4a1109dee.jpg?v=1513589828247" alt="Bàn ghế ăn mã XBA186">
+                                                    <img src="user/js/product-1.png"  data-lazyload="Product_user/js/109f6c495a156b435e81e4a1109dee.jpg?v=1513589828247" alt="Bàn ghế ăn mã XBA186">
                                                 </a>
 
                                                 <div class="summary_grid hidden-xs hidden-sm hidden-md" onclick="window.location.href='/ban-ghe-an-ma-xba186';">
@@ -2149,7 +2147,7 @@
 
 
                                                 <a class="image_link display_flex" href="/ban-ghe-an-ma-xba187" title="Bàn ghế ăn mã XBA187">
-                                                    <img src="image/product-1.png"  data-lazyload="Product_image/20edc9e9564c0b4379a56bd73ebf1d.jpg?v=1513589826453" alt="Bàn ghế ăn mã XBA187">
+                                                    <img src="user/js/product-1.png"  data-lazyload="Product_user/js/20edc9e9564c0b4379a56bd73ebf1d.jpg?v=1513589826453" alt="Bàn ghế ăn mã XBA187">
                                                 </a>
 
                                                 <div class="summary_grid hidden-xs hidden-sm hidden-md" onclick="window.location.href='/ban-ghe-an-ma-xba187';">
@@ -2224,7 +2222,7 @@
 
 
                                                 <a class="image_link display_flex" href="/ban-ghe-an-ma-xba188" title="Bàn ghế ăn mã XBA188">
-                                                    <img src="image/product-1.png"  data-lazyload="Product_image/135eaa10cbae234d92a6f20c0d9c69.jpg?v=1513589824160" alt="Bàn ghế ăn mã XBA188">
+                                                    <img src="user/js/product-1.png"  data-lazyload="Product_user/js/135eaa10cbae234d92a6f20c0d9c69.jpg?v=1513589824160" alt="Bàn ghế ăn mã XBA188">
                                                 </a>
 
                                                 <div class="summary_grid hidden-xs hidden-sm hidden-md" onclick="window.location.href='/ban-ghe-an-ma-xba188';">
@@ -2285,7 +2283,7 @@
 
 
                                                 <a class="image_link display_flex" href="/ban-ghe-an-ma-xba02" title="Bàn ghế ăn mã XBA02">
-                                                    <img src="image/product-1.png"  data-lazyload="Product_image/23.jpg?v=1513589822470" alt="Bàn ghế ăn mã XBA02">
+                                                    <img src="user/js/product-1.png"  data-lazyload="Product_user/js/23.jpg?v=1513589822470" alt="Bàn ghế ăn mã XBA02">
                                                 </a>
 
                                                 <div class="summary_grid hidden-xs hidden-sm hidden-md" onclick="window.location.href='/ban-ghe-an-ma-xba02';">
@@ -2353,7 +2351,7 @@
 
 
                                                 <a class="image_link display_flex" href="/ban-lam-viec-ma-bh01" title="Bàn làm việc mã BH01">
-                                                    <img src="image/product-1.png"  data-lazyload="Product_image/2c61a5b8e414a4f35bdb90beb72245.jpg?v=1513589820710" alt="Bàn làm việc mã BH01">
+                                                    <img src="user/js/product-1.png"  data-lazyload="Product_user/js/2c61a5b8e414a4f35bdb90beb72245.jpg?v=1513589820710" alt="Bàn làm việc mã BH01">
                                                 </a>
 
                                                 <div class="summary_grid hidden-xs hidden-sm hidden-md" onclick="window.location.href='/ban-lam-viec-ma-bh01';">
@@ -2453,7 +2451,7 @@
 
 
                                                 <a class="image_link display_flex" href="/giuong-ngu-nguoi-lon-scandinavian" title="Giường ngủ người lớn Scandinavian">
-                                                    <img src="image/product-1.png"  data-lazyload="Product_image/1f9368946b9de4d46bd5377d4386fe.jpg?v=1513589860783" alt="Giường ngủ người lớn Scandinavian">
+                                                    <img src="user/js/product-1.png"  data-lazyload="Product_user/js/1f9368946b9de4d46bd5377d4386fe.jpg?v=1513589860783" alt="Giường ngủ người lớn Scandinavian">
                                                 </a>
 
                                                 <div class="summary_grid hidden-xs hidden-sm hidden-md" onclick="window.location.href='/giuong-ngu-nguoi-lon-scandinavian';">
@@ -2528,7 +2526,7 @@
 
 
                                                 <a class="image_link display_flex" href="/giuong-ngu-nguoi-lon-harvey" title="Giường ngủ người lớn Harvey">
-                                                    <img src="image/product-1.png"  data-lazyload="Product_image/17.jpg?v=1513589858787" alt="Giường ngủ người lớn Harvey">
+                                                    <img src="user/js/product-1.png"  data-lazyload="Product_user/js/17.jpg?v=1513589858787" alt="Giường ngủ người lớn Harvey">
                                                 </a>
 
                                                 <div class="summary_grid hidden-xs hidden-sm hidden-md" onclick="window.location.href='/giuong-ngu-nguoi-lon-harvey';">
@@ -2589,7 +2587,7 @@
 
 
                                                 <a class="image_link display_flex" href="/giuong-barcelona" title="Giường Barcelona">
-                                                    <img src="image/product-1.png"  data-lazyload="Product_image/10c1fdc33c2f8d4cfa91102e7a53a0.jpg?v=1513589856423" alt="Giường Barcelona">
+                                                    <img src="user/js/product-1.png"  data-lazyload="Product_user/js/10c1fdc33c2f8d4cfa91102e7a53a0.jpg?v=1513589856423" alt="Giường Barcelona">
                                                 </a>
 
                                                 <div class="summary_grid hidden-xs hidden-sm hidden-md" onclick="window.location.href='/giuong-barcelona';">
@@ -2665,7 +2663,7 @@
 
 
                                                 <a class="image_link display_flex" href="/giuong-bianca" title="Giường Bianca">
-                                                    <img src="image/product-1.png"  data-lazyload="Product_image/e38bcbe0e12d64d2dbe1276282a429.jpg?v=1513589854443" alt="Giường Bianca">
+                                                    <img src="user/js/product-1.png"  data-lazyload="Product_user/js/e38bcbe0e12d64d2dbe1276282a429.jpg?v=1513589854443" alt="Giường Bianca">
                                                 </a>
 
                                                 <div class="summary_grid hidden-xs hidden-sm hidden-md" onclick="window.location.href='/giuong-bianca';">
@@ -2741,7 +2739,7 @@
 
 
                                                 <a class="image_link display_flex" href="/giuong-azura" title="Giường Azura">
-                                                    <img src="image/product-1.png"  data-lazyload="Product_image/gaa790205662a4457a90c595eada13.jpg?v=1513589852397" alt="Giường Azura">
+                                                    <img src="user/js/product-1.png"  data-lazyload="Product_user/js/gaa790205662a4457a90c595eada13.jpg?v=1513589852397" alt="Giường Azura">
                                                 </a>
 
                                                 <div class="summary_grid hidden-xs hidden-sm hidden-md" onclick="window.location.href='/giuong-azura';">
@@ -2816,7 +2814,7 @@
 
 
                                                 <a class="image_link display_flex" href="/giuong-blue-panda" title="Giường Blue Panda">
-                                                    <img src="image/product-1.png"  data-lazyload="Product_image/45d42ff1063c0443fae62f6803d010.jpg?v=1513589850593" alt="Giường Blue Panda">
+                                                    <img src="user/js/product-1.png"  data-lazyload="Product_user/js/45d42ff1063c0443fae62f6803d010.jpg?v=1513589850593" alt="Giường Blue Panda">
                                                 </a>
 
                                                 <div class="summary_grid hidden-xs hidden-sm hidden-md" onclick="window.location.href='/giuong-blue-panda';">
@@ -2882,7 +2880,7 @@
 
 
                                                 <a class="image_link display_flex" href="/giuong-ngu-ma-xgn03" title="Giường ngủ mã XGN03">
-                                                    <img src="image/product-1.png"  data-lazyload="Product_image/2e6d39f48463148db85c93b0a27d30.jpg?v=1513589845293" alt="Giường ngủ mã XGN03">
+                                                    <img src="user/js/product-1.png"  data-lazyload="Product_user/js/2e6d39f48463148db85c93b0a27d30.jpg?v=1513589845293" alt="Giường ngủ mã XGN03">
                                                 </a>
 
                                                 <div class="summary_grid hidden-xs hidden-sm hidden-md" onclick="window.location.href='/giuong-ngu-ma-xgn03';">
@@ -2959,7 +2957,7 @@
 
 
                                                 <a class="image_link display_flex" href="/giuong-ngu-ma-gn37" title="Giường ngủ mã GN37">
-                                                    <img src="image/product-1.png"  data-lazyload="Product_image/7.png?v=1513589843527" alt="Giường ngủ mã GN37">
+                                                    <img src="user/js/product-1.png"  data-lazyload="Product_user/js/7.png?v=1513589843527" alt="Giường ngủ mã GN37">
                                                 </a>
 
                                                 <div class="summary_grid hidden-xs hidden-sm hidden-md" onclick="window.location.href='/giuong-ngu-ma-gn37';">
@@ -3155,7 +3153,7 @@
                                                         <div class="sale-flash new">Mới</div>
 
                                                         <a class="image_link display_flex" href="/sofa-da-ma-ntx1824" title="Sofa bộ Italia - Canova">
-                                                            <img src="image/product-1.png"  data-lazyload="Product_image/10.jpg?v=1513589883463" alt="Sofa bộ Italia - Canova">
+                                                            <img src="user/js/product-1.png"  data-lazyload="Product_user/js/10.jpg?v=1513589883463" alt="Sofa bộ Italia - Canova">
                                                         </a>
                                                     </div>
                                                 </div>
@@ -3238,7 +3236,7 @@
                                                         <div class="sale-flash new">Mới</div>
 
                                                         <a class="image_link display_flex" href="/sofa-da-ma-ntx1824-1" title="Sofa bộ Hugo 8979">
-                                                            <img src="image/product-1.png"  data-lazyload="Product_image/4.jpg?v=1513589881417" alt="Sofa bộ Hugo 8979">
+                                                            <img src="user/js/product-1.png"  data-lazyload="Product_user/js/4.jpg?v=1513589881417" alt="Sofa bộ Hugo 8979">
                                                         </a>
                                                     </div>
                                                 </div>
@@ -3325,7 +3323,7 @@
                                                         <div class="sale-flash new">Mới</div>
 
                                                         <a class="image_link display_flex" href="/sofa-da-ma-ntx1824-2" title="Sofa da mã NTX1824">
-                                                            <img src="image/product-1.png"  data-lazyload="Product_image/1.jpg?v=1513589879583" alt="Sofa da mã NTX1824">
+                                                            <img src="user/js/product-1.png"  data-lazyload="Product_user/js/1.jpg?v=1513589879583" alt="Sofa da mã NTX1824">
                                                         </a>
                                                     </div>
                                                 </div>
@@ -3410,7 +3408,7 @@
                                                         <div class="sale-flash new">Mới</div>
 
                                                         <a class="image_link display_flex" href="/bo-sofa-da-ni-9230" title="Bộ Sofa Da Nỉ 9230">
-                                                            <img src="image/product-1.png"  data-lazyload="Product_image/e.jpg?v=1513589876907" alt="Bộ Sofa Da Nỉ 9230">
+                                                            <img src="user/js/product-1.png"  data-lazyload="Product_user/js/e.jpg?v=1513589876907" alt="Bộ Sofa Da Nỉ 9230">
                                                         </a>
                                                     </div>
                                                 </div>
@@ -3518,7 +3516,7 @@
 
 
                                                         <a class="image_link display_flex" href="/giuong-ngu-nguoi-lon-scandinavian" title="Giường ngủ người lớn Scandinavian">
-                                                            <img src="image/product-1.png"  data-lazyload="Product_image/1f9368946b9de4d46bd5377d4386fe.jpg?v=1513589860783" alt="Giường ngủ người lớn Scandinavian">
+                                                            <img src="user/js/product-1.png"  data-lazyload="Product_user/js/1f9368946b9de4d46bd5377d4386fe.jpg?v=1513589860783" alt="Giường ngủ người lớn Scandinavian">
                                                         </a>
                                                     </div>
                                                 </div>
@@ -3603,7 +3601,7 @@
 
 
                                                         <a class="image_link display_flex" href="/giuong-ngu-nguoi-lon-harvey" title="Giường ngủ người lớn Harvey">
-                                                            <img src="image/product-1.png"  data-lazyload="Product_image/17.jpg?v=1513589858787" alt="Giường ngủ người lớn Harvey">
+                                                            <img src="user/js/product-1.png"  data-lazyload="Product_user/js/17.jpg?v=1513589858787" alt="Giường ngủ người lớn Harvey">
                                                         </a>
                                                     </div>
                                                 </div>
@@ -3672,7 +3670,7 @@
 
 
                                                         <a class="image_link display_flex" href="/giuong-barcelona" title="Giường Barcelona">
-                                                            <img src="image/product-1.png"  data-lazyload="Product_image/10c1fdc33c2f8d4cfa91102e7a53a0.jpg?v=1513589856423" alt="Giường Barcelona">
+                                                            <img src="user/js/product-1.png"  data-lazyload="Product_user/js/10c1fdc33c2f8d4cfa91102e7a53a0.jpg?v=1513589856423" alt="Giường Barcelona">
                                                         </a>
                                                     </div>
                                                 </div>
@@ -3757,7 +3755,7 @@
 
 
                                                         <a class="image_link display_flex" href="/giuong-bianca" title="Giường Bianca">
-                                                            <img src="image/product-1.png"  data-lazyload="Product_image/e38bcbe0e12d64d2dbe1276282a429.jpg?v=1513589854443" alt="Giường Bianca">
+                                                            <img src="user/js/product-1.png"  data-lazyload="Product_user/js/e38bcbe0e12d64d2dbe1276282a429.jpg?v=1513589854443" alt="Giường Bianca">
                                                         </a>
                                                     </div>
                                                 </div>
@@ -3866,7 +3864,7 @@
 
 
                                                         <a class="image_link display_flex" href="/ban-ghe-an-ma-xba181-1" title="Bàn ghế ăn mã XBA181">
-                                                            <img src="image/product-1.png"  data-lazyload="Product_image/1fc5df896ffe74b3390d3b4226fad3.jpg?v=1513589837603" alt="Bàn ghế ăn mã XBA181">
+                                                            <img src="user/js/product-1.png"  data-lazyload="Product_user/js/1fc5df896ffe74b3390d3b4226fad3.jpg?v=1513589837603" alt="Bàn ghế ăn mã XBA181">
                                                         </a>
                                                     </div>
                                                 </div>
@@ -3938,7 +3936,7 @@
 
 
                                                         <a class="image_link display_flex" href="/ban-ghe-an-ma-xba184" title="Bàn ghế ăn mã XBA184">
-                                                            <img src="image/product-1.png"  data-lazyload="Product_image/115cb4ad89d21e4ba6bfe2562da9b3.jpg?v=1513589833020" alt="Bàn ghế ăn mã XBA184">
+                                                            <img src="user/js/product-1.png"  data-lazyload="Product_user/js/115cb4ad89d21e4ba6bfe2562da9b3.jpg?v=1513589833020" alt="Bàn ghế ăn mã XBA184">
                                                         </a>
                                                     </div>
                                                 </div>
@@ -4007,7 +4005,7 @@
 
 
                                                         <a class="image_link display_flex" href="/ban-ghe-an-ma-xba185" title="Bàn ghế ăn mã XBA185">
-                                                            <img src="image/product-1.png"  data-lazyload="Product_image/1200bc0cd87d724b26889a71d5edd6.jpg?v=1513589831030" alt="Bàn ghế ăn mã XBA185">
+                                                            <img src="user/js/product-1.png"  data-lazyload="Product_user/js/1200bc0cd87d724b26889a71d5edd6.jpg?v=1513589831030" alt="Bàn ghế ăn mã XBA185">
                                                         </a>
                                                     </div>
                                                 </div>
@@ -4090,7 +4088,7 @@
 
 
                                                         <a class="image_link display_flex" href="/ban-ghe-an-ma-xba186" title="Bàn ghế ăn mã XBA186">
-                                                            <img src="image/product-1.png"  data-lazyload="Product_image/109f6c495a156b435e81e4a1109dee.jpg?v=1513589828247" alt="Bàn ghế ăn mã XBA186">
+                                                            <img src="user/js/product-1.png"  data-lazyload="Product_user/js/109f6c495a156b435e81e4a1109dee.jpg?v=1513589828247" alt="Bàn ghế ăn mã XBA186">
                                                         </a>
                                                     </div>
                                                 </div>
@@ -4200,7 +4198,7 @@
 
 
                                                         <a class="image_link display_flex" href="/giuong-ngu-nguoi-lon-scandinavian" title="Giường ngủ người lớn Scandinavian">
-                                                            <img src="image/product-1.png"  data-lazyload="Product_image/1f9368946b9de4d46bd5377d4386fe.jpg?v=1513589860783" alt="Giường ngủ người lớn Scandinavian">
+                                                            <img src="user/js/product-1.png"  data-lazyload="Product_user/js/1f9368946b9de4d46bd5377d4386fe.jpg?v=1513589860783" alt="Giường ngủ người lớn Scandinavian">
                                                         </a>
                                                     </div>
                                                 </div>
@@ -4284,7 +4282,7 @@
 
 
                                                         <a class="image_link display_flex" href="/giuong-ngu-nguoi-lon-harvey" title="Giường ngủ người lớn Harvey">
-                                                            <img src="image/product-1.png"  data-lazyload="Product_image/17.jpg?v=1513589858787" alt="Giường ngủ người lớn Harvey">
+                                                            <img src="user/js/product-1.png"  data-lazyload="Product_user/js/17.jpg?v=1513589858787" alt="Giường ngủ người lớn Harvey">
                                                         </a>
                                                     </div>
                                                 </div>
@@ -4354,7 +4352,7 @@
 
 
                                                         <a class="image_link display_flex" href="/giuong-barcelona" title="Giường Barcelona">
-                                                            <img src="image/product-1.png"  data-lazyload="Product_image/10c1fdc33c2f8d4cfa91102e7a53a0.jpg?v=1513589856423" alt="Giường Barcelona">
+                                                            <img src="user/js/product-1.png"  data-lazyload="Product_user/js/10c1fdc33c2f8d4cfa91102e7a53a0.jpg?v=1513589856423" alt="Giường Barcelona">
                                                         </a>
                                                     </div>
                                                 </div>
@@ -4440,7 +4438,7 @@
 
 
                                                         <a class="image_link display_flex" href="/giuong-bianca" title="Giường Bianca">
-                                                            <img src="image/product-1.png"  data-lazyload="Product_image/e38bcbe0e12d64d2dbe1276282a429.jpg?v=1513589854443" alt="Giường Bianca">
+                                                            <img src="user/js/product-1.png"  data-lazyload="Product_user/js/e38bcbe0e12d64d2dbe1276282a429.jpg?v=1513589854443" alt="Giường Bianca">
                                                         </a>
                                                     </div>
                                                 </div>
@@ -4560,12 +4558,12 @@
 
                                                 <a href="/nhung-phong-cach-trang-tri-nha-dep-1">
                                                     <picture>
-                                                        <source media="(max-width: 375px)" srcset="articles/1f9368946b9de4d46bd5377d4386fe-f0393dfd-bb85-4be4-9c7e-757d0e70fa63.jpg">
-                                                        <source media="(min-width: 376px) and (max-width: 767px)" srcset="articles/1f9368946b9de4d46bd5377d4386fe-f0393dfd-bb85-4be4-9c7e-757d0e70fa63.jpg">
-                                                        <source media="(min-width: 768px) and (max-width: 1023px)" srcset="articles/1f9368946b9de4d46bd5377d4386fe-f0393dfd-bb85-4be4-9c7e-757d0e70fa63.jpg">
-                                                        <source media="(min-width: 1024px) and (max-width: 1199px)" srcset="articles/1f9368946b9de4d46bd5377d4386fe-f0393dfd-bb85-4be4-9c7e-757d0e70fa63.jpg">
-                                                        <source media="(min-width: 1200px)" srcset="articles/1f9368946b9de4d46bd5377d4386fe-f0393dfd-bb85-4be4-9c7e-757d0e70fa63.jpg">
-                                                        <img src="articles/1f9368946b9de4d46bd5377d4386fe-f0393dfd-bb85-4be4-9c7e-757d0e70fa63.jpg" title="Thiết kế phòng ngủ ấn tượng" alt="Thiết kế phòng ngủ ấn tượng">
+                                                        <source media="(max-width: 375px)" srcset="user/articles/1f9368946b9de4d46bd5377d4386fe-f0393dfd-bb85-4be4-9c7e-757d0e70fa63.jpg">
+                                                        <source media="(min-width: 376px) and (max-width: 767px)" srcset="user/articles/1f9368946b9de4d46bd5377d4386fe-f0393dfd-bb85-4be4-9c7e-757d0e70fa63.jpg">
+                                                        <source media="(min-width: 768px) and (max-width: 1023px)" srcset="user/articles/1f9368946b9de4d46bd5377d4386fe-f0393dfd-bb85-4be4-9c7e-757d0e70fa63.jpg">
+                                                        <source media="(min-width: 1024px) and (max-width: 1199px)" srcset="user/articles/1f9368946b9de4d46bd5377d4386fe-f0393dfd-bb85-4be4-9c7e-757d0e70fa63.jpg">
+                                                        <source media="(min-width: 1200px)" srcset="user/articles/1f9368946b9de4d46bd5377d4386fe-f0393dfd-bb85-4be4-9c7e-757d0e70fa63.jpg">
+                                                        <img src="user/articles/1f9368946b9de4d46bd5377d4386fe-f0393dfd-bb85-4be4-9c7e-757d0e70fa63.jpg" title="Thiết kế phòng ngủ ấn tượng" alt="Thiết kế phòng ngủ ấn tượng">
                                                     </picture>
                                                 </a>
 
@@ -4596,12 +4594,12 @@
 
                                                 <a href="/nhung-phong-cach-trang-tri-nha-dep-2">
                                                     <picture>
-                                                        <source media="(max-width: 375px)" srcset="articles/7.jpg?v=1514934929843">
-                                                        <source media="(min-width: 376px) and (max-width: 767px)" srcset="articles/7.jpg">
-                                                        <source media="(min-width: 768px) and (max-width: 1023px)" srcset="articles/7.jpg">
-                                                        <source media="(min-width: 1024px) and (max-width: 1199px)" srcset="articles/7.jpg">
-                                                        <source media="(min-width: 1200px)" srcset="articles/7.jpg">
-                                                        <img src="articles/7.jpg" title="Phòng khách sang trọng độc đáo" alt="Phòng khách sang trọng độc đáo">
+                                                        <source media="(max-width: 375px)" srcset="user/articles/7.jpg?v=1514934929843">
+                                                        <source media="(min-width: 376px) and (max-width: 767px)" srcset="user/articles/7.jpg">
+                                                        <source media="(min-width: 768px) and (max-width: 1023px)" srcset="user/articles/7.jpg">
+                                                        <source media="(min-width: 1024px) and (max-width: 1199px)" srcset="user/articles/7.jpg">
+                                                        <source media="(min-width: 1200px)" srcset="user/articles/7.jpg">
+                                                        <img src="user/articles/7.jpg" title="Phòng khách sang trọng độc đáo" alt="Phòng khách sang trọng độc đáo">
                                                     </picture>
                                                 </a>
 
@@ -4632,12 +4630,12 @@
 
                                                 <a href="/nhung-phong-cach-trang-tri-nha-dep-3">
                                                     <picture>
-                                                        <source media="(max-width: 375px)" srcset="articles/1f9368946b9de4d46bd5377d4386fe.jpg?v=1514934844753">
-                                                        <source media="(min-width: 376px) and (max-width: 767px)" srcset="articles/1f9368946b9de4d46bd5377d4386fe.jpg?v=1514934844753">
-                                                        <source media="(min-width: 768px) and (max-width: 1023px)" srcset="articles/1f9368946b9de4d46bd5377d4386fe.jpg?v=1514934844753">
-                                                        <source media="(min-width: 1024px) and (max-width: 1199px)" srcset="articles/1f9368946b9de4d46bd5377d4386fe.jpg?v=1514934844753">
-                                                        <source media="(min-width: 1200px)" srcset="articles/1f9368946b9de4d46bd5377d4386fe.jpg?v=1514934844753">
-                                                        <img src="articles/1f9368946b9de4d46bd5377d4386fe.jpg?v=1514934844753" title="1 số cách trang trí phòng ngủ đẹp" alt="1 số cách trang trí phòng ngủ đẹp">
+                                                        <source media="(max-width: 375px)" srcset="user/articles/1f9368946b9de4d46bd5377d4386fe.jpg?v=1514934844753">
+                                                        <source media="(min-width: 376px) and (max-width: 767px)" srcset="user/articles/1f9368946b9de4d46bd5377d4386fe.jpg?v=1514934844753">
+                                                        <source media="(min-width: 768px) and (max-width: 1023px)" srcset="user/articles/1f9368946b9de4d46bd5377d4386fe.jpg?v=1514934844753">
+                                                        <source media="(min-width: 1024px) and (max-width: 1199px)" srcset="user/articles/1f9368946b9de4d46bd5377d4386fe.jpg?v=1514934844753">
+                                                        <source media="(min-width: 1200px)" srcset="user/articles/1f9368946b9de4d46bd5377d4386fe.jpg?v=1514934844753">
+                                                        <img src="user/articles/1f9368946b9de4d46bd5377d4386fe.jpg?v=1514934844753" title="1 số cách trang trí phòng ngủ đẹp" alt="1 số cách trang trí phòng ngủ đẹp">
                                                     </picture>
                                                 </a>
 
@@ -4668,12 +4666,12 @@
 
                                                 <a href="/nhung-phong-cach-trang-tri-dau-giuong-cho-phong-ngu-them-phong-cach">
                                                     <picture>
-                                                        <source media="(max-width: 375px)" srcset="articles/5-422ef3f7-649e-4c32-aeb5-763deb6eaae8.jpg?v=1514590993713">
-                                                        <source media="(min-width: 376px) and (max-width: 767px)" srcset="articles/5-422ef3f7-649e-4c32-aeb5-763deb6eaae8.jpg?v=1514590993713">
-                                                        <source media="(min-width: 768px) and (max-width: 1023px)" srcset="articles/5-422ef3f7-649e-4c32-aeb5-763deb6eaae8.jpg?v=1514590993713">
-                                                        <source media="(min-width: 1024px) and (max-width: 1199px)" srcset="articles/5-422ef3f7-649e-4c32-aeb5-763deb6eaae8.jpg?v=1514590993713">
-                                                        <source media="(min-width: 1200px)" srcset="articles/5-422ef3f7-649e-4c32-aeb5-763deb6eaae8.jpg?v=1514590993713">
-                                                        <img src="articles/5-422ef3f7-649e-4c32-aeb5-763deb6eaae8.jpg?v=1514590993713" title="Những phong cách trang trí đầu giường cho phòng ngủ" alt="Những phong cách trang trí đầu giường cho phòng ngủ">
+                                                        <source media="(max-width: 375px)" srcset="user/articles/5-422ef3f7-649e-4c32-aeb5-763deb6eaae8.jpg?v=1514590993713">
+                                                        <source media="(min-width: 376px) and (max-width: 767px)" srcset="user/articles/5-422ef3f7-649e-4c32-aeb5-763deb6eaae8.jpg?v=1514590993713">
+                                                        <source media="(min-width: 768px) and (max-width: 1023px)" srcset="user/articles/5-422ef3f7-649e-4c32-aeb5-763deb6eaae8.jpg?v=1514590993713">
+                                                        <source media="(min-width: 1024px) and (max-width: 1199px)" srcset="user/articles/5-422ef3f7-649e-4c32-aeb5-763deb6eaae8.jpg?v=1514590993713">
+                                                        <source media="(min-width: 1200px)" srcset="user/articles/5-422ef3f7-649e-4c32-aeb5-763deb6eaae8.jpg?v=1514590993713">
+                                                        <img src="user/articles/5-422ef3f7-649e-4c32-aeb5-763deb6eaae8.jpg?v=1514590993713" title="Những phong cách trang trí đầu giường cho phòng ngủ" alt="Những phong cách trang trí đầu giường cho phòng ngủ">
                                                     </picture>
                                                 </a>
 
@@ -4720,7 +4718,7 @@
 
                             <div class="item_reviews">
                                 <div class="image_reviews">
-                                    <img src="image/us_1.png" alt="Vũ Thùy Linh">
+                                    <img src="user/js/us_1.png" alt="Vũ Thùy Linh">
                                     <p class="description_review">Ba mẹ giao cho Thùy Linh lựa chọn nội thất căn hộ mới mua tại Royal City và
                                         Linh đã lựa chọn nội thất SunMax - Số 1 Việt Nam</p>
                                     <div class="info_reviews">
@@ -4737,7 +4735,7 @@
 
                             <div class="item_reviews">
                                 <div class="image_reviews">
-                                    <img src="image/us_2.png" alt="Nguyễn Thanh Tâm">
+                                    <img src="user/js/us_2.png" alt="Nguyễn Thanh Tâm">
                                     <p class="description_review">Ba mẹ giao cho Thanh Tâm lựa chọn nội thất căn hộ mới mua tại Time City và
                                         Tâm đã lựa chọn nội thất SunMax - Số 1 Việt Nam</p>
                                     <div class="info_reviews">
@@ -4754,7 +4752,7 @@
 
                             <div class="item_reviews">
                                 <div class="image_reviews">
-                                    <img src="image/us_3.png" alt="Ngọc Trinh">
+                                    <img src="user/js/us_3.png" alt="Ngọc Trinh">
                                     <p class="description_review">Ba mẹ giao cho Ngọc Trinh lựa chọn nội thất căn hộ mới mua tại Ecopark và
                                         Trinh đã lựa chọn nội thất SunMax - Số 1 Việt Nam</p>
                                     <div class="info_reviews">
@@ -4784,7 +4782,7 @@
                     <div class="col-item-srv">
                         <div class="service_item_ed">
 					<span class="iconx">
-						<img alt="Sản phẩm chính hãng" src="image/srv_1.png"/>
+						<img alt="Sản phẩm chính hãng" src="user/js/srv_1.png"/>
 					</span>
                             <div class="content_srv">
                                 <span class="title_service">Sản phẩm chính hãng</span>
@@ -4795,7 +4793,7 @@
                     <div class="col-item-srv">
                         <div class="service_item_ed">
 					<span class="iconx">
-						<img alt="Sunmax" src="image/srv_2.png"/>
+						<img alt="Sunmax" src="user/js/srv_2.png"/>
 					</span>
                             <div class="content_srv">
                                 <span class="title_service">Bảo hành chuyên nghiệp</span>
@@ -4806,7 +4804,7 @@
                     <div class="col-item-srv">
                         <div class="service_item_ed">
 					<span class="iconx">
-						<img alt="Giá tốt nhất tại Việt Nam" src="image/srv_3.png"/>
+						<img alt="Giá tốt nhất tại Việt Nam" src="user/js/srv_3.png"/>
 					</span>
                             <div class="content_srv">
                                 <span class="title_service">Giá tốt nhất tại Việt Nam</span>
@@ -4823,7 +4821,7 @@
 
 
 
-<link href="css/bpr-products-module.css" rel="stylesheet" type="text/css" />
+<link href="user/css/bpr-products-module.css" rel="stylesheet" type="text/css" />
 <div class="bizweb-product-reviews-module"></div>
 
 
@@ -4985,7 +4983,7 @@
                             </h4>
                             <div class="footer-widget">
                                 <div class="payment">
-                                    <img src="image/payment.png" alt="Payment" />
+                                    <img src="user/js/payment.png" alt="Payment" />
                                 </div>
                             </div>
                             <h4 class="title-menu tittle_time">
@@ -5058,14 +5056,14 @@
         </div>
     </div>
 </footer>
-<script src='js/api_js.js?sensor=false' type='text/javascript'></script>
-<script src="js/jquery.gmap.min.js" type="text/javascript"></script>
+<script src='user/js/api_js.js?sensor=false' type='text/javascript'></script>
+<script src="user/js/jquery.gmap.min.js" type="text/javascript"></script>
 <!-- Bizweb javascript -->
-<script src="js/option-selectors.js" type="text/javascript"></script>
-<script src="js/api.jquery.js?4" type="text/javascript"></script>
+<script src="user/js/option-selectors.js" type="text/javascript"></script>
+<script src="user/js/api.jquery.js?4" type="text/javascript"></script>
 <!-- Plugin JS -->
-<script src="js/owl.carousel.min.js" type="text/javascript"></script>
-<script src="js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="user/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="user/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <!-- Add to cart -->
 
 
@@ -5080,7 +5078,7 @@
                 <a href="javascript:void(0)" class="close-window close-popup"><i class="fa fa-close"></i></a>
                 <div class="info clearfix">
                     <div class="product-image margin-top-5">
-                        <img alt="popup" src="image/logo.png" style="max-width:150px; height:auto"/>
+                        <img alt="popup" src="user/js/logo.png" style="max-width:150px; height:auto"/>
                     </div>
                     <div class="product-info">
                         <p class="product-name"></p>
@@ -5109,7 +5107,7 @@
 <div id="popup-cart" class="modal fade" role="dialog">
     <div id="popup-cart-desktop" class="clearfix">
         <div class="title-popup-cart">
-            <img src="image/icon-check.png"  alt="Sunmax"/> <span class="your_product">Bạn đã thêm <span class="cart_name_style">[ <span class="cart-popup-name"></span>]</span> vào giỏ hàng thành công ! </span>
+            <img src="user/js/icon-check.png"  alt="Sunmax"/> <span class="your_product">Bạn đã thêm <span class="cart_name_style">[ <span class="cart-popup-name"></span>]</span> vào giỏ hàng thành công ! </span>
         </div>
         <div class="wrap_popup">
             <div class="title-quantity-popup" >
@@ -5142,9 +5140,9 @@
 </div>
 <div id="myModal" class="modal fade" role="dialog">
 </div>
-<script src="js/cs.script.js" type="text/javascript"></script>
-<script src="js/double_tab_togo.js" type="text/javascript"></script>
-<script src="js/appear.js" type="text/javascript"></script>
+<script src="user/js/cs.script.js" type="text/javascript"></script>
+<script src="user/js/double_tab_togo.js" type="text/javascript"></script>
+<script src="user/js/appear.js" type="text/javascript"></script>
 <!-- Quick view -->
 
 
@@ -5159,7 +5157,7 @@
                 <div class="clearfix image-block">
 					<span class="view_full_size">
 						<a class="img-product" title="" href="#">
-							<img id="product-featured-image-quickview" class="img-responsive product-featured-image-quickview" src="image/logo.png" alt="quickview"  />
+							<img id="product-featured-image-quickview" class="img-responsive product-featured-image-quickview" src="user/js/logo.png" alt="quickview"  />
 						</a>
 					</span>
                     <div class="loading-imgquickview" style="display:none;"></div>
@@ -5234,7 +5232,7 @@
     </div>
 </div>
 
-// 		<script src="js/quickview.js" type="text/javascript"></script>
+// 		<script src="user/js/quickview.js" type="text/javascript"></script>
 
 
 // 		<div class='jas-sale-pop flex pf middle-xs'></div>
@@ -5264,7 +5262,7 @@
 
 
     collection[0]="<a href='/ban-giam-doc-hoa-phat-ntp1890t1' class='jas-sale-pop-img mr__20'>"
-        +                                    "<img src='Product_image/r8abaa3a825074cd8855f02e71efc8.jpg' alt='Bàn giám đốc hòa phát NTP1890T1'/>"
+        +                                    "<img src='Product_user/js/r8abaa3a825074cd8855f02e71efc8.jpg' alt='Bàn giám đốc hòa phát NTP1890T1'/>"
         +                                "</a>"
         +                                "<div class='jas-sale-pop-content'>"
         //+                                    "<h4 class='fs__12 fwm mg__0'>Sản phẩm</h4>"
@@ -5278,7 +5276,7 @@
 
 
     collection[1]="<a href='/ba-n-la-m-vie-c-van-pho-ng-ho-a-pha-t-sv204hl' class='jas-sale-pop-img mr__20'>"
-        +                                    "<img src='Product_image/8e72d1df4f29e47c29efe8d482d473.jpg' alt='Bàn làm việc hòa phát SV204HL'/>"
+        +                                    "<img src='Product_user/js/8e72d1df4f29e47c29efe8d482d473.jpg' alt='Bàn làm việc hòa phát SV204HL'/>"
         +                                "</a>"
         +                                "<div class='jas-sale-pop-content'>"
         //+                                    "<h4 class='fs__12 fwm mg__0'>Sản phẩm</h4>"
@@ -5292,7 +5290,7 @@
 
 
     collection[2]="<a href='/bo-vo-chan-ra-goi-cotton-nhung-cao-cap' class='jas-sale-pop-img mr__20'>"
-        +                                    "<img src='Product_image/6e4b0d120477740078be37a750e7ba.jpg' alt='Bộ vỏ chăn ra gối cotton nhung'/>"
+        +                                    "<img src='Product_user/js/6e4b0d120477740078be37a750e7ba.jpg' alt='Bộ vỏ chăn ra gối cotton nhung'/>"
         +                                "</a>"
         +                                "<div class='jas-sale-pop-content'>"
         //+                                    "<h4 class='fs__12 fwm mg__0'>Sản phẩm</h4>"
@@ -5306,7 +5304,7 @@
 
 
     collection[3]="<a href='/bo-vo-chan-ga-goi-cotton-ai-cap-hoa-xanh' class='jas-sale-pop-img mr__20'>"
-        +                                    "<img src='Product_image/59a01658825c7468aa6a84dac7dc80.jpg' alt='Bộ vỏ chăn ga gối cotton Ai Cập'/>"
+        +                                    "<img src='Product_user/js/59a01658825c7468aa6a84dac7dc80.jpg' alt='Bộ vỏ chăn ga gối cotton Ai Cập'/>"
         +                                "</a>"
         +                                "<div class='jas-sale-pop-content'>"
         //+                                    "<h4 class='fs__12 fwm mg__0'>Sản phẩm</h4>"
@@ -5320,7 +5318,7 @@
 
 
     collection[4]="<a href='/bo-chan-ga-goi-cotton-ai-cap-ma-cat17' class='jas-sale-pop-img mr__20'>"
-        +                                    "<img src='Product_image/12684e083a683e4fc1afd8c1688b16.jpg' alt='Bộ chăn ga gối cotton Ai Cập'/>"
+        +                                    "<img src='Product_user/js/12684e083a683e4fc1afd8c1688b16.jpg' alt='Bộ chăn ga gối cotton Ai Cập'/>"
         +                                "</a>"
         +                                "<div class='jas-sale-pop-content'>"
         //+                                    "<h4 class='fs__12 fwm mg__0'>Sản phẩm</h4>"
@@ -5359,7 +5357,7 @@
 
 
 <!-- Main JS -->
-<script src="js/main.js" type="text/javascript"></script>
+<script src="user/js/main.js" type="text/javascript"></script>
 
 
 <!-- Product detail JS,CSS -->

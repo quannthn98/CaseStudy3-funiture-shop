@@ -31,10 +31,10 @@
     <!-- ================= Google Fonts ================== -->
 
 
-    <link href="css/font-Roboto.css?family=Roboto:400,700" rel="stylesheet" type="text/css"/>
+    <link href="user/css/font-Roboto.css?family=Roboto:400,700" rel="stylesheet" type="text/css"/>
 
 
-    <link href="css/font-YesevaOne.css?family=Yeseva+One&amp;subset=cyrillic,cyrillic-ext,latin-ext,vietnamese"
+    <link href="user/css/font-YesevaOne.css?family=Yeseva+One&amp;subset=cyrillic,cyrillic-ext,latin-ext,vietnamese"
           rel="stylesheet">
     <!-- Facebook Open Graph meta tags -->
 
@@ -50,24 +50,24 @@
     <meta property="og:site_name" content="Sunmax">
 
     <!-- Plugin CSS -->
-    <link rel="stylesheet" href="css/themify-icons.css">
-    <link rel="stylesheet" href="css/all.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link href="css/owl.carousel.min.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="user/css/themify-icons.css">
+    <link rel="stylesheet" href="user/css/all.css">
+    <link rel="stylesheet" href="user/css/bootstrap.min.css">
+    <link rel="stylesheet" href="user/css/font-awesome.min.css">
+    <link href="user/css/owl.carousel.min.css" rel="stylesheet" type="text/css"/>
 
     <!-- Build Main CSS -->
-    <link href="css/base.scss.css" rel="stylesheet" type="text/css"/>
-    <link href="css/style.scss.css" rel="stylesheet" type="text/css"/>
-    <link href="css/module.scss.css" rel="stylesheet" type="text/css"/>
-    <link href="css/responsive.scss.css" rel="stylesheet" type="text/css"/>
+    <link href="user/css/base.scss.css" rel="stylesheet" type="text/css"/>
+    <link href="user/css/style.scss.css" rel="stylesheet" type="text/css"/>
+    <link href="user/css/module.scss.css" rel="stylesheet" type="text/css"/>
+    <link href="user/css/responsive.scss.css" rel="stylesheet" type="text/css"/>
 
     <!-- Header JS -->
-    <script src="js/jquery-2.2.3.min.js" type="text/javascript"></script>
+    <script src="user/js/jquery-2.2.3.min.js" type="text/javascript"></script>
     <!-- Bizweb javascript customer -->
 
 
-    <link href="css/iwish.css"/>
+    <link href="user/css/iwish.css"/>
     <script>var ProductReviewsAppUtil = ProductReviewsAppUtil || {};</script>
 </head>
 <body>
@@ -503,7 +503,7 @@
                                         <div class="sale-flash new">Mới</div>
                                         <a class="image_link display_flex" href="{/servlet?id={product.id}"
                                            title="Sofa bộ Italia - Canova">
-                                            <img src="image/product-1.png" data-lazyload="Product_image/10.jpg"
+                                            <img src="image/product-1.png" data-lazyload="user/Product_image/10.jpg"
                                                  alt="Sofa bộ Italia - Canova">
                                         </a>
 
@@ -573,7 +573,7 @@
 
                                         <a class="image_link display_flex" href="/sofa-da-ma-ntx1824-1"
                                            title="Sofa bộ Hugo 8979">
-                                            <img src="image/product-1.png" data-lazyload="Product_image/4.jpg"
+                                            <img src="image/product-1.png" data-lazyload="user/Product_image/4.jpg"
                                                  alt="Sofa bộ Hugo 8979">
                                         </a>
 
@@ -684,7 +684,7 @@
         <div class="col-lg-3 col-md-3 margin-bottom-50 col-lg-pull-9 col-md-pull-9">
 
             <aside class="dqdt-sidebar sidebar left-content">
-                <script src="js/search_filter.js" type="text/javascript"></script>
+                <script src="user/js/search_filter.js" type="text/javascript"></script>
 
                 <aside class="aside-item sidebar-category collection-category">
                     <div class="aside-title">
@@ -759,7 +759,7 @@
                 </aside>
 
 
-                <script src="js/search_filter.js" type="text/javascript"></script>
+                <script src="user/js/search_filter.js" type="text/javascript"></script>
                 <div class="aside-filter">
                     <div class="filter-container">
                         <div class="filter-container__selected-filter" style="display: none;">
@@ -992,7 +992,7 @@
 </script>
 
 
-<link href="css/bpr-products-module.css" rel="stylesheet" type="text/css"/>
+<link href="user/css/bpr-products-module.css" rel="stylesheet" type="text/css"/>
 <div class="bizweb-product-reviews-module"></div>
 
 <footer class="footer">
@@ -1197,14 +1197,14 @@
         </div>
     </div>
 </footer>
-<script src='js/api_js.js?sensor=false' type='text/javascript'></script>
-<script src="js/jquery.gmap.min.js" type="text/javascript"></script>
+<script src='user/js/api_js.js?sensor=false' type='text/javascript'></script>
+<script src="user/js/jquery.gmap.min.js" type="text/javascript"></script>
 <!-- Bizweb javascript -->
-<script src="js/option-selectors.js" type="text/javascript"></script>
-<script src="js/api.jquery.js?4" type="text/javascript"></script>
+<script src="user/js/option-selectors.js" type="text/javascript"></script>
+<script src="user/js/api.jquery.js?4" type="text/javascript"></script>
 <!-- Plugin JS -->
-<script src="js/owl.carousel.min.js" type="text/javascript"></script>
-<script src="js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+<script src="user/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="user/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
 <!-- Add to cart -->
 
@@ -1290,9 +1290,9 @@
 </div>
 <div id="myModal" class="modal fade" role="dialog">
 </div>
-<script src="js/cs.script.js" type="text/javascript"></script>
-<script src="js/double_tab_togo.js" type="text/javascript"></script>
-<script src="js/appear.js" type="text/javascript"></script>
+<script src="user/js/cs.script.js" type="text/javascript"></script>
+<script src="user/js/double_tab_togo.js" type="text/javascript"></script>
+<script src="user/js/appear.js" type="text/javascript"></script>
 <!-- Quick view -->
 
 
@@ -1391,7 +1391,7 @@
 </div>
 
 //
-<script src="js/quickview.js" type="text/javascript"></script>
+<script src="user/js/quickview.js" type="text/javascript"></script>
 
 
 //
@@ -1421,7 +1421,7 @@
 
 
     collection[0] = "<a href='/ban-giam-doc-hoa-phat-ntp1890t1' class='jas-sale-pop-img mr__20'>"
-        + "<img src='Product_image/r8abaa3a825074cd8855f02e71efc8.jpg' alt='Bàn giám đốc hòa phát NTP1890T1'/>"
+        + "<img src='user/Product_image/r8abaa3a825074cd8855f02e71efc8.jpg' alt='Bàn giám đốc hòa phát NTP1890T1'/>"
         + "</a>"
         + "<div class='jas-sale-pop-content'>"
         //+                                    "<h4 class='fs__12 fwm mg__0'>Sản phẩm</h4>"
@@ -1434,7 +1434,7 @@
 
 
     collection[1] = "<a href='/ba-n-la-m-vie-c-van-pho-ng-ho-a-pha-t-sv204hl' class='jas-sale-pop-img mr__20'>"
-        + "<img src='Product_image/8e72d1df4f29e47c29efe8d482d473.jpg' alt='Bàn làm việc hòa phát SV204HL'/>"
+        + "<img src='user/Product_image/8e72d1df4f29e47c29efe8d482d473.jpg' alt='Bàn làm việc hòa phát SV204HL'/>"
         + "</a>"
         + "<div class='jas-sale-pop-content'>"
         //+                                    "<h4 class='fs__12 fwm mg__0'>Sản phẩm</h4>"
@@ -1447,7 +1447,7 @@
 
 
     collection[2] = "<a href='/bo-vo-chan-ra-goi-cotton-nhung-cao-cap' class='jas-sale-pop-img mr__20'>"
-        + "<img src='Product_image/6e4b0d120477740078be37a750e7ba.jpg' alt='Bộ vỏ chăn ra gối cotton nhung'/>"
+        + "<img src='user/Product_image/6e4b0d120477740078be37a750e7ba.jpg' alt='Bộ vỏ chăn ra gối cotton nhung'/>"
         + "</a>"
         + "<div class='jas-sale-pop-content'>"
         //+                                    "<h4 class='fs__12 fwm mg__0'>Sản phẩm</h4>"
@@ -1460,7 +1460,7 @@
 
 
     collection[3] = "<a href='/bo-vo-chan-ga-goi-cotton-ai-cap-hoa-xanh' class='jas-sale-pop-img mr__20'>"
-        + "<img src='Product_image/59a01658825c7468aa6a84dac7dc80.jpg' alt='Bộ vỏ chăn ga gối cotton Ai Cập'/>"
+        + "<img src='user/Product_image/59a01658825c7468aa6a84dac7dc80.jpg' alt='Bộ vỏ chăn ga gối cotton Ai Cập'/>"
         + "</a>"
         + "<div class='jas-sale-pop-content'>"
         //+                                    "<h4 class='fs__12 fwm mg__0'>Sản phẩm</h4>"
@@ -1473,7 +1473,7 @@
 
 
     collection[4] = "<a href='/bo-chan-ga-goi-cotton-ai-cap-ma-cat17' class='jas-sale-pop-img mr__20'>"
-        + "<img src='Product_image/12684e083a683e4fc1afd8c1688b16.jpg' alt='Bộ chăn ga gối cotton Ai Cập'/>"
+        + "<img src='user/Product_image/12684e083a683e4fc1afd8c1688b16.jpg' alt='Bộ chăn ga gối cotton Ai Cập'/>"
         + "</a>"
         + "<div class='jas-sale-pop-content'>"
         //+                                    "<h4 class='fs__12 fwm mg__0'>Sản phẩm</h4>"
@@ -1512,7 +1512,7 @@
 
 
 <!-- Main JS -->
-<script src="js/main.js" type="text/javascript"></script>
+<script src="user/js/main.js" type="text/javascript"></script>
 
 
 <!-- Product detail JS,CSS -->

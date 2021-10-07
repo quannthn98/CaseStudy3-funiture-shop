@@ -1,6 +1,10 @@
 package controller;
 
+import dao.BrandDao;
+import dao.CategoryDao;
 import dao.ProductDao;
+import model.Brand;
+import model.Category;
 import model.Product;
 
 import javax.servlet.*;
@@ -12,6 +16,8 @@ import java.util.List;
 @WebServlet(name = "ProductServlet", value = "/product")
 public class ProductServlet extends HttpServlet {
     ProductDao productDAO = new ProductDao();
+    BrandDao brandDao = new BrandDao();
+    CategoryDao categoryDao = new CategoryDao();
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -77,6 +83,10 @@ public class ProductServlet extends HttpServlet {
 
     private void showFormEditProduct(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
+        List<Brand> brandList = brandDao.getAll();
+        List<Category> categoryList = categoryDao.getAll();
+        request.setAttribute("brandList",brandList);
+        request.setAttribute("categoryList",categoryList);
         Product product = productDAO.findById(id);
         RequestDispatcher dispatcher = request.getRequestDispatcher("product/edit.jsp");
         request.setAttribute("product", product);
@@ -88,6 +98,10 @@ public class ProductServlet extends HttpServlet {
     }
 
     private void showFormCrateProduct(HttpServletRequest request, HttpServletResponse response) {
+        List<Brand> brandList = brandDao.getAll();
+        List<Category> categoryList = categoryDao.getAll();
+        request.setAttribute("brandList", brandList);
+        request.setAttribute("categoryList", categoryList);
         RequestDispatcher dispatcher = request.getRequestDispatcher("product/create.jsp");
         try {
             dispatcher.forward(request, response);

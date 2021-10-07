@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: quans
@@ -128,7 +129,6 @@
             </div>
         </div>
         <div class="col-10">
-            //Content
             <div class="card">
                 <div class="card-header">
                     <div class="row">
@@ -172,35 +172,43 @@
                                    value="${product.description}">
                         </div>
                         <div class="mb-3">
-                            <label for="createdDate" class="form-label">Create Date</label>
-                            <input type="text" name="createdDate" class="form-control" id="createdDate"
-                                   value="${product.createDate}">
-                        </div>
-                        <div class="mb-3">
                             <label for="status" class="form-label">Status</label>
                             <input type="text" name="status" class="form-control" id="status" value="${product.status}">
                         </div>
                         <div class="mb-3">
                             <label for="status" class="form-label">Category</label>
-                            <select name="categoryName">
-                                <option value="1">Ghế Sofa</option>
-                                <option value="2">Ghế đôn</option>
-                                <option value="3">Kệ, Tủ TV</option>
-                                <option value="4">Đồng hồ</option>
+                            <select name="categoryName" class="form-select" aria-label="Default select example">
+                                <c:forEach items="${categoryList}" var="category">
+                                    <c:choose>
+                                        <c:when test="${product.categoryName==category.name}">
+                                            <option value="${category.id}" selected>${category.name}</option>
+                                        </c:when>
+                                        <c:otherwise>
+                                            <option value="${category.id}">${category.name}</option>
+                                        </c:otherwise>
+                                    </c:choose>
+                                </c:forEach>
                             </select>
                         </div>
                         <div class="mb-3">
                             <label for="status" class="form-label">Brand</label>
-                            <select name="brandName">
-                                <option value="1">Ashley Home Furniture</option>
-                                <option value="2">Sofa French William</option>
-                                <option value="3">Sofa Chateau d’Ax – Italia</option>
-                                <option value="4"> Sofa Malaysia Omega</option>
+                            <select name="brandName" class="form-select" aria-label="Default select example">
+
+                                <c:forEach items="${brandList}" var="brand">
+                                    <c:choose>
+                                        <c:when test="${product.brandName == brand.name}">
+                                            <option value="${brand.id}" selected>${brand.name}</option>
+                                        </c:when>
+                                        <c:otherwise>
+                                            <option value="${brand.id}">${brand.name}</option>
+                                        </c:otherwise>
+                                    </c:choose>
+                                </c:forEach>
                             </select>
                         </div>
                         <button type="submit" class="btn btn-primary">Create</button>
+                        <a href="/product" class="btn btn-outline-danger">Cancel</a>
                     </form>
-
                 </div>
                 <div class="card-footer">
                 </div>

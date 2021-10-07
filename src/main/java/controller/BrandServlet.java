@@ -57,9 +57,9 @@ public class BrandServlet extends HttpServlet {
     private void showFormDeleteBrand(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
         brandDao.delete(id);
-        RequestDispatcher dispatcher= request.getRequestDispatcher("/brand/delete.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/brand/delete.jsp");
         try {
-            dispatcher.forward(request,response);
+            dispatcher.forward(request, response);
         } catch (ServletException | IOException e) {
             e.printStackTrace();
         }
@@ -100,7 +100,7 @@ public class BrandServlet extends HttpServlet {
                 break;
             }
             case "edit-brand": {
-                editBrand(request,response);
+                editBrand(request, response);
                 break;
             }
         }
@@ -110,7 +110,7 @@ public class BrandServlet extends HttpServlet {
     private void createBrand(HttpServletRequest request, HttpServletResponse response) {
         String name = request.getParameter("name");
         int status = Integer.parseInt(request.getParameter("status"));
-        brandDao.save(new Brand(name,status));
+        brandDao.save(new Brand(name, status));
         try {
             response.sendRedirect("/brand");
         } catch (IOException e) {
@@ -122,8 +122,8 @@ public class BrandServlet extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         String name = request.getParameter("name");
         int status = Integer.parseInt(request.getParameter("status"));
-        Brand brand = new Brand(name,status);
-        brandDao.update(id,brand);
+        Brand brand = new Brand(name, status);
+        brandDao.update(id, brand);
         try {
             response.sendRedirect("/brand");
         } catch (IOException e) {

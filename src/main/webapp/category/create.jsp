@@ -82,7 +82,6 @@
             </div>
         </div>
         <div class="col-10">
-            //Content
             <div class="card">
                 <div class="card-header">
                     <div class="row">
