@@ -8,5 +8,5 @@ import java.util.List;
 
 public interface INewDao extends IGeneralDao<News> {
     boolean add(News news);
-    List<News> findByName(String name);
+    List<News> findByName(String title);
 }
