@@ -14,10 +14,10 @@ public class CustomerDao implements ICustomerDao {
     Connection connection = DBConnection.getConnection();
 
     @Override
-    public List<Customer> getAll() {
+    public  List<Customer> getAll() {
         List<Customer> customers = new ArrayList<>();
         try {
-            PreparedStatement statement = connection.prepareStatement("select*from customer");
+            PreparedStatement statement = connection.prepareStatement("select*from customerdetail");
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
@@ -28,13 +28,14 @@ public class CustomerDao implements ICustomerDao {
                 String email = resultSet.getString("email");
                 String password = resultSet.getString("password");
                 String status = resultSet.getString("status");
-                customers.add(new Customer(id, name, birthday, address, phone, email, password, status));
+                int role = resultSet.getInt("id_Role");
+                customers.add(new Customer(id, name, birthday, address, phone, email, password, status, role));
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return customers;
-    }
+        }
 
     @Override
     public Customer findById(int id) {
@@ -57,6 +58,19 @@ public class CustomerDao implements ICustomerDao {
             e.printStackTrace();
         }
         return customer;
+    }
+
+    @Override
+    public boolean setRole(int id) {
+        boolean isUpdated = false;
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement("insert into customer_role(id_Customer, id_Role) value (?,2)");
+            preparedStatement.setInt(1, id);
+            isUpdated = preparedStatement.executeUpdate() > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return isUpdated;
     }
 
     @Override
@@ -118,6 +132,7 @@ public class CustomerDao implements ICustomerDao {
         statement.setString(1,email);
         ResultSet resultSet = statement.executeQuery();
         while (resultSet.next()) {
+            int id = resultSet.getInt("id");
             String name = resultSet.getString("name");
             String birthday = resultSet.getString("birthday");
             String address = resultSet.getString("address");
@@ -125,7 +140,7 @@ public class CustomerDao implements ICustomerDao {
             String email1 = resultSet.getString("email");
             String password = resultSet.getString("password");
             String status = resultSet.getString("status");
-            Customer customer = new Customer(name, birthday, address, phone, email1, password, status);
+            Customer customer = new Customer(id,name, birthday, address, phone, email1, password, status);
             customers.add(customer);
         }
         return customers;

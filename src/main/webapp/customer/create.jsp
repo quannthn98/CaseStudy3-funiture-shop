@@ -120,15 +120,12 @@ To change this template use File | Settings | File Templates.
                             <label for="email" class="form-label">Email</label>
                             <input type="text" name="email" class="form-control" id="email" >
                         </div>
+                        <p class="text-warning">${messageemail}</p>
+
                         <div class="mb-3">
                             <label for="password" class="form-label">Password</label>
                             <input type="text" name="password" class="form-control" id="password" >
                         </div>
-                        <div class="mb-3">
-                            <label for="status" class="form-label">Status</label>
-                            <input type="text" name="status" class="form-control" id="status" >
-                        </div>
-
                         <button type="submit" class="btn btn-primary">Create</button>
                     </form>
 

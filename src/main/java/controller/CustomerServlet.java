@@ -1,5 +1,6 @@
 package controller;
 
+import dao.CustomerDao;
 import model.Customer;
 import service.CustomerService;
 import service.ICustomerService;
@@ -36,12 +37,95 @@ public class CustomerServlet extends HttpServlet {
                 deleteJSP(request, response);
                 break;
             }
+            case "login": {
+                loginDoGet(request, response);
+                break;
+            }
+            case "create2":{
+                createDG(request,response);
+            }
             default: {
                 getAll(request, response);
                 break;
             }
         }
 
+    }
+
+    private void createDG(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        RequestDispatcher dispatcher = request.getRequestDispatcher("user/login.jsp");
+        dispatcher.forward(request,response);
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        request.setCharacterEncoding("utf-8");
+        String action = request.getParameter("action");
+        if (action == null) {
+            action = "";
+        }
+        switch (action) {
+            case "create": {
+                createDB(request, response);
+                break;
+            }
+            case "edit": {
+                editPOT(request, response);
+                break;
+            }
+            case "login": {
+                loginDoPot(request, response);
+                break;
+            }
+            case "createUser":
+                createDP(request,response);
+                break;
+        }
+    }
+
+    private void createDP(HttpServletRequest request, HttpServletResponse response) {
+        Customer customer = getCustomerInformation(request);
+        boolean isCreate = true;
+        List<Customer> customers = customerService.selectAll();
+        for (Customer c : customers) {
+            if (c.getEmail().equals(customer.getEmail())) {
+                isCreate = false;
+                request.setAttribute("messengermail", "email da ton tai");
+                break;
+            }
+        }
+
+        if (isCreate) {
+            customerService.save(customer);
+            try {
+                Customer customer1 = customerService.findByEmail(customer.getEmail()).get(0);
+                int newCustomerId = customer1.getId();
+                customerService.setRole(newCustomerId);
+                response.sendRedirect("/user/login.jsp");
+            } catch (SQLException | IOException e) {
+                e.printStackTrace();
+            }
+        } else {
+            RequestDispatcher dispatcher = request.getRequestDispatcher("user/register.jsp");
+            try {
+                dispatcher.forward(request, response);
+            } catch (ServletException | IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+
+    private void loginDoGet(HttpServletRequest request, HttpServletResponse response) {
+        RequestDispatcher dispatcher = request.getRequestDispatcher("customer/login.jsp");
+        try {
+            dispatcher.forward(request, response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 
@@ -75,40 +159,61 @@ public class CustomerServlet extends HttpServlet {
     private void getAll(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String email = request.getParameter("q");
         if (email == null) {
-                List<Customer> customerList = customerService.selectAll();
-                request.setAttribute("customer", customerList);
-                RequestDispatcher dispatcher = request.getRequestDispatcher("/customer/list.jsp");
-                dispatcher.forward(request, response);
-        }
-        else {
+            List<Customer> customerList = customerService.selectAll();
+            request.setAttribute("customer", customerList);
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/customer/list.jsp");
+            dispatcher.forward(request, response);
+        } else {
             try {
                 List<Customer> customers = customerService.findByEmail(email);
                 request.setAttribute("customer", customers);
                 RequestDispatcher dispatcher = request.getRequestDispatcher("/customer/list.jsp");
-                dispatcher.forward(request,response);
+                dispatcher.forward(request, response);
             } catch (SQLException e) {
                 e.printStackTrace();
             }
         }
     }
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        request.setCharacterEncoding("utf-8");
-        String action = request.getParameter("action");
-        if (action == null) {
-            action = "";
-        }
-        switch (action) {
-            case "create": {
-                createDB(request, response);
-                break;
-            }
-            case "edit": {
-                editPOT(request, response);
+
+
+
+    private void loginDoPot(HttpServletRequest request, HttpServletResponse response) {
+        String email = request.getParameter("email");
+        String password = request.getParameter("password");
+        Customer customer=null;
+        boolean isLoginDoPot = false;
+        List<Customer> customerList = customerService.selectAll();
+        for (Customer customer1 : customerList) {
+            if (email.equals(customer1.getEmail()) && password.equals(customer1.getPassword())) {
+                customer = customer1;
+                isLoginDoPot = true;
                 break;
             }
         }
+
+        if (isLoginDoPot){
+            if(customer.getRole() == 1 ){
+            RequestDispatcher dispatcher = request.getRequestDispatcher("customer/list.jsp");
+                try {
+                    dispatcher.forward(request,response);
+                } catch (ServletException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            else {
+                RequestDispatcher dispatcher = request.getRequestDispatcher("user/register.jsp");
+                try {
+                    dispatcher.forward(request,response);
+                } catch (ServletException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
     }
 
     private void editPOT(HttpServletRequest request, HttpServletResponse response) {
@@ -145,7 +250,7 @@ public class CustomerServlet extends HttpServlet {
         }
     }
 
-    private void createDB(HttpServletRequest request, HttpServletResponse response) {
+    private Customer getCustomerInformation(HttpServletRequest request){
         String name = request.getParameter("name");
         String birthday = request.getParameter("birthday");
         String address = request.getParameter("address");
@@ -153,12 +258,37 @@ public class CustomerServlet extends HttpServlet {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         String status = request.getParameter("status");
-        Customer customer = new Customer(name, birthday, address, phone, email, password, status);
-        customerService.save(customer);
-        try {
-            response.sendRedirect("/customers");
-        } catch (IOException e) {
-            e.printStackTrace();
+        return new Customer(name, birthday, address, phone, email, password, status);
+    }
+
+    private void createDB(HttpServletRequest request, HttpServletResponse response) {
+        Customer customer = getCustomerInformation(request);
+        boolean isCreate = true;
+        List<Customer> customers = customerService.selectAll();
+        for (Customer c : customers) {
+            if (c.getEmail().equals(customer.getEmail())) {
+                isCreate = false;
+                request.setAttribute("messageemail", "email da ton tai");
+            }
+        }
+
+        if (isCreate) {
+            customerService.save(customer);
+            try {
+                Customer customer1 = customerService.findByEmail(customer.getEmail()).get(0);
+                int newCustomerId = customer1.getId();
+                customerService.setRole(newCustomerId);
+                response.sendRedirect("/customers");
+            } catch (SQLException | IOException e) {
+                e.printStackTrace();
+            }
+        } else {
+            RequestDispatcher dispatcher = request.getRequestDispatcher("customer/create.jsp");
+            try {
+                dispatcher.forward(request, response);
+            } catch (ServletException | IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 }

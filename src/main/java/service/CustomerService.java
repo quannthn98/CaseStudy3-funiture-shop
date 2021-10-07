@@ -34,6 +34,11 @@ public class CustomerService implements ICustomerService{
     }
 
     @Override
+    public boolean setRole(int id) {
+       return customerDAO.setRole(id);
+    }
+
+    @Override
     public List<Customer> findByEmail(String email) throws SQLException {
         email = "%"+email+"%";
         return customerDAO.findByEmail(email);

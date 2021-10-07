@@ -466,9 +466,9 @@
                         <a href="javascript:void(0)" class="social-login--facebook" onclick="loginFacebook()"><img width="129px" height="37px" alt="facebook-login-button" src="image/fb-btn.svg"></a>
                         <a href="javascript:void(0)" class="social-login--google" onclick="loginGoogle()"><img width="129px" height="37px" alt="google-login-button" src="image/gp-btn.svg"></a>
                     </div>
-                    <form accept-charset="UTF-8" action="/customers?action=create" method="post" id="customer_register">
+                    <form accept-charset="UTF-8" action="/customers?action=createUser" method="post" id="customer_register">
                         <input name="FormType" type="hidden" value="customer_register" />
-                        <input name="utf8" type="hidden" value="true" /><input type="hidden" id="Token-277a2a889fe84b868b8f0829c9c84b1b" name="Token" /><script src="js/api.js"></script>
+                            <input name="utf8" type="hidden" value="true" /><input type="hidden" id="Token-277a2a889fe84b868b8f0829c9c84b1b" name="Token" /><script src="js/api.js"></script>
 
                         <div class="form-signup" >
 
@@ -490,6 +490,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
+                                    <p class="text-warning">${messengermail}</p>
                                     <fieldset class="form-group">
                                         <label>Email <span class="required">*</span></label>
                                         <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$" class="form-control form-control-lg" value="" name="email" id="email"  placeholder="" required="">
@@ -519,8 +520,8 @@
                                 </div>
                             </div>
                             <div class="col-xs-12 text-xs-left" style="margin-top:30px; padding: 0">
-                                <button type="summit" value="Đăng ký" class="btn  btn-style btn-primary">Đăng ký</button>
-                                <a href="/account/login" class="btn-link-style btn-register" style="margin-left: 20px;text-decoration: underline; ">Đăng nhập</a>
+                                <button type="summit" value="Đăng ký" class="btn  btn-style btn-primary" onclick="hienthi()">Đăng ký</button>
+                                <a href="login.jsp" class="btn-link-style btn-register" style="margin-left: 20px;text-decoration: underline; ">Đăng nhập</a>
                             </div>
                         </div>
                     </form>
@@ -1065,6 +1066,11 @@
 
 <!-- Main JS -->
 <script src="js/main.js" type="text/javascript"></script>
+<script>
+    function hienthi(){
+        alert("Đăng ký thành công")
+    }
+</script>
 
 
 <!-- Product detail JS,CSS -->
