@@ -373,7 +373,7 @@
 
 
                         <li class="nav-item ">
-                            <a class="a-img" href="/phong-khach"><span>Phòng Ngủ</span><i
+                            <a class="a-img" href="/phong-khach"><span>Phòng Ăn</span><i
                                     class="fa fa-caret-down"></i></a>
                             <ul class="item_small hidden-sm hidden-xs">
                                 <c:forEach items="${categoryList}" var="category">
