@@ -1,13 +1,13 @@
 package service;
 
-import dao.CustomerDAO;
+import dao.CustomerDao;
 import model.Customer;
 
 import java.sql.SQLException;
 import java.util.List;
 
 public class CustomerService implements ICustomerService{
-    CustomerDAO customerDAO = new CustomerDAO();
+    CustomerDao customerDAO = new CustomerDao();
     @Override
     public List<Customer> selectAll() {
         return customerDAO.getAll();

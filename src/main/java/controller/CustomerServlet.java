@@ -1,7 +1,5 @@
 package controller;
 
-import dao.CustomerDAO;
-import dao.ICustomerDAO;
 import model.Customer;
 import service.CustomerService;
 import service.ICustomerService;
