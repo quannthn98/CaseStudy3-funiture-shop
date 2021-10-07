@@ -1,7 +1,6 @@
 package dao.New;
 
 import config.DBConnection;
-import model.Company;
 import model.News;
 
 import java.sql.*;

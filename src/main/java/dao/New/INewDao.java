@@ -2,6 +2,7 @@ package dao.New;
 
 import dao.IGeneralDao;
 import model.Company;
+import model.Customer;
 import model.News;
 
 import java.util.List;
