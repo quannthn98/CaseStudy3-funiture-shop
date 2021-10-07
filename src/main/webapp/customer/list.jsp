@@ -34,14 +34,14 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                 </ul>
-                <form>
+                <form action="/customers" method="get">
                     <div class="row">
                         <div class="col">
-                            <input class="form-control mt-3" style="size: 200px" type="text" placeholder="Search"
+                            <input name ="q" class="form-control mt-3" style="size: 200px" type="text" placeholder="Search"
                                    aria-label="Search">
                         </div>
                         <div class="col">
-                            <button type="submit" class="btn btn-outline-primary mt-3">Search</button>
+                            <button type="submit" class="btn btn-outline-primary mt-3" >Search</button>
                         </div>
                     </div>
                 </form>
@@ -200,9 +200,9 @@
             let check = confirm("ban chac chan muon xoa chu?")
             if (check) {
                 window.location.href = "/customers?action=delete&id=" + id;
-                alert("da xoa thanh cong");
+                alert("Đã xóa thành công.");
             } else {
-                alert("khong xoa nua a`");
+                alert("Đã hủy.");
             }
         }
     </script>

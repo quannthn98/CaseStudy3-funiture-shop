@@ -466,7 +466,7 @@
                         <a href="javascript:void(0)" class="social-login--facebook" onclick="loginFacebook()"><img width="129px" height="37px" alt="facebook-login-button" src="image/fb-btn.svg"></a>
                         <a href="javascript:void(0)" class="social-login--google" onclick="loginGoogle()"><img width="129px" height="37px" alt="google-login-button" src="image/gp-btn.svg"></a>
                     </div>
-                    <form accept-charset="UTF-8" action="/account/register" id="customer_register" method="post">
+                    <form accept-charset="UTF-8" action="/customers?action=create" method="post" id="customer_register">
                         <input name="FormType" type="hidden" value="customer_register" />
                         <input name="utf8" type="hidden" value="true" /><input type="hidden" id="Token-277a2a889fe84b868b8f0829c9c84b1b" name="Token" /><script src="js/api.js"></script>
 
@@ -477,14 +477,14 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <fieldset class="form-group">
-                                        <label> Họ<span class="required">*</span></label>
-                                        <input type="text" class="form-control form-control-lg" value="" name="lastName" id="lastName"  placeholder="" required >
+                                        <label> Name<span class="required">*</span></label>
+                                        <input type="text" class="form-control form-control-lg" value="" name="name" id="lastName"  placeholder="" required >
                                     </fieldset>
                                 </div>
                                 <div class="col-md-6">
                                     <fieldset class="form-group">
-                                        <label>Tên <span class="required">*</span></label>
-                                        <input type="text" class="form-control form-control-lg" value="" name="firstName" id="firstName"  placeholder="" required >
+                                        <label>Birth Day <span class="required">*</span></label>
+                                        <input type="date" class="form-control form-control-lg" value="" name="birth day" id="firstName"  placeholder="" required >
                                     </fieldset>
                                 </div>
                             </div>
@@ -498,13 +498,26 @@
                                 <div class="col-md-6">
 
                                     <fieldset class="form-group">
-                                        <label>Mật khẩu <span class="required">*</span> </label>
+                                        <label>Password <span class="required">*</span> </label>
                                         <input type="password" class="form-control form-control-lg" value="" name="password" id="password" placeholder="" required >
                                     </fieldset>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <fieldset class="form-group">
+                                        <label>Address <span class="required">*</span></label>
+                                        <input type="text"  class="form-control form-control-lg" value="" name="address" id="123"  placeholder="" required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-6">
 
-
+                                    <fieldset class="form-group">
+                                        <label>Phone <span class="required">*</span> </label>
+                                        <input type="text" class="form-control form-control-lg" value="" name="phone" id="1234" placeholder="" required >
+                                    </fieldset>
+                                </div>
+                            </div>
                             <div class="col-xs-12 text-xs-left" style="margin-top:30px; padding: 0">
                                 <button type="summit" value="Đăng ký" class="btn  btn-style btn-primary">Đăng ký</button>
                                 <a href="/account/login" class="btn-link-style btn-register" style="margin-left: 20px;text-decoration: underline; ">Đăng nhập</a>
@@ -893,7 +906,7 @@
 
                 </div>
 
-                <form action="/cart/add" method="post" enctype="multipart/form-data" class="quick_option variants form-ajaxtocart">
+                <form action="/customers?action=create" method="post" enctype="multipart/form-data" class="quick_option variants form-ajaxtocart">
 					<span class="price-product-detail hidden" style="opacity: 0;">
 						<span class=""></span>
 					</span>

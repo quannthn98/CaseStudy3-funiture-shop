@@ -3,6 +3,7 @@ package service;
 import dao.CustomerDao;
 import model.Customer;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public class CustomerService implements ICustomerService{
@@ -30,5 +31,11 @@ public class CustomerService implements ICustomerService{
     @Override
     public boolean delete(int id) {
         return customerDAO.delete(id);
+    }
+
+    @Override
+    public List<Customer> findByEmail(String email) throws SQLException {
+        email = "%"+email+"%";
+        return customerDAO.findByEmail(email);
     }
 }
