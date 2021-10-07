@@ -26,7 +26,7 @@
     <meta name="robots" content="noodp,index,follow"/>
     <!-- ================= Favicon ================== -->
 
-    <link rel="icon" href="image/favicon.png" type="image/x-icon"/>
+    <link rel="icon" href="user/image/favicon.png" type="image/x-icon"/>
 
     <!-- ================= Google Fonts ================== -->
 
@@ -41,8 +41,8 @@
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="Theme Sunmax dành cho website bán nội thất văn phòng">
-    <meta property="og:image" content="image/logo.png">
-    <meta property="og:image:secure_url" content="image/logo.png">
+    <meta property="og:image" content="user/image/logo.png">
+    <meta property="og:image:secure_url" content="user/image/logo.png">
 
     <meta property="og:description"
           content="Sunmax sẽ là một trong những sự lựa chọn hoàn hảo cho các website thương mại kinh doanh các mặt hàng. Giao diện đơn giản nhưng vô cùng tinh tế.">
@@ -203,14 +203,14 @@
                 <div class="content_header">
                     <div class="header-main">
                         <div class="menu-bar-h nav-mobile-button hidden-md hidden-lg">
-                            <a href="#nav-mobile"><img src="image/i_menubar.png" alt="menu bar"/></a>
+                            <a href="#nav-mobile"><img src="user/image/i_menubar.png" alt="menu bar"/></a>
                         </div>
                         <div class="col-lg-3 col-md-3">
                             <div class="logo">
 
 
                                 <a href="/" class="logo-wrapper ">
-                                    <img src="image/logo.png" alt="logo ">
+                                    <img src="user/image/logo.png" alt="logo ">
                                 </a>
 
                             </div>
@@ -272,7 +272,7 @@
                                 <div class="header-acount hidden-lg-down">
                                     <div class="wishlist_header hidden-xs hidden-sm">
 
-                                        <div class="img_hotline"><img alt="Wishlist" src="image/icon_phone.png"/></div>
+                                        <div class="img_hotline"><img alt="Wishlist" src="user/image/icon_phone.png"/></div>
 
                                         <span class="text_hotline">Hotline:</span> <a class="hai01"
                                                                                       href="tel:0165939688">0165939688</a>
@@ -283,7 +283,7 @@
                                         <div class="mini-cart text-xs-center">
                                             <div class="heading-cart">
                                                 <a class="bg_cart" href="/cart" title="Giỏ hàng">
-                                                    <img alt="Giỏ hàng" src="image/icon_hovercart.png"/>
+                                                    <img alt="Giỏ hàng" src="user/image/icon_hovercart.png"/>
                                                     <span class="text-giohang hidden-xs">Giỏ hàng:</span>
                                                     (<span class="count_item count_item_pr">0</span>)
                                                 </a>
@@ -324,7 +324,7 @@
                                         <div class="mini-cart text-xs-center">
                                             <div class="heading-cart-mobi">
                                                 <a class="bg_cart" href="/cart" title="Giỏ hàng">
-                                                    <img alt="Giỏ hàng" src="image/icon_cart_mobi.png"/>
+                                                    <img alt="Giỏ hàng" src="user/image/icon_cart_mobi.png"/>
                                                     <span class="count_item count_item_pr"></span>
                                                 </a>
                                             </div>
@@ -503,7 +503,7 @@
                                         <div class="sale-flash new">Mới</div>
                                         <a class="image_link display_flex" href="{/servlet?id={product.id}"
                                            title="Sofa bộ Italia - Canova">
-                                            <img src="image/product-1.png" data-lazyload="user/Product_image/10.jpg"
+                                            <img src="user/image/product-1.png" data-lazyload="user/Product_image/10.jpg"
                                                  alt="Sofa bộ Italia - Canova">
                                         </a>
 
@@ -573,7 +573,7 @@
 
                                         <a class="image_link display_flex" href="/sofa-da-ma-ntx1824-1"
                                            title="Sofa bộ Hugo 8979">
-                                            <img src="image/product-1.png" data-lazyload="user/Product_image/4.jpg"
+                                            <img src="user/image/product-1.png" data-lazyload="user/Product_image/4.jpg"
                                                  alt="Sofa bộ Hugo 8979">
                                         </a>
 
@@ -967,7 +967,7 @@
 
                 <div class="banner-right margin-top-20">
                     <a href="#" title="Banner sidebar">
-                        <img src="image/banner_sidebar.png" class="img-responsive" alt="Banner sidebar">
+                        <img src="user/image/banner_sidebar.png" class="img-responsive" alt="Banner sidebar">
                     </a>
                 </div>
 
@@ -1116,7 +1116,7 @@
                             </h4>
                             <div class="footer-widget">
                                 <div class="payment">
-                                    <img src="image/payment.png" alt="Payment"/>
+                                    <img src="user/image/payment.png" alt="Payment"/>
                                 </div>
                             </div>
                             <h4 class="title-menu tittle_time">
@@ -1220,7 +1220,7 @@
                 <a href="javascript:void(0)" class="close-window close-popup"><i class="fa fa-close"></i></a>
                 <div class="info clearfix">
                     <div class="product-image margin-top-5">
-                        <img alt="popup" src="image/logo.png" style="max-width:150px; height:auto"/>
+                        <img alt="popup" src="user/image/logo.png" style="max-width:150px; height:auto"/>
                     </div>
                     <div class="product-info">
                         <p class="product-name"></p>
@@ -1250,7 +1250,7 @@
 <div id="popup-cart" class="modal fade" role="dialog">
     <div id="popup-cart-desktop" class="clearfix">
         <div class="title-popup-cart">
-            <img src="image/icon-check.png" alt="Sunmax"/> <span class="your_product">Bạn đã thêm <span
+            <img src="user/image/icon-check.png" alt="Sunmax"/> <span class="your_product">Bạn đã thêm <span
                 class="cart_name_style">[ <span
                 class="cart-popup-name"></span>]</span> vào giỏ hàng thành công ! </span>
         </div>
@@ -1307,7 +1307,7 @@
 					<span class="view_full_size">
 						<a class="img-product" title="" href="#">
 							<img id="product-featured-image-quickview"
-                                 class="img-responsive product-featured-image-quickview" src="image/logo.png"
+                                 class="img-responsive product-featured-image-quickview" src="user/image/logo.png"
                                  alt="quickview"/>
 						</a>
 					</span>

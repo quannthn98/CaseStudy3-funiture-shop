@@ -32,7 +32,7 @@
     <meta name="robots" content="noodp,index,follow"/>
     <!-- ================= Favicon ================== -->
 
-    <link rel="icon" href="image/favicon.png" type="image/x-icon"/>
+    <link rel="icon" href="user/image/favicon.png" type="image/x-icon"/>
 
     <!-- ================= Google Fonts ================== -->
 
@@ -49,13 +49,13 @@
     <meta property="og:title" content="Sofa bộ Hugo 8979">
 
     <meta property="og:image" content="user/Product_image/4.jpg">
-    <meta property="og:image:secure_url" content="user/Product_image/4.jpg?v=1513589881417">
+    <meta property="og:image:secure_url" content="user/Product_image/4.jpg">
 
     <meta property="og:image" content="user/Product_image/13.jpg">
-    <meta property="og:image:secure_url" content="user/Product_image/13.jpg?v=1513589881417">
+    <meta property="og:image:secure_url" content="user/Product_image/13.jpg">
 
     <meta property="og:image" content="user/Product_image/2.jpg">
-    <meta property="og:image:secure_url" content="user/Product_image/2.jpg?v=1513589881417">
+    <meta property="og:image:secure_url" content="user/Product_image/2.jpg">
     <!-- ======================================================================================================= -->
     <meta property="og:price:amount" content="56.000.000">
     <meta property="og:price:currency" content="VND">
@@ -219,14 +219,14 @@
                 <div class="content_header">
                     <div class="header-main">
                         <div class="menu-bar-h nav-mobile-button hidden-md hidden-lg">
-                            <a href="#nav-mobile"><img src="image/i_menubar.png" alt="menu bar"/></a>
+                            <a href="#nav-mobile"><img src="user/image/i_menubar.png" alt="menu bar"/></a>
                         </div>
                         <div class="col-lg-3 col-md-3">
                             <div class="logo">
 
 
                                 <a href="/" class="logo-wrapper ">
-                                    <img src="image/logo.png" alt="logo ">
+                                    <img src="user/image/logo.png" alt="logo ">
                                 </a>
 
                             </div>
@@ -288,7 +288,7 @@
                                 <div class="header-acount hidden-lg-down">
                                     <div class="wishlist_header hidden-xs hidden-sm">
 
-                                        <div class="img_hotline"><img alt="Wishlist" src="image/icon_phone.png"/></div>
+                                        <div class="img_hotline"><img alt="Wishlist" src="user/image/icon_phone.png"/></div>
 
                                         <span class="text_hotline">Hotline:</span> <a class="hai01"
                                                                                       href="tel:0165939688">0165939688</a>
@@ -299,7 +299,7 @@
                                         <div class="mini-cart text-xs-center">
                                             <div class="heading-cart">
                                                 <a class="bg_cart" href="/cart" title="Giỏ hàng">
-                                                    <img alt="Giỏ hàng" src="image/icon_hovercart.png"/>
+                                                    <img alt="Giỏ hàng" src="user/image/icon_hovercart.png"/>
                                                     <span class="text-giohang hidden-xs">Giỏ hàng:</span>
                                                     (<span class="count_item count_item_pr">0</span>)
                                                 </a>
@@ -340,7 +340,7 @@
                                         <div class="mini-cart text-xs-center">
                                             <div class="heading-cart-mobi">
                                                 <a class="bg_cart" href="/cart" title="Giỏ hàng">
-                                                    <img alt="Giỏ hàng" src="image/icon_cart_mobi.png"/>
+                                                    <img alt="Giỏ hàng" src="user/image/icon_cart_mobi.png"/>
                                                     <span class="count_item count_item_pr"></span>
                                                 </a>
                                             </div>
@@ -469,7 +469,7 @@
 <section class="product margin-top-20" itemscope itemtype="http://schema.org/Product">
     <meta itemprop="url" content="//sunmax.bizwebvietnam.net/sofa-da-ma-ntx1824-1">
     <meta itemprop="name" content="Sofa bộ Hugo 8979">
-    <meta itemprop="image" content="user/Product_image/4.jpg?v=1513589881417">
+    <meta itemprop="image" content="user/Product_image/4.jpg">
     <div class="container">
         <div class="row">
             //Servlet here
@@ -481,26 +481,26 @@
                                 <div class="col_large_default large-image">
                                         <img id="img_01" class="img-responsive" alt="Sofa bộ Hugo 8979"
                                              src="${product.image}"
-                                             data-zoom-image="user/Product_image/4.jpg?v=1513589881417"/>
+                                             data-zoom-image="user/Product_image/4.jpg"/>
                                     <div class="hidden">
                                         <div class="item">
-                                            <a href="user/Product_image/13.jpg?v=1513589881417"
-                                               data-image="user/Product_image/13.jpg?v=1513589881417"
-                                               data-zoom-image="user/Product_image/13.jpg?v=1513589881417"
+                                            <a href="user/Product_image/13.jpg"
+                                               data-image="user/Product_image/13.jpg"
+                                               data-zoom-image="user/Product_image/13.jpg"
                                                data-rel="prettyPhoto[product-gallery]">
                                             </a>
                                         </div>
                                         <div class="item">
-                                            <a href="user/Product_image/2.jpg?v=1513589881417"
-                                               data-image="user/Product_image/2.jpg?v=1513589881417"
-                                               data-zoom-image="user/Product_image/2.jpg?v=1513589881417"
+                                            <a href="user/Product_image/2.jpg"
+                                               data-image="user/Product_image/2.jpg"
+                                               data-zoom-image="user/Product_image/2.jpg"
                                                data-rel="prettyPhoto[product-gallery]">
                                             </a>
                                         </div>
                                         <div class="item">
-                                            <a href="user/Product_image/8.jpg?v=1513589881417"
-                                               data-image="user/Product_image/8.jpg?v=1513589881417"
-                                               data-zoom-image="user/Product_image/8.jpg?v=1513589881417"
+                                            <a href="user/Product_image/8.jpg"
+                                               data-image="user/Product_image/8.jpg"
+                                               data-zoom-image="user/Product_image/8.jpg"
                                                data-rel="prettyPhoto[product-gallery]">
                                             </a>
                                         </div>
@@ -513,35 +513,35 @@
 <%--                                         data-loop="false" data-lg-items="3" data-md-items="3" data-sm-items="3"--%>
 <%--                                         data-xs-items="3" data-xxs-items="3">--%>
 <%--                                        <div class="item">--%>
-<%--                                            <a href="#" data-image="user/Product_image/4.jpg?v=1513589881417"--%>
-<%--                                               data-zoom-image="user/Product_image/4.jpg?v=1513589881417">--%>
-<%--                                                <img data-img="user/Product_image/4.jpg?v=1513589881417"--%>
-<%--                                                     src="user/Product_image/sofahugo.jpg?v=1513589881417"--%>
+<%--                                            <a href="#" data-image="user/Product_image/4.jpg"--%>
+<%--                                               data-zoom-image="user/Product_image/4.jpg">--%>
+<%--                                                <img data-img="user/Product_image/4.jpg"--%>
+<%--                                                     src="user/Product_image/sofahugo.jpg"--%>
 <%--                                                     alt="{product.name}}">--%>
 <%--                                            </a>--%>
 <%--                                        </div>--%>
 
 <%--                                        <div class="item">--%>
-<%--                                            <a href="#" data-image="user/Product_image/13.jpg?v=1513589881417"--%>
-<%--                                               data-zoom-image="user/Product_image/13.jpg?v=1513589881417">--%>
-<%--                                                <img data-img="user/Product_image/13.jpg?v=1513589881417"--%>
-<%--                                                     src="user/Product_image/13.jpg?v=1513589881417" alt="Sofa bộ Hugo 8979">--%>
+<%--                                            <a href="#" data-image="user/Product_image/13.jpg"--%>
+<%--                                               data-zoom-image="user/Product_image/13.jpg">--%>
+<%--                                                <img data-img="user/Product_image/13.jpg"--%>
+<%--                                                     src="user/Product_image/13.jpg" alt="Sofa bộ Hugo 8979">--%>
 <%--                                            </a>--%>
 <%--                                        </div>--%>
 
 <%--                                        <div class="item">--%>
-<%--                                            <a href="#" data-image="user/Product_image/2.jpg?v=1513589881417"--%>
-<%--                                               data-zoom-image="user/Product_image/2.jpg?v=1513589881417">--%>
-<%--                                                <img data-img="user/Product_image/2.jpg?v=1513589881417"--%>
-<%--                                                     src="user/Product_image/2.jpg?v=1513589881417" alt="Sofa bộ Hugo 8979">--%>
+<%--                                            <a href="#" data-image="user/Product_image/2.jpg"--%>
+<%--                                               data-zoom-image="user/Product_image/2.jpg">--%>
+<%--                                                <img data-img="user/Product_image/2.jpg"--%>
+<%--                                                     src="user/Product_image/2.jpg" alt="Sofa bộ Hugo 8979">--%>
 <%--                                            </a>--%>
 <%--                                        </div>--%>
 
 <%--                                        <div class="item">--%>
-<%--                                            <a href="#" data-image="user/Product_image/8.jpg?v=1513589881417"--%>
-<%--                                               data-zoom-image="user/Product_image/8.jpg?v=1513589881417">--%>
-<%--                                                <img data-img="user/Product_image/8.jpg?v=1513589881417"--%>
-<%--                                                     src="user/Product_image/8.jpg?v=1513589881417" alt="Sofa bộ Hugo 8979">--%>
+<%--                                            <a href="#" data-image="user/Product_image/8.jpg"--%>
+<%--                                               data-zoom-image="user/Product_image/8.jpg">--%>
+<%--                                                <img data-img="user/Product_image/8.jpg"--%>
+<%--                                                     src="user/Product_image/8.jpg" alt="Sofa bộ Hugo 8979">--%>
 <%--                                            </a>--%>
 <%--                                        </div>--%>
 
@@ -1056,7 +1056,7 @@
                             </h4>
                             <div class="footer-widget">
                                 <div class="payment">
-                                    <img src="image/payment.png" alt="Payment"/>
+                                    <img src="user/image/payment.png" alt="Payment"/>
                                 </div>
                             </div>
                             <h4 class="title-menu tittle_time">
@@ -1160,7 +1160,7 @@
                 <a href="javascript:void(0)" class="close-window close-popup"><i class="fa fa-close"></i></a>
                 <div class="info clearfix">
                     <div class="product-image margin-top-5">
-                        <img alt="popup" src="image/logo.png" style="max-width:150px; height:auto"/>
+                        <img alt="popup" src="user/image/logo.png" style="max-width:150px; height:auto"/>
                     </div>
                     <div class="product-info">
                         <p class="product-name"></p>
@@ -1247,7 +1247,7 @@
 					<span class="view_full_size">
 						<a class="img-product" title="" href="#">
 							<img id="product-featured-image-quickview"
-                                 class="img-responsive product-featured-image-quickview" src="image/logo.png"
+                                 class="img-responsive product-featured-image-quickview" src="user/image/logo.png"
                                  alt="quickview"/>
 						</a>
 					</span>
