@@ -1,18 +1,20 @@
 package model;
 
+import javax.xml.crypto.Data;
+import java.util.Date;
 import java.util.HashMap;
 
 public class Order {
     private int id;
     private int customerId;
-    private String createdDate;
+    private Date createdDate;
     private boolean status;
     private String consignee;
     private String addressOrder;
     private String phone;
     private String note;
 
-    public Order(int id, int customerId, String createdDate, boolean status, String consignee, String addressOrder, String phone, String note) {
+    public Order(int id, int customerId, Date createdDate, boolean status, String consignee, String addressOrder, String phone, String note) {
         this.id = id;
         this.customerId = customerId;
         this.createdDate = createdDate;
@@ -47,11 +49,11 @@ public class Order {
         this.customerId = customerId;
     }
 
-    public String getCreatedDate() {
+    public Date getCreatedDate() {
         return createdDate;
     }
 
-    public void setCreatedDate(String createdDate) {
+    public void setCreatedDate(Date createdDate) {
         this.createdDate = createdDate;
     }
 

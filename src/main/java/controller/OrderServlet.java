@@ -56,7 +56,15 @@ public class OrderServlet extends HttpServlet {
     }
 
     public void showAll(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<Order> orderList = orderService.selectAll();
+        String filter = request.getParameter("filter");
+        String q = request.getParameter("q");
+        List<Order> orderList;
+        if (filter.equals("bigger") || filter.equals("smaller")){
+            double targetValue = Double.parseDouble(q);
+            orderList = orderService.findOrderByPayment(targetValue, filter);
+        } else {
+            orderList = orderService.selectAll();
+        }
         List<OrderDetail> orderDetailList = orderService.getDetails();
         HashMap<Integer, Double> totalPaymentByOrderId = orderService.getPaymentByOrder();
 
@@ -109,7 +117,12 @@ public class OrderServlet extends HttpServlet {
         String pre = "";
         int selectedPage;
         int countRecord = orderService.countRecord();
-        int totalPage = countRecord/DEFAULT_LIMIT + 1;
+        int totalPage;
+        if (countRecord%DEFAULT_LIMIT == 0){
+            totalPage = countRecord/DEFAULT_LIMIT;
+        } else {
+            totalPage = countRecord/DEFAULT_LIMIT + 1;
+        }
         String page = request.getParameter("page");
         if (page == null){
             selectedPage = 1;
@@ -118,7 +131,8 @@ public class OrderServlet extends HttpServlet {
         }
         if (selectedPage == 1){
             pre = "disabled";
-        } else if (selectedPage == totalPage){
+        }
+        if (selectedPage == totalPage){
             next = "disabled";
         }
         request.setAttribute("selectedPage", selectedPage);
@@ -134,7 +148,6 @@ public class OrderServlet extends HttpServlet {
         List<Order> orderList = orderService.getOrderByOffset(offset);
         List<OrderDetail> orderDetailList = orderService.getDetails();
         HashMap<Integer, Double> totalPaymentByOrderId = orderService.getPaymentByOrder();
-
         request.setAttribute("orderList", orderList);
         request.setAttribute("orderDetailList", orderDetailList);
         request.setAttribute("totalPayment", totalPaymentByOrderId);

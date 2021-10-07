@@ -1,18 +1,17 @@
-import dao.CustomerDAO;
 import dao.OrderDao;
-import model.Customer;
+import model.Order;
+import service.OrderService;
 
-import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.List;
 
 public class Main {
-    public static void main(String[] args) throws SQLException {
+    public static void main(String[] args) {
         OrderDao orderDao = new OrderDao();
-        CustomerDAO customer = new CustomerDAO();
-        List<Customer> customers = customer.findByEmail("L");
-        for (Customer customer1: customers){
-            System.out.println(customer1.getId());
+        OrderService orderService = new OrderService();
+        List<Order> orderList = orderService.findOrderByPayment(30000000, "bigger");
+        for (Order order: orderList){
+            System.out.println(order.getId());
         }
 
     }

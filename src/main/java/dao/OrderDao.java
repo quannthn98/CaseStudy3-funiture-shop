@@ -9,6 +9,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
@@ -21,6 +22,8 @@ public class OrderDao implements IOrderDao {
     private final String UPDATE_SALE_OFF = "update orderDetailProduct set price_sell = ? where id_Order = ?";
     private final String FIND_ORDER_BY_ID = "select * from orderProduct where id = ?";
     private final String COUNT_RECORD = "select count(id) from orderProduct";
+    private final String SELECT_BY_BIGGER_THAN_VALUE = "select * from totalPaymentByOrder where payment >= ?";
+    private final String SELECT_BY_SMALLER_THAN_VALUE = "select * from totalPaymentByOrder where payment < ?";
 
     private final String FIND_SALE_OFF_BY_ID = "select price_Sell from orderDetailProduct where id_Order = ? order by price_sell DESC";
     private final String INSERT_NEW_ORDER = "insert into orderProduct(consignee, addressOrder, numberPhone, note, id_Customer) values (?,?,?,?,?)";
@@ -35,7 +38,7 @@ public class OrderDao implements IOrderDao {
             while(resultSet.next()){
                 int orderId = resultSet.getInt("id");
                 int customerId = resultSet.getInt("id_Customer");
-                String date = resultSet.getString("createdDate");
+                Date date = resultSet.getDate("createdDate");
                 Boolean status = resultSet.getBoolean("status");
                 String consignee = resultSet.getString("consignee");
                 String addressOrder = resultSet.getString("addressOrder");
@@ -61,7 +64,7 @@ public class OrderDao implements IOrderDao {
             while(resultSet.next()){
                 int orderId = resultSet.getInt("id");
                 int customerId = resultSet.getInt("id_Customer");
-                String date = resultSet.getString("createdDate");
+                Date date = resultSet.getDate("createdDate");
                 Boolean status = resultSet.getBoolean("status");
                 String consignee = resultSet.getString("consignee");
                 String addressOrder = resultSet.getString("addressOrder");
@@ -118,6 +121,30 @@ public class OrderDao implements IOrderDao {
     }
 
     @Override
+    public HashMap<Integer, Double> findOrderByPayment(double targetValue, String direction) {
+        HashMap<Integer, Double> totalPaymentByOrderId = new HashMap<>();
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(SELECT_PAYMENT_BY_ORDER);
+            if (direction.equals("bigger")) {
+                preparedStatement = connection.prepareStatement(SELECT_BY_BIGGER_THAN_VALUE);
+                preparedStatement.setDouble(1, targetValue);
+            } else if (direction.equals("smaller")){
+                preparedStatement = connection.prepareStatement(SELECT_BY_SMALLER_THAN_VALUE);
+                preparedStatement.setDouble(1, targetValue);
+            }
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()){
+                int orderId = resultSet.getInt(1);
+                double payment = resultSet.getDouble(2);
+                totalPaymentByOrderId.put(orderId, payment);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return totalPaymentByOrderId;
+    }
+
+    @Override
     public Order findById(int id) {
         Order order = null;
         try {
@@ -126,7 +153,7 @@ public class OrderDao implements IOrderDao {
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()){
                 int orderId = resultSet.getInt(1);
-                String date = resultSet.getString(2);
+                Date date = resultSet.getDate(2);
                 boolean status = resultSet.getBoolean(3);
                 String customerName =resultSet.getString(4);
                 String address = resultSet.getString(5);
