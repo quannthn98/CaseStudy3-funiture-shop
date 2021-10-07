@@ -1,3 +1,4 @@
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%--
   Created by IntelliJ IDEA.
   User: quans
@@ -36,10 +37,10 @@
     <!-- ================= Google Fonts ================== -->
 
 
-    <link href="css/font-Roboto.css?family=Roboto:400,700" rel="stylesheet" type="text/css"/>
+    <link href="user/css/font-Roboto.css?family=Roboto:400,700" rel="stylesheet" type="text/css"/>
 
 
-    <link href="css/font-YesevaOne.css?family=Yeseva+One&amp;subset=cyrillic,cyrillic-ext,latin-ext,vietnamese"
+    <link href="user/css/font-YesevaOne.css?family=Yeseva+One&amp;subset=cyrillic,cyrillic-ext,latin-ext,vietnamese"
           rel="stylesheet">
     <!-- Facebook Open Graph meta tags -->
 
@@ -47,14 +48,14 @@
     <meta property="og:type" content="product">
     <meta property="og:title" content="Sofa bộ Hugo 8979">
 
-    <meta property="og:image" content="Product_image/4.jpg">
-    <meta property="og:image:secure_url" content="Product_image/4.jpg?v=1513589881417">
+    <meta property="og:image" content="user/Product_image/4.jpg">
+    <meta property="og:image:secure_url" content="user/Product_image/4.jpg?v=1513589881417">
 
-    <meta property="og:image" content="Product_image/13.jpg">
-    <meta property="og:image:secure_url" content="Product_image/13.jpg?v=1513589881417">
+    <meta property="og:image" content="user/Product_image/13.jpg">
+    <meta property="og:image:secure_url" content="user/Product_image/13.jpg?v=1513589881417">
 
-    <meta property="og:image" content="Product_image/2.jpg">
-    <meta property="og:image:secure_url" content="Product_image/2.jpg?v=1513589881417">
+    <meta property="og:image" content="user/Product_image/2.jpg">
+    <meta property="og:image:secure_url" content="user/Product_image/2.jpg?v=1513589881417">
     <!-- ======================================================================================================= -->
     <meta property="og:price:amount" content="56.000.000">
     <meta property="og:price:currency" content="VND">
@@ -65,27 +66,24 @@
     <meta property="og:site_name" content="Sunmax">
 
     <!-- Plugin CSS -->
-    <link rel="stylesheet" href="css/themify-icons.css">
-    <link rel="stylesheet" href="css/all.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link href="css/owl.carousel.min.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="user/css/themify-icons.css">
+    <link rel="stylesheet" href="user/css/all.css">
+    <link rel="stylesheet" href="user/css/bootstrap.min.css">
+    <link rel="stylesheet" href="user/css/font-awesome.min.css">
+    <link href="user/css/owl.carousel.min.css" rel="stylesheet" type="text/css"/>
 
     <!-- Build Main CSS -->
-    <link href="css/base.scss.css" rel="stylesheet" type="text/css"/>
-    <link href="css/style.scss.css" rel="stylesheet" type="text/css"/>
-    <link href="css/module.scss.css" rel="stylesheet" type="text/css"/>
-    <link href="css/responsive.scss.css" rel="stylesheet" type="text/css"/>
+    <link href="user/css/base.scss.css" rel="stylesheet" type="text/css"/>
+    <link href="user/css/style.scss.css" rel="stylesheet" type="text/css"/>
+    <link href="user/css/module.scss.css" rel="stylesheet" type="text/css"/>
+    <link href="user/css/responsive.scss.css" rel="stylesheet" type="text/css"/>
 
     <!-- Header JS -->
-    <script src="js/jquery-2.2.3.min.js" type="text/javascript"></script>
+    <script src="user/js/jquery-2.2.3.min.js" type="text/javascript"></script>
     <!-- Bizweb javascript customer -->
 
-
     <!-- Bizweb conter for header -->
-
-
-    <link href="css/iwish.css"/>
+    <link href="user/css/iwish.css"/>
 
 </head>
 <body>
@@ -440,7 +438,7 @@
     </div>
 </header>
 <!-- =============================== -->
-<script src="js/jquery.cookie.min.js" type="text/javascript"></script>
+<script src="user/js/jquery.cookie.min.js" type="text/javascript"></script>
 <!-- ================================ -->
 
 
@@ -456,11 +454,11 @@
 
 
                     <li>
-                        <a itemprop="url" href="/ghe-sofa"><span itemprop="title">Ghế sofa</span></a>
+                        <a itemprop="url" href="/ghe-sofa"><span itemprop="title">{category.name}</span></a>
                         <span><i class="fa">/</i></span>
                     </li>
 
-                    <li><strong><span itemprop="title">Sofa bộ Hugo 8979</span></strong>
+                    <li><strong><span itemprop="title">${product.name}</span></strong>
                     <li>
 
                 </ul>
@@ -471,7 +469,7 @@
 <section class="product margin-top-20" itemscope itemtype="http://schema.org/Product">
     <meta itemprop="url" content="//sunmax.bizwebvietnam.net/sofa-da-ma-ntx1824-1">
     <meta itemprop="name" content="Sofa bộ Hugo 8979">
-    <meta itemprop="image" content="Product_image/4.jpg?v=1513589881417">
+    <meta itemprop="image" content="user/Product_image/4.jpg?v=1513589881417">
     <div class="container">
         <div class="row">
             //Servlet here
@@ -481,86 +479,82 @@
                         <div class="product-detail-left product-images col-xs-12 col-sm-6 col-md-5 col-lg-5">
                             <div class="row">
                                 <div class="col_large_default large-image">
-                                    "{product.img}"
-                                    <a href="Product_image/sofahugo.jpg?v=1513589881417"
-                                       class="large_image_url checkurl" data-rel="prettyPhoto[product-gallery]">
                                         <img id="img_01" class="img-responsive" alt="Sofa bộ Hugo 8979"
-                                             src="Product_image/sofahugo.jpg?v=1513589881417"
-                                             data-zoom-image="Product_image/4.jpg?v=1513589881417"/>
-                                    </a>
+                                             src="${product.image}"
+                                             data-zoom-image="user/Product_image/4.jpg?v=1513589881417"/>
                                     <div class="hidden">
                                         <div class="item">
-                                            <a href="Product_image/13.jpg?v=1513589881417"
-                                               data-image="Product_image/13.jpg?v=1513589881417"
-                                               data-zoom-image="Product_image/13.jpg?v=1513589881417"
+                                            <a href="user/Product_image/13.jpg?v=1513589881417"
+                                               data-image="user/Product_image/13.jpg?v=1513589881417"
+                                               data-zoom-image="user/Product_image/13.jpg?v=1513589881417"
                                                data-rel="prettyPhoto[product-gallery]">
                                             </a>
                                         </div>
                                         <div class="item">
-                                            <a href="Product_image/2.jpg?v=1513589881417"
-                                               data-image="Product_image/2.jpg?v=1513589881417"
-                                               data-zoom-image="Product_image/2.jpg?v=1513589881417"
+                                            <a href="user/Product_image/2.jpg?v=1513589881417"
+                                               data-image="user/Product_image/2.jpg?v=1513589881417"
+                                               data-zoom-image="user/Product_image/2.jpg?v=1513589881417"
                                                data-rel="prettyPhoto[product-gallery]">
                                             </a>
                                         </div>
                                         <div class="item">
-                                            <a href="Product_image/8.jpg?v=1513589881417"
-                                               data-image="Product_image/8.jpg?v=1513589881417"
-                                               data-zoom-image="Product_image/8.jpg?v=1513589881417"
+                                            <a href="user/Product_image/8.jpg?v=1513589881417"
+                                               data-image="user/Product_image/8.jpg?v=1513589881417"
+                                               data-zoom-image="user/Product_image/8.jpg?v=1513589881417"
                                                data-rel="prettyPhoto[product-gallery]">
                                             </a>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="aaa">
-                                    <div id="gallery_02"
-                                         class="owl-carousel owl-theme thumbnail-product thumb_product_details not-dqowl"
-                                         data-loop="false" data-lg-items="3" data-md-items="3" data-sm-items="3"
-                                         data-xs-items="3" data-xxs-items="3">
-                                        <div class="item">
-                                            <a href="#" data-image="Product_image/4.jpg?v=1513589881417"
-                                               data-zoom-image="Product_image/4.jpg?v=1513589881417">
-                                                <img data-img="Product_image/4.jpg?v=1513589881417"
-                                                     src="Product_image/sofahugo.jpg?v=1513589881417"
-                                                     alt="{product.name}}">
-                                            </a>
-                                        </div>
+<%--                                <div class="aaa">--%>
+<%--                                    <div id="gallery_02"--%>
+<%--                                         class="owl-carousel owl-theme thumbnail-product thumb_product_details not-dqowl"--%>
+<%--                                         data-loop="false" data-lg-items="3" data-md-items="3" data-sm-items="3"--%>
+<%--                                         data-xs-items="3" data-xxs-items="3">--%>
+<%--                                        <div class="item">--%>
+<%--                                            <a href="#" data-image="user/Product_image/4.jpg?v=1513589881417"--%>
+<%--                                               data-zoom-image="user/Product_image/4.jpg?v=1513589881417">--%>
+<%--                                                <img data-img="user/Product_image/4.jpg?v=1513589881417"--%>
+<%--                                                     src="user/Product_image/sofahugo.jpg?v=1513589881417"--%>
+<%--                                                     alt="{product.name}}">--%>
+<%--                                            </a>--%>
+<%--                                        </div>--%>
 
-                                        <div class="item">
-                                            <a href="#" data-image="Product_image/13.jpg?v=1513589881417"
-                                               data-zoom-image="Product_image/13.jpg?v=1513589881417">
-                                                <img data-img="Product_image/13.jpg?v=1513589881417"
-                                                     src="Product_image/13.jpg?v=1513589881417" alt="Sofa bộ Hugo 8979">
-                                            </a>
-                                        </div>
+<%--                                        <div class="item">--%>
+<%--                                            <a href="#" data-image="user/Product_image/13.jpg?v=1513589881417"--%>
+<%--                                               data-zoom-image="user/Product_image/13.jpg?v=1513589881417">--%>
+<%--                                                <img data-img="user/Product_image/13.jpg?v=1513589881417"--%>
+<%--                                                     src="user/Product_image/13.jpg?v=1513589881417" alt="Sofa bộ Hugo 8979">--%>
+<%--                                            </a>--%>
+<%--                                        </div>--%>
 
-                                        <div class="item">
-                                            <a href="#" data-image="Product_image/2.jpg?v=1513589881417"
-                                               data-zoom-image="Product_image/2.jpg?v=1513589881417">
-                                                <img data-img="Product_image/2.jpg?v=1513589881417"
-                                                     src="Product_image/2.jpg?v=1513589881417" alt="Sofa bộ Hugo 8979">
-                                            </a>
-                                        </div>
+<%--                                        <div class="item">--%>
+<%--                                            <a href="#" data-image="user/Product_image/2.jpg?v=1513589881417"--%>
+<%--                                               data-zoom-image="user/Product_image/2.jpg?v=1513589881417">--%>
+<%--                                                <img data-img="user/Product_image/2.jpg?v=1513589881417"--%>
+<%--                                                     src="user/Product_image/2.jpg?v=1513589881417" alt="Sofa bộ Hugo 8979">--%>
+<%--                                            </a>--%>
+<%--                                        </div>--%>
 
-                                        <div class="item">
-                                            <a href="#" data-image="Product_image/8.jpg?v=1513589881417"
-                                               data-zoom-image="Product_image/8.jpg?v=1513589881417">
-                                                <img data-img="Product_image/8.jpg?v=1513589881417"
-                                                     src="Product_image/8.jpg?v=1513589881417" alt="Sofa bộ Hugo 8979">
-                                            </a>
-                                        </div>
+<%--                                        <div class="item">--%>
+<%--                                            <a href="#" data-image="user/Product_image/8.jpg?v=1513589881417"--%>
+<%--                                               data-zoom-image="user/Product_image/8.jpg?v=1513589881417">--%>
+<%--                                                <img data-img="user/Product_image/8.jpg?v=1513589881417"--%>
+<%--                                                     src="user/Product_image/8.jpg?v=1513589881417" alt="Sofa bộ Hugo 8979">--%>
+<%--                                            </a>--%>
+<%--                                        </div>--%>
 
-                                    </div>
-                                </div>
+<%--                                    </div>--%>
+<%--                                </div>--%>
 
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-6 col-md-7 col-lg-7 details-pro">
-                            <h1 class="title-product">{product.name}</h1>
+                            <h1 class="title-product">${product.name}</h1>
                             <div class="group-status">
-                                <span class="first_status">Brand: <span class="status_name">{product.brand}</span></span>
-                                <span class="first_status"> &nbsp;|&nbsp; Tình trạng: {product.status} <span
+                                <span class="first_status">Brand: <span class="status_name">${product.brandName}</span></span>
+                                <span class="first_status"> &nbsp;|&nbsp; Tình trạng: ${product.status} <span
                                         class="status_name availabel">
 									Còn hàng
 									</span>
@@ -571,15 +565,15 @@
                             </div>
 
                             <div class="price-box" itemscope itemtype="http://schema.org/Offer">
-								<span class="special-price"><span class="price product-price" itemprop="price">{product price after sale off}</span>
+								<span class="special-price"><span class="price product-price" itemprop="price"><fmt:formatNumber type="number" maxFractionDigits = "0"  value="${product.price}"/></span>
 									<meta itemprop="priceCurrency" content="VND">
 								</span> <!-- Giá Khuyến mại -->
                                 <span class="old-price"><del class="price product-price-old"
                                                              itemprop="priceSpecification">
 
-									{product .price}
+                                   <fmt:formatNumber type="number" maxFractionDigits = "0"  value="${product.price}"/>
 
-									</del>
+                                </del>
 									<meta itemprop="priceCurrency" content="VND">
 								</span> <!-- Giá gốc -->
 
@@ -592,7 +586,7 @@
                                 <div class="rte description text4line  rte-summary">
                                     <span style="display: block;font-weight: bold;color: #474c5f">Thông tin sản phẩm:</span>
 
-                                    <p>{product.subDescription}</p>
+                                    <p>${product.subDescription}</p>
 
                                 </div>
 
@@ -601,86 +595,6 @@
                             <div class="form-product col-sm-12">
                                 <form enctype="multipart/form-data" id="add-to-cart-form" action="/cart/add"
                                       method="post" class="form-inline margin-bottom-0">
-
-
-                                    <div class="swatch-color swatch clearfix" data-option-index="0">
-                                        <div class="header">Màu sắc:</div>
-
-
-                                        <div data-value="Trắng" class="swatch-element color Trắng available">
-
-
-                                            <div class="tooltip">Trắng</div>
-
-                                            <input class="swatch-hai" id="swatch-0-Trắng" type="radio" name="option-0"
-                                                   data-value="Trắng" value="Trắng" checked/>
-
-
-                                            <label for="swatch-0-Trắng"
-                                                   style="background-color: trang;background-image: url(Product_image/13.jpg?v=1513589881417);background-size: contain; background-repeat: no-repeat; background-position: center;">
-
-                                            </label>
-
-
-                                        </div>
-
-
-                                        <script>
-                                            jQuery('.swatch[data-option-index="0"] .Trắng').removeClass('soldout').addClass('available').find(':radio').removeAttr('disabled');
-
-                                        </script>
-
-
-                                        <div data-value="X&#225;m" class="swatch-element color Xám available">
-
-
-                                            <div class="tooltip">Xám</div>
-
-                                            <input class="swatch-hai" id="swatch-0-Xám" type="radio" name="option-0"
-                                                   data-value="X&#225;m" value="X&#225;m"/>
-
-
-                                            <label for="swatch-0-Xám"
-                                                   style="background-color: #615a5a; background-image: url(Product_image/sofahugo.jpg?v=1513589881417);background-size: contain; background-repeat: no-repeat; background-position: center;">
-
-                                            </label>
-
-
-                                        </div>
-
-
-                                        <script>
-                                            jQuery('.swatch[data-option-index="0"] .Xám').removeClass('soldout').addClass('available').find(':radio').removeAttr('disabled');
-
-                                        </script>
-
-
-                                        <div data-value="N&#226;u" class="swatch-element color Nâu available">
-
-
-                                            <div class="tooltip">Nâu</div>
-
-                                            <input class="swatch-hai" id="swatch-0-Nâu" type="radio" name="option-0"
-                                                   data-value="N&#226;u" value="N&#226;u"/>
-
-
-                                            <label for="swatch-0-Nâu"
-                                                   style="background-color: nau;background-image: url(Product_image/8.jpg?v=1513589881417);background-size: contain; background-repeat: no-repeat; background-position: center;">
-
-                                            </label>
-
-
-                                        </div>
-
-
-                                        <script>
-                                            jQuery('.swatch[data-option-index="0"] .Nâu').removeClass('soldout').addClass('available').find(':radio').removeAttr('disabled');
-
-                                        </script>
-
-
-                                    </div>
-
 
                                     <div class="box-variant clearfix  hidden ">
 
@@ -742,45 +656,6 @@
                                     </ul>
                                 </div>
                             </div>
-
-
-                            <div class="social-sharing ">
-
-
-                                <div class="social-media"
-                                     data-permalink="https://sunmax.bizwebvietnam.net/sofa-da-ma-ntx1824-1">
-                                    <label>Chia sẻ: </label>
-
-                                    <a target="_blank"
-                                       href="//www.facebook.com/sharer.php?u=https://sunmax.bizwebvietnam.net/sofa-da-ma-ntx1824-1"
-                                       class="share-facebook" title="Chia sẻ lên Facebook">
-                                        <i class="fa fa-facebook"></i>
-                                    </a>
-
-
-                                    <a target="_blank"
-                                       href="//twitter.com/share?text=SofabộHugo8979&amp;url=https://sunmax.bizwebvietnam.net/sofa-da-ma-ntx1824-1"
-                                       class="share-twitter" title="Chia sẻ lên Twitter">
-                                        <i class="fa fa-twitter"></i>
-                                    </a>
-
-
-                                    <a target="_blank"
-                                       href="//pinterest.com/pin/create/button/?url=https://sunmax.bizwebvietnam.net/sofa-da-ma-ntx1824-1&amp;media=http://bizweb.dktcdn.net/thumb/1024x1024/100/284/162/products/4.jpg?v=1513589881417&amp;description=SofabộHugo8979"
-                                       class="share-pinterest" title="Chia sẻ lên pinterest">
-                                        <i class="fa fa-pinterest"></i>
-                                    </a>
-
-
-                                    <a target="_blank"
-                                       href="//plus.google.com/share?url=https://sunmax.bizwebvietnam.net/sofa-da-ma-ntx1824-1"
-                                       class="share-google" title="+1">
-                                        <i class="fa fa-google-plus"></i>
-                                    </a>
-
-                                </div>
-                            </div>
-
                         </div>
                     </div>
 
@@ -811,52 +686,18 @@
 
                                     <div id="tab-1" class="tab-content">
                                         <div class="rte">
-
-                                            {product.description}
-                                            <p><strong>Sofa bộ Hugo 8979</strong></p>
-                                            <p>Sofa bộ 8979 là sản phẩm được thiệt kế dựa trên ý tưởng hiện đại, phong
-                                                cách thời trang, đồng thời giá cả phải chăng để đáp ứng nhu cầu tiêu
-                                                dùng của đại đa số khách hàng trên thị trường. Đây cũng là một trong số
-                                                những mẫu sofa hot trên thị trường cả về thiết kế lẫn giá cả.<br/>
-                                                <strong>Ưu điểm của bộ Sofa bộ 8979</strong><br/>
-                                                + Mang tới không gian tiện nghi hơn<br/>
-                                                + Cảm nhận giây phút êm ái khi sử dụng với chất liệu da Microfiber cao
-                                                cấp<br/>
-                                                + Thiết kế kiểu chữ U&nbsp;giúp tiết kiệm diện tích bày trí<br/>
-                                                + Màu sắc đa dạng cho quý vị chọn lựa<br/>
-                                                + Miễn phí giao hàng trong bán kính 200km</p>
-                                            <p><strong>Thông tin về bộ Sofa bộ 8979</strong><br/>
-                                                Kích thước: 2850x1800x900 mm</p>
-                                            <p>Bảo hành: 6 Năm</p>
-                                            <p>Nguồn gốc: Hugo, Malaysia<br/>
-                                                Chất liệu:&nbsp;Da bò 100% + khung sườn sofa bằng gỗ dầu Malaysia<br/>
-                                                Kich thước:&nbsp;&nbsp; &nbsp;<br/>
-                                                + Ghế 3 : Dài 214 x Cao 79 x Sâu 105&nbsp;<br/>
-                                                + Ghế 2,5 : Dài 194 x Cao 79 x Sâu 105&nbsp;<br/>
-                                                + Ghế 1.25: Dài 127 x Cao 79 xSâu105 &nbsp;</p>
-                                            <p><strong>Một số hình ảnh về SP&nbsp;</strong></p>
-                                            <p><img data-thumb="original" original-height="400" original-width="600"
-                                                    src="Product_image/2.jpg"/></p>
-                                            <p><em>Hình 1:&nbsp;Chất liệu da thật cùng đệm mút 3 lớp tạo nên 1 sự đàn
-                                                hồi cao</em></p>
-                                            <p>&nbsp;</p>
-                                            <p><img data-thumb="original" original-height="400" original-width="600"
-                                                    src="Product_image/sofahugo.jpg"/></p>
-                                            <p><em>Hình 2:&nbsp;Tựa lưng và hông ghế được nhấn bằng những múi chia đẹp
-                                                mắt với nguyên bản từ chính những chiếc ghế da cao cấp trên dòng xe hơi
-                                                BMW hay Lexus</em></p>
+                                            <p><strong>${product.name}</strong></p>
+                                            <p>${product.description}</p>
 
 
                                         </div>
                                     </div>
-
 
                                     <div id="tab-2" class="tab-content">
                                         <div class="rte">
                                             Nội dung tùy chỉnh viết tại đây
                                         </div>
                                     </div>
-
 
                                     <div id="tab-3" class="tab-content">
                                         <div class="rte">
@@ -954,132 +795,132 @@
                                 <h2 class="title-head"><a href="san-pham-noi-bat" title="Có thể bạn thích">Có thể bạn
                                     thích</a></h2>
                             </div>
-                            <div class="sale_off_today">
-                                c: forEach items="{productList with same category}" var = "product1"
-                                <div class="not-dqowl wrp_list_product">
+<%--                            <div class="sale_off_today">--%>
+<%--                                c: forEach items="{productList with same category}" var = "product1"--%>
+<%--                                <div class="not-dqowl wrp_list_product">--%>
 
-                                    <div class="item_small">
+<%--                                    <div class="item_small">--%>
 
-                                        <div class="product-mini-item clearfix   on-sale">
-                                            <a href="/ban-giam-doc-hoa-phat-ntp1890t1" class="product-img">
+<%--                                        <div class="product-mini-item clearfix   on-sale">--%>
+<%--                                            <a href="/ban-giam-doc-hoa-phat-ntp1890t1" class="product-img">--%>
 
-                                                <img src="Product_image/r8abaa3a825074cd8855f02e71efc8.jpg?v=1513589807893"
-                                                     alt="Bàn giám đốc hòa phát NTP1890T1">
-                                            </a>
+<%--                                                <img src="user/Product_image/r8abaa3a825074cd8855f02e71efc8.jpg?v=1513589807893"--%>
+<%--                                                     alt="Bàn giám đốc hòa phát NTP1890T1">--%>
+<%--                                            </a>--%>
 
-                                            <div class="product-info">
-                                                <h3><a href="{link theo id}"
-                                                       title="Bàn giám đốc hòa phát NTP1890T1"
-                                                       class="product-name text3line">{product1.name}</a></h3>
-                                                <div class="price-box">
-                                                    <span class="price">
-                                                        <span
-                                                            class="price product-price">{product1. price with sale off}
-                                                        </span>
-                                                    </span>
-                                                    <!-- Giá Khuyến mại -->
-                                                    <span class="old-price"><del
-                                                            class="sale-price">{product1.price}</del>
-                                                    </span> <!-- Giá gốc -->
-                                                </div>
+<%--                                            <div class="product-info">--%>
+<%--                                                <h3><a href="{link theo id}"--%>
+<%--                                                       title="Bàn giám đốc hòa phát NTP1890T1"--%>
+<%--                                                       class="product-name text3line">{product1.name}</a></h3>--%>
+<%--                                                <div class="price-box">--%>
+<%--                                                    <span class="price">--%>
+<%--                                                        <span--%>
+<%--                                                                class="price product-price">{product1. price with sale off}--%>
+<%--                                                        </span>--%>
+<%--                                                    </span>--%>
+<%--                                                    <!-- Giá Khuyến mại -->--%>
+<%--                                                    <span class="old-price"><del--%>
+<%--                                                            class="sale-price">{product1.price}</del>--%>
+<%--                                                    </span> <!-- Giá gốc -->--%>
+<%--                                                </div>--%>
 
-                                            </div>
-                                        </div>
-                                    </div>
-                                    /c:forEach
+<%--                                            </div>--%>
+<%--                                        </div>--%>
+<%--                                    </div>--%>
+<%--                                    /c:forEach--%>
 
-                                </div>
-                            </div>
+<%--                                </div>--%>
+<%--                            </div>--%>
                         </div>
 
                     </div>
                 </div>
 
 
-                <div class="col-lg-12 related-product margin-top-20 xs-margin-top-0 margin-bottom-30">
-                    <div class="section_prd_feature">
-                        <div class="heading heading_related_h">
-                            <h2 class="title-head"><a href="/ghe-sofa">Sản phẩm cùng loại</a></h2>
-                        </div>
-                        <div class="products product_related products-view-grid-bb owl-carousel owl-theme products-view-grid not-dot2"
-                             data-dot="false" data-nav="false" data-lg-items="4" data-md-items="4" data-sm-items="3"
-                             data-xs-items="2" data-margin="30">
-                            c:forEach items="order with same category" var="product1"
-                            <div class="item saler_item col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
-                                <div class="owl_item_product product-col">
-                                    <div class="product-box">
-                                        <div class="product-thumbnail">
+<%--                <div class="col-lg-12 related-product margin-top-20 xs-margin-top-0 margin-bottom-30">--%>
+<%--                    <div class="section_prd_feature">--%>
+<%--                        <div class="heading heading_related_h">--%>
+<%--                            <h2 class="title-head"><a href="/ghe-sofa">Sản phẩm cùng loại</a></h2>--%>
+<%--                        </div>--%>
+<%--                        <div class="products product_related products-view-grid-bb owl-carousel owl-theme products-view-grid not-dot2"--%>
+<%--                             data-dot="false" data-nav="false" data-lg-items="4" data-md-items="4" data-sm-items="3"--%>
+<%--                             data-xs-items="2" data-margin="30">--%>
+<%--                            c:forEach items="order with same category" var="product1"--%>
+<%--                            <div class="item saler_item col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">--%>
+<%--                                <div class="owl_item_product product-col">--%>
+<%--                                    <div class="product-box">--%>
+<%--                                        <div class="product-thumbnail">--%>
 
-                                            <div class="sale-flash new">Mới</div>
+<%--                                            <div class="sale-flash new">Mới</div>--%>
 
-                                            <a class="image_link display_flex" href="/sofa-da-ma-ntx1824"
-                                               title="Sofa bộ Italia - Canova">
-                                                <img src="{product.img}"
-                                                     data-lazyload="Product_image/10.jpg?v=1513589883463"
-                                                     alt="Sofa bộ Italia - Canova">
-                                            </a>
+<%--                                            <a class="image_link display_flex" href="/sofa-da-ma-ntx1824"--%>
+<%--                                               title="Sofa bộ Italia - Canova">--%>
+<%--                                                <img src="{product.img}"--%>
+<%--                                                     data-lazyload="user/Product_image/10.jpg?v=1513589883463"--%>
+<%--                                                     alt="Sofa bộ Italia - Canova">--%>
+<%--                                            </a>--%>
 
-                                            <div class="summary_grid hidden-xs hidden-sm hidden-md"
-                                                 onclick="window.location.href='/sofa-da-ma-ntx1824';">
-                                                <div class="rte description">
+<%--                                            <div class="summary_grid hidden-xs hidden-sm hidden-md"--%>
+<%--                                                 onclick="window.location.href='/sofa-da-ma-ntx1824';">--%>
+<%--                                                <div class="rte description">--%>
 
-                                                    <p>{product1.subDescription}</p>
+<%--                                                    <p>{product1.subDescription}</p>--%>
 
-                                                </div>
-                                            </div>
-                                            <div class="product-action-grid clearfix">
-                                                <form action="/cart/add" method="post" class="variants form-nut-grid"
-                                                      data-id="product-actions-9387021" enctype="multipart/form-data">
-                                                    <div>
+<%--                                                </div>--%>
+<%--                                            </div>--%>
+<%--                                            <div class="product-action-grid clearfix">--%>
+<%--                                                <form action="/cart/add" method="post" class="variants form-nut-grid"--%>
+<%--                                                      data-id="product-actions-9387021" enctype="multipart/form-data">--%>
+<%--                                                    <div>--%>
 
-                                                        <input class="hidden" type="hidden" name="variantId"
-                                                               value="14992946"/>
+<%--                                                        <input class="hidden" type="hidden" name="variantId"--%>
+<%--                                                               value="14992946"/>--%>
 
-                                                        <a title="Xem nhanh" href="{link to productDetail with {product1.id}}"
-                                                           data-handle="sofa-da-ma-ntx1824"
-                                                           class="button_wh_40 btn_view right-to quick-view">
-                                                            Xem nhanh
-                                                        </a>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                        <div class="product-info effect a-left">
+<%--                                                        <a title="Xem nhanh" href="{link to productDetail with {product1.id}}"--%>
+<%--                                                           data-handle="sofa-da-ma-ntx1824"--%>
+<%--                                                           class="button_wh_40 btn_view right-to quick-view">--%>
+<%--                                                            Xem nhanh--%>
+<%--                                                        </a>--%>
+<%--                                                    </div>--%>
+<%--                                                </form>--%>
+<%--                                            </div>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="product-info effect a-left">--%>
 
-                                            <div class="info_hhh">
-                                                <h3 class="product-name product-name-hover">
-                                                    <a href="{likn to product detail with {product1.id}}" title="Sofa bộ Italia - Canova">
-                                                        {product1.name}
-                                                    </a>
-                                                </h3>
-
-
-                                                <div class="price-box clearfix">
-                                                    <span class="price product-price">{product1.price with out sale off}</span>
-
-                                                    <span class="price product-price-old">{product1.price}</span>
-
-                                                    <span class="sale-off">{product1.price_sell}</span>
-
-                                                </div>
-
-                                                <div class="reviews-product-grid">
-                                                    <div class="bizweb-product-reviews-badge" data-id="9387021"></div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
+<%--                                            <div class="info_hhh">--%>
+<%--                                                <h3 class="product-name product-name-hover">--%>
+<%--                                                    <a href="{likn to product detail with {product1.id}}" title="Sofa bộ Italia - Canova">--%>
+<%--                                                        {product1.name}--%>
+<%--                                                    </a>--%>
+<%--                                                </h3>--%>
 
 
+<%--                                                <div class="price-box clearfix">--%>
+<%--                                                    <span class="price product-price">{product1.price with out sale off}</span>--%>
+
+<%--                                                    <span class="price product-price-old">{product1.price}</span>--%>
+
+<%--                                                    <span class="sale-off">{product1.price_sell}</span>--%>
+
+<%--                                                </div>--%>
+
+<%--                                                <div class="reviews-product-grid">--%>
+<%--                                                    <div class="bizweb-product-reviews-badge" data-id="9387021"></div>--%>
+<%--                                                </div>--%>
+<%--                                            </div>--%>
+
+<%--                                        </div>--%>
+
+<%--                                    </div>--%>
+<%--                                </div>--%>
+<%--                            </div>--%>
 
 
-                        </div>
-                    </div>
-                </div>
+
+
+<%--                        </div>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
 
             </div>
 
@@ -1090,7 +931,7 @@
 </section>
 
 
-<link href="css/bpr-products-module.css?1564624970765" rel="stylesheet" type="text/css"/>
+<link href="user/css/bpr-products-module.css?1564624970765" rel="stylesheet" type="text/css"/>
 <div class="bizweb-product-reviews-module"></div>
 
 
@@ -1296,14 +1137,14 @@
         </div>
     </div>
 </footer>
-<script src='js/api_js.js?sensor=false' type='text/javascript'></script>
-<script src="js/jquery.gmap.min.js" type="text/javascript"></script>
+<script src='user/js/api_js.js?sensor=false' type='text/javascript'></script>
+<script src="user/js/jquery.gmap.min.js" type="text/javascript"></script>
 <!-- Bizweb javascript -->
-<script src="js/option-selectors.js" type="text/javascript"></script>
-<script src="js/api.jquery.js?4" type="text/javascript"></script>
+<script src="user/js/option-selectors.js" type="text/javascript"></script>
+<script src="user/js/api.jquery.js?4" type="text/javascript"></script>
 <!-- Plugin JS -->
-<script src="js/owl.carousel.min.js" type="text/javascript"></script>
-<script src="js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+<script src="user/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="user/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
 <!-- Add to cart -->
 
@@ -1389,9 +1230,9 @@
 </div>
 <div id="myModal" class="modal fade" role="dialog">
 </div>
-<script src="js/cs.script.js" type="text/javascript"></script>
-<script src="js/double_tab_togo.js" type="text/javascript"></script>
-<script src="js/appear.js" type="text/javascript"></script>
+<script src="user/js/cs.script.js" type="text/javascript"></script>
+<script src="user/js/double_tab_togo.js" type="text/javascript"></script>
+<script src="user/js/appear.js" type="text/javascript"></script>
 <!-- Quick view -->
 
 
@@ -1489,7 +1330,7 @@
     </div>
 </div>
 
-<script src="js/quickview.js" type="text/javascript"></script>
+<script src="user/js/quickview.js" type="text/javascript"></script>
 
 
 <div class='jas-sale-pop flex pf middle-xs'></div>
@@ -1517,7 +1358,7 @@
 
 
     collection[0] = "<a href='/ban-giam-doc-hoa-phat-ntp1890t1' class='jas-sale-pop-img mr__20'>"
-        + "<img src='Product_image/r8abaa3a825074cd8855f02e71efc8.jpg' alt='Bàn giám đốc hòa phát NTP1890T1'/>"
+        + "<img src='user/Product_image/r8abaa3a825074cd8855f02e71efc8.jpg' alt='Bàn giám đốc hòa phát NTP1890T1'/>"
         + "</a>"
         + "<div class='jas-sale-pop-content'>"
         //+                                    "<h4 class='fs__12 fwm mg__0'>Sản phẩm</h4>"
@@ -1530,7 +1371,7 @@
 
 
     collection[1] = "<a href='/ba-n-la-m-vie-c-van-pho-ng-ho-a-pha-t-sv204hl' class='jas-sale-pop-img mr__20'>"
-        + "<img src='Product_image/8e72d1df4f29e47c29efe8d482d473.jpg' alt='Bàn làm việc hòa phát SV204HL'/>"
+        + "<img src='user/Product_image/8e72d1df4f29e47c29efe8d482d473.jpg' alt='Bàn làm việc hòa phát SV204HL'/>"
         + "</a>"
         + "<div class='jas-sale-pop-content'>"
         //+                                    "<h4 class='fs__12 fwm mg__0'>Sản phẩm</h4>"
@@ -1543,7 +1384,7 @@
 
 
     collection[2] = "<a href='/bo-vo-chan-ra-goi-cotton-nhung-cao-cap' class='jas-sale-pop-img mr__20'>"
-        + "<img src='Product_image/6e4b0d120477740078be37a750e7ba.jpg' alt='Bộ vỏ chăn ra gối cotton nhung'/>"
+        + "<img src='user/Product_image/6e4b0d120477740078be37a750e7ba.jpg' alt='Bộ vỏ chăn ra gối cotton nhung'/>"
         + "</a>"
         + "<div class='jas-sale-pop-content'>"
         //+                                    "<h4 class='fs__12 fwm mg__0'>Sản phẩm</h4>"
@@ -1556,7 +1397,7 @@
 
 
     collection[3] = "<a href='/bo-vo-chan-ga-goi-cotton-ai-cap-hoa-xanh' class='jas-sale-pop-img mr__20'>"
-        + "<img src='Product_image/59a01658825c7468aa6a84dac7dc80.jpg' alt='Bộ vỏ chăn ga gối cotton Ai Cập'/>"
+        + "<img src='user/Product_image/59a01658825c7468aa6a84dac7dc80.jpg' alt='Bộ vỏ chăn ga gối cotton Ai Cập'/>"
         + "</a>"
         + "<div class='jas-sale-pop-content'>"
         //+                                    "<h4 class='fs__12 fwm mg__0'>Sản phẩm</h4>"
@@ -1569,7 +1410,7 @@
 
 
     collection[4] = "<a href='/bo-chan-ga-goi-cotton-ai-cap-ma-cat17' class='jas-sale-pop-img mr__20'>"
-        + "<img src='Product_image/12684e083a683e4fc1afd8c1688b16.jpg' alt='Bộ chăn ga gối cotton Ai Cập'/>"
+        + "<img src='user/Product_image/12684e083a683e4fc1afd8c1688b16.jpg' alt='Bộ chăn ga gối cotton Ai Cập'/>"
         + "</a>"
         + "<div class='jas-sale-pop-content'>"
         //+                                    "<h4 class='fs__12 fwm mg__0'>Sản phẩm</h4>"
@@ -1608,18 +1449,18 @@
 
 
 <!-- Main JS -->
-<script src="js/main.js" type="text/javascript"></script>
+<script src="user/js/main.js" type="text/javascript"></script>
 
 
 <!-- Product detail JS,CSS -->
 
-<link href="css/lightbox.css" rel="stylesheet" type="text/css"/>
+<link href="user/css/lightbox.css" rel="stylesheet" type="text/css"/>
 
-<script src="js/jquery.elevatezoom308.min.js" type="text/javascript"></script>
+<script src="user/js/jquery.elevatezoom308.min.js" type="text/javascript"></script>
 
 
-<script src="js/jquery.prettyphoto.min005e.js" type="text/javascript"></script>
-<script src="js/jquery.prettyphoto.init.min367a.js" type="text/javascript"></script>
+<script src="user/js/jquery.prettyphoto.min005e.js" type="text/javascript"></script>
+<script src="user/js/jquery.prettyphoto.init.min367a.js" type="text/javascript"></script>
 
 
 </body>
