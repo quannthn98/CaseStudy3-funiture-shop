@@ -15,7 +15,7 @@
 </head>
 <body>
 <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light rounded navbar-padding-0" style="height: 50px" aria-label="Eleventh navbar example">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light rounded navbar-padding-0 mt-2" style="height: 50px" aria-label="Eleventh navbar example">
         <div class="container-fluid">
             <nav class="navbar navbar-light bg-light">
                 <div class="container-fluid">
@@ -32,8 +32,18 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                 </ul>
-                <form action="/orders">
-                    <div class="row">
+                <form action="/orders" method="post">
+                    <div class="row mt-2">
+                        <div class="col">
+                            <select name="filter" class="form-select form-select-sm mb-3 mt-3" style="width: 250px; height: 37px" aria-label=".form-select-lg example">
+                                <option selected>Search By</option>
+                                <option value="bigger">Total payment bigger than</option>
+                                <option value="smaller">Total payment smaller than</option>
+                                <option value="3">Year</option>
+                                <option value="3">Month</option>
+                                <option value="3">Id</option>
+                            </select>
+                        </div>
                         <div class="col">
                             <input class="form-control mt-3 " style="size: 200px" type="text" placeholder="Search" aria-label="Search" name="q">
                         </div>
@@ -97,19 +107,7 @@
                         <div class="col">
                             <h5 class="mt-2">Order Management</h5>
                         </div>
-                        <div class="col">
-                            <button type="button" class="btn btn-outline-primary float-end ">
-                                <a href="/orders?action=create" style="text-decoration: none">
-                                    Create
-                                </a>
-                            </button>
-                            <div class="dropdown">
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                    <li><a class="dropdown-item" href="/orders?view=modal">Modal Details</a></li>
-                                    <li><a class="dropdown-item" href="/orders?view=list">Common List</a></li>
-                                </ul>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
                 <div class="card-body">
@@ -127,7 +125,7 @@
                         <c:forEach items="${orderList}" var="order">
                             <tr>
                                 <td>${order.id}</td>
-                                <td>${order.createdDate}</td>
+                                <td><fmt:formatDate value="${order.createdDate}" pattern="yyyy-MM-dd" /></td>
                                 <td>${order.consignee}</td>
                                 <td>${order.phone}</td>
                                 <td>${order.addressOrder}</td>
