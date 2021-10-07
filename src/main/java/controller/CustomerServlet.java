@@ -92,7 +92,7 @@ public class CustomerServlet extends HttpServlet {
             if (c.getEmail().equals(customer.getEmail())) {
                 isCreate = false;
                 request.setAttribute("messengermail", "email da ton tai");
-                break;
+
             }
         }
 
@@ -102,12 +102,12 @@ public class CustomerServlet extends HttpServlet {
                 Customer customer1 = customerService.findByEmail(customer.getEmail()).get(0);
                 int newCustomerId = customer1.getId();
                 customerService.setRole(newCustomerId);
-                response.sendRedirect("/user/login.jsp");
+                response.sendRedirect("/user");
             } catch (SQLException | IOException e) {
                 e.printStackTrace();
             }
         } else {
-            RequestDispatcher dispatcher = request.getRequestDispatcher("user/register.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/user?action=login");
             try {
                 dispatcher.forward(request, response);
             } catch (ServletException | IOException e) {
@@ -118,7 +118,7 @@ public class CustomerServlet extends HttpServlet {
 
 
     private void loginDoGet(HttpServletRequest request, HttpServletResponse response) {
-        RequestDispatcher dispatcher = request.getRequestDispatcher("customer/login.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/user");
         try {
             dispatcher.forward(request, response);
         } catch (ServletException e) {
@@ -193,7 +193,7 @@ public class CustomerServlet extends HttpServlet {
 
         if (isLoginDoPot){
             if(customer.getRole() == 1 ){
-            RequestDispatcher dispatcher = request.getRequestDispatcher("customer/list.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/customers");
                 try {
                     dispatcher.forward(request,response);
                 } catch (ServletException e) {
@@ -203,7 +203,7 @@ public class CustomerServlet extends HttpServlet {
                 }
             }
             else {
-                RequestDispatcher dispatcher = request.getRequestDispatcher("user/register.jsp");
+                RequestDispatcher dispatcher = request.getRequestDispatcher("/user");
                 try {
                     dispatcher.forward(request,response);
                 } catch (ServletException e) {
