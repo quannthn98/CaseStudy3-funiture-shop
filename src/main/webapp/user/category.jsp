@@ -88,7 +88,6 @@
 
             </ul>
             <ul class="ct-mobile">
-
                 <li class="level0 level-top parent level_ico">
                     <a href="/phong-khach">Phòng khách</a>
                     <i class="ti-plus hide_close"></i>
@@ -347,55 +346,45 @@
                             <a class="a-img" href="/phong-khach"><span>Phòng khách</span><i
                                     class="fa fa-caret-down"></i></a>
                             <ul class="item_small hidden-sm hidden-xs">
-
+                                <c:forEach items="${categoryList}" var="category">
+                                    <c:if test="${category.location == 1}">
                                 <li>
-                                    <a href="/tham-trang-tri" title="">Thảm trang trí </a>
-
+                                    <a href="/user?action=category&categoryId=${category.id}" title="">${category.name}</a>
                                 </li>
-
-                                <li>
-                                    <a href="/ban-lam-viec" title="">Bàn làm việc </a>
-
-                                </li>
-
-                                <li>
-                                    <a href="/ban-tra" title="">Bàn trà </a>
-
-                                </li>
-
-                                <li>
-                                    <a href="/ghe-sofa" title="">Ghế sofa </a>
-
-                                </li>
-
+                                    </c:if>
+                                </c:forEach>
                             </ul>
                         </li>
 
 
                         <li class="nav-item ">
-                            <a class="a-img" href="/phong-bep"><span>Phòng bếp</span></a>
+                            <a class="a-img" href="/phong-khach"><span>Phòng Ngủ</span><i
+                                    class="fa fa-caret-down"></i></a>
+                            <ul class="item_small hidden-sm hidden-xs">
+                                <c:forEach items="${categoryList}" var="category">
+                                    <c:if test="${category.location == 3}">
+                                        <li>
+                                            <a href="/user?action=category&categoryId=${category.id}" title="">${category.name}</a>
+                                        </li>
+                                    </c:if>
+                                </c:forEach>
+                            </ul>
                         </li>
 
 
                         <li class="nav-item ">
-                            <a class="a-img" href="/phong-lam-viec"><span>Phòng làm việc</span></a>
+                            <a class="a-img" href="/phong-khach"><span>Phòng Ngủ</span><i
+                                    class="fa fa-caret-down"></i></a>
+                            <ul class="item_small hidden-sm hidden-xs">
+                                <c:forEach items="${categoryList}" var="category">
+                                    <c:if test="${category.location == 2}">
+                                        <li>
+                                            <a href="/user?action=category&categoryId=${category.id}" title="">${category.name}</a>
+                                        </li>
+                                    </c:if>
+                                </c:forEach>
+                            </ul>
                         </li>
-
-
-                        <li class="nav-item ">
-                            <a class="a-img" href="/chan-ga-dem"><span>Chăn ga đệm</span></a>
-                        </li>
-
-
-                        <li class="nav-item ">
-                            <a class="a-img" href="/ngoai-that"><span>Ngoại thất</span></a>
-                        </li>
-
-
-                        <li class="nav-item ">
-                            <a class="a-img" href="/do-trang-tri"><span>Đồ trang trí</span></a>
-                        </li>
-
 
                     </ul>
                 </nav>
