@@ -131,7 +131,6 @@
         </div>
         <div class="col-10">
             <div class="card">
-                //Content
                 <div class="card-header">
                     <div class="row">
                         <div class="col">
