@@ -155,7 +155,7 @@
                             <th>Phone</th>
                             <th>Email</th>
                             <th>Password</th>
-                            <th>Status</th>
+                            <th>Role</th>
                         </tr>
                         <c:forEach items="${customer}" var="customer">
                             <tr>
@@ -166,7 +166,7 @@
                                 <td>${customer.phone}</td>
                                 <td>${customer.email}</td>
                                 <td>${customer.password}</td>
-                                <td>${customer.status}</td>
+                                <td>${customer.role}</td>
                                 <td>
                                     <button type="button" class="btn btn-primary btn-sm">
                                         <a style="color: white"
@@ -197,7 +197,7 @@
     </footer>
     <script>
         function confirmDelete(id) {
-            let check = confirm("ban chac chan muon xoa chu?")
+            let check = confirm("Bạn chắc chắn muốn xóa chứ?")
             if (check) {
                 window.location.href = "/customers?action=delete&id=" + id;
                 alert("Đã xóa thành công.");

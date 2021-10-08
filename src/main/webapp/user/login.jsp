@@ -444,7 +444,7 @@
             <a itemprop="url" href="/" ><span itemprop="title">Trang chủ</span></a>
             <span><i class="fa">/</i></span>
           </li>
-
+          <li><h2>${message}</h2></li>
           <li><strong itemprop="title">Đăng nhập tài khoản</strong></li>
 
         </ul>
@@ -467,7 +467,7 @@
             <a href="javascript:void(0)" class="social-login--facebook" onclick="loginFacebook()"><img width="129px" height="37px" alt="facebook-login-button" src="user/image/fb-btn.svg"></a>
             <a href="javascript:void(0)" class="social-login--google" onclick="loginGoogle()"><img width="129px" height="37px" alt="google-login-button" src="user/image/gp-btn.svg"></a>
           </div>
-          <form accept-charset="UTF-8" action="/account/login" id="customer_login" method="post">
+          <form accept-charset="UTF-8" action="/customers?action=login" id="customer_login" method="post">
             <input name="FormType" type="hidden" value="customer_login" />
             <input name="utf8" type="hidden" value="true" />
             <div class="form-signup" >
@@ -486,8 +486,8 @@
 
 
               <div class="pull-xs-left" style="margin-top: 25px;">
-                <input class="btn btn-style btn-primary"  type="submit" value="Đăng nhập" />
-                <a href="/account/register" class="btn-link-style btn-register" style="margin-left: 20px;text-decoration: underline; ">Đăng ký</a>
+                <input   type="submit" value="Đăng nhập" />
+                <a href="register.jsp " class="btn-link-style btn-register" style="margin-left: 20px;text-decoration: underline; ">Đăng ký</a>
               </div>
             </div>
           </form>

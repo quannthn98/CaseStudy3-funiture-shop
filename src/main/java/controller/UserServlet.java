@@ -55,9 +55,37 @@ public class UserServlet extends HttpServlet {
             case "category":
                 showCategory(request, response);
                 break;
+            case "register":
+                showRegister(request, response);
+                break;
+            case "login":
+                showLogin(request, response);
+                break;
             default:
                 showHome(request, response);
                 break;
+        }
+    }
+
+    private void showLogin(HttpServletRequest request, HttpServletResponse response) {
+        RequestDispatcher dispatcher = request.getRequestDispatcher("user/login.jsp");
+        try {
+            dispatcher.forward(request,response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void showRegister(HttpServletRequest request, HttpServletResponse response) {
+        RequestDispatcher dispatcher = request.getRequestDispatcher("user/register.jsp");
+        try {
+            dispatcher.forward(request, response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
@@ -104,7 +132,7 @@ public class UserServlet extends HttpServlet {
         request.setAttribute("productList",productList);
         request.setAttribute("categoryList",categoryList);
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/category.jsp");
-        dispatcher.forward(request,response);
+        dispatcher.forward(request, response);
     }
 
 

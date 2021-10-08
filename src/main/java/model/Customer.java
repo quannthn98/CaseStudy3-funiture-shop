@@ -9,6 +9,7 @@ public class Customer {
     private String email;
     private String password;
     private String status;
+    private int role;
 
     public Customer() {
     }
@@ -34,8 +35,28 @@ public class Customer {
         this.status = status;
     }
 
+    public Customer(int id, String name, String birthday, String address, String phone, String email, String password, String status, int role) {
+        this.id = id;
+        this.name = name;
+        this.birthday = birthday;
+        this.address = address;
+        this.phone = phone;
+        this.email = email;
+        this.password = password;
+        this.status = status;
+        this.role = role;
+    }
+
     public int getId() {
         return id;
+    }
+
+    public int getRole() {
+        return role;
+    }
+
+    public void setRole(int role) {
+        this.role = role;
     }
 
     public void setId(int id) {
