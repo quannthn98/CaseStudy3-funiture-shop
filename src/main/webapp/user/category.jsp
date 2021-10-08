@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%--
   Created by IntelliJ IDEA.
   User: quans
@@ -12,8 +14,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>
         Theme Sunmax dành cho website bán nội thất văn phòng
-
-
     </title>
 
     <!-- ================= Page description ================== -->
@@ -88,40 +88,21 @@
 
             </ul>
             <ul class="ct-mobile">
-
                 <li class="level0 level-top parent level_ico">
                     <a href="/phong-khach">Phòng khách</a>
-
                     <i class="ti-plus hide_close"></i>
                     <ul class="level0 sub-menu" style="display:none;">
-
-                        <li class="level1">
-                            <a href="/tham-trang-tri"><span>Thảm trang trí</span></a>
-
-                        </li>
-
-                        <li class="level1">
-                            <a href="/ban-lam-viec"><span>Bàn làm việc</span></a>
-
-                        </li>
-
-                        <li class="level1">
-                            <a href="/ban-tra"><span>Bàn trà</span></a>
-
-                        </li>
-
-                        <li class="level1">
-                            <a href="/ghe-sofa"><span>Ghế sofa</span></a>
-
-                        </li>
-
+                        <c:forEach items="${categoryList}" var="category">
+                            <c:if test="${category.location == 1}">
+                            <li class="level1">
+                                <a href="/user?action=category&categoryId=${category.id}"><span>${category.name}</span></a>
+                            </li>
+                            </c:if>
+                        </c:forEach>
                     </ul>
-
                 </li>
-
                 <li class="level0 level-top parent level_ico">
-                    <a href="/phong-bep">Phòng bếp</a>
-
+                    <a href="/phong">bếp</a>
                 </li>
 
                 <li class="level0 level-top parent level_ico">
@@ -365,55 +346,45 @@
                             <a class="a-img" href="/phong-khach"><span>Phòng khách</span><i
                                     class="fa fa-caret-down"></i></a>
                             <ul class="item_small hidden-sm hidden-xs">
-
+                                <c:forEach items="${categoryList}" var="category">
+                                    <c:if test="${category.location == 1}">
                                 <li>
-                                    <a href="/tham-trang-tri" title="">Thảm trang trí </a>
-
+                                    <a href="/user?action=category&categoryId=${category.id}" title="">${category.name}</a>
                                 </li>
-
-                                <li>
-                                    <a href="/ban-lam-viec" title="">Bàn làm việc </a>
-
-                                </li>
-
-                                <li>
-                                    <a href="/ban-tra" title="">Bàn trà </a>
-
-                                </li>
-
-                                <li>
-                                    <a href="/ghe-sofa" title="">Ghế sofa </a>
-
-                                </li>
-
+                                    </c:if>
+                                </c:forEach>
                             </ul>
                         </li>
 
 
                         <li class="nav-item ">
-                            <a class="a-img" href="/phong-bep"><span>Phòng bếp</span></a>
+                            <a class="a-img" href="/phong-khach"><span>Phòng Ngủ</span><i
+                                    class="fa fa-caret-down"></i></a>
+                            <ul class="item_small hidden-sm hidden-xs">
+                                <c:forEach items="${categoryList}" var="category">
+                                    <c:if test="${category.location == 3}">
+                                        <li>
+                                            <a href="/user?action=category&categoryId=${category.id}" title="">${category.name}</a>
+                                        </li>
+                                    </c:if>
+                                </c:forEach>
+                            </ul>
                         </li>
 
 
                         <li class="nav-item ">
-                            <a class="a-img" href="/phong-lam-viec"><span>Phòng làm việc</span></a>
+                            <a class="a-img" href="/phong-khach"><span>Phòng Ăn</span><i
+                                    class="fa fa-caret-down"></i></a>
+                            <ul class="item_small hidden-sm hidden-xs">
+                                <c:forEach items="${categoryList}" var="category">
+                                    <c:if test="${category.location == 2}">
+                                        <li>
+                                            <a href="/user?action=category&categoryId=${category.id}" title="">${category.name}</a>
+                                        </li>
+                                    </c:if>
+                                </c:forEach>
+                            </ul>
                         </li>
-
-
-                        <li class="nav-item ">
-                            <a class="a-img" href="/chan-ga-dem"><span>Chăn ga đệm</span></a>
-                        </li>
-
-
-                        <li class="nav-item ">
-                            <a class="a-img" href="/ngoai-that"><span>Ngoại thất</span></a>
-                        </li>
-
-
-                        <li class="nav-item ">
-                            <a class="a-img" href="/do-trang-tri"><span>Đồ trang trí</span></a>
-                        </li>
-
 
                     </ul>
                 </nav>
@@ -434,7 +405,7 @@
                     </li>
 
 
-                    <li><strong><span itemprop="title"> Phòng khách</strong></li>
+                    <li><strong><span itemprop="title"> Phòng khách</span></strong></li>
 
 
                 </ul>
@@ -449,8 +420,8 @@
             <div class="text-sm-left">
 
                 <div class="tt hidden-xs">
-                    <h1 class="title-head margin-top-0">{category.name}</h1>
 
+                    <h1 class="title-head margin-top-0">Name</h1>
 
                     <span class="hidden-sm hidden-xs">
 						(Tìm thấy {category.totalProduct} sản phẩm)</span>
@@ -458,7 +429,6 @@
                 </div>
             </div>
             <div class="category-products products">
-
                 <div class="sortPagiBar">
                     <div class="srt">
                         <div class="wr_sort col-sm-12">
@@ -492,197 +462,100 @@
 
 
                 <section class="products-view products-view-grid collection_reponsive">
-                    c:forEach items="{productList}" var="product"
+                    <%--                    c:forEach items="{productList}" var="product"--%>
 
                     <div class="row">
-                        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-                            <div class="product-col">
-                                <div class="product-box">
-                                    <div class="product-thumbnail">
+                        <c:forEach items="${productList}" var="product">
+                            <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                                <div class="product-col">
+                                    <div class="product-box">
+                                        <div class="product-thumbnail">
 
-                                        <div class="sale-flash new">Mới</div>
-                                        <a class="image_link display_flex" href="{/servlet?id={product.id}"
-                                           title="Sofa bộ Italia - Canova">
-                                            <img src="image/product-1.png" data-lazyload="user/Product_image/10.jpg"
-                                                 alt="Sofa bộ Italia - Canova">
-                                        </a>
+                                            <div class="sale-flash new">Mới</div>
+                                            <a class="image_link display_flex" href="{/servlet?id={product.id}"
+                                               title="Sofa bộ Italia - Canova">
+                                                <img src="${product.image}" data-lazyload="${product.image}"
+                                                     alt="Sofa bộ Italia - Canova">
+                                            </a>
 
-                                        <div class="summary_grid hidden-xs hidden-sm hidden-md"
-                                             onclick="window.location.href='/sofa-da-ma-ntx1824';">
-                                            <div class="rte description">
+                                            <div class="summary_grid hidden-xs hidden-sm hidden-md"
+                                                 onclick="window.location.href='/sofa-da-ma-ntx1824';">
+                                                <div class="rte description">
 
-                                                <p>{product.subDescription}</p>
-
-                                            </div>
-                                        </div>
-                                        <div class="product-action-grid clearfix">
-                                            <form action="/cart/add" method="post" class="variants form-nut-grid"
-                                                  data-id="product-actions-9387021" enctype="multipart/form-data">
-                                                <div>
-
-                                                    <input class="hidden" type="hidden" name="variantId"
-                                                           value="14992946"/>
-
-                                                    <a title="Xem nhanh" href="/servlet?id={product.id}"
-                                                       data-handle="sofa-da-ma-ntx1824"
-                                                       class="button_wh_40 btn_view right-to quick-view">
-                                                        Xem nhanh
-                                                    </a>
+                                                    <p>${product.subDescription}</p>
 
                                                 </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <div class="product-info effect a-left">
-
-                                        <div class="info_hhh">
-                                            <h3 class="product-name product-name-hover">
-                                                <a href="/sofa-da-ma-ntx1824" title="Sofa bộ Italia - Canova">
-                                                    {product.name}
-                                                </a>
-                                            </h3>
-                                            <div class="price-box clearfix">
-                                                <span class="price product-price">{product. price after sale off}</span>
-
-                                                <span class="price product-price-old">{product.price}</span>
-
-                                                <span class="sale-off">{product.price_sell}</span>
-
                                             </div>
+                                            <div class="product-action-grid clearfix">
+                                                <form action="/cart/add" method="post" class="variants form-nut-grid"
+                                                      data-id="product-actions-9387021" enctype="multipart/form-data">
+                                                    <div>
 
-                                            <div class="reviews-product-grid">
-                                                <div class="bizweb-product-reviews-badge" data-id="9387021"></div>
+                                                        <input class="hidden" type="hidden" name="variantId"
+                                                               value="14992946"/>
+
+                                                        <a title="Xem nhanh" href="/servlet?id={product.id}"
+                                                           data-handle="sofa-da-ma-ntx1824"
+                                                           class="button_wh_40 btn_view right-to quick-view">
+                                                            Xem nhanh
+                                                        </a>
+
+                                                    </div>
+                                                </form>
                                             </div>
                                         </div>
+                                        <div class="product-info effect a-left">
 
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-                            <div class="product-col">
-
-
-                                <div class="product-box">
-                                    <div class="product-thumbnail">
-
-                                        <div class="sale-flash new">Mới</div>
-
-
-                                        <a class="image_link display_flex" href="/sofa-da-ma-ntx1824-1"
-                                           title="Sofa bộ Hugo 8979">
-                                            <img src="image/product-1.png" data-lazyload="user/Product_image/4.jpg"
-                                                 alt="Sofa bộ Hugo 8979">
-                                        </a>
-
-                                        <div class="summary_grid hidden-xs hidden-sm hidden-md"
-                                             onclick="window.location.href='/sofa-da-ma-ntx1824-1';">
-                                            <div class="rte description">
-
-                                                <p>Kích thước: 2850x1800x900 mm<br/>
-                                                    Bảo hành: 6 Năm<br/>
-                                                    Nguồn gốc: Hugo, Malaysia</p>
-
-                                            </div>
-                                        </div>
-                                        <div class="product-action-grid clearfix">
-                                            <form action="/cart/add" method="post" class="variants form-nut-grid"
-                                                  data-id="product-actions-9387020" enctype="multipart/form-data">
-                                                <div>
-
-                                                    <input class="hidden" type="hidden" name="variantId"
-                                                           value="14992943"/>
-                                                    <button class="btn-cart button_wh_40 left-to" title="Tùy chọn"
-                                                            type="button"
-                                                            onclick="window.location.href='/sofa-da-ma-ntx1824-1'">
-                                                        Tùy chọn
-                                                    </button>
-
-
-                                                    <a title="Xem nhanh" href="/sofa-da-ma-ntx1824-1"
-                                                       data-handle="sofa-da-ma-ntx1824-1"
-                                                       class="button_wh_40 btn_view right-to quick-view">
-                                                        Xem nhanh
+                                            <div class="info_hhh">
+                                                <h3 class="product-name product-name-hover">
+                                                    <a href="/sofa-da-ma-ntx1824" title="Sofa bộ Italia - Canova">
+                                                            ${product.name}
                                                     </a>
-
-
+                                                </h3>
+                                                <div class="price-box clearfix">
+                                                    <span class="price product-price"><fmt:formatNumber type="number"
+                                                                                                        maxFractionDigits="0"
+                                                                                                        value="${product.priceSell}"/></span>
+                                                    <span class="price product-price-old"><fmt:formatNumber
+                                                            type="number" maxFractionDigits="0"
+                                                            value="${product.price}"/></span>
+                                                    <span class="sale-off">- <fmt:formatNumber type="number"
+                                                                                               maxFractionDigits="0"
+                                                                                               value="${(1-(product.priceSell / product.price))*100}"/>%</span>
                                                 </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <div class="product-info effect a-left">
-
-                                        <div class="info_hhh">
-                                            <h3 class="product-name product-name-hover"><a href="/sofa-da-ma-ntx1824-1"
-                                                                                           title="Sofa bộ Hugo 8979">Sofa
-                                                bộ Hugo 8979</a></h3>
-
-
-                                            <div class="price-box clearfix">
-                                                <span class="price product-price">59.000.000₫</span>
-
-                                                <span class="price product-price-old">
-					70.000.000₫
-				</span>
-
-                                                <span class="sale-off">-
-16%
-</span>
-
-
-                                            </div>
-
-
-                                            <div class="reviews-product-grid">
-                                                <div class="bizweb-product-reviews-badge" data-id="9387020"></div>
+                                                <div class="reviews-product-grid">
+                                                    <div class="bizweb-product-reviews-badge" data-id="9387021"></div>
+                                                </div>
                                             </div>
                                         </div>
-
                                     </div>
-
                                 </div>
                             </div>
-                        </div>
-
+                        </c:forEach>
                     </div>
                     <div class="text-right">
-
                         <nav class="clearfix">
                             <ul class="pagination clearfix">
-
                                 <li class="page-i   tem disabled"><a class="page-link" href="#">«</a></li>
-
-
                                 <li class="active page-item disabled"><a class="page-link" href="javascript:;">1</a>
                                 </li>
-
-
                                 <li class="page-item"><a class="page-link" onclick="doSearch(2)"
                                                          href="javascript:;">2</a></li>
-
-
                                 <li class="page-item hidden-xs"><a class="page-link" onclick="doSearch(2)"
                                                                    href="javascript:;"><i class="fa fa-angle-right"
-                                                                                          aria-hidden="true"></i>
-                                </a></li>
-
+                                                                                          aria-hidden="true"></i></a>
+                                </li>
                             </ul>
                         </nav>
                         <script>
                             var cuPage = 1
                         </script>
-
                     </div>
                 </section>
-
-
             </div>
         </section>
 
         <div class="col-lg-3 col-md-3 margin-bottom-50 col-lg-pull-9 col-md-pull-9">
-
             <aside class="dqdt-sidebar sidebar left-content">
                 <script src="user/js/search_filter.js" type="text/javascript"></script>
 
@@ -695,61 +568,52 @@
                             <ul class="nav navbar-pills">
                                 <li class="nav-item lv1">
                                     <a href="/phong-khach" class="nav-link">Phòng khách <span
-                                            class="count_x">(15)</span></a>
+                                            class="count_x">(4)</span></a>
                                     <i class="fa fa-angle-right"></i>
                                     <ul class="dropdown-menu">
-                                        c:forEach items="{categoryList}" var="category"
-                                        <li class="nav-item lv2">
-                                            <a class="nav-link" href="/tham-trang-tri">href=/servlet?id={category.id} //
-                                                {category.name}<span
-                                                        class="count_x">(4)</span></a>
-                                        </li>
-
+                                        <c:forEach items="${categoryList}" var="category">
+                                            <c:if test="${category.location == 1}">
+                                                <li class="nav-item lv2">
+                                                    <a class="nav-link"
+                                                       href="/user?action=category&categoryId=${category.id}">
+                                                            ${category.name}
+                                                    </a>
+                                                </li>
+                                            </c:if>
+                                        </c:forEach>
                                     </ul>
                                 </li>
-
                                 <li class="nav-item lv1">
                                     <a href="/phong-khach" class="nav-link">Phòng ngủ <span
-                                            class="count_x">(15)</span></a>
+                                            class="count_x">(4)</span></a>
                                     <i class="fa fa-angle-right"></i>
                                     <ul class="dropdown-menu">
-                                        c:forEach items="{categoryList}" var="category"
-                                        <li class="nav-item lv2">
-                                            <a class="nav-link" href="/tham-trang-tri">href=/servlet?id={category.id} //
-                                                {category.name}<span
-                                                        class="count_x">(4)</span></a>
-                                        </li>
-
+                                        <c:forEach items="${categoryList}" var="category">
+                                            <c:if test="${category.location == 3 }">
+                                                <li class="nav-item lv2">
+                                                    <a class="nav-link"
+                                                       href="/user?action=category&categoryId=${category.id}">
+                                                            ${category.name}
+                                                    </a>
+                                                </li>
+                                            </c:if>
+                                        </c:forEach>
                                     </ul>
                                 </li>
 
                                 <li class="nav-item lv1">
                                     <a href="/phong-khach" class="nav-link">Phòng bếp <span
-                                            class="count_x">(15)</span></a>
+                                            class="count_x">(4)</span></a>
                                     <i class="fa fa-angle-right"></i>
                                     <ul class="dropdown-menu">
-                                        c:forEach items="{categoryList}" var="category"
-                                        <li class="nav-item lv2">
-                                            <a class="nav-link" href="/tham-trang-tri">href=/servlet?id={category.id} //
-                                                {category.name}<span
-                                                        class="count_x">(4)</span></a>
-                                        </li>
-
-                                    </ul>
-                                </li>
-
-                                <li class="nav-item lv1">
-                                    <a href="/phong-khach" class="nav-link">Phòng làm việc <span
-                                            class="count_x">(15)</span></a>
-                                    <i class="fa fa-angle-right"></i>
-                                    <ul class="dropdown-menu">
-                                        c:forEach items="{categoryList}" var="category"
-                                        <li class="nav-item lv2">
-                                            <a class="nav-link" href="/tham-trang-tri">href=/servlet?id={category.id} //
-                                                {category.name}<span
-                                                        class="count_x">(4)</span></a>
-                                        </li>
-                                        /c:forEacth
+                                        <c:forEach items="${categoryList}" var="category">
+                                            <c:if test="${category.location == 2}">
+                                                <li class="nav-item lv2">
+                                                    <a class="nav-link"
+                                                       href="/user?action=category&categoryId=${category.id}">${category.name}</a>
+                                                </li>
+                                            </c:if>
+                                        </c:forEach>
                                     </ul>
                                 </li>
 
@@ -1204,7 +1068,8 @@
 <script src="user/js/api.jquery.js?4" type="text/javascript"></script>
 <!-- Plugin JS -->
 <script src="user/js/owl.carousel.min.js" type="text/javascript"></script>
-<script src="user/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+<script src="user/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
 <!-- Add to cart -->
 

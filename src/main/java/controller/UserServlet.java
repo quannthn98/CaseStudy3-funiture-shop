@@ -1,15 +1,17 @@
 package controller;
 
 import com.sun.org.apache.xpath.internal.operations.Or;
-import dao.ICartDao;
+import dao.CategoryDao;
 import dao.IOrderDao;
 import dao.IProductDao;
 import dao.ProductDao;
-import model.Cart;
+import model.Category;
 import model.Order;
 import model.OrderDetail;
 import model.Product;
-import service.*;
+
+import service.IOrderService;
+import service.OrderService;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -22,7 +24,7 @@ import java.util.List;
 public class UserServlet extends HttpServlet {
     IOrderService orderService = new OrderService();
     IProductDao productDao = new ProductDao();
-    ICartService cartService = new CartService();
+    CategoryDao categoryDao = new CategoryDao();
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
@@ -35,9 +37,6 @@ public class UserServlet extends HttpServlet {
                 break;
             case "category":
                 showCategory(request ,response);
-                break;
-            case "cart":
-                showCart(request, response);
                 break;
             default:
                 showHome(request, response);
@@ -65,15 +64,18 @@ public class UserServlet extends HttpServlet {
     }
 
     private void showCategory(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        String categoryId = request.getParameter("categoryId");
+        int categoryId1;
+        if (categoryId == null){
+            categoryId = "1";
+        }
+        categoryId1 = Integer.parseInt(categoryId);
+        List<Product> productList = productDao.findByCategory(categoryId1);
+        List<Category> categoryList = categoryDao.getAll();
+        request.setAttribute("productList",productList);
+        request.setAttribute("categoryList",categoryList);
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/category.jsp");
         dispatcher.forward(request,response);
-    }
-
-    private void showCart(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<Cart> cartList = cartService.findByCustomerId(9);
-        request.setAttribute("cartList", cartList);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("user/cart.jsp");
-        dispatcher.forward(request, response);
     }
 
 
