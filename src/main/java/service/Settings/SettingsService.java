@@ -43,4 +43,9 @@ private ISettingsDao settingsDao = new SettingsDao();
     public boolean add(Settings settings) {
         return settingsDao.add(settings);
     }
+
+    @Override
+    public Settings getTop() {
+        return settingsDao.getTop();
+    }
 }

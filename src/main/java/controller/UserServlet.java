@@ -1,12 +1,8 @@
 package controller;
 
 import com.sun.org.apache.xpath.internal.operations.Or;
-import dao.CategoryDao;
+import dao.*;
 import dao.Company.ICompanyDao;
-import dao.ICartDao;
-import dao.IOrderDao;
-import dao.IProductDao;
-import dao.ProductDao;
 import model.Category;
 import model.Cart;
 
@@ -46,6 +42,7 @@ public class UserServlet extends HttpServlet {
     private INewService newService = new NewService();
     private ICompanyService companyService = new CompanyService();
     ICartService cartService = new CartService();
+
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -116,15 +113,18 @@ public class UserServlet extends HttpServlet {
         banners = bannerService.getAll();
         List<Company> companies;
         companies = companyService.getAll();
-        List<Settings> settings;
-        settings = settingsService.getAll();
+        Settings settings = settingsService.getTop();
         List<News> news;
         news = newService.getAll();
+        List<Category> categories = categoryDao.getAll();
+        List<Category> categoriesTop = categoryDao.getUniqueLocation();
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/home.jsp");
         request.setAttribute("banners", banners);
         request.setAttribute("companies", companies);
         request.setAttribute("settings", settings);
         request.setAttribute("news", news);
+        request.setAttribute("categories", categories);
+        request.setAttribute("categoriesTop", categoriesTop);
         dispatcher.forward(request, response);
     }
 
@@ -137,8 +137,10 @@ public class UserServlet extends HttpServlet {
         categoryId1 = Integer.parseInt(categoryId);
         List<Product> productList = productDao.findByCategory(categoryId1);
         List<Category> categoryList = categoryDao.getAll();
+        int count = 0;
         request.setAttribute("productList",productList);
         request.setAttribute("categoryList",categoryList);
+        request.setAttribute("count",count);
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/category.jsp");
         dispatcher.forward(request,response);
     }

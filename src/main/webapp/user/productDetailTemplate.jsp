@@ -293,7 +293,7 @@
                                         <div class="img_hotline"><img alt="Wishlist" src="user/image/icon_phone.png"/></div>
 
                                         <span class="text_hotline">Hotline:</span> <a class="hai01"
-                                                                                      href="tel:0165939688">0165939688</a>
+                                                                                      href="tel:${settings.hotline}">${settings.hotline}</a>
 
 
                                     </div>
@@ -1256,13 +1256,13 @@
                                         fjs.parentNode.insertBefore(js, fjs);
                                     }(document, 'script', 'facebook-jssdk'));
                                     </script>
-                                    <div class="fb-page" data-href="https://www.facebook.com/sapo.vn"
+                                    <div class="fb-page" data-href="${settings.pageFacebook}"
                                          data-tabs="timeline" data-height="150" data-small-header="true"
                                          data-adapt-container-width="true" data-hide-cover="false"
                                          data-show-facepile="true">
                                         <div class="fb-xfbml-parse-ignore">
-                                            <blockquote cite="https://www.facebook.com/sapo.vn">
-                                                <a href="https://www.facebook.com/sapo.vn">Facebook</a>
+                                            <blockquote cite="${settings.pageFacebook}">
+                                                <a href="${settings.pageFacebook}">Facebook</a>
                                             </blockquote>
                                         </div>
                                     </div>

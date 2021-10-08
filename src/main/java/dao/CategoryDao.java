@@ -101,4 +101,22 @@ public class CategoryDao implements ICategoryDao {
         return rowUpdated;
     }
 
+    @Override
+    public List<Category> getUniqueLocation() {
+        List<Category> categoryList = new ArrayList<>();
+        try {
+            PreparedStatement statement = connection.prepareStatement("select * from category GROUP BY location ORDER BY location ASC");
+            ResultSet rs = statement.executeQuery();
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                String name = rs.getString("name");
+                int location = rs.getInt("location");
+                int status = rs.getInt("status");
+                categoryList.add(new Category(id, name, location, status));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return categoryList;
+    }
 }
