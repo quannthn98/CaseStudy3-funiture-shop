@@ -1277,7 +1277,6 @@
 
                                                             <input type="hidden" name="variantId" value="14992921" />
                                                             <button class="button_wh_40 btn-cart left-to add_to_cart" title="Đặt mua">
-                                                            <button class="button_wh_40 btn-cart left-to add_to_cart" title="Đặt mua">
                                                                 Đặt mua
                                                             </button>
 
@@ -7039,12 +7038,12 @@
 
                                                 <a href="/nhung-phong-cach-trang-tri-nha-dep-1">
                                                     <picture>
-                                                        <source media="(max-width: 375px)" srcset="articles/1f9368946b9de4d46bd5377d4386fe-f0393dfd-bb85-4be4-9c7e-757d0e70fa63.jpg">
-                                                        <source media="(min-width: 376px) and (max-width: 767px)" srcset="articles/1f9368946b9de4d46bd5377d4386fe-f0393dfd-bb85-4be4-9c7e-757d0e70fa63.jpg">
-                                                        <source media="(min-width: 768px) and (max-width: 1023px)" srcset="articles/1f9368946b9de4d46bd5377d4386fe-f0393dfd-bb85-4be4-9c7e-757d0e70fa63.jpg">
-                                                        <source media="(min-width: 1024px) and (max-width: 1199px)" srcset="articles/1f9368946b9de4d46bd5377d4386fe-f0393dfd-bb85-4be4-9c7e-757d0e70fa63.jpg">
-                                                        <source media="(min-width: 1200px)" srcset="articles/1f9368946b9de4d46bd5377d4386fe-f0393dfd-bb85-4be4-9c7e-757d0e70fa63.jpg">
-                                                        <img src="articles/1f9368946b9de4d46bd5377d4386fe-f0393dfd-bb85-4be4-9c7e-757d0e70fa63.jpg" title="Thiết kế phòng ngủ ấn tượng" alt="Thiết kế phòng ngủ ấn tượng">
+                                                        <source media="(max-width: 375px)" srcset="user/articles/1f9368946b9de4d46bd5377d4386fe-f0393dfd-bb85-4be4-9c7e-757d0e70fa63.jpg">
+                                                        <source media="(min-width: 376px) and (max-width: 767px)" srcset="user/articles/1f9368946b9de4d46bd5377d4386fe-f0393dfd-bb85-4be4-9c7e-757d0e70fa63.jpg">
+                                                        <source media="(min-width: 768px) and (max-width: 1023px)" srcset="user/articles/1f9368946b9de4d46bd5377d4386fe-f0393dfd-bb85-4be4-9c7e-757d0e70fa63.jpg">
+                                                        <source media="(min-width: 1024px) and (max-width: 1199px)" srcset="user/articles/1f9368946b9de4d46bd5377d4386fe-f0393dfd-bb85-4be4-9c7e-757d0e70fa63.jpg">
+                                                        <source media="(min-width: 1200px)" srcset="user/articles/1f9368946b9de4d46bd5377d4386fe-f0393dfd-bb85-4be4-9c7e-757d0e70fa63.jpg">
+                                                        <img src="user/articles/1f9368946b9de4d46bd5377d4386fe-f0393dfd-bb85-4be4-9c7e-757d0e70fa63.jpg" title="Thiết kế phòng ngủ ấn tượng" alt="Thiết kế phòng ngủ ấn tượng">
                                                     </picture>
                                                 </a>
 
@@ -7075,11 +7074,11 @@
 
                                                 <a href="/nhung-phong-cach-trang-tri-nha-dep-2">
                                                     <picture>
-                                                        <source media="(max-width: 375px)" srcset="articles/7.jpg?v=1514934929843">
-                                                        <source media="(min-width: 376px) and (max-width: 767px)" srcset="articles/7.jpg">
-                                                        <source media="(min-width: 768px) and (max-width: 1023px)" srcset="articles/7.jpg">
-                                                        <source media="(min-width: 1024px) and (max-width: 1199px)" srcset="articles/7.jpg">
-                                                        <source media="(min-width: 1200px)" srcset="articles/7.jpg">
+                                                        <source media="(max-width: 375px)" srcset="user/articles/7.jpg?v=1514934929843">
+                                                        <source media="(min-width: 376px) and (max-width: 767px)" srcset="user/articles/7.jpg">
+                                                        <source media="(min-width: 768px) and (max-width: 1023px)" srcset="user/articles/7.jpg">
+                                                        <source media="(min-width: 1024px) and (max-width: 1199px)" srcset="user/articles/7.jpg">
+                                                        <source media="(min-width: 1200px)" srcset="user/articles/7.jpg">
                                                         <img src="user/articles/7.jpg" title="Phòng khách sang trọng độc đáo" alt="Phòng khách sang trọng độc đáo">
                                                     </picture>
                                                 </a>
@@ -7111,11 +7110,11 @@
 
                                                 <a href="/nhung-phong-cach-trang-tri-nha-dep-3">
                                                     <picture>
-                                                        <source media="(max-width: 375px)" srcset="articles/1f9368946b9de4d46bd5377d4386fe.jpg?v=1514934844753">
-                                                        <source media="(min-width: 376px) and (max-width: 767px)" srcset="articles/1f9368946b9de4d46bd5377d4386fe.jpg?v=1514934844753">
-                                                        <source media="(min-width: 768px) and (max-width: 1023px)" srcset="articles/1f9368946b9de4d46bd5377d4386fe.jpg?v=1514934844753">
-                                                        <source media="(min-width: 1024px) and (max-width: 1199px)" srcset="articles/1f9368946b9de4d46bd5377d4386fe.jpg?v=1514934844753">
-                                                        <source media="(min-width: 1200px)" srcset="articles/1f9368946b9de4d46bd5377d4386fe.jpg?v=1514934844753">
+                                                        <source media="(max-width: 375px)" srcset="user/articles/1f9368946b9de4d46bd5377d4386fe.jpg?v=1514934844753">
+                                                        <source media="(min-width: 376px) and (max-width: 767px)" srcset="user/articles/1f9368946b9de4d46bd5377d4386fe.jpg?v=1514934844753">
+                                                        <source media="(min-width: 768px) and (max-width: 1023px)" srcset="user/articles/1f9368946b9de4d46bd5377d4386fe.jpg?v=1514934844753">
+                                                        <source media="(min-width: 1024px) and (max-width: 1199px)" srcset="user/articles/1f9368946b9de4d46bd5377d4386fe.jpg?v=1514934844753">
+                                                        <source media="(min-width: 1200px)" srcset="user/articles/1f9368946b9de4d46bd5377d4386fe.jpg?v=1514934844753">
                                                         <img src="user/articles/1f9368946b9de4d46bd5377d4386fe.jpg?v=1514934844753" title="1 số cách trang trí phòng ngủ đẹp" alt="1 số cách trang trí phòng ngủ đẹp">
                                                     </picture>
                                                 </a>
@@ -7147,11 +7146,11 @@
 
                                                 <a href="/nhung-phong-cach-trang-tri-dau-giuong-cho-phong-ngu-them-phong-cach">
                                                     <picture>
-                                                        <source media="(max-width: 375px)" srcset="articles/5-422ef3f7-649e-4c32-aeb5-763deb6eaae8.jpg?v=1514590993713">
-                                                        <source media="(min-width: 376px) and (max-width: 767px)" srcset="articles/5-422ef3f7-649e-4c32-aeb5-763deb6eaae8.jpg?v=1514590993713">
-                                                        <source media="(min-width: 768px) and (max-width: 1023px)" srcset="articles/5-422ef3f7-649e-4c32-aeb5-763deb6eaae8.jpg?v=1514590993713">
-                                                        <source media="(min-width: 1024px) and (max-width: 1199px)" srcset="articles/5-422ef3f7-649e-4c32-aeb5-763deb6eaae8.jpg?v=1514590993713">
-                                                        <source media="(min-width: 1200px)" srcset="articles/5-422ef3f7-649e-4c32-aeb5-763deb6eaae8.jpg?v=1514590993713">
+                                                        <source media="(max-width: 375px)" srcset="user/articles/5-422ef3f7-649e-4c32-aeb5-763deb6eaae8.jpg?v=1514590993713">
+                                                        <source media="(min-width: 376px) and (max-width: 767px)" srcset="user/articles/5-422ef3f7-649e-4c32-aeb5-763deb6eaae8.jpg?v=1514590993713">
+                                                        <source media="(min-width: 768px) and (max-width: 1023px)" srcset="user/articles/5-422ef3f7-649e-4c32-aeb5-763deb6eaae8.jpg?v=1514590993713">
+                                                        <source media="(min-width: 1024px) and (max-width: 1199px)" srcset="user/articles/5-422ef3f7-649e-4c32-aeb5-763deb6eaae8.jpg?v=1514590993713">
+                                                        <source media="(min-width: 1200px)" srcset="user/articles/5-422ef3f7-649e-4c32-aeb5-763deb6eaae8.jpg?v=1514590993713">
                                                         <img src="user/articles/5-422ef3f7-649e-4c32-aeb5-763deb6eaae8.jpg?v=1514590993713" title="Những phong cách trang trí đầu giường cho phòng ngủ" alt="Những phong cách trang trí đầu giường cho phòng ngủ">
                                                     </picture>
                                                 </a>
