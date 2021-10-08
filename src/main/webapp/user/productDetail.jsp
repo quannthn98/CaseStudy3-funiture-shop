@@ -472,7 +472,6 @@
     <meta itemprop="image" content="user/Product_image/4.jpg">
     <div class="container">
         <div class="row">
-            //Servlet here
             <div class="details-product">
                 <div class="col-lg-9 col-md-8 col-sm-12 col-xs-12">
                     <div class="rows">
