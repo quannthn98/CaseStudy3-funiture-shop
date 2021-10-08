@@ -492,15 +492,19 @@
                                         <span class="item-price"> <span class="price"><fmt:formatNumber type="number" maxFractionDigits = "0"  value="${cart.saleOff}"/>₫</span></span>
                                     </div>
                                     <div style="width: 12%" class="a-center">
-                                        <div class="input_qty_pr"><input class="variantID" type="hidden" name="variantId"
-                                                                         value="14992946">
-                                            <button class="increase_pop items-count btn-plus" type="button"><a
-                                                    href="/cart?action=update&direction=down&id=${cart.id}"> - </a> </button>
+                                        <div class="input_qty_pr">
+                                            <a style="text-decoration: none" href="/cart?action=update&direction=down&id=${cart.id}">
+                                                <button class="increase_pop items-count btn-plus" type="button"> - </button>
+                                            </a>
+
                                             <input type="text" maxlength="12" min="0"
                                                    class="input-text number-sidebar input_pop input_pop qtyItem14992946"
                                                    id="qtyItem14992946" name="quantity1" size="4" value="${cart.quantity}">
-                                            <button class="increase_pop items-count btn-plus" type="button"><a
-                                                    href="/cart?action=update&direction=up&id=${cart.id}"> + </a>  </button>
+
+                                            <a style="text-decoration: none" href="/cart?action=update&direction=up&id=${cart.id}">
+                                                <button class="increase_pop items-count btn-plus" type="button"> + </button>
+                                            </a>
+
                                         </div>
                                     </div>
                                     <div style="width: 15%" class="a-center"><span class="cart-price"> <span class="price"><fmt:formatNumber type="number" maxFractionDigits = "0"  value="${cart.saleOff*cart.quantity}"/>₫</span> </span>

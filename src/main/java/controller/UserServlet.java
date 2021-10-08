@@ -3,15 +3,19 @@ package controller;
 import com.sun.org.apache.xpath.internal.operations.Or;
 import dao.CategoryDao;
 import dao.Company.ICompanyDao;
+import dao.ICartDao;
 import dao.IOrderDao;
 import dao.IProductDao;
 import dao.ProductDao;
 import model.Category;
+import model.Cart;
+
 import model.Order;
 import model.OrderDetail;
 import model.Product;
 
 import model.*;
+import service.*;
 import service.Banner.BannerService;
 import service.Banner.IBannerService;
 import service.Company.CompanyService;
@@ -41,6 +45,7 @@ public class UserServlet extends HttpServlet {
     private ISettingsService settingsService = new SettingsService();
     private INewService newService = new NewService();
     private ICompanyService companyService = new CompanyService();
+    ICartService cartService = new CartService();
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -60,6 +65,9 @@ public class UserServlet extends HttpServlet {
                 break;
             case "login":
                 showLogin(request, response);
+                break;
+            case "cart":
+                showCart(request, response);
                 break;
             default:
                 showHome(request, response);
@@ -132,6 +140,13 @@ public class UserServlet extends HttpServlet {
         request.setAttribute("productList",productList);
         request.setAttribute("categoryList",categoryList);
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/category.jsp");
+        dispatcher.forward(request,response);
+    }
+
+    private void showCart(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        List<Cart> cartList = cartService.findByCustomerId(9);
+        request.setAttribute("cartList", cartList);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("user/cart.jsp");
         dispatcher.forward(request, response);
     }
 

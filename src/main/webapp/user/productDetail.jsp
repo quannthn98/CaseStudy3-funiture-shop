@@ -454,7 +454,7 @@
 
 
                     <li>
-                        <a itemprop="url" href="/ghe-sofa"><span itemprop="title">{category.name}</span></a>
+                        <a itemprop="url" href="/ghe-sofa"><span itemprop="title">${product.categoryName}</span></a>
                         <span><i class="fa">/</i></span>
                     </li>
 
