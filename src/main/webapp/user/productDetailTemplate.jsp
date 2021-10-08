@@ -31,15 +31,15 @@
     <meta name="robots" content="noodp,index,follow"/>
     <!-- ================= Favicon ================== -->
 
-    <link rel="icon" href="image/favicon.png" type="image/x-icon"/>
+    <link rel="icon" href="user/image/favicon.png" type="image/x-icon"/>
 
     <!-- ================= Google Fonts ================== -->
 
 
-    <link href="css/font-Roboto.css?family=Roboto:400,700" rel="stylesheet" type="text/css"/>
+    <link href="user/css/font-Roboto.css?family=Roboto:400,700" rel="stylesheet" type="text/css"/>
 
 
-    <link href="css/font-YesevaOne.css?family=Yeseva+One&amp;subset=cyrillic,cyrillic-ext,latin-ext,vietnamese"
+    <link href="user/css/font-YesevaOne.css?family=Yeseva+One&amp;subset=cyrillic,cyrillic-ext,latin-ext,vietnamese"
           rel="stylesheet">
     <!-- Facebook Open Graph meta tags -->
 
@@ -48,13 +48,13 @@
     <meta property="og:title" content="Sofa bộ Hugo 8979">
 
     <meta property="og:image" content="user/Product_image/4.jpg">
-    <meta property="og:image:secure_url" content="user/Product_image/4.jpg?v=1513589881417">
+    <meta property="og:image:secure_url" content="user/Product_image/4.jpg">
 
     <meta property="og:image" content="user/Product_image/13.jpg">
-    <meta property="og:image:secure_url" content="user/Product_image/13.jpg?v=1513589881417">
+    <meta property="og:image:secure_url" content="user/Product_image/13.jpg">
 
     <meta property="og:image" content="user/Product_image/2.jpg">
-    <meta property="og:image:secure_url" content="user/Product_image/2.jpg?v=1513589881417">
+    <meta property="og:image:secure_url" content="user/Product_image/2.jpg">
     <!-- ======================================================================================================= -->
     <meta property="og:price:amount" content="56.000.000">
     <meta property="og:price:currency" content="VND">
@@ -65,27 +65,27 @@
     <meta property="og:site_name" content="Sunmax">
 
     <!-- Plugin CSS -->
-    <link rel="stylesheet" href="css/themify-icons.css">
-    <link rel="stylesheet" href="css/all.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link href="css/owl.carousel.min.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="user/css/themify-icons.css">
+    <link rel="stylesheet" href="user/css/all.css">
+    <link rel="stylesheet" href="user/css/bootstrap.min.css">
+    <link rel="stylesheet" href="user/css/font-awesome.min.css">
+    <link href="user/css/owl.carousel.min.css" rel="stylesheet" type="text/css"/>
 
     <!-- Build Main CSS -->
-    <link href="css/base.scss.css" rel="stylesheet" type="text/css"/>
-    <link href="css/style.scss.css" rel="stylesheet" type="text/css"/>
-    <link href="css/module.scss.css" rel="stylesheet" type="text/css"/>
-    <link href="css/responsive.scss.css" rel="stylesheet" type="text/css"/>
+    <link href="user/css/base.scss.css" rel="stylesheet" type="text/css"/>
+    <link href="user/css/style.scss.css" rel="stylesheet" type="text/css"/>
+    <link href="user/css/module.scss.css" rel="stylesheet" type="text/css"/>
+    <link href="user/css/responsive.scss.css" rel="stylesheet" type="text/css"/>
 
     <!-- Header JS -->
-    <script src="js/jquery-2.2.3.min.js" type="text/javascript"></script>
+    <script src="user/js/jquery-2.2.3.min.js" type="text/javascript"></script>
     <!-- Bizweb javascript customer -->
 
 
     <!-- Bizweb conter for header -->
 
 
-    <link href="css/iwish.css"/>
+    <link href="user/css/iwish.css"/>
 
 </head>
 <body>
@@ -221,14 +221,14 @@
                 <div class="content_header">
                     <div class="header-main">
                         <div class="menu-bar-h nav-mobile-button hidden-md hidden-lg">
-                            <a href="#nav-mobile"><img src="image/i_menubar.png" alt="menu bar"/></a>
+                            <a href="#nav-mobile"><img src="user/image/i_menubar.png" alt="menu bar"/></a>
                         </div>
                         <div class="col-lg-3 col-md-3">
                             <div class="logo">
 
 
                                 <a href="/" class="logo-wrapper ">
-                                    <img src="image/logo.png" alt="logo ">
+                                    <img src="user/image/logo.png" alt="logo ">
                                 </a>
 
                             </div>
@@ -290,7 +290,7 @@
                                 <div class="header-acount hidden-lg-down">
                                     <div class="wishlist_header hidden-xs hidden-sm">
 
-                                        <div class="img_hotline"><img alt="Wishlist" src="image/icon_phone.png"/></div>
+                                        <div class="img_hotline"><img alt="Wishlist" src="user/image/icon_phone.png"/></div>
 
                                         <span class="text_hotline">Hotline:</span> <a class="hai01"
                                                                                       href="tel:0165939688">0165939688</a>
@@ -301,7 +301,7 @@
                                         <div class="mini-cart text-xs-center">
                                             <div class="heading-cart">
                                                 <a class="bg_cart" href="/cart" title="Giỏ hàng">
-                                                    <img alt="Giỏ hàng" src="image/icon_hovercart.png"/>
+                                                    <img alt="Giỏ hàng" src="user/image/icon_hovercart.png"/>
                                                     <span class="text-giohang hidden-xs">Giỏ hàng:</span>
                                                     (<span class="count_item count_item_pr">0</span>)
                                                 </a>
@@ -342,7 +342,7 @@
                                         <div class="mini-cart text-xs-center">
                                             <div class="heading-cart-mobi">
                                                 <a class="bg_cart" href="/cart" title="Giỏ hàng">
-                                                    <img alt="Giỏ hàng" src="image/icon_cart_mobi.png"/>
+                                                    <img alt="Giỏ hàng" src="user/image/icon_cart_mobi.png"/>
                                                     <span class="count_item count_item_pr"></span>
                                                 </a>
                                             </div>
@@ -440,7 +440,7 @@
     </div>
 </header>
 <!-- =============================== -->
-<script src="js/jquery.cookie.min.js" type="text/javascript"></script>
+<script src="user/js/jquery.cookie.min.js" type="text/javascript"></script>
 <!-- ================================ -->
 
 
@@ -471,7 +471,7 @@
 <section class="product margin-top-20" itemscope itemtype="http://schema.org/Product">
     <meta itemprop="url" content="//sunmax.bizwebvietnam.net/sofa-da-ma-ntx1824-1">
     <meta itemprop="name" content="Sofa bộ Hugo 8979">
-    <meta itemprop="image" content="user/Product_image/4.jpg?v=1513589881417">
+    <meta itemprop="image" content="user/Product_image/4.jpg">
     <div class="container">
         <div class="row">
             //Servlet here
@@ -482,31 +482,31 @@
                             <div class="row">
                                 <div class="col_large_default large-image">
                                     "${product.image}"
-                                    <a href="user/Product_image/sofahugo.jpg?v=1513589881417"
+                                    <a href="user/Product_image/sofahugo.jpg"
                                        class="large_image_url checkurl" data-rel="prettyPhoto[product-gallery]">
                                         <img id="img_01" class="img-responsive" alt="Sofa bộ Hugo 8979"
-                                             src="user/Product_image/sofahugo.jpg?v=1513589881417"
-                                             data-zoom-image="user/Product_image/4.jpg?v=1513589881417"/>
+                                             src="user/Product_image/sofahugo.jpg"
+                                             data-zoom-image="user/Product_image/4.jpg"/>
                                     </a>
                                     <div class="hidden">
                                         <div class="item">
-                                            <a href="user/Product_image/13.jpg?v=1513589881417"
-                                               data-image="user/Product_image/13.jpg?v=1513589881417"
-                                               data-zoom-image="user/Product_image/13.jpg?v=1513589881417"
+                                            <a href="user/Product_image/13.jpg"
+                                               data-image="user/Product_image/13.jpg"
+                                               data-zoom-image="user/Product_image/13.jpg"
                                                data-rel="prettyPhoto[product-gallery]">
                                             </a>
                                         </div>
                                         <div class="item">
-                                            <a href="user/Product_image/2.jpg?v=1513589881417"
-                                               data-image="user/Product_image/2.jpg?v=1513589881417"
-                                               data-zoom-image="user/Product_image/2.jpg?v=1513589881417"
+                                            <a href="user/Product_image/2.jpg"
+                                               data-image="user/Product_image/2.jpg"
+                                               data-zoom-image="user/Product_image/2.jpg"
                                                data-rel="prettyPhoto[product-gallery]">
                                             </a>
                                         </div>
                                         <div class="item">
-                                            <a href="user/Product_image/8.jpg?v=1513589881417"
-                                               data-image="user/Product_image/8.jpg?v=1513589881417"
-                                               data-zoom-image="user/Product_image/8.jpg?v=1513589881417"
+                                            <a href="user/Product_image/8.jpg"
+                                               data-image="user/Product_image/8.jpg"
+                                               data-zoom-image="user/Product_image/8.jpg"
                                                data-rel="prettyPhoto[product-gallery]">
                                             </a>
                                         </div>
@@ -519,35 +519,35 @@
                                          data-loop="false" data-lg-items="3" data-md-items="3" data-sm-items="3"
                                          data-xs-items="3" data-xxs-items="3">
                                         <div class="item">
-                                            <a href="#" data-image="user/Product_image/4.jpg?v=1513589881417"
-                                               data-zoom-image="user/Product_image/4.jpg?v=1513589881417">
-                                                <img data-img="user/Product_image/4.jpg?v=1513589881417"
-                                                     src="user/Product_image/sofahugo.jpg?v=1513589881417"
+                                            <a href="#" data-image="user/Product_image/4.jpg"
+                                               data-zoom-image="user/Product_image/4.jpg">
+                                                <img data-img="user/Product_image/4.jpg"
+                                                     src="user/Product_image/sofahugo.jpg"
                                                      alt="{product.name}}">
                                             </a>
                                         </div>
 
                                         <div class="item">
-                                            <a href="#" data-image="user/Product_image/13.jpg?v=1513589881417"
-                                               data-zoom-image="user/Product_image/13.jpg?v=1513589881417">
-                                                <img data-img="user/Product_image/13.jpg?v=1513589881417"
-                                                     src="user/Product_image/13.jpg?v=1513589881417" alt="Sofa bộ Hugo 8979">
+                                            <a href="#" data-image="user/Product_image/13.jpg"
+                                               data-zoom-image="user/Product_image/13.jpg">
+                                                <img data-img="user/Product_image/13.jpg"
+                                                     src="user/Product_image/13.jpg" alt="Sofa bộ Hugo 8979">
                                             </a>
                                         </div>
 
                                         <div class="item">
-                                            <a href="#" data-image="user/Product_image/2.jpg?v=1513589881417"
-                                               data-zoom-image="user/Product_image/2.jpg?v=1513589881417">
-                                                <img data-img="user/Product_image/2.jpg?v=1513589881417"
-                                                     src="user/Product_image/2.jpg?v=1513589881417" alt="Sofa bộ Hugo 8979">
+                                            <a href="#" data-image="user/Product_image/2.jpg"
+                                               data-zoom-image="user/Product_image/2.jpg">
+                                                <img data-img="user/Product_image/2.jpg"
+                                                     src="user/Product_image/2.jpg" alt="Sofa bộ Hugo 8979">
                                             </a>
                                         </div>
 
                                         <div class="item">
-                                            <a href="#" data-image="user/Product_image/8.jpg?v=1513589881417"
-                                               data-zoom-image="user/Product_image/8.jpg?v=1513589881417">
-                                                <img data-img="user/Product_image/8.jpg?v=1513589881417"
-                                                     src="user/Product_image/8.jpg?v=1513589881417" alt="Sofa bộ Hugo 8979">
+                                            <a href="#" data-image="user/Product_image/8.jpg"
+                                               data-zoom-image="user/Product_image/8.jpg">
+                                                <img data-img="user/Product_image/8.jpg"
+                                                     src="user/Product_image/8.jpg" alt="Sofa bộ Hugo 8979">
                                             </a>
                                         </div>
 
@@ -617,7 +617,7 @@
 
 
                                             <label for="swatch-0-Trắng"
-                                                   style="background-color: trang;background-image: url(user/Product_image/13.jpg?v=1513589881417);background-size: contain; background-repeat: no-repeat; background-position: center;">
+                                                   style="background-color: white;background-image: url('Product_image/13.jpg');background-size: contain; background-repeat: no-repeat; background-position: center;">
 
                                             </label>
 
@@ -641,7 +641,7 @@
 
 
                                             <label for="swatch-0-Xám"
-                                                   style="background-color: #615a5a; background-image: url(user/Product_image/sofahugo.jpg?v=1513589881417);background-size: contain; background-repeat: no-repeat; background-position: center;">
+                                                   style="background-color: #615a5a; background-image: url('Product_image/17.jpg');background-size: contain; background-repeat: no-repeat; background-position: center;">
 
                                             </label>
 
@@ -665,7 +665,7 @@
 
 
                                             <label for="swatch-0-Nâu"
-                                                   style="background-color: nau;background-image: url(user/Product_image/8.jpg?v=1513589881417);background-size: contain; background-repeat: no-repeat; background-position: center;">
+                                                   style="background-color: burlywood;background-image: url('Product_image/8.jpg');background-size: contain; background-repeat: no-repeat; background-position: center;">
 
                                             </label>
 
@@ -766,7 +766,7 @@
 
 
                                     <a target="_blank"
-                                       href="//pinterest.com/pin/create/button/?url=https://sunmax.bizwebvietnam.net/sofa-da-ma-ntx1824-1&amp;media=http://bizweb.dktcdn.net/thumb/1024x1024/100/284/162/products/4.jpg?v=1513589881417&amp;description=SofabộHugo8979"
+                                       href="//pinterest.com/pin/create/button/?url=https://sunmax.bizwebvietnam.net/sofa-da-ma-ntx1824-1&amp;media=http://bizweb.dktcdn.net/thumb/1024x1024/100/284/162/products/4.jpg&amp;description=SofabộHugo8979"
                                        class="share-pinterest" title="Chia sẻ lên pinterest">
                                         <i class="fa fa-pinterest"></i>
                                     </a>
@@ -1090,7 +1090,7 @@
 </section>
 
 
-<link href="css/bpr-products-module.css?1564624970765" rel="stylesheet" type="text/css"/>
+<link href="user/css/bpr-products-module.css?1564624970765" rel="stylesheet" type="text/css"/>
 <div class="bizweb-product-reviews-module"></div>
 
 
@@ -1215,7 +1215,7 @@
                             </h4>
                             <div class="footer-widget">
                                 <div class="payment">
-                                    <img src="image/payment.png" alt="Payment"/>
+                                    <img src="user/image/payment.png" alt="Payment"/>
                                 </div>
                             </div>
                             <h4 class="title-menu tittle_time">
@@ -1296,14 +1296,14 @@
         </div>
     </div>
 </footer>
-<script src='js/api_js.js?sensor=false' type='text/javascript'></script>
-<script src="js/jquery.gmap.min.js" type="text/javascript"></script>
+<script src='user/js/api_js.js?sensor=false' type='text/javascript'></script>
+<script src="user/js/jquery.gmap.min.js" type="text/javascript"></script>
 <!-- Bizweb javascript -->
-<script src="js/option-selectors.js" type="text/javascript"></script>
-<script src="js/api.jquery.js?4" type="text/javascript"></script>
+<script src="user/js/option-selectors.js" type="text/javascript"></script>
+<script src="user/js/api.jquery.js?4" type="text/javascript"></script>
 <!-- Plugin JS -->
-<script src="js/owl.carousel.min.js" type="text/javascript"></script>
-<script src="js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+<script src="user/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="user/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
 <!-- Add to cart -->
 
@@ -1319,7 +1319,7 @@
                 <a href="javascript:void(0)" class="close-window close-popup"><i class="fa fa-close"></i></a>
                 <div class="info clearfix">
                     <div class="product-image margin-top-5">
-                        <img alt="popup" src="image/logo.png" style="max-width:150px; height:auto"/>
+                        <img alt="popup" src="user/image/logo.png" style="max-width:150px; height:auto"/>
                     </div>
                     <div class="product-info">
                         <p class="product-name"></p>
@@ -1389,9 +1389,9 @@
 </div>
 <div id="myModal" class="modal fade" role="dialog">
 </div>
-<script src="js/cs.script.js" type="text/javascript"></script>
-<script src="js/double_tab_togo.js" type="text/javascript"></script>
-<script src="js/appear.js" type="text/javascript"></script>
+<script src="user/js/cs.script.js" type="text/javascript"></script>
+<script src="user/js/double_tab_togo.js" type="text/javascript"></script>
+<script src="user/js/appear.js" type="text/javascript"></script>
 <!-- Quick view -->
 
 
@@ -1406,7 +1406,7 @@
 					<span class="view_full_size">
 						<a class="img-product" title="" href="#">
 							<img id="product-featured-image-quickview"
-                                 class="img-responsive product-featured-image-quickview" src="image/logo.png"
+                                 class="img-responsive product-featured-image-quickview" src="user/image/logo.png"
                                  alt="quickview"/>
 						</a>
 					</span>
@@ -1489,7 +1489,7 @@
     </div>
 </div>
 
-<script src="js/quickview.js" type="text/javascript"></script>
+<script src="user/js/quickview.js" type="text/javascript"></script>
 
 
 <div class='jas-sale-pop flex pf middle-xs'></div>
@@ -1608,18 +1608,18 @@
 
 
 <!-- Main JS -->
-<script src="js/main.js" type="text/javascript"></script>
+<script src="user/js/main.js" type="text/javascript"></script>
 
 
 <!-- Product detail JS,CSS -->
 
-<link href="css/lightbox.css" rel="stylesheet" type="text/css"/>
+<link href="user/css/lightbox.css" rel="stylesheet" type="text/css"/>
 
-<script src="js/jquery.elevatezoom308.min.js" type="text/javascript"></script>
+<script src="user/js/jquery.elevatezoom308.min.js" type="text/javascript"></script>
 
 
-<script src="js/jquery.prettyphoto.min005e.js" type="text/javascript"></script>
-<script src="js/jquery.prettyphoto.init.min367a.js" type="text/javascript"></script>
+<script src="user/js/jquery.prettyphoto.min005e.js" type="text/javascript"></script>
+<script src="user/js/jquery.prettyphoto.init.min367a.js" type="text/javascript"></script>
 
 
 </body>

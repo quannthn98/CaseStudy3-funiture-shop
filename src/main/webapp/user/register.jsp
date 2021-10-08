@@ -62,12 +62,12 @@
     <link href="user/css/responsive.scss.css" rel="stylesheet" type="text/css" />
 
     <!-- Header JS -->
-    <script src="js/jquery-2.2.3.min.js" type="text/javascript"></script>
+    <script src="user/js/jquery-2.2.3.min.js" type="text/javascript"></script>
     <!-- Bizweb javascript customer -->
 
-    <script src="js/bizweb-api.js?4" type="text/javascript"></script>
+    <script src="user/js/bizweb-api.js?4" type="text/javascript"></script>
     <!-- 	 -->
-    <script src="js/customer.js?4" type="text/javascript"></script>
+    <script src="user/js/customer.js?4" type="text/javascript"></script>
 
 
 
@@ -468,7 +468,7 @@
                     </div>
                     <form accept-charset="UTF-8" action="/customers?action=create" method="post" id="customer_register">
                         <input name="FormType" type="hidden" value="customer_register" />
-                        <input name="utf8" type="hidden" value="true" /><input type="hidden" id="Token-277a2a889fe84b868b8f0829c9c84b1b" name="Token" /><script src="js/api.js"></script>
+                        <input name="utf8" type="hidden" value="true" /><input type="hidden" id="Token-277a2a889fe84b868b8f0829c9c84b1b" name="Token" /><script src="user/js/api.js"></script>
 
                         <div class="form-signup" >
 
@@ -765,14 +765,14 @@
         </div>
     </div>
 </footer>
-<script src='js/api_js.js?sensor=false' type='text/javascript'></script>
-<script src="js/jquery.gmap.min.js" type="text/javascript"></script>
+<script src='user/js/api_js.js?sensor=false' type='text/javascript'></script>
+<script src="user/js/jquery.gmap.min.js" type="text/javascript"></script>
 <!-- Bizweb javascript -->
-<script src="js/option-selectors.js" type="text/javascript"></script>
-<script src="js/api.jquery.js?4" type="text/javascript"></script>
+<script src="user/js/option-selectors.js" type="text/javascript"></script>
+<script src="user/js/api.jquery.js?4" type="text/javascript"></script>
 <!-- Plugin JS -->
-<script src="js/owl.carousel.min.js" type="text/javascript"></script>
-<script src="js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="user/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="user/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <!-- Add to cart -->
 
 
@@ -848,9 +848,9 @@
 </div>
 <div id="myModal" class="modal fade" role="dialog">
 </div>
-<script src="js/cs.script.js" type="text/javascript"></script>
-<script src="js/double_tab_togo.js" type="text/javascript"></script>
-<script src="js/appear.js" type="text/javascript"></script>
+<script src="user/js/cs.script.js" type="text/javascript"></script>
+<script src="user/js/double_tab_togo.js" type="text/javascript"></script>
+<script src="user/js/appear.js" type="text/javascript"></script>
 <!-- Quick view -->
 
 
@@ -940,7 +940,7 @@
     </div>
 </div>
 
-<script src="js/quickview.js" type="text/javascript"></script>
+<script src="user/js/quickview.js" type="text/javascript"></script>
 
 <div class='jas-sale-pop flex pf middle-xs'></div>
 
@@ -1064,7 +1064,7 @@
 
 
 <!-- Main JS -->
-<script src="js/main.js" type="text/javascript"></script>
+<script src="user/js/main.js" type="text/javascript"></script>
 
 
 <!-- Product detail JS,CSS -->

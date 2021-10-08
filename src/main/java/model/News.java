@@ -1,5 +1,6 @@
 package model;
 
+
 import java.util.Date;
 
 public class News {
@@ -12,6 +13,14 @@ public class News {
     private int id_Customer;
 
     public News() {
+    }
+
+    public News(String title, String subtitle,String description, boolean status, int id_Customer) {
+        this.title = title;
+        this.subtitle = subtitle;
+        this.description = description;
+        this.status = status;
+        this.id_Customer = id_Customer;
     }
 
     public News(int id, String title, String subtitle, Date createdDate, String description, boolean status, int id_Customer) {
