@@ -63,6 +63,7 @@
     <link href="user/css/style.scss.css" rel="stylesheet" type="text/css"/>
     <link href="user/css/module.scss.css" rel="stylesheet" type="text/css"/>
     <link href="user/css/responsive.scss.css" rel="stylesheet" type="text/css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
     <!-- Header JS -->
     <script src="user/js/jquery-2.2.3.min.js" type="text/javascript"></script>
 
@@ -471,6 +472,7 @@
                             <div style="width: 6%">Xoá</div>
                         </div>
                         <div class="cart-tbody">
+                            <c:set var="total" value="${0}"/>
                             <c:forEach items="${cartList}" var="cart">
                                 <div class="item-cart productid-14992946">
                                     <div style="width: 17%" class="image"><a class="product-image"
@@ -505,13 +507,13 @@
                                     </div>
                                     <div style="width: 6%">
                                         <a  title="Xóa"
-                                                              href="/cart?action=delete&id=${cart.id}" data-id="14992946"><span><i
-                                            class="fa fa-times" aria-hidden="true"></i></span></a>
+                                                              href="/cart?action=delete&id=${cart.id}" data-id="14992946"><span><i class="fa fa-times" ></i></span></a>
                                     </div>
                                 </div>
-
+                                <c:set var="total" value="${total + cart.saleOff}"/>
                             </c:forEach>
                         </div>
+
                     </div>
                 </form>
                 <div class="cart-collaterals cart_submit row">
@@ -527,7 +529,7 @@
                                     <tfoot>
                                     <tr>
                                         <td colspan="20" class="a-right"><span>Tổng tiền thanh toán:</span></td>
-                                        <td class="a-right"><strong><span class="totals_price price">40.000.000₫</span></strong>
+                                        <td class="a-right"><strong><span class="totals_price price"><fmt:formatNumber type="number" maxFractionDigits = "0"  value="${total}"/>₫</span></strong>
                                         </td>
                                     </tr>
                                     </tfoot>
@@ -1090,7 +1092,7 @@
 <!-- Main JS -->
 <script src="user/js/main.js" type="text/javascript"></script>
 
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
 <!-- Product detail JS,CSS -->
 
 
