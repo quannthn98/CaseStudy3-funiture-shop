@@ -544,7 +544,7 @@
                         <nav class="nav-category navbar-toggleable-md">
                             <ul class="nav navbar-pills">
                                 <li class="nav-item lv1">
-                                    <a href="/phong-khach" class="nav-link">Phòng khách <span
+                                    <a href="" class="nav-link">Phòng khách <span
                                             class="count_x"></span></a>
                                     <i class="fa fa-angle-right"></i>
                                     <ul class="dropdown-menu">
@@ -561,7 +561,7 @@
                                     </ul>
                                 </li>
                                 <li class="nav-item lv1">
-                                    <a href="/phong-khach" class="nav-link">Phòng ngủ <span
+                                    <a href="" class="nav-link">Phòng ngủ <span
                                             class="count_x"></span></a>
                                     <i class="fa fa-angle-right"></i>
                                     <ul class="dropdown-menu">
@@ -579,7 +579,7 @@
                                 </li>
 
                                 <li class="nav-item lv1">
-                                    <a href="/phong-khach" class="nav-link">Phòng bếp <span
+                                    <a href="" class="nav-link">Phòng bếp <span
                                             class="count_x"></span></a>
                                     <i class="fa fa-angle-right"></i>
                                     <ul class="dropdown-menu">
