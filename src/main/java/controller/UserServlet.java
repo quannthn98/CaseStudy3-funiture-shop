@@ -127,7 +127,6 @@ public class UserServlet extends HttpServlet {
         request.setAttribute("product", product);
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/productDetail.jsp");
         dispatcher.forward(request, response);
-//        response.sendRedirect("user/productDetailTemplate.jsp");
     }
 
     private void showHome(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

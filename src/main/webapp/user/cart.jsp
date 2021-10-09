@@ -541,7 +541,7 @@
                                 <ul class="checkout">
                                     <li class="clearfix f-right">
                                         <button class="btn btn-white f-left" title="Tiếp tục mua hàng" type="button"
-                                                onclick="window.location.href='/collections/all'"><span>Tiếp tục mua hàng</span>
+                                                onclick="window.location.href='/user'"><span>Tiếp tục mua hàng</span>
                                         </button>
                                         <button class="btn btn-primary button btn-proceed-checkout f-right"
                                                 title="Thực hiện thanh toán" type="button"
