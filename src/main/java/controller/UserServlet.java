@@ -161,18 +161,7 @@ public class UserServlet extends HttpServlet {
 
     private void showCategory(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         getSiteSetting(request);
-        String categoryId = request.getParameter("categoryId");
-        int categoryId1;
-        if (categoryId == null){
-            categoryId = "1";
-        }
-        categoryId1 = Integer.parseInt(categoryId);
-        List<Product> productList = productDao.findByCategory(categoryId1);
-        List<Category> categoryList = categoryDao.getAll();
-        int count = 0;
-        request.setAttribute("productList",productList);
-        request.setAttribute("categoryList",categoryList);
-        request.setAttribute("count",count);
+
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/category.jsp");
         dispatcher.forward(request,response);
     }
@@ -256,7 +245,18 @@ public class UserServlet extends HttpServlet {
 
         List<Category> categories = categoryDao.getAll();
         List<Category> categoriesTop = categoryDao.getUniqueLocation();
-
+        String categoryId = request.getParameter("categoryId");
+        int categoryId1;
+        if (categoryId == null){
+            categoryId = "1";
+        }
+        categoryId1 = Integer.parseInt(categoryId);
+        List<Product> productList = productDao.findByCategory(categoryId1);
+        List<Category> categoryList = categoryDao.getAll();
+        int count = 0;
+        request.setAttribute("productList",productList);
+        request.setAttribute("categoryList",categoryList);
+        request.setAttribute("count",count);
         request.setAttribute("size", cartSize);
         request.setAttribute("customer", customer);
         request.setAttribute("banners", banners);
