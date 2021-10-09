@@ -272,6 +272,8 @@
                                                 <a class="bg_cart" href="/user?action=cart" title="Giỏ hàng">
                                                     <img alt="Giỏ hàng" src="user/image/icon_hovercart.png"/>
                                                     <span class="text-giohang hidden-xs">Giỏ hàng</span>
+                                                    (<span class="count_item count_item_pr">${size}</span>)
+
                                                 </a>
                                             </div>
                                         </div>

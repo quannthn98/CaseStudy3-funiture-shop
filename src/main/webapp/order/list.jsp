@@ -196,7 +196,7 @@
                                     <th>Product</th>
                                     <th>Quantity</th>
                                     <th>Price</th>
-                                    <th>% Sale Off</th>
+                                    <th>Price sell Actual</th>
                                     <th>Payment</th>
                                 </tr>
                                 <c:forEach items="${orderDetailList}" var="orderDetail">

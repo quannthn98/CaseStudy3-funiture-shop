@@ -95,7 +95,7 @@ public class OrderDao implements IOrderDao {
                 float price = resultSet.getFloat("price");
                 int saleOff = resultSet.getInt("price_sell");
                 int quantity = resultSet.getInt("quantity");
-                double total = (double) quantity*(price - (double) price*saleOff/100);
+                double total = (double) quantity*(saleOff*quantity);
                 OrderDetail orderDetail = new OrderDetail(orderId, productId, productName, price, saleOff, quantity, total);
                 orderDetailList.add(orderDetail);
             }

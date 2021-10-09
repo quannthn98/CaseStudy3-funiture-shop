@@ -150,7 +150,20 @@ public class UserServlet extends HttpServlet {
     }
 
     private void showHome(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        getSiteSetting(request);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("user/home.jsp");
+        dispatcher.forward(request, response);
+    }
+
+    private void getSiteSetting(HttpServletRequest request) {
         Customer customer = getCustomer();
+        int cartSize;
+        if(customer == null){
+            cartSize = 0;
+        } else {
+            List<Cart> cartList = cartService.findByCustomerId(customer.getId());
+            cartSize = cartList.size();
+        }
         List<Banner> banners;
         banners = bannerService.getAll();
         List<Company> companies;
@@ -160,7 +173,7 @@ public class UserServlet extends HttpServlet {
         news = newService.getAll();
         List<Category> categories = categoryDao.getAll();
         List<Category> categoriesTop = categoryDao.getUniqueLocation();
-        RequestDispatcher dispatcher = request.getRequestDispatcher("user/home.jsp");
+        request.setAttribute("size", cartSize);
         request.setAttribute("customer", customer);
         request.setAttribute("banners", banners);
         request.setAttribute("companies", companies);
@@ -168,7 +181,6 @@ public class UserServlet extends HttpServlet {
         request.setAttribute("news", news);
         request.setAttribute("categories", categories);
         request.setAttribute("categoriesTop", categoriesTop);
-        dispatcher.forward(request, response);
     }
 
     private void showCategory(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
@@ -193,7 +205,7 @@ public class UserServlet extends HttpServlet {
         if(customer == null){
             response.sendRedirect("/user?action=login");
         } else {
-            List<Cart> cartList = cartService.findByCustomerId(9);
+            List<Cart> cartList = cartService.findByCustomerId(customer.getId());
             request.setAttribute("cartList", cartList);
             RequestDispatcher dispatcher = request.getRequestDispatcher("user/cart.jsp");
             dispatcher.forward(request, response);
@@ -202,7 +214,7 @@ public class UserServlet extends HttpServlet {
 
     private void addToCart(HttpServletRequest request, HttpServletResponse response) throws IOException {
         int productId = Integer.parseInt(request.getParameter("productId"));
-        int customerId = 3;
+        int customerId = customer.getId();
         Cart cart = new Cart(customerId, productId, 1);
         cartService.save(cart);
         response.sendRedirect("/user?action=detail&id=" +productId);
