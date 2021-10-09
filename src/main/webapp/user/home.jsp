@@ -334,7 +334,8 @@
                     <ul class="item_big">
                         <c:forEach items="${categoriesTop}" var="categorytop">
                             <li class="nav-item ">
-                                <a class="a-img" href="user?action=category&categoryId=${categorytop.id}"><span>${categorytop.name}</span>
+                                <a class="a-img"
+                                   href="user?action=category&categoryId=${categorytop.id}"><span>${categorytop.name}</span>
                                     <i class="fa fa-caret-down"></i>
                                 </a>
                                 <ul class="item_small hidden-sm hidden-xs">
@@ -342,7 +343,8 @@
                                         <c:choose>
                                             <c:when test="${categorytop.location == category.location and categorytop.id != category.id}">
                                                 <li>
-                                                    <a href="user?action=category&categoryId=${category.id}" title="">${category.name}</a>
+                                                    <a href="user?action=category&categoryId=${category.id}"
+                                                       title="">${category.name}</a>
                                                 </li>
                                             </c:when>
                                             <c:otherwise>
@@ -368,13 +370,13 @@
 <section class="awe-section-1">
     <div class="home-slider owl-carousel owl-theme not-aweowl">
 
-<c:forEach items="${banners}" var="banner">
-    <div class="item">
-        <a href="#" class="clearfix">
-            <img src="user/image/${banner.image}" alt="Slider 1">
-        </a>
-    </div>
-</c:forEach>
+        <c:forEach items="${banners}" var="banner">
+            <div class="item">
+                <a href="#" class="clearfix">
+                    <img src="user/image/${banner.image}" alt="Slider 1">
+                </a>
+            </div>
+        </c:forEach>
 
     </div><!-- /.products -->
 </section>
@@ -6632,8 +6634,8 @@
                                                     <div class="content_day_blog"><span class="fix_left_blog"><i
                                                             class="fa fa-clock-o"></i>
 				<span class="news_home_content_short_time">
-					${news.createdDate}
-				</span>
+                        ${news.createdDate}
+                </span>
 				</span>
                                                         <div class="post-time">
                                                             <i class="fa fa-user" aria-hidden="true"></i>

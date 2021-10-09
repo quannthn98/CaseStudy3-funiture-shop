@@ -118,6 +118,7 @@ public class UserServlet extends HttpServlet {
         news = newService.getAll();
         List<Category> categories = categoryDao.getAll();
         List<Category> categoriesTop = categoryDao.getUniqueLocation();
+        int count = 0;
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/home.jsp");
         request.setAttribute("banners", banners);
         request.setAttribute("companies", companies);
@@ -125,6 +126,7 @@ public class UserServlet extends HttpServlet {
         request.setAttribute("news", news);
         request.setAttribute("categories", categories);
         request.setAttribute("categoriesTop", categoriesTop);
+        request.setAttribute("count", count);
         dispatcher.forward(request, response);
     }
 
