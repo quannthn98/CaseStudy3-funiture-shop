@@ -3,10 +3,7 @@ package dao;
 import config.DBConnection;
 import model.Category;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -105,8 +102,8 @@ public class CategoryDao implements ICategoryDao {
     public List<Category> getUniqueLocation() {
         List<Category> categoryList = new ArrayList<>();
         try {
-            PreparedStatement statement = connection.prepareStatement("select * from category GROUP BY location ORDER BY location ASC");
-            ResultSet rs = statement.executeQuery();
+            CallableStatement callableStatement = connection.prepareCall("call showTopcategory");
+            ResultSet rs = callableStatement.executeQuery();
             while (rs.next()) {
                 int id = rs.getInt("id");
                 String name = rs.getString("name");
