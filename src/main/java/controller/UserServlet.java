@@ -71,6 +71,9 @@ public class UserServlet extends HttpServlet {
             case "login":
                 showLogin(request, response);
                 break;
+            case "logout":
+                logout(request, response);
+                break;
             case "cart":
                 showCart(request, response);
                 break;
@@ -110,6 +113,11 @@ public class UserServlet extends HttpServlet {
         }
     }
 
+    private void logout(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        setCustomer(null);
+        response.sendRedirect("/user");
+    }
+
     private void showLogin(HttpServletRequest request, HttpServletResponse response) {
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/login.jsp");
         try {
@@ -142,6 +150,7 @@ public class UserServlet extends HttpServlet {
     }
 
     private void showHome(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        Customer customer = getCustomer();
         List<Banner> banners;
         banners = bannerService.getAll();
         List<Company> companies;
@@ -152,6 +161,7 @@ public class UserServlet extends HttpServlet {
         List<Category> categories = categoryDao.getAll();
         List<Category> categoriesTop = categoryDao.getUniqueLocation();
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/home.jsp");
+        request.setAttribute("customer", customer);
         request.setAttribute("banners", banners);
         request.setAttribute("companies", companies);
         request.setAttribute("settings", settings);
@@ -188,7 +198,6 @@ public class UserServlet extends HttpServlet {
             RequestDispatcher dispatcher = request.getRequestDispatcher("user/cart.jsp");
             dispatcher.forward(request, response);
         }
-
     }
 
     private void addToCart(HttpServletRequest request, HttpServletResponse response) throws IOException {

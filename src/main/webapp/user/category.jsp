@@ -424,10 +424,7 @@
 
                 <div class="tt hidden-xs">
 
-                    <h1 class="title-head margin-top-0">Name</h1>
-
-                    <span class="hidden-sm hidden-xs">
-						(Tìm thấy {category.totalProduct} sản phẩm)</span>
+                    <h1 class="title-head margin-top-0">${productList.get(1).categoryName}</h1>
 
                 </div>
             </div>

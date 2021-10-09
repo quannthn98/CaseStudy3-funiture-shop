@@ -148,19 +148,33 @@
                                     Liên hệ
                                 </a>
                             </li>
+                            <c:choose>
+                                <c:when test="${customer==null}">
+                                    <li>
+                                        <a href="/user?action=register" title="Đăng ký" class="account_a">
+                                            <span>Đăng ký</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/user?action=login" title="Đăng nhập" class="account_a">
+                                            <span>Đăng nhập</span>
+                                        </a>
+                                    </li>
+                                </c:when>
+                                <c:otherwise>
+                                    <li>
+                                        <a class="account_a">
+                                            <span>${customer.email}</span>
 
-                            <li>
-                                <a href="/user?action=register" title="Đăng ký" class="account_a">
-                                    <span>Đăng ký</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/user?action=login" title="Đăng nhập" class="account_a">
-                                    <span>Đăng nhập</span>
-                                </a>
-                            </li>
-
-
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/user?action=logout" title="Đăng nhập" class="account_a">
+                                            <span>Đăng xuất</span>
+                                        </a>
+                                    </li>
+                                </c:otherwise>
+                            </c:choose>
                         </ul>
                     </div>
 
@@ -255,41 +269,10 @@
                                     <div class="top-cart-contain f-right hidden-xs hidden-sm visible-md visible-lg">
                                         <div class="mini-cart text-xs-center">
                                             <div class="heading-cart">
-                                                <a class="bg_cart" href="/cart" title="Giỏ hàng">
+                                                <a class="bg_cart" href="/user?action=cart" title="Giỏ hàng">
                                                     <img alt="Giỏ hàng" src="user/image/icon_hovercart.png"/>
-                                                    <span class="text-giohang hidden-xs">Giỏ hàng:</span>
-                                                    (<span class="count_item count_item_pr">0</span>)
+                                                    <span class="text-giohang hidden-xs">Giỏ hàng</span>
                                                 </a>
-                                            </div>
-                                            <div class="top-cart-content">
-                                                <ul id="cart-sidebar" class="mini-products-list count_li">
-                                                    <li class="list-item">
-                                                        <ul></ul>
-                                                    </li>
-                                                    <li class="action">
-                                                        <ul>
-                                                            <li class="li-fix-1">
-                                                                <div class="top-subtotal">
-                                                                    Tổng tiền thanh toán:
-                                                                    <span class="price"></span>
-                                                                </div>
-                                                            </li>
-                                                            <li class="li-fix-2" style="">
-                                                                <div class="actions">
-                                                                    <a href="/cart" class="btn btn-primary"
-                                                                       title="Giỏ hàng">
-                                                                        <span>Giỏ hàng</span>
-                                                                    </a>
-                                                                    <a href="/checkout"
-                                                                       class="btn btn-checkout btn-gray"
-                                                                       title="Thanh toán">
-                                                                        <span>Thanh toán</span>
-                                                                    </a>
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
                                             </div>
                                         </div>
                                     </div>
