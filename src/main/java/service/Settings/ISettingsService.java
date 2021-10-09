@@ -10,4 +10,5 @@ import java.util.List;
 public interface ISettingsService extends IGeneralService<Settings> {
     List<Settings> getAll();
     boolean add(Settings settings);
+    Settings getTop();
 }

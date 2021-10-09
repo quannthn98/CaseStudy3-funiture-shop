@@ -1,5 +1,8 @@
 package controller;
 
+import com.sun.org.apache.xpath.internal.operations.Or;
+import dao.*;
+import dao.Company.ICompanyDao;
 import dao.CategoryDao;
 import dao.IProductDao;
 import dao.ProductDao;
@@ -80,24 +83,6 @@ public class UserServlet extends HttpServlet {
         }
     }
 
-    private void showLogin(HttpServletRequest request, HttpServletResponse response) {
-        RequestDispatcher dispatcher = request.getRequestDispatcher("user/login.jsp");
-        try {
-            dispatcher.forward(request,response);
-        } catch (ServletException | IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    private void showRegister(HttpServletRequest request, HttpServletResponse response) {
-        RequestDispatcher dispatcher = request.getRequestDispatcher("user/register.jsp");
-        try {
-            dispatcher.forward(request, response);
-        } catch (ServletException | IOException e) {
-            e.printStackTrace();
-        }
-    }
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -125,9 +110,26 @@ public class UserServlet extends HttpServlet {
         }
     }
 
+    private void showLogin(HttpServletRequest request, HttpServletResponse response) {
+        RequestDispatcher dispatcher = request.getRequestDispatcher("user/login.jsp");
+        try {
+            dispatcher.forward(request,response);
+        } catch (ServletException | IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void showRegister(HttpServletRequest request, HttpServletResponse response) {
+        RequestDispatcher dispatcher = request.getRequestDispatcher("user/register.jsp");
+        try {
+            dispatcher.forward(request, response);
+        } catch (ServletException | IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     private void registerUser(HttpServletRequest request, HttpServletResponse response) {
         String email = request.getParameter("email");
-
     }
 
     private void showProductDetail(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -144,15 +146,18 @@ public class UserServlet extends HttpServlet {
         banners = bannerService.getAll();
         List<Company> companies;
         companies = companyService.getAll();
-        List<Settings> settings;
-        settings = settingsService.getAll();
+        Settings settings = settingsService.getTop();
         List<News> news;
         news = newService.getAll();
+        List<Category> categories = categoryDao.getAll();
+        List<Category> categoriesTop = categoryDao.getUniqueLocation();
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/home.jsp");
         request.setAttribute("banners", banners);
         request.setAttribute("companies", companies);
         request.setAttribute("settings", settings);
         request.setAttribute("news", news);
+        request.setAttribute("categories", categories);
+        request.setAttribute("categoriesTop", categoriesTop);
         dispatcher.forward(request, response);
     }
 
@@ -165,17 +170,25 @@ public class UserServlet extends HttpServlet {
         categoryId1 = Integer.parseInt(categoryId);
         List<Product> productList = productDao.findByCategory(categoryId1);
         List<Category> categoryList = categoryDao.getAll();
+        int count = 0;
         request.setAttribute("productList",productList);
         request.setAttribute("categoryList",categoryList);
+        request.setAttribute("count",count);
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/category.jsp");
         dispatcher.forward(request,response);
     }
 
     private void showCart(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<Cart> cartList = cartService.findByCustomerId(9);
-        request.setAttribute("cartList", cartList);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("user/cart.jsp");
-        dispatcher.forward(request, response);
+        Customer customer = getCustomer();
+        if(customer == null){
+            response.sendRedirect("/user?action=login");
+        } else {
+            List<Cart> cartList = cartService.findByCustomerId(9);
+            request.setAttribute("cartList", cartList);
+            RequestDispatcher dispatcher = request.getRequestDispatcher("user/cart.jsp");
+            dispatcher.forward(request, response);
+        }
+
     }
 
     private void addToCart(HttpServletRequest request, HttpServletResponse response) throws IOException {

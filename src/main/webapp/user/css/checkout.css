@@ -215,7 +215,6 @@ button.close {
 
 .btn-delete {
     background-color: #bbbbbb;
-    background-image: url(clear.svg), none;
     background-position: center center;
     background-repeat: no-repeat;
     border-radius: 50%;
@@ -369,8 +368,8 @@ button.close {
     transform: translate3d(0, 0, 0);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    -webkit-perspective: 1000;
-    perspective: 1000;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
     -webkit-font-smoothing: antialiased;
     backface-visibility: hidden;
     position: absolute;
@@ -706,8 +705,8 @@ input[type="checkbox"], input[type="radio"] {
     height: 8px;
     margin-left: -5px;
     margin-top: -4px;
-    background-image: url(../../image/checkbox-tick-0.png);
-    background-image: url(../../image/checkbox-tick-0.svg),none;
+    background-image: url(../../user/image/checkbox-tick-0.png);
+    background-image: url(../../user/image/checkbox-tick-0.svg),none;
 }
 
 .error {
@@ -1141,8 +1140,8 @@ input[type="checkbox"], input[type="radio"] {
 
 /* BEGIN Main Container */
 .main .field__input-wrapper--select::before {
-    background-image: url(../../image/dropdown-arrow-down-dark.png);
-    background-image: url(../../image/dropdown-arrow-down-dark.svg),none;
+    background-image: url(../../user/image/dropdown-arrow-down-dark.png);
+    background-image: url(../../user/image/dropdown-arrow-down-dark.svg),none;
 }
 
 .main .field__input {
@@ -1178,7 +1177,7 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 .payment-icon {
-    background: url(../../image/payment_icon_manual.png) no-repeat center center;
+    background: url(../../user/image/payment_icon_manual.png) no-repeat center center;
     display: inline-block;
     width: 52px;
     height: 28px;
@@ -1201,43 +1200,43 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 .payment-icon--1, .payment-icon--2 {
-    background: url(../../image/payment_icon_onepay.png) no-repeat center center;
+    background: url(../../user/image/payment_icon_onepay.png) no-repeat center center;
 }
 
 .payment-icon--6 {
-    background: url(../../image/payment_icon_ngan_luong.png) no-repeat center center;
+    background: url(../../user/image/payment_icon_ngan_luong.png) no-repeat center center;
 }
 
 .payment-icon--7 {
-    background: url(../../image/payment_icon_bao_kim.png?18) no-repeat center center;
+    background: url(../../user/image/payment_icon_bao_kim.png?18) no-repeat center center;
 }
 
 .payment-icon--10 {
-    background: url(../../image/payment_icon_paypal.png) no-repeat center center;
+    background: url(../../user/image/payment_icon_paypal.png) no-repeat center center;
 }
 
 .payment-icon--11 {
-    background: url(../../image/payment_icon_moca.png) no-repeat center center;
+    background: url(../../user/image/payment_icon_moca.png) no-repeat center center;
 }
 
 .payment-icon--12 {
-    background: url(../../image/payment_icon_webmoney.png?18) no-repeat center center;
+    background: url(../../user/image/payment_icon_webmoney.png?18) no-repeat center center;
 }
 
 .payment-icon--13, .payment-icon--14 {
-    background: url(../../image/payment_icon_napas.png) no-repeat center center;
+    background: url(../../user/image/payment_icon_napas.png) no-repeat center center;
 }
 
 .payment-icon--15 {
-    background: url(../../image/payment_icon_vtc_pay.png) no-repeat center center;
+    background: url(../../user/image/payment_icon_vtc_pay.png) no-repeat center center;
 }
 
 .payment-icon--16 {
-    background: url(../../image/payment_icon_vnpay.png) no-repeat center center;
+    background: url(../../user/image/payment_icon_vnpay.png) no-repeat center center;
 }
 
 .payment-icon--17 {
-    background: url(../../image/payment_icon_zalopay_alt.png) no-repeat center center;
+    background: url(../../user/image/payment_icon_zalopay_alt.png) no-repeat center center;
 }
 
 .zalopay-qr-payment-icon {
@@ -1465,7 +1464,7 @@ input[type="checkbox"], input[type="radio"] {
 /*END MocaPayment*/
 /*BEGIN Onepay Visa*/
 .cart-icon {
-    background-image: url("../../image/banner_banks.png");
+    background-image: url("../../user/image/banner_banks.png");
     background-repeat: no-repeat;
     float: left;
     height: 30px;

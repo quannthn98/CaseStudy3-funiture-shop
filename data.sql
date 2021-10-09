@@ -4,6 +4,7 @@ delete from product where id>0;
 
 
 
+
 insert into Role(name, status)
 VALUES ('admin', 1);
 insert into Role(name, status)
@@ -54,10 +55,10 @@ insert into orderDetailProduct(price, price_sell, quantity, id_Order, id_Product
 insert into orderDetailProduct(price, price_sell, quantity, id_Order, id_Product) values (15000000,0,1,5,3);
 insert into orderDetailProduct(price, price_sell, quantity, id_Order, id_Product) values (25000000,0,1,6,7);
 
-insert into Category(name) values ('Ghế Sofa');
-insert into Category(name) values ('Ghế đôn');
-insert into Category(name) values ('Kệ, Tủ TV');
-insert into Category(name) values ('Đồng hồ');
+insert into category(name, location, status) VALUES ('Ghế Sofa',1,1);
+insert into category(name, location, status) VALUES ('Ghế Sofa',1,1);
+insert into category(name, location, status) VALUES ('Kệ, Tủ TV',1,1);
+insert into category(name, location, status) VALUES ('Đồng hồ',1,1);
 insert into category(name, location, status) VALUES ('Bàn Ăn',2,1);
 insert into category(name, location, status) VALUES ('Tủ Bếp',2,1);
 insert into category(name, location, status) VALUES ('Bồn Rửa Bát',2,1);
@@ -386,6 +387,7 @@ create view customerdetail as
 select Customer.*, cr.id_Role from
     Customer
         join Customer_Role CR on Customer.id = CR.id_Customer;
+
 
 
 
