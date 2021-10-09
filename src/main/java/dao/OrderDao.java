@@ -1,5 +1,6 @@
 package dao;
 
+import com.sun.org.apache.xpath.internal.operations.Or;
 import config.DBConnection;
 import model.Order;
 import model.OrderDetail;
@@ -24,9 +25,11 @@ public class OrderDao implements IOrderDao {
     private final String COUNT_RECORD = "select count(id) from orderProduct";
     private final String SELECT_BY_BIGGER_THAN_VALUE = "select * from totalPaymentByOrder where payment >= ?";
     private final String SELECT_BY_SMALLER_THAN_VALUE = "select * from totalPaymentByOrder where payment < ?";
-
     private final String FIND_SALE_OFF_BY_ID = "select price_Sell from orderDetailProduct where id_Order = ? order by price_sell DESC";
     private final String INSERT_NEW_ORDER = "insert into orderProduct(consignee, addressOrder, numberPhone, note, id_Customer) values (?,?,?,?,?)";
+    private final String INSERT_NEW_ORDER_DETAIL = "insert into orderDetailProduct(nameProduct, price, price_sell, quantity, total, id_Order, id_Product) VALUES (?,?,?,?,?,?,?)";
+    private final String SELECT_LATEST_ORDER = "select max(id) from orderProduct";
+
     private Connection connection = DBConnection.getConnection();
 
     @Override
@@ -249,5 +252,38 @@ public class OrderDao implements IOrderDao {
             e.printStackTrace();
         }
         return count;
+    }
+
+    @Override
+    public int getLatestOrder() {
+        int id = 0;
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(SELECT_LATEST_ORDER);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            resultSet.next();
+            id = resultSet.getInt(1);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return id;
+    }
+
+    @Override
+    public boolean insertOrderDetail(OrderDetail orderDetail) {
+        boolean isSaved = false;
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(INSERT_NEW_ORDER_DETAIL);
+            preparedStatement.setString(1, orderDetail.getProductName());
+            preparedStatement.setFloat(2, orderDetail.getPrice());
+            preparedStatement.setInt(3, orderDetail.getSaleOff());
+            preparedStatement.setInt(4, orderDetail.getQuantity());
+            preparedStatement.setDouble(5, orderDetail.getTotal());
+            preparedStatement.setInt(6, orderDetail.getOrderId());
+            preparedStatement.setInt(7, orderDetail.getProductId());
+            isSaved = preparedStatement.executeUpdate() > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return isSaved;
     }
 }

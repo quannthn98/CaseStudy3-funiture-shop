@@ -11,11 +11,12 @@ public class Main {
     public static void main(String[] args) {
         OrderDao orderDao = new OrderDao();
         CartDao cartDao = new CartDao();
-        List<Cart> cartList = cartDao.findByCustomerId(10);
-        for (Cart cart: cartList){
-            System.out.println(cart.getId() + " " + cart.getCustomerId() + " " + cart.getProductId() +" "+ cart.getQuantity());
-
-        }
+//        List<Cart> cartList = cartDao.findByCustomerId(10);
+//        for (Cart cart: cartList){
+//            System.out.println(cart.getId() + " " + cart.getCustomerId() + " " + cart.getProductId() +" "+ cart.getQuantity());
+//        }
+        int id = orderDao.getLatestOrder();
+        System.out.println(id);
 
     }
 }

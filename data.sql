@@ -345,6 +345,12 @@ insert into product(name, image, subimage, price, price_sell, subdescription, de
 VALUES ('Đèn ngủ gỗ LUKA cao cấp chuyên dụng', 'user/src/img/den-ngu-cao-cap2.jpeg', 'none', 700000, 550000,
         'Kích thước(DxR): 530x300mm', 'Đèn Ngủ Cao Cấp', 12, 13);
 
+insert into cart(id_Customer, id_Product, quantity) VALUES (5, 58, 1);
+insert into cart(id_Customer, id_Product, quantity) VALUES (6, 68, 1);
+insert into cart(id_Customer, id_Product, quantity) VALUES (7, 59, 1);
+insert into cart(id_Customer, id_Product, quantity) VALUES (8, 69, 1);
+insert into cart(id_Customer, id_Product, quantity) VALUES (9, 80, 1);
+insert into cart(id_Customer, id_Product, quantity) VALUES (10, 81, 1);
 
 drop view fullOrderWithDetails;
 
@@ -363,6 +369,12 @@ from Product p
          join Brand B on B.id = p.id_Brand
          join Category C on C.id = p.id_Category;
 
+create view cartDetail as
+select c.id as cartId, c.id_Customer as customerId, c.id_Product as productId, c.quantity, P.image, P.name, P.price, P.price_sell
+from cart c
+         join Customer C2 on C2.id = c.id_Customer
+         join Product P on P.id = c.id_Product;
+
 create trigger deleteCustomerRole
     before delete on Customer for each row
     delete from Customer_Role where id_Customer = old.id;
@@ -375,8 +387,6 @@ create trigger deleteOrderDetailId
     before delete on orderProduct for each row
     delete from orderDetailProduct where orderDetailProduct.id_Order = old.id;
 
-update product set price_sell = 1090000 , price = 1200000 where id = 82;
-update product set price_sell = 2400000 , price = 3000000 where id = 91;
 
 
 

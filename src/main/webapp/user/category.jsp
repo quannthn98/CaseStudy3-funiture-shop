@@ -494,9 +494,8 @@
                                                         <input class="hidden" type="hidden" name="variantId"
                                                                value="14992946"/>
 
-                                                        <a title="Xem nhanh" href="/servlet?id={product.id}"
-                                                           data-handle="sofa-da-ma-ntx1824"
-                                                           class="button_wh_40 btn_view right-to quick-view">
+                                                        <a title="Xem nhanh" href="/user?action=detail&id=${product.id}"
+                                                           class="button_wh_40 btn_view">
                                                             Xem nhanh
                                                         </a>
 

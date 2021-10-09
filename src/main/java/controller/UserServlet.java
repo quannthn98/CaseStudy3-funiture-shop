@@ -1,17 +1,11 @@
 package controller;
 
-import com.sun.org.apache.xpath.internal.operations.Or;
 import dao.CategoryDao;
-import dao.Company.ICompanyDao;
-import dao.ICartDao;
-import dao.IOrderDao;
 import dao.IProductDao;
 import dao.ProductDao;
 import model.Category;
 import model.Cart;
 
-import model.Order;
-import model.OrderDetail;
 import model.Product;
 
 import model.*;
@@ -20,7 +14,6 @@ import service.Banner.BannerService;
 import service.Banner.IBannerService;
 import service.Company.CompanyService;
 import service.Company.ICompanyService;
-import service.IGeneralService;
 import service.IOrderService;
 import service.New.INewService;
 import service.New.NewService;
@@ -32,8 +25,6 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 @WebServlet(name = "UserServlet", value = "/user")
@@ -49,6 +40,8 @@ public class UserServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        request.setCharacterEncoding("utf-8");
         String action = request.getParameter("action");
         if (action == null) {
             action = "";
@@ -69,11 +62,36 @@ public class UserServlet extends HttpServlet {
             case "cart":
                 showCart(request, response);
                 break;
+            case "checkout":
+                showCheckOut(request, response);
+                break;
             default:
                 showHome(request, response);
                 break;
         }
     }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        request.setCharacterEncoding("utf-8");
+        String action = request.getParameter("action");
+        if (action == null){
+            action = "";
+        }
+        switch (action){
+            case "checkout":
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                doCheckOut(request, response);
+                break;
+        }
+    }
+
+
 
     private void showLogin(HttpServletRequest request, HttpServletResponse response) {
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/login.jsp");
@@ -97,10 +115,7 @@ public class UserServlet extends HttpServlet {
         }
     }
 
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-    }
 
     private void showProductDetail(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int productId = Integer.parseInt(request.getParameter("id"));
@@ -150,6 +165,38 @@ public class UserServlet extends HttpServlet {
         dispatcher.forward(request, response);
     }
 
+    private void showCheckOut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int customerId = Integer.parseInt(request.getParameter("id"));
+        List<Cart> cartList = cartService.findByCustomerId(customerId);
+        int cartSize = 0;
+        for(Cart cart: cartList){
+            cartSize = cartSize + cart.getQuantity();
+        }
+        request.setAttribute("cartList", cartList);
+        request.setAttribute("size", cartSize);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/user/checkout.jsp");
+        dispatcher.forward(request, response);
+    }
 
+    private void doCheckOut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int customerId = Integer.parseInt(request.getParameter("id"));
+        String email = request.getParameter("email");
+        String name = request.getParameter("name");
+        String address = request.getParameter("address");
+        String phone = request.getParameter("phone");
+        String note = request.getParameter("note");
+        Order order = new Order(customerId, name, address, phone, note);
+        orderService.save(order);
+        int orderId = orderService.getLatestOrder();
+        List<Cart> cartList = cartService.findByCustomerId(customerId);
+        for (Cart cart: cartList){
+            OrderDetail orderDetail = new OrderDetail(orderId, cart.getProductId(), cart.getProductName(), (float) cart.getProductPrice(), (int) cart.getSaleOff(), cart.getQuantity(), cart.getQuantity()*cart.getSaleOff());
+            orderService.insertOrderDetail(orderDetail);
+            cartService.delete(cart.getId());
+        }
+//        RequestDispatcher dispatcher = request.getRequestDispatcher("/user?action=cart");
+//        dispatcher.forward(request, response);
+        response.sendRedirect("/user?action=cart");
+    }
 
 }
