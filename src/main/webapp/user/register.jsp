@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>
         Đăng ký tài khoản
@@ -22,20 +22,20 @@
     <!-- ================= Meta ================== -->
     <meta name="keywords" content="Đăng ký tài khoản, Sunmax, sunmax.bizwebvietnam.net"/>
     <link rel="canonical" href="https://sunmax.bizwebvietnam.net/account/register"/>
-    <meta name='revisit-after' content='1 days' />
-    <meta name="robots" content="noodp,index,follow" />
+    <meta name='revisit-after' content='1 days'/>
+    <meta name="robots" content="noodp,index,follow"/>
     <!-- ================= Favicon ================== -->
 
-    <link rel="icon" href="user/image/favicon.png?1564624970765" type="user/image/x-icon" />
+    <link rel="icon" href="user/image/favicon.png?1564624970765" type="user/image/x-icon"/>
 
     <!-- ================= Google Fonts ================== -->
 
 
+    <link href="user/css/font-Roboto.css?family=Roboto:400,700" rel="stylesheet" type="text/css"/>
 
-    <link href="user/css/font-Roboto.css?family=Roboto:400,700" rel="stylesheet" type="text/css" />
 
-
-    <link href="user/css/font-YesevaOne.css?family=Yeseva+One&amp;subset=cyrillic,cyrillic-ext,latin-ext,vietnamese" rel="stylesheet">
+    <link href="user/css/font-YesevaOne.css?family=Yeseva+One&amp;subset=cyrillic,cyrillic-ext,latin-ext,vietnamese"
+          rel="stylesheet">
     <!-- Facebook Open Graph meta tags -->
 
 
@@ -49,17 +49,18 @@
     <meta property="og:site_name" content="Sunmax">
 
     <!-- Plugin CSS -->
-    <<link rel="stylesheet" href="user/css/themify-icons.css" >
+    <
+    <link rel="stylesheet" href="user/css/themify-icons.css">
     <link rel="stylesheet" href="user/css/all.css">
     <link rel="stylesheet" href="user/css/bootstrap.min.css">
     <link rel="stylesheet" href="user/css/font-awesome.min.css">
-    <link href="user/css/owl.carousel.min.css" rel="stylesheet" type="text/css" />
+    <link href="user/css/owl.carousel.min.css" rel="stylesheet" type="text/css"/>
 
     <!-- Build Main CSS -->
-    <link href="user/css/base.scss.css" rel="stylesheet" type="text/css" />
-    <link href="user/css/style.scss.css" rel="stylesheet" type="text/css" />
-    <link href="user/css/module.scss.css" rel="stylesheet" type="text/css" />
-    <link href="user/css/responsive.scss.css" rel="stylesheet" type="text/css" />
+    <link href="user/css/base.scss.css" rel="stylesheet" type="text/css"/>
+    <link href="user/css/style.scss.css" rel="stylesheet" type="text/css"/>
+    <link href="user/css/module.scss.css" rel="stylesheet" type="text/css"/>
+    <link href="user/css/responsive.scss.css" rel="stylesheet" type="text/css"/>
 
     <!-- Header JS -->
     <script src="js/jquery-2.2.3.min.js" type="text/javascript"></script>
@@ -70,15 +71,10 @@
     <script src="js/customer.js?4" type="text/javascript"></script>
 
 
-
     <!-- Bizweb conter for header -->
 
 
-
-
-
-
-    <link href="user/css/iwish.css" />
+    <link href="user/css/iwish.css"/>
 </head>
 <body>
 <div class="hidden-md hidden-lg opacity_menu"></div>
@@ -188,12 +184,12 @@
                             </li>
 
                             <li>
-                                <a href="/account/register" title="Đăng ký" class="account_a">
+                                <a href="/user?action=register" title="Đăng ký" class="account_a">
                                     <span>Đăng ký</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="/account/login" title="Đăng nhập" class="account_a">
+                                <a href="/user?action=login" title="Đăng nhập" class="account_a">
                                     <span>Đăng nhập</span>
                                 </a>
                             </li>
@@ -213,7 +209,7 @@
                 <div class="content_header">
                     <div class="header-main">
                         <div class="menu-bar-h nav-mobile-button hidden-md hidden-lg">
-                            <a href="#nav-mobile"><img src="user/image/i_menubar.png" alt="menu bar" /></a>
+                            <a href="#nav-mobile"><img src="user/image/i_menubar.png" alt="menu bar"/></a>
                         </div>
                         <div class="col-lg-3 col-md-3">
                             <div class="logo">
@@ -265,10 +261,12 @@
                                                 <div class="search_item active" data-coll-id="0">Tất cả</div>
                                             </div>
                                         </div>
-                                        <input type="search" name="query" value="" placeholder="Bạn muốn tìm gì... " class="input-group-field st-default-search-input search-text" autocomplete="off">
+                                        <input type="search" name="query" value="" placeholder="Bạn muốn tìm gì... "
+                                               class="input-group-field st-default-search-input search-text"
+                                               autocomplete="off">
                                         <span class="input-group-btn">
 			<button class="btn icon-fallback-text">
-				<span class="fa fa-search" ></span>
+				<span class="fa fa-search"></span>
 			</button>
 		</span>
                                     </form>
@@ -280,9 +278,11 @@
                                 <div class="header-acount hidden-lg-down">
                                     <div class="wishlist_header hidden-xs hidden-sm">
 
-                                        <div class="img_hotline"><img alt="Wishlist" src="user/image/icon_phone.png"/></div>
+                                        <div class="img_hotline"><img alt="Wishlist" src="user/image/icon_phone.png"/>
+                                        </div>
 
-                                        <span class="text_hotline">Hotline:</span> <a class="hai01" href="tel:0165939688">0165939688</a>
+                                        <span class="text_hotline">Hotline:</span> <a class="hai01"
+                                                                                      href="tel:0165939688">0165939688</a>
 
 
                                     </div>
@@ -310,10 +310,13 @@
                                                             </li>
                                                             <li class="li-fix-2" style="">
                                                                 <div class="actions">
-                                                                    <a href="/cart" class="btn btn-primary" title="Giỏ hàng">
+                                                                    <a href="/cart" class="btn btn-primary"
+                                                                       title="Giỏ hàng">
                                                                         <span>Giỏ hàng</span>
                                                                     </a>
-                                                                    <a href="/checkout" class="btn btn-checkout btn-gray" title="Thanh toán">
+                                                                    <a href="/checkout"
+                                                                       class="btn btn-checkout btn-gray"
+                                                                       title="Thanh toán">
                                                                         <span>Thanh toán</span>
                                                                     </a>
                                                                 </div>
@@ -343,10 +346,11 @@
                             <form action="/search" method="get" class="input-group search-bar" role="search">
                                 <input type="hidden" name="type" value="product">
 
-                                <input type="search" name="query" value="" placeholder="Tìm kiếm sản phẩm..." class="input-group-field">
+                                <input type="search" name="query" value="" placeholder="Tìm kiếm sản phẩm..."
+                                       class="input-group-field">
                                 <span class="input-group-btn">
 									<button type="submit" class="btn icon-fallback-text">
-										<span class="fa fa-search" ></span>
+										<span class="fa fa-search"></span>
 									</button>
 								</span>
                             </form>
@@ -359,15 +363,14 @@
 
     <div class="bg-header-nav hidden-xs hidden-sm">
         <div class="container relative">
-            <div class= "row row-noGutter-2">
+            <div class="row row-noGutter-2">
                 <nav class="header-nav">
                     <ul class="item_big">
 
 
-
-
                         <li class="nav-item ">
-                            <a class="a-img" href="/phong-khach"><span>Phòng khách</span><i class="fa fa-caret-down"></i></a>
+                            <a class="a-img" href="/phong-khach"><span>Phòng khách</span><i
+                                    class="fa fa-caret-down"></i></a>
                             <ul class="item_small hidden-sm hidden-xs">
 
                                 <li>
@@ -394,14 +397,9 @@
                         </li>
 
 
-
-
-
                         <li class="nav-item ">
                             <a class="a-img" href="/phong-bep"><span>Phòng bếp</span></a>
                         </li>
-
-
 
 
                         <li class="nav-item ">
@@ -409,20 +407,14 @@
                         </li>
 
 
-
-
                         <li class="nav-item ">
                             <a class="a-img" href="/chan-ga-dem"><span>Chăn ga đệm</span></a>
                         </li>
 
 
-
-
                         <li class="nav-item ">
                             <a class="a-img" href="/ngoai-that"><span>Ngoại thất</span></a>
                         </li>
-
-
 
 
                         <li class="nav-item ">
@@ -443,7 +435,7 @@
             <div class="col-xs-12">
                 <ul class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
                     <li class="home">
-                        <a itemprop="url" href="/" ><span itemprop="title">Trang chủ</span></a>
+                        <a itemprop="url" href="/"><span itemprop="title">Trang chủ</span></a>
                         <span><i class="fa">/</i></span>
                     </li>
                     <li><h2>${messages}</h2></li>
@@ -462,15 +454,51 @@
                 <div id="login">
                     <span>Nếu chưa có tài khoản vui lòng đăng ký tại đây</span>
                     <div class="social-login text-left margin-top-15 margin-bottom-0">
-                        <script>function loginFacebook(){var a={client_id:"947410958642584",redirect_uri:"https://store.bizwebvietnam.net/account/facebook_account_callback",state:JSON.stringify({redirect_url:window.location.href}),scope:"email",response_type:"code"},b="https://www.facebook.com/v3.2/dialog/oauth"+encodeURIParams(a,!0);window.location.href=b}function loginGoogle(){var a={client_id:"885968593373-197u9i4pte44vmvcc0j50pvhlfvl27ds.apps.googleusercontent.com",redirect_uri:"https://store.bizwebvietnam.net/account/google_account_callback",scope:"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile",access_type:"online",state:JSON.stringify({redirect_url:window.location.href}),response_type:"code"},b="https://accounts.google.com/o/oauth2/v2/auth"+encodeURIParams(a,!0);window.location.href=b}function encodeURIParams(a,b){var c=[];for(var d in a)if(a.hasOwnProperty(d)){var e=a[d];null!=e&&c.push(encodeURIComponent(d)+"="+encodeURIComponent(e))}return 0==c.length?"":(b?"?":"")+c.join("&")}</script>
-                        <a href="javascript:void(0)" class="social-login--facebook" onclick="loginFacebook()"><img width="129px" height="37px" alt="facebook-login-button" src="user/image/fb-btn.svg"></a>
-                        <a href="javascript:void(0)" class="social-login--google" onclick="loginGoogle()"><img width="129px" height="37px" alt="google-login-button" src="user/image/gp-btn.svg"></a>
-                    </div>
-                    <form accept-charset="UTF-8" action="/customers?action=createUser" method="post" id="customer_register">
-                        <input name="FormType" type="hidden" value="customer_register" />
-                            <input name="utf8" type="hidden" value="true" /><input type="hidden" id="Token-277a2a889fe84b868b8f0829c9c84b1b" name="Token" /><script src="js/api.js"></script>
+                        <script>function loginFacebook() {
+                            var a = {
+                                client_id: "947410958642584",
+                                redirect_uri: "https://store.bizwebvietnam.net/account/facebook_account_callback",
+                                state: JSON.stringify({redirect_url: window.location.href}),
+                                scope: "email",
+                                response_type: "code"
+                            }, b = "https://www.facebook.com/v3.2/dialog/oauth" + encodeURIParams(a, !0);
+                            window.location.href = b
+                        }
 
-                        <div class="form-signup" >
+                        function loginGoogle() {
+                            var a = {
+                                client_id: "885968593373-197u9i4pte44vmvcc0j50pvhlfvl27ds.apps.googleusercontent.com",
+                                redirect_uri: "https://store.bizwebvietnam.net/account/google_account_callback",
+                                scope: "email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile",
+                                access_type: "online",
+                                state: JSON.stringify({redirect_url: window.location.href}),
+                                response_type: "code"
+                            }, b = "https://accounts.google.com/o/oauth2/v2/auth" + encodeURIParams(a, !0);
+                            window.location.href = b
+                        }
+
+                        function encodeURIParams(a, b) {
+                            var c = [];
+                            for (var d in a) if (a.hasOwnProperty(d)) {
+                                var e = a[d];
+                                null != e && c.push(encodeURIComponent(d) + "=" + encodeURIComponent(e))
+                            }
+                            return 0 == c.length ? "" : (b ? "?" : "") + c.join("&")
+                        }</script>
+                        <a href="javascript:void(0)" class="social-login--facebook" onclick="loginFacebook()"><img
+                                width="129px" height="37px" alt="facebook-login-button" src="user/image/fb-btn.svg"></a>
+                        <a href="javascript:void(0)" class="social-login--google" onclick="loginGoogle()"><img
+                                width="129px" height="37px" alt="google-login-button" src="user/image/gp-btn.svg"></a>
+                    </div>
+                    <form accept-charset="UTF-8" action="/customers?action=createUser" method="post"
+                          id="customer_register">
+                        <input name="FormType" type="hidden" value="customer_register"/>
+                        <input name="utf8" type="hidden" value="true"/><input type="hidden"
+                                                                              id="Token-277a2a889fe84b868b8f0829c9c84b1b"
+                                                                              name="Token"/>
+                        <script src="js/api.js"></script>
+
+                        <div class="form-signup">
 
                         </div>
                         <div class="form-signup clearfix">
@@ -478,13 +506,15 @@
                                 <div class="col-md-6">
                                     <fieldset class="form-group">
                                         <label> Name<span class="required">*</span></label>
-                                        <input type="text" class="form-control form-control-lg" value="" name="name" id="lastName"  placeholder="" required >
+                                        <input type="text" class="form-control form-control-lg" value="" name="name"
+                                               id="lastName" placeholder="" required>
                                     </fieldset>
                                 </div>
                                 <div class="col-md-6">
                                     <fieldset class="form-group">
-                                        <label>Birth Day <span class="required">*</span></label>
-                                        <input type="date" class="form-control form-control-lg" value="" name="birth day" id="firstName"  placeholder="" required >
+                                        <label for="birthday">Birth Day <span class="required">*</span></label>
+                                        <input type="date" class="form-control form-control-lg" value="" name="birthday"
+                                               id="birthday" placeholder="" required>
                                     </fieldset>
                                 </div>
                             </div>
@@ -493,14 +523,17 @@
                                     <p class="text-warning">${messengermail}</p>
                                     <fieldset class="form-group">
                                         <label>Email <span class="required">*</span></label>
-                                        <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$" class="form-control form-control-lg" value="" name="email" id="email"  placeholder="" required="">
+                                        <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$"
+                                               class="form-control form-control-lg" value="" name="email" id="email"
+                                               placeholder="" required="">
                                     </fieldset>
                                 </div>
                                 <div class="col-md-6">
 
                                     <fieldset class="form-group">
                                         <label>Password <span class="required">*</span> </label>
-                                        <input type="password" class="form-control form-control-lg" value="" name="password" id="password" placeholder="" required >
+                                        <input type="password" class="form-control form-control-lg" value=""
+                                               name="password" id="password" placeholder="" required>
                                     </fieldset>
                                 </div>
                             </div>
@@ -508,20 +541,24 @@
                                 <div class="col-md-6">
                                     <fieldset class="form-group">
                                         <label>Address <span class="required">*</span></label>
-                                        <input type="text"  class="form-control form-control-lg" value="" name="address" id="123"  placeholder="" required="">
+                                        <input type="text" class="form-control form-control-lg" value="" name="address"
+                                               id="address" placeholder="" required="">
                                     </fieldset>
                                 </div>
                                 <div class="col-md-6">
 
                                     <fieldset class="form-group">
                                         <label>Phone <span class="required">*</span> </label>
-                                        <input type="text" class="form-control form-control-lg" value="" name="phone" id="1234" placeholder="" required >
+                                        <input type="text" class="form-control form-control-lg" value="" name="phone"
+                                               id="phone" placeholder="Phone Number" required>
                                     </fieldset>
                                 </div>
                             </div>
                             <div class="col-xs-12 text-xs-left" style="margin-top:30px; padding: 0">
-                                <button type="summit" value="Đăng ký" class="btn  btn-style btn-primary" onclick="hienthi()">Đăng ký</button>
-                                <a href="login.jsp" class="btn-link-style btn-register" style="margin-left: 20px;text-decoration: underline; ">Đăng nhập</a>
+                                <button type="summit" value="Đăng ký" class="btn  btn-style btn-primary">Đăng ký
+                                </button>
+                                <a href="login.jsp" class="btn-link-style btn-register"
+                                   style="margin-left: 20px;text-decoration: underline; ">Đăng nhập</a>
                             </div>
                         </div>
                     </form>
@@ -531,25 +568,8 @@
     </div>
 </div>
 
-<link href="user/css/bpr-products-module.css?1564624970765" rel="stylesheet" type="text/css" />
+<link href="user/css/bpr-products-module.css?1564624970765" rel="stylesheet" type="text/css"/>
 <div class="bizweb-product-reviews-module"></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <footer class="footer">
@@ -567,12 +587,6 @@
                             <div>
                                 <div class="list-menu">
                                     <div class="widget-ft wg-logo">
-
-
-
-
-
-
 
 
                                         <div class="item">
@@ -596,12 +610,6 @@
                                         </div>
 
 
-
-
-
-
-
-
                                         <div class="item">
                                             <h4 class="title-menu4 icon_none_first">
                                                 <a>Sunmax Đội Cấn</a>
@@ -621,12 +629,6 @@
 
                                             </ul>
                                         </div>
-
-
-
-
-
-
 
 
                                         <div class="item">
@@ -650,9 +652,6 @@
                                         </div>
 
 
-
-
-
                                     </div>
                                 </div>
                             </div>
@@ -661,7 +660,8 @@
                     <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2">
                         <div class="widget-ft">
                             <h4 class="title-menu">
-                                <a role="button" class="collapsed" data-toggle="collapse" aria-expanded="false" data-target="#collapseListMenu02" aria-controls="collapseListMenu02">
+                                <a role="button" class="collapsed" data-toggle="collapse" aria-expanded="false"
+                                   data-target="#collapseListMenu02" aria-controls="collapseListMenu02">
                                     Chính sách <i class="fa fa-plus" aria-hidden="true"></i>
                                 </a>
                             </h4>
@@ -693,7 +693,7 @@
                             </h4>
                             <div class="footer-widget">
                                 <div class="payment">
-                                    <img src="user/image/payment.png" alt="Payment" />
+                                    <img src="user/image/payment.png" alt="Payment"/>
                                 </div>
                             </div>
                             <h4 class="title-menu tittle_time">
@@ -725,15 +725,19 @@
 
                                 <div class="facebook">
                                     <div id="fb-root"></div>
-                                    <script>(function(d, s, id) {
+                                    <script>(function (d, s, id) {
                                         var js, fjs = d.getElementsByTagName(s)[0];
                                         if (d.getElementById(id)) return;
-                                        js = d.createElement(s); js.id = id;
+                                        js = d.createElement(s);
+                                        js.id = id;
                                         js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7&appId=631942543575730";
                                         fjs.parentNode.insertBefore(js, fjs);
                                     }(document, 'script', 'facebook-jssdk'));
                                     </script>
-                                    <div class="fb-page" data-href="https://www.facebook.com/sapo.vn" data-tabs="timeline" data-height="150" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                                    <div class="fb-page" data-href="https://www.facebook.com/sapo.vn"
+                                         data-tabs="timeline" data-height="150" data-small-header="true"
+                                         data-adapt-container-width="true" data-hide-cover="false"
+                                         data-show-facepile="true">
                                         <div class="fb-xfbml-parse-ignore">
                                             <blockquote cite="https://www.facebook.com/sapo.vn">
                                                 <a href="https://www.facebook.com/sapo.vn">Facebook</a>
@@ -753,13 +757,17 @@
                 <div class="inner clearfix">
                     <div class="row tablet">
                         <div id="copyright" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 a-center fot_copyright">
-                            <span class="wsp"><span class="mobile">© Bản quyền thuộc về <b>Jupitter Team</b></span><span class="hidden-xs"> | </span><span class="mobile">Cung cấp bởi <a href="https://www.sapo.vn/?utm_campaign=cpn:site_khach_hang-plm:footer&utm_source=site_khach_hang&utm_medium=referral&utm_content=fm:text_link-km:-sz:&utm_term=&campaign=site_khach_hang/" rel="nofollow" title="Sapo" target="_blank">Sapo</a></span></span>
+                            <span class="wsp"><span class="mobile">© Bản quyền thuộc về <b>Jupitter Team</b></span><span
+                                    class="hidden-xs"> | </span><span class="mobile">Cung cấp bởi <a
+                                    href="https://www.sapo.vn/?utm_campaign=cpn:site_khach_hang-plm:footer&utm_source=site_khach_hang&utm_medium=referral&utm_content=fm:text_link-km:-sz:&utm_term=&campaign=site_khach_hang/"
+                                    rel="nofollow" title="Sapo" target="_blank">Sapo</a></span></span>
 
                         </div>
                     </div>
                 </div>
 
-                <a href="#" id="back-to-top" class="backtop"  title="Lên đầu trang"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
+                <a href="#" id="back-to-top" class="backtop" title="Lên đầu trang"><i class="fa fa-angle-up"
+                                                                                      aria-hidden="true"></i></a>
 
 
             </div>
@@ -773,7 +781,8 @@
 <script src="js/api.jquery.js?4" type="text/javascript"></script>
 <!-- Plugin JS -->
 <script src="js/owl.carousel.min.js" type="text/javascript"></script>
-<script src="js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
 <!-- Add to cart -->
 
 
@@ -782,7 +791,8 @@
     <div class="content">
         <div class="row row-noGutter">
             <div class="col-xl-6 col-xs-12">
-                <div class="btn btn-full btn-primary a-left popup-title"><i class="fa fa-check"></i>Thêm vào giỏ hàng thành công
+                <div class="btn btn-full btn-primary a-left popup-title"><i class="fa fa-check"></i>Thêm vào giỏ hàng
+                    thành công
                 </div>
                 <a href="javascript:void(0)" class="close-window close-popup"><i class="fa fa-close"></i></a>
                 <div class="info clearfix">
@@ -797,7 +807,8 @@
                     </div>
                     <div class="actions">
                         <button class="btn  btn-primary  margin-top-5 btn-continue">Tiếp tục mua hàng</button>
-                        <button class="btn btn-gray margin-top-5" onclick="window.location='/cart'">Kiểm tra giỏ hàng</button>
+                        <button class="btn btn-gray margin-top-5" onclick="window.location='/cart'">Kiểm tra giỏ hàng
+                        </button>
                     </div>
                 </div>
 
@@ -816,11 +827,15 @@
 <div id="popup-cart" class="modal fade" role="dialog">
     <div id="popup-cart-desktop" class="clearfix">
         <div class="title-popup-cart">
-            <img src="user/image/icon-check.png"  alt="Sunmax"/> <span class="your_product">Bạn đã thêm <span class="cart_name_style">[ <span class="cart-popup-name"></span>]</span> vào giỏ hàng thành công ! </span>
+            <img src="user/image/icon-check.png" alt="Sunmax"/> <span class="your_product">Bạn đã thêm <span
+                class="cart_name_style">[ <span
+                class="cart-popup-name"></span>]</span> vào giỏ hàng thành công ! </span>
         </div>
         <div class="wrap_popup">
-            <div class="title-quantity-popup" >
-                <span class="cart_status" onclick="window.location.href='/cart';">Giỏ hàng của bạn có <span class="cart-popup-count"></span> sản phẩm </span> <i class="fa fa-caret-right" aria-hidden="true"></i>
+            <div class="title-quantity-popup">
+                <span class="cart_status" onclick="window.location.href='/cart';">Giỏ hàng của bạn có <span
+                        class="cart-popup-count"></span> sản phẩm </span> <i class="fa fa-caret-right"
+                                                                             aria-hidden="true"></i>
             </div>
             <div class="content-popup-cart">
                 <div class="thead-popup">
@@ -836,13 +851,16 @@
                         <span class="total-p popup-total">Tổng tiền thanh toán: <span class="total-price"></span></span>
                     </div>
                     <div class="tfoot-popup-2 clearfix">
-                        <a class="button checkout_ btn-proceed-checkout" title="Thực hiện thanh toán" href="/checkout"><span>Thực hiện thanh toán</span></a>
-                        <a class="button buy_ btn-continus-h" title="Tiếp tục mua hàng" onclick="$('#popup-cart').modal('hide');"><span><span>Tiếp tục mua hàng</span></span></a>
+                        <a class="button checkout_ btn-proceed-checkout" title="Thực hiện thanh toán"
+                           href="/checkout"><span>Thực hiện thanh toán</span></a>
+                        <a class="button buy_ btn-continus-h" title="Tiếp tục mua hàng"
+                           onclick="$('#popup-cart').modal('hide');"><span><span>Tiếp tục mua hàng</span></span></a>
 
                     </div>
                 </div>
             </div>
-            <a title="Close" class="quickview-close close-window" href="javascript:;" onclick="$('#popup-cart').modal('hide');"><i class="fa  fa-close"></i></a>
+            <a title="Close" class="quickview-close close-window" href="javascript:;"
+               onclick="$('#popup-cart').modal('hide');"><i class="fa  fa-close"></i></a>
         </div>
     </div>
 
@@ -855,7 +873,6 @@
 <!-- Quick view -->
 
 
-
 <div id="quick-view-product" class="quickview-product" style="display:none;">
     <div class="quickview-overlay fancybox-overlay fancybox-overlay-fixed"></div>
     <div class="quick-view-product"></div>
@@ -866,7 +883,9 @@
                 <div class="clearfix image-block">
 					<span class="view_full_size">
 						<a class="img-product" title="" href="#">
-							<img id="product-featured-image-quickview" class="img-responsive product-featured-image-quickview" src="user/image/logo.png" alt="quickview"  />
+							<img id="product-featured-image-quickview"
+                                 class="img-responsive product-featured-image-quickview" src="user/image/logo.png"
+                                 alt="quickview"/>
 						</a>
 					</span>
                     <div class="loading-imgquickview" style="display:none;"></div>
@@ -907,7 +926,8 @@
 
                 </div>
 
-                <form action="/customers?action=create" method="post" enctype="multipart/form-data" class="quick_option variants form-ajaxtocart">
+                <form action="/customers?action=create" method="post" enctype="multipart/form-data"
+                      class="quick_option variants form-ajaxtocart">
 					<span class="price-product-detail hidden" style="opacity: 0;">
 						<span class=""></span>
 					</span>
@@ -915,13 +935,19 @@
                     <div class="clearfix"></div>
                     <div class="quantity_wanted_p">
                         <div class="input_qty_qv">
-                            <a class="btn_num num_1 button button_qty" onClick="var result = document.getElementById('quantity-detail'); var qtyqv = result.value; if( !isNaN( qtyqv ) &amp;&amp; qtyqv &gt; 1 ) result.value--;return false;" >-</a>
-                            <input type="text" id="quantity-detail" name="quantity" value="1" onkeypress='validate(event)' onkeyup="valid(this,'numbers')" onblur="valid(this,'numbers')" class="form-control prd_quantity">
-                            <a class="btn_num num_2 button button_qty" onClick="var result = document.getElementById('quantity-detail'); var qtyqv = result.value; if( !isNaN( qtyqv )) result.value++;return false;" >+</a>
+                            <a class="btn_num num_1 button button_qty"
+                               onClick="var result = document.getElementById('quantity-detail'); var qtyqv = result.value; if( !isNaN( qtyqv ) &amp;&amp; qtyqv &gt; 1 ) result.value--;return false;">-</a>
+                            <input type="text" id="quantity-detail" name="quantity" value="1"
+                                   onkeypress='validate(event)' onkeyup="valid(this,'numbers')"
+                                   onblur="valid(this,'numbers')" class="form-control prd_quantity">
+                            <a class="btn_num num_2 button button_qty"
+                               onClick="var result = document.getElementById('quantity-detail'); var qtyqv = result.value; if( !isNaN( qtyqv )) result.value++;return false;">+</a>
                         </div>
 
                         <div class="button_actions">
-                            <button type="submit" class="btn btn-lg fix_add_to_cart  btn-cart button_cart_buy_enable add_to_cart btn_buy add_to_cart_detail ajax_addtocart" title="Cho vào giỏ hàng">
+                            <button type="submit"
+                                    class="btn btn-lg fix_add_to_cart  btn-cart button_cart_buy_enable add_to_cart btn_buy add_to_cart_detail ajax_addtocart"
+                                    title="Cho vào giỏ hàng">
                                 <span class="btn-content">Thêm vào giỏ hàng</span>
                             </button>
                         </div>
@@ -946,108 +972,102 @@
 <div class='jas-sale-pop flex pf middle-xs'></div>
 
 
-
-
-
-
 <script type="text/javascript">
     $(document).ready(function ($) {
-        if ($(window).width() >= 768 ){
+        if ($(window).width() >= 768) {
             SalesPop();
         }
     });
-    function fisherYates ( myArray ) {
+
+    function fisherYates(myArray) {
         var i = myArray.length, j, temp;
-        if ( i === 0 ) return false;
-        while ( --i ) {
-            j = Math.floor( Math.random() * ( i + 1 ) );
+        if (i === 0) return false;
+        while (--i) {
+            j = Math.floor(Math.random() * (i + 1));
             temp = myArray[i];
             myArray[i] = myArray[j];
             myArray[j] = temp;
         }
     }
+
     var collection = new Array();
 
 
-    collection[0]="<a href='/ban-giam-doc-hoa-phat-ntp1890t1' class='jas-sale-pop-img mr__20'>"
-        +                                    "<img src='user/Product_image/r8abaa3a825074cd8855f02e71efc8.jpg' alt='Bàn giám đốc hòa phát NTP1890T1'/>"
-        +                                "</a>"
-        +                                "<div class='jas-sale-pop-content'>"
+    collection[0] = "<a href='/ban-giam-doc-hoa-phat-ntp1890t1' class='jas-sale-pop-img mr__20'>"
+        + "<img src='user/Product_image/r8abaa3a825074cd8855f02e71efc8.jpg' alt='Bàn giám đốc hòa phát NTP1890T1'/>"
+        + "</a>"
+        + "<div class='jas-sale-pop-content'>"
         //+                                    "<h4 class='fs__12 fwm mg__0'>Sản phẩm</h4>"
-        +                                    "<h3 class='mg__0 mt__5 mb__5 fs__18'>"
-        +                                        "<a href='/ban-giam-doc-hoa-phat-ntp1890t1' title='Bàn giám đốc hòa phát NTP1890T1'>Bàn giám đốc hòa phát NTP1890T1</a>"
-        +                                    "</h3>"
-        +                                    "<span class='fs__12 jas-sale-pop-timeago'></span>"
-        +                                "</div>"
-        +                                "<span class='pe-7s-close pa fs__20'></span>";
+        + "<h3 class='mg__0 mt__5 mb__5 fs__18'>"
+        + "<a href='/ban-giam-doc-hoa-phat-ntp1890t1' title='Bàn giám đốc hòa phát NTP1890T1'>Bàn giám đốc hòa phát NTP1890T1</a>"
+        + "</h3>"
+        + "<span class='fs__12 jas-sale-pop-timeago'></span>"
+        + "</div>"
+        + "<span class='pe-7s-close pa fs__20'></span>";
 
 
-
-    collection[1]="<a href='/ba-n-la-m-vie-c-van-pho-ng-ho-a-pha-t-sv204hl' class='jas-sale-pop-img mr__20'>"
-        +                                    "<img src='user/Product_image/8e72d1df4f29e47c29efe8d482d473.jpg' alt='Bàn làm việc hòa phát SV204HL'/>"
-        +                                "</a>"
-        +                                "<div class='jas-sale-pop-content'>"
+    collection[1] = "<a href='/ba-n-la-m-vie-c-van-pho-ng-ho-a-pha-t-sv204hl' class='jas-sale-pop-img mr__20'>"
+        + "<img src='user/Product_image/8e72d1df4f29e47c29efe8d482d473.jpg' alt='Bàn làm việc hòa phát SV204HL'/>"
+        + "</a>"
+        + "<div class='jas-sale-pop-content'>"
         //+                                    "<h4 class='fs__12 fwm mg__0'>Sản phẩm</h4>"
-        +                                    "<h3 class='mg__0 mt__5 mb__5 fs__18'>"
-        +                                        "<a href='/ba-n-la-m-vie-c-van-pho-ng-ho-a-pha-t-sv204hl' title='Bàn làm việc hòa phát SV204HL'>Bàn làm việc hòa phát SV204HL</a>"
-        +                                    "</h3>"
-        +                                    "<span class='fs__12 jas-sale-pop-timeago'></span>"
-        +                                "</div>"
-        +                                "<span class='pe-7s-close pa fs__20'></span>";
+        + "<h3 class='mg__0 mt__5 mb__5 fs__18'>"
+        + "<a href='/ba-n-la-m-vie-c-van-pho-ng-ho-a-pha-t-sv204hl' title='Bàn làm việc hòa phát SV204HL'>Bàn làm việc hòa phát SV204HL</a>"
+        + "</h3>"
+        + "<span class='fs__12 jas-sale-pop-timeago'></span>"
+        + "</div>"
+        + "<span class='pe-7s-close pa fs__20'></span>";
 
 
-
-    collection[2]="<a href='/bo-vo-chan-ra-goi-cotton-nhung-cao-cap' class='jas-sale-pop-img mr__20'>"
-        +                                    "<img src='user/Product_image/6e4b0d120477740078be37a750e7ba.jpg' alt='Bộ vỏ chăn ra gối cotton nhung'/>"
-        +                                "</a>"
-        +                                "<div class='jas-sale-pop-content'>"
+    collection[2] = "<a href='/bo-vo-chan-ra-goi-cotton-nhung-cao-cap' class='jas-sale-pop-img mr__20'>"
+        + "<img src='user/Product_image/6e4b0d120477740078be37a750e7ba.jpg' alt='Bộ vỏ chăn ra gối cotton nhung'/>"
+        + "</a>"
+        + "<div class='jas-sale-pop-content'>"
         //+                                    "<h4 class='fs__12 fwm mg__0'>Sản phẩm</h4>"
-        +                                    "<h3 class='mg__0 mt__5 mb__5 fs__18'>"
-        +                                        "<a href='/bo-vo-chan-ra-goi-cotton-nhung-cao-cap' title='Bộ vỏ chăn ra gối cotton nhung'>Bộ vỏ chăn ra gối cotton nhung</a>"
-        +                                    "</h3>"
-        +                                    "<span class='fs__12 jas-sale-pop-timeago'></span>"
-        +                                "</div>"
-        +                                "<span class='pe-7s-close pa fs__20'></span>";
+        + "<h3 class='mg__0 mt__5 mb__5 fs__18'>"
+        + "<a href='/bo-vo-chan-ra-goi-cotton-nhung-cao-cap' title='Bộ vỏ chăn ra gối cotton nhung'>Bộ vỏ chăn ra gối cotton nhung</a>"
+        + "</h3>"
+        + "<span class='fs__12 jas-sale-pop-timeago'></span>"
+        + "</div>"
+        + "<span class='pe-7s-close pa fs__20'></span>";
 
 
-
-    collection[3]="<a href='/bo-vo-chan-ga-goi-cotton-ai-cap-hoa-xanh' class='jas-sale-pop-img mr__20'>"
-        +                                    "<img src='user/Product_image/59a01658825c7468aa6a84dac7dc80.jpg' alt='Bộ vỏ chăn ga gối cotton Ai Cập'/>"
-        +                                "</a>"
-        +                                "<div class='jas-sale-pop-content'>"
+    collection[3] = "<a href='/bo-vo-chan-ga-goi-cotton-ai-cap-hoa-xanh' class='jas-sale-pop-img mr__20'>"
+        + "<img src='user/Product_image/59a01658825c7468aa6a84dac7dc80.jpg' alt='Bộ vỏ chăn ga gối cotton Ai Cập'/>"
+        + "</a>"
+        + "<div class='jas-sale-pop-content'>"
         //+                                    "<h4 class='fs__12 fwm mg__0'>Sản phẩm</h4>"
-        +                                    "<h3 class='mg__0 mt__5 mb__5 fs__18'>"
-        +                                        "<a href='/bo-vo-chan-ga-goi-cotton-ai-cap-hoa-xanh' title='Bộ vỏ chăn ga gối cotton Ai Cập'>Bộ vỏ chăn ga gối cotton Ai Cập</a>"
-        +                                    "</h3>"
-        +                                    "<span class='fs__12 jas-sale-pop-timeago'></span>"
-        +                                "</div>"
-        +                                "<span class='pe-7s-close pa fs__20'></span>";
+        + "<h3 class='mg__0 mt__5 mb__5 fs__18'>"
+        + "<a href='/bo-vo-chan-ga-goi-cotton-ai-cap-hoa-xanh' title='Bộ vỏ chăn ga gối cotton Ai Cập'>Bộ vỏ chăn ga gối cotton Ai Cập</a>"
+        + "</h3>"
+        + "<span class='fs__12 jas-sale-pop-timeago'></span>"
+        + "</div>"
+        + "<span class='pe-7s-close pa fs__20'></span>";
 
 
-
-    collection[4]="<a href='/bo-chan-ga-goi-cotton-ai-cap-ma-cat17' class='jas-sale-pop-img mr__20'>"
-        +                                    "<img src='user/Product_image/12684e083a683e4fc1afd8c1688b16.jpg' alt='Bộ chăn ga gối cotton Ai Cập'/>"
-        +                                "</a>"
-        +                                "<div class='jas-sale-pop-content'>"
+    collection[4] = "<a href='/bo-chan-ga-goi-cotton-ai-cap-ma-cat17' class='jas-sale-pop-img mr__20'>"
+        + "<img src='user/Product_image/12684e083a683e4fc1afd8c1688b16.jpg' alt='Bộ chăn ga gối cotton Ai Cập'/>"
+        + "</a>"
+        + "<div class='jas-sale-pop-content'>"
         //+                                    "<h4 class='fs__12 fwm mg__0'>Sản phẩm</h4>"
-        +                                    "<h3 class='mg__0 mt__5 mb__5 fs__18'>"
-        +                                        "<a href='/bo-chan-ga-goi-cotton-ai-cap-ma-cat17' title='Bộ chăn ga gối cotton Ai Cập'>Bộ chăn ga gối cotton Ai Cập</a>"
-        +                                    "</h3>"
-        +                                    "<span class='fs__12 jas-sale-pop-timeago'></span>"
-        +                                "</div>"
-        +                                "<span class='pe-7s-close pa fs__20'></span>";
-
+        + "<h3 class='mg__0 mt__5 mb__5 fs__18'>"
+        + "<a href='/bo-chan-ga-goi-cotton-ai-cap-ma-cat17' title='Bộ chăn ga gối cotton Ai Cập'>Bộ chăn ga gối cotton Ai Cập</a>"
+        + "</h3>"
+        + "<span class='fs__12 jas-sale-pop-timeago'></span>"
+        + "</div>"
+        + "<span class='pe-7s-close pa fs__20'></span>";
 
 
     fisherYates(collection);
+
     function SalesPop() {
         if ($('.jas-sale-pop').length < 0)
             return;
-        setInterval(function() {
-            $('.jas-sale-pop').fadeIn(function() {
+        setInterval(function () {
+            $('.jas-sale-pop').fadeIn(function () {
                 $(this).removeClass('slideUp');
-            }).delay(10000).fadeIn(function() {
-                var randomTime =['1 phút','2 phút','3 phút','4 phút','5 phút','6 phút','7 phút','8 phút','9 phút','10 phút','11 phút','12 phút','13 phút','14 phút','15 phút','16 phút','17 phút','18 phút','19 phút','20 phút','21 phút','22 phút','23 phút','24 phút','25 phút','26 phút','27 phút','28 phút','29 phút','30 phút','31 phút','32 phút','33 phút','34 phút','35 phút','36 phút','37 phút','38 phút','39 phút','40 phút','41 phút','42 phút','43 phút','44 phút','45 phút','46 phút','47 phút','48 phút','49 phút','50 phút','51 phút','52 phút','53 phút','54 phút','55 phút','56 phút','57 phút','58 phút','59 phút',],
+            }).delay(10000).fadeIn(function () {
+                var randomTime = ['1 phút', '2 phút', '3 phút', '4 phút', '5 phút', '6 phút', '7 phút', '8 phút', '9 phút', '10 phút', '11 phút', '12 phút', '13 phút', '14 phút', '15 phút', '16 phút', '17 phút', '18 phút', '19 phút', '20 phút', '21 phút', '22 phút', '23 phút', '24 phút', '25 phút', '26 phút', '27 phút', '28 phút', '29 phút', '30 phút', '31 phút', '32 phút', '33 phút', '34 phút', '35 phút', '36 phút', '37 phút', '38 phút', '39 phút', '40 phút', '41 phút', '42 phút', '43 phút', '44 phút', '45 phút', '46 phút', '47 phút', '48 phút', '49 phút', '50 phút', '51 phút', '52 phút', '53 phút', '54 phút', '55 phút', '56 phút', '57 phút', '58 phút', '59 phút',],
                     randomTimeAgo = Math.floor(Math.random() * randomTime.length),
                     randomProduct = Math.floor(Math.random() * collection.length),
                     randomShowP = collection[randomProduct],
@@ -1055,7 +1075,7 @@
                 $(".jas-sale-pop").html(randomShowP);
                 $('.jas-sale-pop-timeago').text('Một khách hàng vừa đặt mua cách đây ' + TimeAgo);
                 $(this).addClass('slideUp');
-                $('.pe-7s-close').on('click', function() {
+                $('.pe-7s-close').on('click', function () {
                     $('.jas-sale-pop').remove();
                 });
             }).delay(6000);
@@ -1066,11 +1086,6 @@
 
 <!-- Main JS -->
 <script src="js/main.js" type="text/javascript"></script>
-<script>
-    function hienthi(){
-        alert("Đăng ký thành công")
-    }
-</script>
 
 
 <!-- Product detail JS,CSS -->

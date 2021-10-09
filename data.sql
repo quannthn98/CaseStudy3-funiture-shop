@@ -375,8 +375,14 @@ create trigger deleteOrderDetailId
     before delete on orderProduct for each row
     delete from orderDetailProduct where orderDetailProduct.id_Order = old.id;
 
+
 update product set price_sell = 1090000 , price = 1200000 where id = 82;
 update product set price_sell = 2400000 , price = 3000000 where id = 91;
+
+create view customerdetail as
+select Customer.*, cr.id_Role from
+    Customer
+        join Customer_Role CR on Customer.id = CR.id_Customer;
 
 
 

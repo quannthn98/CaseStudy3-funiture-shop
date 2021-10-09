@@ -46,6 +46,15 @@ public class UserServlet extends HttpServlet {
     private INewService newService = new NewService();
     private ICompanyService companyService = new CompanyService();
     ICartService cartService = new CartService();
+    private static Customer customer;
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public static void  setCustomer(Customer customer1) {
+        customer = customer1;
+    }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -79,9 +88,7 @@ public class UserServlet extends HttpServlet {
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/login.jsp");
         try {
             dispatcher.forward(request,response);
-        } catch (ServletException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+        } catch (ServletException | IOException e) {
             e.printStackTrace();
         }
     }
@@ -90,15 +97,27 @@ public class UserServlet extends HttpServlet {
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/register.jsp");
         try {
             dispatcher.forward(request, response);
-        } catch (ServletException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+        } catch (ServletException | IOException e) {
             e.printStackTrace();
         }
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String action = request.getParameter("action");
+        if (action == null){
+            action = "";
+        }
+        switch (action){
+            case "register":{
+                registerUser(request,response);
+                break;
+            }
+        }
+    }
+
+    private void registerUser(HttpServletRequest request, HttpServletResponse response) {
+        String email = request.getParameter("email");
 
     }
 

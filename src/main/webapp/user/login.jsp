@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: quans
@@ -26,7 +27,7 @@
   <meta name="robots" content="noodp,index,follow" />
   <!-- ================= Favicon ================== -->
 
-  <<link rel="icon" href="user/image/favicon.png" type="user/image/x-icon" />
+  <link rel="icon" href="user/image/favicon.png" type="user/image/x-icon" />
 
   <!-- ================= Google Fonts ================== -->
 
@@ -40,14 +41,14 @@
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Đăng nhập tài khoản">
-  <<meta property="og:image" content="user/image/logo.png">
+  <meta property="og:image" content="user/image/logo.png">
   <meta property="og:image:secure_url" content="user/image/logo.png">
 
   <meta property="og:description" content="">
   <meta property="og:url" content="https://sunmax.bizwebvietnam.net/account/login">
   <meta property="og:site_name" content="Sunmax">
 
-  link rel="stylesheet" href="user/css/themify-icons.css" >
+
   <link rel="stylesheet" href="user/css/all.css">
   <link rel="stylesheet" href="user/css/bootstrap.min.css">
   <link rel="stylesheet" href="user/css/font-awesome.min.css">
@@ -186,12 +187,12 @@
               </li>
 
               <li>
-                <a href="/account/register" title="Đăng ký" class="account_a">
+                <a href="/user?action=register" title="Đăng ký" class="account_a">
                   <span>Đăng ký</span>
                 </a>
               </li>
               <li>
-                <a href="/account/login" title="Đăng nhập" class="account_a">
+                <a href="/user?action=login" title="Đăng nhập" class="account_a">
                   <span>Đăng nhập</span>
                 </a>
               </li>
@@ -365,29 +366,13 @@
 
 
             <li class="nav-item ">
-              <a class="a-img" href="/phong-khach"><span>Phòng khách</span><i class="fa fa-caret-down"></i></a>
+              <a class="a-img" href="/phong-khach"><span>Phòng khách</span></a>
               <ul class="item_small hidden-sm hidden-xs">
-
+                <c:forEach items="${categoryList}" var="category">
                 <li>
-                  <a href="/tham-trang-tri" title="">Thảm trang trí </a>
-
+                  <a href="/tham-trang-tri" title="">${category.name}</a>
                 </li>
-
-                <li>
-                  <a href="/ban-lam-viec" title="">Bàn làm việc </a>
-
-                </li>
-
-                <li>
-                  <a href="/ban-tra" title="">Bàn trà </a>
-
-                </li>
-
-                <li>
-                  <a href="/ghe-sofa" title="">Ghế sofa </a>
-
-                </li>
-
+                </c:forEach>
               </ul>
             </li>
 

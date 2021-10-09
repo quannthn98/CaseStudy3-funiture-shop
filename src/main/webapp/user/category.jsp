@@ -159,12 +159,12 @@
                             </li>
 
                             <li>
-                                <a href="/account/register" title="Đăng ký" class="account_a">
+                                <a href="/user?action=register" title="Đăng ký" class="account_a">
                                     <span>Đăng ký</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="/account/login" title="Đăng nhập" class="account_a">
+                                <a href="/user?action=login" title="Đăng nhập" class="account_a">
                                     <span>Đăng nhập</span>
                                 </a>
                             </li>
@@ -500,7 +500,7 @@
 
                                                         <a title="Xem nhanh" href="/user?action=detail&id=${product.id}"
                                                            data-handle="/user?action=detail&id=${product.id}"
-                                                           class="button_wh_40 btn_view right-to quick-view">
+                                                           class="button_wh_40 btn_view right-to ">
                                                             Xem nhanh
                                                         </a>
 
