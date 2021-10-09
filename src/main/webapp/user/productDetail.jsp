@@ -194,12 +194,12 @@
                             </li>
 
                             <li>
-                                <a href="/account/register" title="Đăng ký" class="account_a">
+                                <a href="/user?action=register" title="Đăng ký" class="account_a">
                                     <span>Đăng ký</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="/account/login" title="Đăng nhập" class="account_a">
+                                <a href="/user?action=login" title="Đăng nhập" class="account_a">
                                     <span>Đăng nhập</span>
                                 </a>
                             </li>
@@ -448,12 +448,12 @@
             <div class="col-xs-12">
                 <ul class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
                     <li class="home">
-                        <a itemprop="url" href="/"><span itemprop="title">Trang chủ</span></a>
+                        <a itemprop="url" href="/user"><span itemprop="title">Trang chủ</span></a>
                         <span><i class="fa">/</i></span>
                     </li>
 
                     <li>
-                        <a itemprop="url" href="/ghe-sofa"><span itemprop="title">${product.categoryName}</span></a>
+                        <a itemprop="url" href="/user?aciton=category&categoryId=5"><span itemprop="title">${product.categoryName}</span></a>
                         <span><i class="fa">/</i></span>
                     </li>
 

@@ -338,55 +338,27 @@
             <div class="row row-noGutter-2">
                 <nav class="header-nav">
                     <ul class="item_big">
+                        <c:forEach items="${categoriesTop}" var="categorytop">
+                            <li class="nav-item ">
+                                <a class="a-img" href="user?action=category&categoryId=${categorytop.id}"><span>${categorytop.name}</span>
+                                    <i class="fa fa-caret-down"></i>
+                                </a>
+                                <ul class="item_small hidden-sm hidden-xs">
+                                    <c:forEach items="${categories}" var="category">
+                                        <c:choose>
+                                            <c:when test="${categorytop.location == category.location and categorytop.id != category.id}">
+                                                <li>
+                                                    <a href="user?action=category&categoryId=${category.id}" title="">${category.name}</a>
+                                                </li>
+                                            </c:when>
+                                            <c:otherwise>
 
-
-                        <li class="nav-item ">
-                            <a class="a-img" href="/phong-khach"><span>Phòng khách</span><i
-                                    class="fa fa-caret-down"></i></a>
-                            <ul class="item_small hidden-sm hidden-xs">
-                                <c:forEach items="${categoryList}" var="category">
-                                    <c:if test="${category.location == 1}">
-                                        <li>
-                                            <a href="/user?action=category&categoryId=${category.id}"
-                                               title="">${category.name}</a>
-                                        </li>
-                                    </c:if>
-                                </c:forEach>
-                            </ul>
-                        </li>
-
-
-                        <li class="nav-item ">
-                            <a class="a-img" href="/phong-khach"><span>Phòng Ngủ</span><i
-                                    class="fa fa-caret-down"></i></a>
-                            <ul class="item_small hidden-sm hidden-xs">
-                                <c:forEach items="${categoryList}" var="category">
-                                    <c:if test="${category.location == 3}">
-                                        <li>
-                                            <a href="/user?action=category&categoryId=${category.id}"
-                                               title="">${category.name}</a>
-                                        </li>
-                                    </c:if>
-                                </c:forEach>
-                            </ul>
-                        </li>
-
-
-                        <li class="nav-item ">
-                            <a class="a-img" href="/phong-khach"><span>Phòng Ăn</span><i
-                                    class="fa fa-caret-down"></i></a>
-                            <ul class="item_small hidden-sm hidden-xs">
-                                <c:forEach items="${categoryList}" var="category">
-                                    <c:if test="${category.location == 2}">
-                                        <li>
-                                            <a href="/user?action=category&categoryId=${category.id}"
-                                               title="">${category.name}</a>
-                                        </li>
-                                    </c:if>
-                                </c:forEach>
-                            </ul>
-                        </li>
-
+                                            </c:otherwise>
+                                        </c:choose>
+                                    </c:forEach>
+                                </ul>
+                            </li>
+                        </c:forEach>
                     </ul>
                 </nav>
             </div>
