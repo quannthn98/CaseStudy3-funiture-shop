@@ -71,6 +71,8 @@ public class UserServlet extends HttpServlet {
         }
     }
 
+
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -88,10 +90,11 @@ public class UserServlet extends HttpServlet {
                 }
                 doCheckOut(request, response);
                 break;
+            case "add":
+                addToCart(request, response);
+                break;
         }
     }
-
-
 
     private void showLogin(HttpServletRequest request, HttpServletResponse response) {
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/login.jsp");
@@ -163,6 +166,17 @@ public class UserServlet extends HttpServlet {
         request.setAttribute("cartList", cartList);
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/cart.jsp");
         dispatcher.forward(request, response);
+    }
+
+    private void addToCart(HttpServletRequest request, HttpServletResponse response) throws IOException {
+//        int quantity = Integer.parseInt(request.getParameter("quantity"));
+//        int quantity = 1;
+        String amount = request.getParameter("abcd");
+        int productId = Integer.parseInt(request.getParameter("productId"));
+        int customerId = 3;
+        Cart cart = new Cart(customerId, productId, 1);
+        cartService.save(cart);
+        response.sendRedirect("/user?action=detail&id=" +productId);
     }
 
     private void showCheckOut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -551,54 +551,21 @@
                             </div>
 
                             <div class="form-product col-sm-12">
-                                <form enctype="multipart/form-data" id="add-to-cart-form" action="/cart/add"
+                                <form enctype="multipart/form-data" id="add-to-cart-form" action="/user?action=add&productId=${product.id}"
                                       method="post" class="form-inline margin-bottom-0">
-
-                                    <div class="box-variant clearfix  hidden ">
-
-                                        <fieldset class="form-group">
-                                            <select id="product-selectors" class="form-control form-control-lg"
-                                                    name="variantId" style="display:none">
-
-                                                <option selected="selected" value="14992943">Trắng - 59.000.000₫
-                                                </option>
-
-                                                <option value="14992944">Xám - 56.000.000₫</option>
-
-                                                <option value="14992945">Nâu - 56.000.000₫</option>
-
-                                            </select>
-                                        </fieldset>
-
-                                    </div>
                                     <div class="form-group form_button_details">
-                                        <div class="form_hai ">
-                                            <div class="custom input_number_product custom-btn-number form-control">
-                                                <button class="btn_num num_1 button button_qty"
-                                                        onClick="var result = document.getElementById('qtym'); var qtypro = result.value; if( !isNaN( qtypro ) &amp;&amp; qtypro &gt; 1 ) result.value--;return false;"
-                                                        type="button">-
-                                                </button>
-                                                <input type="text" id="qtym" name="quantity" value="1"
-                                                       onkeyup="valid(this,'numbers')" onkeypress='validate(event)'
-                                                       class="form-control prd_quantity">
-                                                <button class="btn_num num_2 button button_qty"
-                                                        onClick="var result = document.getElementById('qtym'); var qtypro = result.value; if( !isNaN( qtypro )) result.value++;return false;"
-                                                        type="button">+
-                                                </button>
-                                            </div>
+                                            <input type="text" name="abcd">
                                             <div class="button_actions">
-                                                <input class="hidden" type="hidden" name="variantId" value="14992943"/>
-
-
-                                                <button type="submit"
-                                                        class="btn btn-lg  btn-cart button_cart_buy_enable add_to_cart btn_buy"
-                                                        title="Cho vào giỏ hàng">
-                                                    <span class="btn-content">Thêm vào giỏ hàng</span>
+<%--                                                <button type="submit"--%>
+<%--                                                        class="btn btn-lg  btn-cart button_cart_buy_enable add_to_cart btn_buy"--%>
+<%--                                                        title="Cho vào giỏ hàng">--%>
+<%--                                                    Thêm vào giỏ hàng--%>
+<%--                                                </button>--%>
+                                                <button type="submit">
+                                                    Add
                                                 </button>
-
-
                                             </div>
-                                        </div>
+
                                     </div>
                                 </form>
                             </div>
@@ -1116,7 +1083,7 @@
 
                 </div>
 
-                <form action="/cart/add" method="post" enctype="multipart/form-data"
+                <form action="/user?action=add&id=${product.id}" method="get" enctype="multipart/form-data"
                       class="quick_option variants form-ajaxtocart">
 					<span class="price-product-detail hidden" style="opacity: 0;">
 						<span class=""></span>
