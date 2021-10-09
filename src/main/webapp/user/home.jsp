@@ -137,17 +137,6 @@
                 <div class="col-md-6 col-sm-6 d-list col-xs-12 a-right topbar_right">
                     <div class="list-inline a-center f-right">
                         <ul>
-                            <li>
-                                <a href="/tin-tuc" title="Tin tức" class="account_a">
-                                    Tin tức
-                                </a>
-
-                            </li>
-                            <li>
-                                <a href="/lien-he" title="Liên hệ" class="account_a">
-                                    Liên hệ
-                                </a>
-                            </li>
                             <c:choose>
                                 <c:when test="${customer==null}">
                                     <li>
@@ -195,8 +184,8 @@
                             <div class="logo">
 
 
-                                <a href="/" class="logo-wrapper ">
-                                    <img src="user/image/logo.png" alt="logo ">
+                                <a href="/user" class="logo-wrapper ">
+                                    <img src="user/image/${settings.logo}" alt="logo ">
                                 </a>
 
                             </div>
@@ -238,7 +227,7 @@
                                                 <div class="search_item" data-coll-id="1392927">Sản phẩm nổi bật</div>
 
                                                 <div class="liner_search"></div>
-<%--                                                <div class="search_item active" data-coll-id="0">Tất cả</div>--%>
+                                                <div class="search_item active" data-coll-id="0">Tất cả</div>
                                             </div>
                                         </div>
                                         <input type="search" name="query" value="" placeholder="Bạn muốn tìm gì... "
@@ -317,27 +306,54 @@
             <div class="row row-noGutter-2">
                 <nav class="header-nav">
                     <ul class="item_big">
-                        <c:forEach items="${categoriesTop}" var="categorytop">
-                            <li class="nav-item ">
-                                <a class="a-img" href="user?action=category&categoryId=${categorytop.id}"><span>${categorytop.name}</span>
-                                    <i class="fa fa-caret-down"></i>
-                                </a>
-                                <ul class="item_small hidden-sm hidden-xs">
-                                    <c:forEach items="${categories}" var="category">
-                                        <c:choose>
-                                            <c:when test="${categorytop.location == category.location and categorytop.id != category.id}">
-                                                <li>
-                                                    <a href="user?action=category&categoryId=${category.id}" title="">${category.name}</a>
-                                                </li>
-                                            </c:when>
-                                            <c:otherwise>
 
-                                            </c:otherwise>
-                                        </c:choose>
-                                    </c:forEach>
-                                </ul>
-                            </li>
-                        </c:forEach>
+
+                        <li class="nav-item ">
+                            <a class="a-img" href=""><span>Phòng khách</span><i
+                                    class="fa fa-caret-down"></i></a>
+                            <ul class="item_small hidden-sm hidden-xs">
+                                <c:forEach items="${categoryList}" var="category">
+                                    <c:if test="${category.location == 1}">
+                                        <li>
+                                            <a href="/user?action=category&categoryId=${category.id}"
+                                               title="">${category.name}</a>
+                                        </li>
+                                    </c:if>
+                                </c:forEach>
+                            </ul>
+                        </li>
+
+
+                        <li class="nav-item ">
+                            <a class="a-img" href=""><span>Phòng Ngủ</span><i
+                                    class="fa fa-caret-down"></i></a>
+                            <ul class="item_small hidden-sm hidden-xs">
+                                <c:forEach items="${categoryList}" var="category">
+                                    <c:if test="${category.location == 3}">
+                                        <li>
+                                            <a href="/user?action=category&categoryId=${category.id}"
+                                               title="">${category.name}</a>
+                                        </li>
+                                    </c:if>
+                                </c:forEach>
+                            </ul>
+                        </li>
+
+
+                        <li class="nav-item ">
+                            <a class="a-img" href=""><span>Phòng Ăn</span><i
+                                    class="fa fa-caret-down"></i></a>
+                            <ul class="item_small hidden-sm hidden-xs">
+                                <c:forEach items="${categoryList}" var="category">
+                                    <c:if test="${category.location == 2}">
+                                        <li>
+                                            <a href="/user?action=category&categoryId=${category.id}"
+                                               title="">${category.name}</a>
+                                        </li>
+                                    </c:if>
+                                </c:forEach>
+                            </ul>
+                        </li>
 
                     </ul>
                 </nav>
