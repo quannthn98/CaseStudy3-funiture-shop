@@ -1,10 +1,5 @@
 use Project;
 
-delete from product where id>0;
-
-
-
-
 insert into Role(name, status)
 VALUES ('admin', 1);
 insert into Role(name, status)
@@ -55,10 +50,10 @@ insert into orderDetailProduct(price, price_sell, quantity, id_Order, id_Product
 insert into orderDetailProduct(price, price_sell, quantity, id_Order, id_Product) values (15000000,0,1,5,3);
 insert into orderDetailProduct(price, price_sell, quantity, id_Order, id_Product) values (25000000,0,1,6,7);
 
-insert into category(name, location, status) VALUES ('Ghế Sofa',1,1);
-insert into category(name, location, status) VALUES ('Ghế Sofa',1,1);
-insert into category(name, location, status) VALUES ('Kệ, Tủ TV',1,1);
-insert into category(name, location, status) VALUES ('Đồng hồ',1,1);
+insert into Category(name) values ('Ghế Sofa');
+insert into Category(name) values ('Ghế đôn');
+insert into Category(name) values ('Kệ, Tủ TV');
+insert into Category(name) values ('Đồng hồ');
 insert into category(name, location, status) VALUES ('Bàn Ăn',2,1);
 insert into category(name, location, status) VALUES ('Tủ Bếp',2,1);
 insert into category(name, location, status) VALUES ('Bồn Rửa Bát',2,1);
@@ -262,9 +257,6 @@ insert into product(name, image, subimage, price, price_sell, subdescription, de
 VALUES ('Máy Hút Mùi Munchen AMC 8122', 'user/src/img/may-hut-mui-munchen-amc-8122.webp', 'none', 9800000, 7800000,
         'Chiều dài: 700mm, Chiều sâu: 480mm, Chiều cao: 530mm', 'Máy Hút Mùi', 8, 12);
 
-
-
-
 insert into product(name, image, subimage, price, price_sell, subdescription, description, id_Category,
                     id_Brand)
 VALUES ('Giường ngủ thông minh BM4', 'user/src/img/giuong-thong-minh1.webp', 'none', 42500000, 32000000,
@@ -346,8 +338,12 @@ insert into product(name, image, subimage, price, price_sell, subdescription, de
 VALUES ('Đèn ngủ gỗ LUKA cao cấp chuyên dụng', 'user/src/img/den-ngu-cao-cap2.jpeg', 'none', 700000, 550000,
         'Kích thước(DxR): 530x300mm', 'Đèn Ngủ Cao Cấp', 12, 13);
 
-
-drop view fullOrderWithDetails;
+insert into cart(id_Customer, id_Product, quantity) VALUES (5, 58, 1);
+insert into cart(id_Customer, id_Product, quantity) VALUES (6, 68, 1);
+insert into cart(id_Customer, id_Product, quantity) VALUES (7, 59, 1);
+insert into cart(id_Customer, id_Product, quantity) VALUES (8, 69, 1);
+insert into cart(id_Customer, id_Product, quantity) VALUES (9, 80, 1);
+insert into cart(id_Customer, id_Product, quantity) VALUES (10, 81, 1);
 
 create view fullOrderWithDetails as
 select o.id as orderId, o.id_Customer as customerId,p.id as productId, od.nameProduct as productName, od.price, od.price_sell, o.createdDate, od.quantity as quantity, total,  o.status, consignee, addressOrder, numberPhone, note
@@ -355,20 +351,15 @@ from orderDetailProduct od
          join orderProduct o on o.id = od.id_Order
          join Product p on P.id = od.id_Product;
 
+
 create view totalPaymentByOrder as
-select orderId, sum((price*(1-fullOrderWithDetails.price_sell/100))*quantity) as payment from fullOrderWithDetails group by orderId;
+select orderId, sum(price_sell*fullOrderWithDetails.quantity) as payment from fullOrderWithDetails group by orderId;
 
 create view productDetail as
 select p.*, B.name as brand, C.name as category, C.location
 from Product p
          join Brand B on B.id = p.id_Brand
          join Category C on C.id = p.id_Category;
-
-create view cartDetail as
-select c.id as cartId, c.id_Customer as customerId, c.id_Product as productId, c.quantity, P.image, P.name, P.price, P.price_sell
-from cart c
-         join Customer C2 on C2.id = c.id_Customer
-         join Product P on P.id = c.id_Product;
 
 create trigger deleteCustomerRole
     before delete on Customer for each row
@@ -382,14 +373,15 @@ create trigger deleteOrderDetailId
     before delete on orderProduct for each row
     delete from orderDetailProduct where orderDetailProduct.id_Order = old.id;
 
+create view cartDetail as
+select c.id as cartId, c.id_Customer as customerId, c.id_Product as productId, c.quantity, P.image, P.name, P.price, P.price_sell
+from cart c
+         join Customer C2 on C2.id = c.id_Customer
+         join Product P on P.id = c.id_Product;
 
 create view customerdetail as
 select Customer.*, cr.id_Role from
     Customer
         join Customer_Role CR on Customer.id = CR.id_Customer;
 
-
-
-
-
-
+select * from totalpaymentbyorder

@@ -119,6 +119,7 @@ public class UserServlet extends HttpServlet {
     }
 
     private void showLogin(HttpServletRequest request, HttpServletResponse response) {
+        getSiteSetting(request);
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/login.jsp");
         try {
             dispatcher.forward(request,response);
@@ -128,6 +129,7 @@ public class UserServlet extends HttpServlet {
     }
 
     private void showRegister(HttpServletRequest request, HttpServletResponse response) {
+        getSiteSetting(request);
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/register.jsp");
         try {
             dispatcher.forward(request, response);
@@ -141,6 +143,7 @@ public class UserServlet extends HttpServlet {
     }
 
     private void showProductDetail(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        getSiteSetting(request);
         int productId = Integer.parseInt(request.getParameter("id"));
         Product product = productDao.findById(productId);
         request.setAttribute("product", product);
@@ -155,35 +158,9 @@ public class UserServlet extends HttpServlet {
         dispatcher.forward(request, response);
     }
 
-    private void getSiteSetting(HttpServletRequest request) {
-        Customer customer = getCustomer();
-        int cartSize;
-        if(customer == null){
-            cartSize = 0;
-        } else {
-            List<Cart> cartList = cartService.findByCustomerId(customer.getId());
-            cartSize = cartList.size();
-        }
-        List<Banner> banners;
-        banners = bannerService.getAll();
-        List<Company> companies;
-        companies = companyService.getAll();
-        Settings settings = settingsService.getTop();
-        List<News> news;
-        news = newService.getAll();
-        List<Category> categories = categoryDao.getAll();
-        List<Category> categoriesTop = categoryDao.getUniqueLocation();
-        request.setAttribute("size", cartSize);
-        request.setAttribute("customer", customer);
-        request.setAttribute("banners", banners);
-        request.setAttribute("companies", companies);
-        request.setAttribute("settings", settings);
-        request.setAttribute("news", news);
-        request.setAttribute("categories", categories);
-        request.setAttribute("categoriesTop", categoriesTop);
-    }
 
     private void showCategory(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        getSiteSetting(request);
         String categoryId = request.getParameter("categoryId");
         int categoryId1;
         if (categoryId == null){
@@ -201,6 +178,7 @@ public class UserServlet extends HttpServlet {
     }
 
     private void showCart(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        getSiteSetting(request);
         Customer customer = getCustomer();
         if(customer == null){
             response.sendRedirect("/user?action=login");
@@ -213,6 +191,7 @@ public class UserServlet extends HttpServlet {
     }
 
     private void addToCart(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        getSiteSetting(request);
         int productId = Integer.parseInt(request.getParameter("productId"));
         int customerId = customer.getId();
         Cart cart = new Cart(customerId, productId, 1);
@@ -221,6 +200,7 @@ public class UserServlet extends HttpServlet {
     }
 
     private void showCheckOut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        getSiteSetting(request);
         int customerId = Integer.parseInt(request.getParameter("id"));
         List<Cart> cartList = cartService.findByCustomerId(customerId);
         int cartSize = 0;
@@ -253,5 +233,39 @@ public class UserServlet extends HttpServlet {
 //        dispatcher.forward(request, response);
         response.sendRedirect("/user?action=cart");
     }
+
+    private void getSiteSetting(HttpServletRequest request) {
+        Customer customer = getCustomer();
+        int cartSize;
+        if(customer == null){
+            cartSize = 0;
+        } else {
+            List<Cart> cartList = cartService.findByCustomerId(customer.getId());
+            cartSize = cartList.size();
+        }
+
+        List<Banner> banners;
+        banners = bannerService.getAll();
+
+        List<Company> companies;
+        companies = companyService.getAll();
+
+        Settings settings = settingsService.getTop();
+        List<News> news;
+        news = newService.getAll();
+
+        List<Category> categories = categoryDao.getAll();
+        List<Category> categoriesTop = categoryDao.getUniqueLocation();
+
+        request.setAttribute("size", cartSize);
+        request.setAttribute("customer", customer);
+        request.setAttribute("banners", banners);
+        request.setAttribute("companies", companies);
+        request.setAttribute("settings", settings);
+        request.setAttribute("news", news);
+        request.setAttribute("categories", categories);
+        request.setAttribute("categoriesTop", categoriesTop);
+    }
+
 
 }
