@@ -554,18 +554,15 @@
                                 <form enctype="multipart/form-data" id="add-to-cart-form" action="/user?action=add&productId=${product.id}"
                                       method="post" class="form-inline margin-bottom-0">
                                     <div class="form-group form_button_details">
-                                            <input type="text" name="abcd">
+                                        <div class="form_hai ">
                                             <div class="button_actions">
-<%--                                                <button type="submit"--%>
-<%--                                                        class="btn btn-lg  btn-cart button_cart_buy_enable add_to_cart btn_buy"--%>
-<%--                                                        title="Cho vào giỏ hàng">--%>
-<%--                                                    Thêm vào giỏ hàng--%>
-<%--                                                </button>--%>
-                                                <button type="submit">
-                                                    Add
+                                                <button type="submit"
+                                                        class="btn btn-lg button_cart_buy_enable btn_buy"
+                                                        title="Cho vào giỏ hàng">
+                                                    Thêm vào giỏ hàng
                                                 </button>
                                             </div>
-
+                                        </div>
                                     </div>
                                 </form>
                             </div>

@@ -169,9 +169,6 @@ public class UserServlet extends HttpServlet {
     }
 
     private void addToCart(HttpServletRequest request, HttpServletResponse response) throws IOException {
-//        int quantity = Integer.parseInt(request.getParameter("quantity"));
-//        int quantity = 1;
-        String amount = request.getParameter("abcd");
         int productId = Integer.parseInt(request.getParameter("productId"));
         int customerId = 3;
         Cart cart = new Cart(customerId, productId, 1);
