@@ -104,22 +104,22 @@ public class UserServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String action = request.getParameter("action");
-        if (action == null){
-            action = "";
-        }
-        switch (action){
-            case "register":{
-                registerUser(request,response);
-                break;
-            }
-        }
+//        String action = request.getParameter("action");
+//        if (action == null){
+//            action = "";
+//        }
+//        switch (action){
+//            case "register":{
+//                registerUser(request,response);
+//                break;
+//            }
+//        }
     }
 
-    private void registerUser(HttpServletRequest request, HttpServletResponse response) {
-        String email = request.getParameter("email");
-
-    }
+//    private void registerUser(HttpServletRequest request, HttpServletResponse response) {
+//        String email = request.getParameter("email");
+//
+//    }
 
     private void showProductDetail(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int productId = Integer.parseInt(request.getParameter("id"));
