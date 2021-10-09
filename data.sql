@@ -4,6 +4,7 @@ delete from product where id>0;
 
 
 
+
 insert into Role(name, status)
 VALUES ('admin', 1);
 insert into Role(name, status)
@@ -377,6 +378,7 @@ create trigger deleteOrderDetailId
 
 update product set price_sell = 1090000 , price = 1200000 where id = 82;
 update product set price_sell = 2400000 , price = 3000000 where id = 91;
+
 
 
 

@@ -85,7 +85,7 @@
             <ul class="ct-mobile">
                 <c:forEach items="${categories}" var="category">
                     <li class="level0 level-top parent level_ico">
-                        <a href="/phong-khach">${category.name}</a>
+                        <a href="user?action=category&categoryid=${category.id}">${category.name}</a>
 
                         <i class="ti-plus hide_close"></i>
                         <ul class="level0 sub-menu" style="display:none;">
@@ -334,7 +334,7 @@
                     <ul class="item_big">
                         <c:forEach items="${categoriesTop}" var="categorytop">
                             <li class="nav-item ">
-                                <a class="a-img" href="/phong-khach"><span>${categorytop.name}</span>
+                                <a class="a-img" href="user?action=category&categoryId=${categorytop.id}"><span>${categorytop.name}</span>
                                     <i class="fa fa-caret-down"></i>
                                 </a>
                                 <ul class="item_small hidden-sm hidden-xs">
@@ -342,7 +342,7 @@
                                         <c:choose>
                                             <c:when test="${categorytop.location == category.location and categorytop.id != category.id}">
                                                 <li>
-                                                    <a href="/tham-trang-tri" title="">${category.name}</a>
+                                                    <a href="user?action=category&categoryId=${category.id}" title="">${category.name}</a>
                                                 </li>
                                             </c:when>
                                             <c:otherwise>
