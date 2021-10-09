@@ -280,7 +280,7 @@
                                         </div>
 
                                         <span class="text_hotline">Hotline:</span> <a class="hai01"
-                                                                                      href="tel:0165939688">0165939688</a>
+                                                                                      href="tel:${settings.hotline}">${settings.hotline}</a>
 
 
                                     </div>
@@ -473,17 +473,18 @@
                         </div>
                         <div class="cart-tbody">
                             <c:set var="total" value="${0}"/>
+                            <c:set var="customerId" value="${0}"/>
                             <c:forEach items="${cartList}" var="cart">
                                 <div class="item-cart productid-14992946">
                                     <div style="width: 17%" class="image"><a class="product-image"
                                                                              title="Sofa bộ Italia - Canova - Trắng"
-                                                                             href="/sofa-da-ma-ntx1824"><img width="75"
+                                                                             href="/user?action=detail&id=${cart.productId}"><img width="75"
                                                                                                              height="auto"
                                                                                                              alt="Sofa bộ Italia - Canova - Trắng"
                                                                                                              src="${cart.image}"></a>
                                     </div>
                                     <div style="width: 25%" class="a-center prd_name"><h2 class="product-name"><a
-                                            class="text2line" href="/sofa-da-ma-ntx1824">${cart.productName}</a></h2>
+                                            class="text2line" href="/user?action=detail&id=${cart.productId}">${cart.productName}</a></h2>
                                     </div>
                                     <div style="width: 13%" class="a-center">
                                         <span class="item-price"> <span class="price"><fmt:formatNumber type="number" maxFractionDigits = "0"  value="${cart.productPrice}"/>₫</span></span>
@@ -514,7 +515,8 @@
                                                               href="/cart?action=delete&id=${cart.id}" data-id="14992946"><span><i class="fa fa-times" ></i></span></a>
                                     </div>
                                 </div>
-                                <c:set var="total" value="${total + cart.saleOff}"/>
+                                <c:set var="total" value="${total + cart.saleOff*cart.quantity}"/>
+                                <c:set var="customerId" value="${cart.customerId}"/>
                             </c:forEach>
                         </div>
 
@@ -543,10 +545,11 @@
                                         <button class="btn btn-white f-left" title="Tiếp tục mua hàng" type="button"
                                                 onclick="window.location.href='/user'"><span>Tiếp tục mua hàng</span>
                                         </button>
-                                        <button class="btn btn-primary button btn-proceed-checkout f-right"
-                                                title="Thực hiện thanh toán" type="button"
-                                                onclick="window.location.href='/checkout'">
+                                        <a href="/user?action=checkout&id=${customerId}">
+                                            <button class="btn btn-primary button btn-proceed-checkout f-right" title="Thực hiện thanh toán" type="submit"
                                             <span>Thực hiện thanh toán</span></button>
+                                        </a>
+
                                     </li>
                                 </ul>
                             </div>
@@ -742,13 +745,13 @@
                                         fjs.parentNode.insertBefore(js, fjs);
                                     }(document, 'script', 'facebook-jssdk'));
                                     </script>
-                                    <div class="fb-page" data-href="https://www.facebook.com/sapo.vn"
+                                    <div class="fb-page" data-href="${settings.pageFacebook}"
                                          data-tabs="timeline" data-height="150" data-small-header="true"
                                          data-adapt-container-width="true" data-hide-cover="false"
                                          data-show-facepile="true">
                                         <div class="fb-xfbml-parse-ignore">
-                                            <blockquote cite="https://www.facebook.com/sapo.vn">
-                                                <a href="https://www.facebook.com/sapo.vn">Facebook</a>
+                                            <blockquote cite="${settings.pageFacebook}">
+                                                <a href="${settings.pageFacebook}">Facebook</a>
                                             </blockquote>
                                         </div>
                                     </div>

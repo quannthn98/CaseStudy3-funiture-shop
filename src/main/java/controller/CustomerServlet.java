@@ -11,6 +11,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
+import java.sql.Date;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -197,10 +198,9 @@ public class CustomerServlet extends HttpServlet {
 
         if (isLoggedIn){
             if(customer.getRole() == 1 ){
-            RequestDispatcher dispatcher = request.getRequestDispatcher("/customers");
                 try {
-                    dispatcher.forward(request,response);
-                } catch (ServletException | IOException e) {
+                    response.sendRedirect("/customers");
+                } catch (IOException e) {
                     e.printStackTrace();
                 }
             }
@@ -257,7 +257,7 @@ public class CustomerServlet extends HttpServlet {
 
     private Customer getCustomerInformation(HttpServletRequest request){
         String name = request.getParameter("name");
-        String birthday = request.getParameter("birthday");
+        String birthday = String.valueOf(Date.valueOf(request.getParameter("birthday")));
         String address = request.getParameter("address");
         String phone = request.getParameter("phone");
         String email = request.getParameter("email");

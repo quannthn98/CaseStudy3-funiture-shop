@@ -15,11 +15,16 @@ public interface IOrderDao extends IGeneralDao<Order> {
 
     HashMap<Integer, Double> getPaymentByOrder();
 
-   HashMap<Integer, Double> findOrderByPayment(double targetValue, String direction);
+    HashMap<Integer, Double> findOrderByPayment(double targetValue, String direction);
 
     boolean updateSaleOff(int saleOff, int orderId);
 
     int getSaleOffByOrder(int id);
 
     int countRecord();
+
+    int getLatestOrder();
+
+    boolean insertOrderDetail(OrderDetail orderDetail);
+
 }

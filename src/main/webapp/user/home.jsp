@@ -83,61 +83,38 @@
 
             </ul>
             <ul class="ct-mobile">
+                <c:forEach items="${categories}" var="category">
+                    <li class="level0 level-top parent level_ico">
+                        <a href="user?action=category&categoryid=${category.id}">${category.name}</a>
 
-                <li class="level0 level-top parent level_ico">
-                    <a href="/phong-khach">Phòng khách</a>
+                        <i class="ti-plus hide_close"></i>
+                        <ul class="level0 sub-menu" style="display:none;">
 
-                    <i class="ti-plus hide_close"></i>
-                    <ul class="level0 sub-menu" style="display:none;">
+                            <li class="level1">
+                                <a href="/tham-trang-tri"><span>Thảm trang trí</span></a>
 
-                        <li class="level1">
-                            <a href="/tham-trang-tri"><span>Thảm trang trí</span></a>
+                            </li>
 
-                        </li>
+                            <li class="level1">
+                                <a href="/ban-lam-viec"><span>Bàn làm việc</span></a>
 
-                        <li class="level1">
-                            <a href="/ban-lam-viec"><span>Bàn làm việc</span></a>
+                            </li>
 
-                        </li>
+                            <li class="level1">
+                                <a href="/ban-tra"><span>Bàn trà</span></a>
 
-                        <li class="level1">
-                            <a href="/ban-tra"><span>Bàn trà</span></a>
+                            </li>
 
-                        </li>
+                            <li class="level1">
+                                <a href="/ghe-sofa"><span>Ghế sofa</span></a>
 
-                        <li class="level1">
-                            <a href="/ghe-sofa"><span>Ghế sofa</span></a>
+                            </li>
 
-                        </li>
+                        </ul>
 
-                    </ul>
+                    </li>
+                </c:forEach>
 
-                </li>
-
-                <li class="level0 level-top parent level_ico">
-                    <a href="/phong-bep">Phòng bếp</a>
-
-                </li>
-
-                <li class="level0 level-top parent level_ico">
-                    <a href="/phong-lam-viec">Phòng làm việc</a>
-
-                </li>
-
-                <li class="level0 level-top parent level_ico">
-                    <a href="/chan-ga-dem">Chăn ga đệm</a>
-
-                </li>
-
-                <li class="level0 level-top parent level_ico">
-                    <a href="/ngoai-that">Ngoại thất</a>
-
-                </li>
-
-                <li class="level0 level-top parent level_ico">
-                    <a href="/do-trang-tri">Đồ trang trí</a>
-
-                </li>
 
             </ul>
         </div>
@@ -152,10 +129,11 @@
                 <div class="col-md-6 col-sm-6 col-xs-12">
                     <ul class="list-inline topbar_left hidden-sm hidden-xs">
                         <li>
-                            <a class="welcome_text">Chào mừng bạn đến với hệ thống siêu thị nội thất Sunmax !</a>
+                            <a class="welcome_text">${settings.title}</a>
                         </li>
                     </ul>
                 </div>
+
                 <div class="col-md-6 col-sm-6 d-list col-xs-12 a-right topbar_right">
                     <div class="list-inline a-center f-right">
                         <ul>
@@ -163,24 +141,44 @@
                                 <a href="/tin-tuc" title="Tin tức" class="account_a">
                                     Tin tức
                                 </a>
+
                             </li>
                             <li>
                                 <a href="/lien-he" title="Liên hệ" class="account_a">
                                     Liên hệ
                                 </a>
                             </li>
-                            <li>
-                                <a href="/user?action=register" title="Đăng ký" class="account_a">
-                                    <span>Đăng ký</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/user?action=login" title="Đăng nhập" class="account_a">
-                                    <span>Đăng nhập</span>
-                                </a>
-                            </li>
+                            <c:choose>
+                                <c:when test="${customer==null}">
+                                    <li>
+                                        <a href="/user?action=register" title="Đăng ký" class="account_a">
+                                            <span>Đăng ký</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/user?action=login" title="Đăng nhập" class="account_a">
+                                            <span>Đăng nhập</span>
+                                        </a>
+                                    </li>
+                                </c:when>
+                                <c:otherwise>
+                                    <li>
+                                        <a class="account_a">
+                                            <span>${customer.email}</span>
+
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/user?action=logout" title="Đăng nhập" class="account_a">
+                                            <span>Đăng xuất</span>
+                                        </a>
+                                    </li>
+                                </c:otherwise>
+                            </c:choose>
                         </ul>
                     </div>
+
+
                 </div>
             </div>
         </div>
@@ -197,7 +195,7 @@
                             <div class="logo">
 
 
-                                <a href="/user" class="logo-wrapper ">
+                                <a href="/" class="logo-wrapper ">
                                     <img src="user/image/logo.png" alt="logo ">
                                 </a>
 
@@ -240,7 +238,7 @@
                                                 <div class="search_item" data-coll-id="1392927">Sản phẩm nổi bật</div>
 
                                                 <div class="liner_search"></div>
-                                                <div class="search_item active" data-coll-id="0">Tất cả</div>
+<%--                                                <div class="search_item active" data-coll-id="0">Tất cả</div>--%>
                                             </div>
                                         </div>
                                         <input type="search" name="query" value="" placeholder="Bạn muốn tìm gì... "
@@ -264,48 +262,17 @@
                                         </div>
 
                                         <span class="text_hotline">Hotline:</span> <a class="hai01"
-                                                                                      href="tel:0165939688">0165939688</a>
+                                                                                      href="tel:${settings.hotline}">${settings.hotline}</a>
 
 
                                     </div>
                                     <div class="top-cart-contain f-right hidden-xs hidden-sm visible-md visible-lg">
                                         <div class="mini-cart text-xs-center">
                                             <div class="heading-cart">
-                                                <a class="bg_cart" href="/cart" title="Giỏ hàng">
+                                                <a class="bg_cart" href="/user?action=cart" title="Giỏ hàng">
                                                     <img alt="Giỏ hàng" src="user/image/icon_hovercart.png"/>
-                                                    <span class="text-giohang hidden-xs">Giỏ hàng:</span>
-                                                    (<span class="count_item count_item_pr">0</span>)
+                                                    <span class="text-giohang hidden-xs">Giỏ hàng</span>
                                                 </a>
-                                            </div>
-                                            <div class="top-cart-content">
-                                                <ul id="cart-sidebar" class="mini-products-list count_li">
-                                                    <li class="list-item">
-                                                        <ul></ul>
-                                                    </li>
-                                                    <li class="action">
-                                                        <ul>
-                                                            <li class="li-fix-1">
-                                                                <div class="top-subtotal">
-                                                                    Tổng tiền thanh toán:
-                                                                    <span class="price"></span>
-                                                                </div>
-                                                            </li>
-                                                            <li class="li-fix-2" style="">
-                                                                <div class="actions">
-                                                                    <a href="/cart" class="btn btn-primary"
-                                                                       title="Giỏ hàng">
-                                                                        <span>Giỏ hàng</span>
-                                                                    </a>
-                                                                    <a href="/checkout"
-                                                                       class="btn btn-checkout btn-gray"
-                                                                       title="Thanh toán">
-                                                                        <span>Thanh toán</span>
-                                                                    </a>
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
                                             </div>
                                         </div>
                                     </div>
@@ -348,61 +315,27 @@
             <div class="row row-noGutter-2">
                 <nav class="header-nav">
                     <ul class="item_big">
+                        <c:forEach items="${categoriesTop}" var="categorytop">
+                            <li class="nav-item ">
+                                <a class="a-img" href="user?action=category&categoryId=${categorytop.id}"><span>${categorytop.name}</span>
+                                    <i class="fa fa-caret-down"></i>
+                                </a>
+                                <ul class="item_small hidden-sm hidden-xs">
+                                    <c:forEach items="${categories}" var="category">
+                                        <c:choose>
+                                            <c:when test="${categorytop.location == category.location and categorytop.id != category.id}">
+                                                <li>
+                                                    <a href="user?action=category&categoryId=${category.id}" title="">${category.name}</a>
+                                                </li>
+                                            </c:when>
+                                            <c:otherwise>
 
-
-                        <li class="nav-item ">
-                            <a class="a-img" href="/phong-khach"><span>Phòng khách</span><i
-                                    class="fa fa-caret-down"></i></a>
-                            <ul class="item_small hidden-sm hidden-xs">
-
-                                <li>
-                                    <a href="/tham-trang-tri" title="">Thảm trang trí </a>
-
-                                </li>
-
-                                <li>
-                                    <a href="/ban-lam-viec" title="">Bàn làm việc </a>
-
-                                </li>
-
-                                <li>
-                                    <a href="/ban-tra" title="">Bàn trà </a>
-
-                                </li>
-
-                                <li>
-                                    <a href="/ghe-sofa" title="">Ghế sofa </a>
-
-                                </li>
-
-                            </ul>
-                        </li>
-
-
-                        <li class="nav-item ">
-                            <a class="a-img" href="/phong-bep"><span>Phòng bếp</span></a>
-                        </li>
-
-
-                        <li class="nav-item ">
-                            <a class="a-img" href="/phong-lam-viec"><span>Phòng làm việc</span></a>
-                        </li>
-
-
-                        <li class="nav-item ">
-                            <a class="a-img" href="/chan-ga-dem"><span>Chăn ga đệm</span></a>
-                        </li>
-
-
-                        <li class="nav-item ">
-                            <a class="a-img" href="/ngoai-that"><span>Ngoại thất</span></a>
-                        </li>
-
-
-                        <li class="nav-item ">
-                            <a class="a-img" href="/do-trang-tri"><span>Đồ trang trí</span></a>
-                        </li>
-
+                                            </c:otherwise>
+                                        </c:choose>
+                                    </c:forEach>
+                                </ul>
+                            </li>
+                        </c:forEach>
 
                     </ul>
                 </nav>
@@ -418,20 +351,15 @@
 <section class="awe-section-1">
     <div class="home-slider owl-carousel owl-theme not-aweowl">
 
-
-        <div class="item">
-            <a href="#" class="clearfix">
-                <img src="user/image/slider_1.png" alt="Slider 1">
-            </a>
-        </div>
-
-
-        <div class="item">
-            <a href="#" class="clearfix">
-                <img src="user/image/slider_2.png" alt="Slider 2">
-            </a>
-        </div>
+<c:forEach items="${banners}" var="banner">
+    <div class="item">
+        <a href="#" class="clearfix">
+            <img src="user/image/${banner.image}" alt="Slider 1">
+        </a>
     </div>
+</c:forEach>
+
+    </div><!-- /.products -->
 </section>
 
 
@@ -1909,7 +1837,7 @@
                                                 <a class="image_link display_flex" href="/giuong-ngu-ma-gn37"
                                                    title="Giường ngủ mã GN37">
                                                     <img src="user/image/product-1.png"
-                                                         data-lazyload="user/Product_image/7.png?v=1513589843527"
+                                                         data-lazyload="user/Product_image/7.png?v=1513589850593"
                                                          alt="Giường ngủ mã GN37">
                                                 </a>
 
@@ -3255,7 +3183,7 @@
                                                 <a class="image_link display_flex" href="/giuong-ngu-ma-gn37"
                                                    title="Giường ngủ mã GN37">
                                                     <img src="user/image/product-1.png"
-                                                         data-lazyload="user/Product_image/7.png?v=1513589843527"
+                                                         data-lazyload="user/Product_image/7.png?v=1513589850593"
                                                          alt="Giường ngủ mã GN37">
                                                 </a>
 
@@ -3366,14 +3294,14 @@
                             <span> Hotline:</span>
 
 
-                            <a href="tel:0165939688">0165939688</a>
+                            <a href="tel:${settings.hotline}">${settings.hotline}</a>
 
 
                             <span class="hidden-sm">-</span>
                             <span class="email_h">
 							<span> Email:</span>
 
-							<a href="mailto:jupittertheme@gmail.com">jupittertheme@gmail.com</a>
+							<a href="mailto:${settings.email}">${settings.email}</a>
 
 
 						</span>
@@ -6652,195 +6580,53 @@
                                 <div class="wrap_owl_blog owl-carousel" data-lg-items="2" data-md-items="2"
                                      data-sm-items="1" data-xs-items="1" data-height="true" data-dot="false"
                                      data-nav="true">
+                                    <c:forEach items="${news}" var="news">
+                                        <div class="blog_items">
+                                            <div class="myblog"
+                                                 onclick="window.location.href='/nhung-phong-cach-trang-tri-nha-dep-1';">
+                                                <div class="image-blog-left">
 
-                                    <div class="blog_items">
-                                        <div class="myblog"
-                                             onclick="window.location.href='/nhung-phong-cach-trang-tri-nha-dep-1';">
-                                            <div class="image-blog-left">
+                                                    <a href="/nhung-phong-cach-trang-tri-nha-dep-1">
+                                                        <picture>
+                                                            <source media="(max-width: 375px)"
+                                                                    srcset="user/articles/1f9368946b9de4d46bd5377d4386fe-f0393dfd-bb85-4be4-9c7e-757d0e70fa63.jpg">
+                                                            <source media="(min-width: 376px) and (max-width: 767px)"
+                                                                    srcset="user/articles/1f9368946b9de4d46bd5377d4386fe-f0393dfd-bb85-4be4-9c7e-757d0e70fa63.jpg">
+                                                            <source media="(min-width: 768px) and (max-width: 1023px)"
+                                                                    srcset="user/articles/1f9368946b9de4d46bd5377d4386fe-f0393dfd-bb85-4be4-9c7e-757d0e70fa63.jpg">
+                                                            <source media="(min-width: 1024px) and (max-width: 1199px)"
+                                                                    srcset="user/articles/1f9368946b9de4d46bd5377d4386fe-f0393dfd-bb85-4be4-9c7e-757d0e70fa63.jpg">
+                                                            <source media="(min-width: 1200px)"
+                                                                    srcset="user/articles/1f9368946b9de4d46bd5377d4386fe-f0393dfd-bb85-4be4-9c7e-757d0e70fa63.jpg">
+                                                            <img src="user/articles/1f9368946b9de4d46bd5377d4386fe-f0393dfd-bb85-4be4-9c7e-757d0e70fa63.jpg"
+                                                                 title="Thiết kế phòng ngủ ấn tượng"
+                                                                 alt="Thiết kế phòng ngủ ấn tượng">
+                                                        </picture>
+                                                    </a>
 
-                                                <a href="/nhung-phong-cach-trang-tri-nha-dep-1">
-                                                    <picture>
-                                                        <source media="(max-width: 375px)"
-                                                                srcset="user/articles/1f9368946b9de4d46bd5377d4386fe-f0393dfd-bb85-4be4-9c7e-757d0e70fa63.jpg">
-                                                        <source media="(min-width: 376px) and (max-width: 767px)"
-                                                                srcset="user/articles/1f9368946b9de4d46bd5377d4386fe-f0393dfd-bb85-4be4-9c7e-757d0e70fa63.jpg">
-                                                        <source media="(min-width: 768px) and (max-width: 1023px)"
-                                                                srcset="user/articles/1f9368946b9de4d46bd5377d4386fe-f0393dfd-bb85-4be4-9c7e-757d0e70fa63.jpg">
-                                                        <source media="(min-width: 1024px) and (max-width: 1199px)"
-                                                                srcset="user/articles/1f9368946b9de4d46bd5377d4386fe-f0393dfd-bb85-4be4-9c7e-757d0e70fa63.jpg">
-                                                        <source media="(min-width: 1200px)"
-                                                                srcset="user/articles/1f9368946b9de4d46bd5377d4386fe-f0393dfd-bb85-4be4-9c7e-757d0e70fa63.jpg">
-                                                        <img src="user/articles/1f9368946b9de4d46bd5377d4386fe-f0393dfd-bb85-4be4-9c7e-757d0e70fa63.jpg"
-                                                             title="Thiết kế phòng ngủ ấn tượng"
-                                                             alt="Thiết kế phòng ngủ ấn tượng">
-                                                    </picture>
-                                                </a>
-
-                                            </div>
-                                            <div class="content-right-blog">
-                                                <div class="title_blog_home">
-                                                    <h3>
-                                                        <a href="/nhung-phong-cach-trang-tri-nha-dep-1"
-                                                           title="Thiết kế phòng ngủ ấn tượng">Thiết kế phòng ngủ ấn
-                                                            tượng</a>
-                                                    </h3>
                                                 </div>
-                                                <div class="content_day_blog"><span class="fix_left_blog"><i
-                                                        class="fa fa-clock-o"></i><span>Thứ Bảy,</span>
+                                                <div class="content-right-blog">
+                                                    <div class="title_blog_home">
+                                                        <h3>
+                                                            <a href="/nhung-phong-cach-trang-tri-nha-dep-1"
+                                                               title="Thiết kế phòng ngủ ấn tượng">${news.title}</a>
+                                                        </h3>
+                                                    </div>
+                                                    <div class="content_day_blog"><span class="fix_left_blog"><i
+                                                            class="fa fa-clock-o"></i>
 				<span class="news_home_content_short_time">
-					30/12/2017
+					${news.createdDate}
 				</span>
 				</span>
-                                                    <div class="post-time">
-                                                        <i class="fa fa-user" aria-hidden="true"></i>
-                                                        <span>Đào Thiện Hải</span>
+                                                        <div class="post-time">
+                                                            <i class="fa fa-user" aria-hidden="true"></i>
+                                                            <span>${news.id_Customer}</span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-
-                                    <div class="blog_items">
-                                        <div class="myblog"
-                                             onclick="window.location.href='/nhung-phong-cach-trang-tri-nha-dep-2';">
-                                            <div class="image-blog-left">
-
-                                                <a href="/nhung-phong-cach-trang-tri-nha-dep-2">
-                                                    <picture>
-                                                        <source media="(max-width: 375px)"
-                                                                srcset="user/articles/7.jpg?v=1514934929843">
-                                                        <source media="(min-width: 376px) and (max-width: 767px)"
-                                                                srcset="user/articles/7.jpg">
-                                                        <source media="(min-width: 768px) and (max-width: 1023px)"
-                                                                srcset="user/articles/7.jpg">
-                                                        <source media="(min-width: 1024px) and (max-width: 1199px)"
-                                                                srcset="user/articles/7.jpg">
-                                                        <source media="(min-width: 1200px)"
-                                                                srcset="user/articles/7.jpg">
-                                                        <img src="user/articles/7.jpg"
-                                                             title="Phòng khách sang trọng độc đáo"
-                                                             alt="Phòng khách sang trọng độc đáo">
-                                                    </picture>
-                                                </a>
-
-                                            </div>
-                                            <div class="content-right-blog">
-                                                <div class="title_blog_home">
-                                                    <h3>
-                                                        <a href="/nhung-phong-cach-trang-tri-nha-dep-2"
-                                                           title="Phòng khách sang trọng độc đáo">Phòng khách sang trọng
-                                                            độc đáo</a>
-                                                    </h3>
-                                                </div>
-                                                <div class="content_day_blog"><span class="fix_left_blog"><i
-                                                        class="fa fa-clock-o"></i><span>Thứ Bảy,</span>
-				<span class="news_home_content_short_time">
-					30/12/2017
-				</span>
-				</span>
-                                                    <div class="post-time">
-                                                        <i class="fa fa-user" aria-hidden="true"></i>
-                                                        <span>Đào Thiện Hải</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="blog_items">
-                                        <div class="myblog"
-                                             onclick="window.location.href='/nhung-phong-cach-trang-tri-nha-dep-3';">
-                                            <div class="image-blog-left">
-
-                                                <a href="/nhung-phong-cach-trang-tri-nha-dep-3">
-                                                    <picture>
-                                                        <source media="(max-width: 375px)"
-                                                                srcset="user/articles/1f9368946b9de4d46bd5377d4386fe.jpg?v=1514934844753">
-                                                        <source media="(min-width: 376px) and (max-width: 767px)"
-                                                                srcset="user/articles/1f9368946b9de4d46bd5377d4386fe.jpg?v=1514934844753">
-                                                        <source media="(min-width: 768px) and (max-width: 1023px)"
-                                                                srcset="user/articles/1f9368946b9de4d46bd5377d4386fe.jpg?v=1514934844753">
-                                                        <source media="(min-width: 1024px) and (max-width: 1199px)"
-                                                                srcset="user/articles/1f9368946b9de4d46bd5377d4386fe.jpg?v=1514934844753">
-                                                        <source media="(min-width: 1200px)"
-                                                                srcset="user/articles/1f9368946b9de4d46bd5377d4386fe.jpg?v=1514934844753">
-                                                        <img src="user/articles/1f9368946b9de4d46bd5377d4386fe.jpg?v=1514934844753"
-                                                             title="1 số cách trang trí phòng ngủ đẹp"
-                                                             alt="1 số cách trang trí phòng ngủ đẹp">
-                                                    </picture>
-                                                </a>
-
-                                            </div>
-                                            <div class="content-right-blog">
-                                                <div class="title_blog_home">
-                                                    <h3>
-                                                        <a href="/nhung-phong-cach-trang-tri-nha-dep-3"
-                                                           title="1 số cách trang trí phòng ngủ đẹp">1 số cách trang trí
-                                                            phòng ngủ đẹp</a>
-                                                    </h3>
-                                                </div>
-                                                <div class="content_day_blog"><span class="fix_left_blog"><i
-                                                        class="fa fa-clock-o"></i><span>Thứ Bảy,</span>
-				<span class="news_home_content_short_time">
-					30/12/2017
-				</span>
-				</span>
-                                                    <div class="post-time">
-                                                        <i class="fa fa-user" aria-hidden="true"></i>
-                                                        <span>Đào Thiện Hải</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="blog_items">
-                                        <div class="myblog"
-                                             onclick="window.location.href='/nhung-phong-cach-trang-tri-dau-giuong-cho-phong-ngu-them-phong-cach';">
-                                            <div class="image-blog-left">
-
-                                                <a href="/nhung-phong-cach-trang-tri-dau-giuong-cho-phong-ngu-them-phong-cach">
-                                                    <picture>
-                                                        <source media="(max-width: 375px)"
-                                                                srcset="user/articles/5-422ef3f7-649e-4c32-aeb5-763deb6eaae8.jpg?v=1514590993713">
-                                                        <source media="(min-width: 376px) and (max-width: 767px)"
-                                                                srcset="user/articles/5-422ef3f7-649e-4c32-aeb5-763deb6eaae8.jpg?v=1514590993713">
-                                                        <source media="(min-width: 768px) and (max-width: 1023px)"
-                                                                srcset="user/articles/5-422ef3f7-649e-4c32-aeb5-763deb6eaae8.jpg?v=1514590993713">
-                                                        <source media="(min-width: 1024px) and (max-width: 1199px)"
-                                                                srcset="user/articles/5-422ef3f7-649e-4c32-aeb5-763deb6eaae8.jpg?v=1514590993713">
-                                                        <source media="(min-width: 1200px)"
-                                                                srcset="user/articles/5-422ef3f7-649e-4c32-aeb5-763deb6eaae8.jpg?v=1514590993713">
-                                                        <img src="user/articles/5-422ef3f7-649e-4c32-aeb5-763deb6eaae8.jpg?v=1514590993713"
-                                                             title="Những phong cách trang trí đầu giường cho phòng ngủ"
-                                                             alt="Những phong cách trang trí đầu giường cho phòng ngủ">
-                                                    </picture>
-                                                </a>
-
-                                            </div>
-                                            <div class="content-right-blog">
-                                                <div class="title_blog_home">
-                                                    <h3>
-                                                        <a href="/nhung-phong-cach-trang-tri-dau-giuong-cho-phong-ngu-them-phong-cach"
-                                                           title="Những phong cách trang trí đầu giường cho phòng ngủ">Những
-                                                            phong cách trang trí đầu giường cho phòng ngủ</a>
-                                                    </h3>
-                                                </div>
-                                                <div class="content_day_blog"><span class="fix_left_blog"><i
-                                                        class="fa fa-clock-o"></i><span>Thứ Bảy,</span>
-				<span class="news_home_content_short_time">
-					30/12/2017
-				</span>
-				</span>
-                                                    <div class="post-time">
-                                                        <i class="fa fa-user" aria-hidden="true"></i>
-                                                        <span>Đào Thiện Hải</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
+                                    </c:forEach>
                                 </div>
                             </div>
                         </div>
@@ -6979,70 +6765,27 @@
                             <div>
                                 <div class="list-menu">
                                     <div class="widget-ft wg-logo">
-
-
-                                        <div class="item">
-                                            <h4 class="title-menu4 icon_none_first">
-                                                <a>Sunmax Nguyễn Chí Thanh</a>
-                                            </h4>
-                                            <ul class="contact contact_x">
-                                                <li>
+                                        <c:forEach items="${companies}" var="company">
+                                            <div class="item">
+                                                <h4 class="title-menu4 icon_none_first">
+                                                    <a>${company.name}</a>
+                                                </h4>
+                                                <ul class="contact contact_x">
+                                                    <li>
 													<span class="txt_content_child">
 														<span>Địa chỉ:</span>
-														143 Nguyễn Chí Thanh, Ba Đình, Hà Nội, Hà Nội
+														${company.address}
 													</span>
-                                                </li>
+                                                    </li>
 
-                                                <li class="sdt">
-                                                    <span> Hotline:</span>
-                                                    <a href="tel:01659329688">01659329688</a>
-                                                </li>
+                                                    <li class="sdt">
+                                                        <span> Hotline:</span>
+                                                        <a href="tel:${company.hotline}">${company.hotline}</a>
+                                                    </li>
 
-                                            </ul>
-                                        </div>
-
-
-                                        <div class="item">
-                                            <h4 class="title-menu4 icon_none_first">
-                                                <a>Sunmax Đội Cấn</a>
-                                            </h4>
-                                            <ul class="contact contact_x">
-                                                <li>
-													<span class="txt_content_child">
-														<span>Địa chỉ:</span>
-														280 Đội Cấn, Ba Đình, Hà Nội, Hà Nội
-													</span>
-                                                </li>
-
-                                                <li class="sdt">
-                                                    <span> Hotline:</span>
-                                                    <a href="tel:0968686868">0968686868</a>
-                                                </li>
-
-                                            </ul>
-                                        </div>
-
-
-                                        <div class="item">
-                                            <h4 class="title-menu4 icon_none_first">
-                                                <a>Sunmax Thái Hà</a>
-                                            </h4>
-                                            <ul class="contact contact_x">
-                                                <li>
-													<span class="txt_content_child">
-														<span>Địa chỉ:</span>
-														90 Thái Hà, Đống Đa, Hà Nội, Hà Nội
-													</span>
-                                                </li>
-
-                                                <li class="sdt">
-                                                    <span> Hotline:</span>
-                                                    <a href="tel:0123456789">0123456789</a>
-                                                </li>
-
-                                            </ul>
-                                        </div>
-
+                                                </ul>
+                                            </div>
+                                        </c:forEach>
 
                                     </div>
                                 </div>
@@ -7085,7 +6828,7 @@
                             </h4>
                             <div class="footer-widget">
                                 <div class="payment">
-                                    <img src="user/image/payment.png" alt="Payment"/>
+                                    <img src="user/image/${settings.logo_payment}" alt="Payment"/>
                                 </div>
                             </div>
                             <h4 class="title-menu tittle_time">
@@ -7096,7 +6839,7 @@
                             <div class="time_work">
                                 <ul class="list-menu">
                                     <li class="li_menu li_menu_xxx">
-                                        <a class="rc yeloww" href="tel:01659329688">01659329688</a>
+                                        <a class="rc yeloww" href="tel:${settings.hotline}">${settings.hotline}</a>
 
                                         <span class="hour_">( Phục vụ 24/24, cả thứ 7 & CN )</span>
 
@@ -7126,13 +6869,12 @@
                                         fjs.parentNode.insertBefore(js, fjs);
                                     }(document, 'script', 'facebook-jssdk'));
                                     </script>
-                                    <div class="fb-page" data-href="https://www.facebook.com/sapo.vn"
-                                         data-tabs="timeline" data-height="150" data-small-header="true"
-                                         data-adapt-container-width="true" data-hide-cover="false"
-                                         data-show-facepile="true">
+                                    <div class="fb-page" data-href="${settings.pageFacebook}" data-tabs="timeline"
+                                         data-height="150" data-small-header="true" data-adapt-container-width="true"
+                                         data-hide-cover="false" data-show-facepile="true">
                                         <div class="fb-xfbml-parse-ignore">
-                                            <blockquote cite="https://www.facebook.com/sapo.vn">
-                                                <a href="https://www.facebook.com/sapo.vn">Facebook</a>
+                                            <blockquote cite="${settings.pageFacebook}">
+                                                <a href="${settings.pageFacebook}">Facebook</a>
                                             </blockquote>
                                         </div>
                                     </div>
@@ -7391,7 +7133,7 @@
 
 
     collection[0] = "<a href='/ban-giam-doc-hoa-phat-ntp1890t1' class='jas-sale-pop-img mr__20'>"
-        + "<img src='Product_image/r8abaa3a825074cd8855f02e71efc8.jpg' alt='Bàn giám đốc hòa phát NTP1890T1'/>"
+        + "<img src='user/Product_image/r8abaa3a825074cd8855f02e71efc8.jpg' alt='Bàn giám đốc hòa phát NTP1890T1'/>"
         + "</a>"
         + "<div class='jas-sale-pop-content'>"
         //+                                    "<h4 class='fs__12 fwm mg__0'>Sản phẩm</h4>"
@@ -7404,7 +7146,7 @@
 
 
     collection[1] = "<a href='/ba-n-la-m-vie-c-van-pho-ng-ho-a-pha-t-sv204hl' class='jas-sale-pop-img mr__20'>"
-        + "<img src='Product_image/8e72d1df4f29e47c29efe8d482d473.jpg' alt='Bàn làm việc hòa phát SV204HL'/>"
+        + "<img src='user/Product_image/8e72d1df4f29e47c29efe8d482d473.jpg' alt='Bàn làm việc hòa phát SV204HL'/>"
         + "</a>"
         + "<div class='jas-sale-pop-content'>"
         //+                                    "<h4 class='fs__12 fwm mg__0'>Sản phẩm</h4>"
@@ -7417,7 +7159,7 @@
 
 
     collection[2] = "<a href='/bo-vo-chan-ra-goi-cotton-nhung-cao-cap' class='jas-sale-pop-img mr__20'>"
-        + "<img src='Product_image/6e4b0d120477740078be37a750e7ba.jpg' alt='Bộ vỏ chăn ra gối cotton nhung'/>"
+        + "<img src='user/Product_image/6e4b0d120477740078be37a750e7ba.jpg' alt='Bộ vỏ chăn ra gối cotton nhung'/>"
         + "</a>"
         + "<div class='jas-sale-pop-content'>"
         //+                                    "<h4 class='fs__12 fwm mg__0'>Sản phẩm</h4>"
@@ -7430,7 +7172,7 @@
 
 
     collection[3] = "<a href='/bo-vo-chan-ga-goi-cotton-ai-cap-hoa-xanh' class='jas-sale-pop-img mr__20'>"
-        + "<img src='Product_image/59a01658825c7468aa6a84dac7dc80.jpg' alt='Bộ vỏ chăn ga gối cotton Ai Cập'/>"
+        + "<img src='user/Product_image/59a01658825c7468aa6a84dac7dc80.jpg' alt='Bộ vỏ chăn ga gối cotton Ai Cập'/>"
         + "</a>"
         + "<div class='jas-sale-pop-content'>"
         //+                                    "<h4 class='fs__12 fwm mg__0'>Sản phẩm</h4>"
@@ -7443,7 +7185,7 @@
 
 
     collection[4] = "<a href='/bo-chan-ga-goi-cotton-ai-cap-ma-cat17' class='jas-sale-pop-img mr__20'>"
-        + "<img src='Product_image/12684e083a683e4fc1afd8c1688b16.jpg' alt='Bộ chăn ga gối cotton Ai Cập'/>"
+        + "<img src='user/Product_image/12684e083a683e4fc1afd8c1688b16.jpg' alt='Bộ chăn ga gối cotton Ai Cập'/>"
         + "</a>"
         + "<div class='jas-sale-pop-content'>"
         //+                                    "<h4 class='fs__12 fwm mg__0'>Sản phẩm</h4>"

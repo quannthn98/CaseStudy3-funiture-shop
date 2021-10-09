@@ -9,4 +9,5 @@ import java.util.List;
 
 public interface ISettingsDao extends IGeneralDao<Settings> {
     boolean add(Settings company);
+    Settings getTop();
 }

@@ -87,6 +87,31 @@ public class SettingsDao implements ISettingsDao{
     }
 
     @Override
+    public Settings getTop() {
+        Settings settings = new Settings();
+        try {
+            PreparedStatement statement = connection.prepareStatement("SELECT * FROM Settings ORDER BY id DESC LIMIT 1");
+            ResultSet resultSet = statement.executeQuery();
+            while (resultSet.next()){
+                int id = resultSet.getInt("id");
+                String title = resultSet.getString("title");
+                String logo = resultSet.getString("logo");
+                String hotline = resultSet.getString("hotline");
+                String address = resultSet.getString("address");
+                String linkMap = resultSet.getString("linkMap");
+                String email = resultSet.getString("email");
+                String pageFacebook = resultSet.getString("pageFacebook");
+                String logo_payment = resultSet.getString("logo_payment");
+                String note = resultSet.getString("note");
+                settings = new Settings(id,title,logo,hotline,address,linkMap,email,pageFacebook,logo_payment,note);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return settings;
+    }
+
+    @Override
     public boolean update(int id, Settings settings) {
         Boolean isUpdate = false;
         try {

@@ -24,6 +24,16 @@ public class OrderService implements IOrderService {
     }
 
     @Override
+    public boolean insertOrderDetail(OrderDetail orderDetail) {
+        return orderDao.insertOrderDetail(orderDetail);
+    }
+
+    @Override
+    public int getLatestOrder() {
+        return orderDao.getLatestOrder();
+    }
+
+    @Override
     public List<OrderDetail> getDetails() {
         List<OrderDetail> orderDetailList = orderDao.getDetails();
         return orderDetailList;

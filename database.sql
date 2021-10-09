@@ -147,4 +147,15 @@ Create table Settings(
                          note nvarchar(100),
                          primary key (id)
 );
+
+create table cart
+(
+    id          int auto_increment,
+    id_Customer int not null,
+    id_Product  int not null,
+    quantity    int not null default (1),
+    primary key (id),
+    foreign key (id_Customer) references Customer (id),
+    foreign key (id_Product) references Product (id)
+)
 /*================Procedure===============*/
