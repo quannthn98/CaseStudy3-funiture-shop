@@ -105,7 +105,7 @@ public class CategoryDao implements ICategoryDao {
     public List<Category> getUniqueLocation() {
         List<Category> categoryList = new ArrayList<>();
         try {
-            PreparedStatement statement = connection.prepareStatement("select * from category GROUP BY location ORDER BY location ASC");
+            PreparedStatement statement = connection.prepareStatement("call showTopcategory()");
             ResultSet rs = statement.executeQuery();
             while (rs.next()) {
                 int id = rs.getInt("id");
