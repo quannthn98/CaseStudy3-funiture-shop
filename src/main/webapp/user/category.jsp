@@ -94,9 +94,9 @@
                     <ul class="level0 sub-menu" style="display:none;">
                         <c:forEach items="${categoryList}" var="category">
                             <c:if test="${category.location == 1}">
-                            <li class="level1">
-                                <a href="/user?action=category&categoryId=${category.id}"><span>${category.name}</span></a>
-                            </li>
+                                <li class="level1">
+                                    <a href="/user?action=category&categoryId=${category.id}"><span>${category.name}</span></a>
+                                </li>
                             </c:if>
                         </c:forEach>
                     </ul>
@@ -159,12 +159,12 @@
                             </li>
 
                             <li>
-                                <a href="/account/register" title="Đăng ký" class="account_a">
+                                <a href="/user?action=register" title="Đăng ký" class="account_a">
                                     <span>Đăng ký</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="/account/login" title="Đăng nhập" class="account_a">
+                                <a href="/user?action=login" title="Đăng nhập" class="account_a">
                                     <span>Đăng nhập</span>
                                 </a>
                             </li>
@@ -348,9 +348,10 @@
                             <ul class="item_small hidden-sm hidden-xs">
                                 <c:forEach items="${categoryList}" var="category">
                                     <c:if test="${category.location == 1}">
-                                <li>
-                                    <a href="/user?action=category&categoryId=${category.id}" title="">${category.name}</a>
-                                </li>
+                                        <li>
+                                            <a href="/user?action=category&categoryId=${category.id}"
+                                               title="">${category.name}</a>
+                                        </li>
                                     </c:if>
                                 </c:forEach>
                             </ul>
@@ -364,7 +365,8 @@
                                 <c:forEach items="${categoryList}" var="category">
                                     <c:if test="${category.location == 3}">
                                         <li>
-                                            <a href="/user?action=category&categoryId=${category.id}" title="">${category.name}</a>
+                                            <a href="/user?action=category&categoryId=${category.id}"
+                                               title="">${category.name}</a>
                                         </li>
                                     </c:if>
                                 </c:forEach>
@@ -379,7 +381,8 @@
                                 <c:forEach items="${categoryList}" var="category">
                                     <c:if test="${category.location == 2}">
                                         <li>
-                                            <a href="/user?action=category&categoryId=${category.id}" title="">${category.name}</a>
+                                            <a href="/user?action=category&categoryId=${category.id}"
+                                               title="">${category.name}</a>
                                         </li>
                                     </c:if>
                                 </c:forEach>
@@ -472,14 +475,15 @@
                                         <div class="product-thumbnail">
 
                                             <div class="sale-flash new">Mới</div>
-                                            <a class="image_link display_flex" href="{/servlet?id={product.id}"
-                                               title="Sofa bộ Italia - Canova">
+                                            <a class="image_link display_flex"
+                                               href="/user?action=detail&id=${product.id}"
+                                               title="${product.name}">
                                                 <img src="${product.image}" data-lazyload="${product.image}"
                                                      alt="Sofa bộ Italia - Canova">
                                             </a>
 
                                             <div class="summary_grid hidden-xs hidden-sm hidden-md"
-                                                 onclick="window.location.href='/sofa-da-ma-ntx1824';">
+                                                 onclick="window.location.href='/user?action=detail&id=${product.id}';">
                                                 <div class="rte description">
 
                                                     <p>${product.subDescription}</p>
@@ -495,7 +499,8 @@
                                                                value="14992946"/>
 
                                                         <a title="Xem nhanh" href="/user?action=detail&id=${product.id}"
-                                                           class="button_wh_40 btn_view">
+                                                           data-handle="/user?action=detail&id=${product.id}"
+                                                           class="button_wh_40 btn_view right-to ">
                                                             Xem nhanh
                                                         </a>
 
@@ -507,7 +512,8 @@
 
                                             <div class="info_hhh">
                                                 <h3 class="product-name product-name-hover">
-                                                    <a href="/sofa-da-ma-ntx1824" title="Sofa bộ Italia - Canova">
+                                                    <a href="/user?action=detail&id=${product.id}"
+                                                       title="${product.name}">
                                                             ${product.name}
                                                     </a>
                                                 </h3>

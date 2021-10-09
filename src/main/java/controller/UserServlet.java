@@ -37,6 +37,15 @@ public class UserServlet extends HttpServlet {
     private INewService newService = new NewService();
     private ICompanyService companyService = new CompanyService();
     ICartService cartService = new CartService();
+    private static Customer customer;
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public static void  setCustomer(Customer customer1) {
+        customer = customer1;
+    }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -71,7 +80,23 @@ public class UserServlet extends HttpServlet {
         }
     }
 
+    private void showLogin(HttpServletRequest request, HttpServletResponse response) {
+        RequestDispatcher dispatcher = request.getRequestDispatcher("user/login.jsp");
+        try {
+            dispatcher.forward(request,response);
+        } catch (ServletException | IOException e) {
+            e.printStackTrace();
+        }
+    }
 
+    private void showRegister(HttpServletRequest request, HttpServletResponse response) {
+        RequestDispatcher dispatcher = request.getRequestDispatcher("user/register.jsp");
+        try {
+            dispatcher.forward(request, response);
+        } catch (ServletException | IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -82,6 +107,10 @@ public class UserServlet extends HttpServlet {
             action = "";
         }
         switch (action){
+            case "register":{
+                registerUser(request,response);
+                break;
+            }
             case "checkout":
                 try {
                     Thread.sleep(1000);
@@ -96,29 +125,10 @@ public class UserServlet extends HttpServlet {
         }
     }
 
-    private void showLogin(HttpServletRequest request, HttpServletResponse response) {
-        RequestDispatcher dispatcher = request.getRequestDispatcher("user/login.jsp");
-        try {
-            dispatcher.forward(request,response);
-        } catch (ServletException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    private void registerUser(HttpServletRequest request, HttpServletResponse response) {
+        String email = request.getParameter("email");
+
     }
-
-    private void showRegister(HttpServletRequest request, HttpServletResponse response) {
-        RequestDispatcher dispatcher = request.getRequestDispatcher("user/register.jsp");
-        try {
-            dispatcher.forward(request, response);
-        } catch (ServletException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-
 
     private void showProductDetail(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int productId = Integer.parseInt(request.getParameter("id"));

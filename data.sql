@@ -345,12 +345,6 @@ insert into product(name, image, subimage, price, price_sell, subdescription, de
 VALUES ('Đèn ngủ gỗ LUKA cao cấp chuyên dụng', 'user/src/img/den-ngu-cao-cap2.jpeg', 'none', 700000, 550000,
         'Kích thước(DxR): 530x300mm', 'Đèn Ngủ Cao Cấp', 12, 13);
 
-insert into cart(id_Customer, id_Product, quantity) VALUES (5, 58, 1);
-insert into cart(id_Customer, id_Product, quantity) VALUES (6, 68, 1);
-insert into cart(id_Customer, id_Product, quantity) VALUES (7, 59, 1);
-insert into cart(id_Customer, id_Product, quantity) VALUES (8, 69, 1);
-insert into cart(id_Customer, id_Product, quantity) VALUES (9, 80, 1);
-insert into cart(id_Customer, id_Product, quantity) VALUES (10, 81, 1);
 
 drop view fullOrderWithDetails;
 
@@ -387,6 +381,11 @@ create trigger deleteOrderDetailId
     before delete on orderProduct for each row
     delete from orderDetailProduct where orderDetailProduct.id_Order = old.id;
 
+
+create view customerdetail as
+select Customer.*, cr.id_Role from
+    Customer
+        join Customer_Role CR on Customer.id = CR.id_Customer;
 
 
 

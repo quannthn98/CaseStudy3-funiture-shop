@@ -1,6 +1,8 @@
 package controller;
 
+import dao.CategoryDao;
 import dao.CustomerDao;
+import model.Category;
 import model.Customer;
 import service.CustomerService;
 import service.ICustomerService;
@@ -15,6 +17,7 @@ import java.util.List;
 @WebServlet(name = "CustomerServlet", value = "/customers")
 public class CustomerServlet extends HttpServlet {
     ICustomerService customerService = new CustomerService();
+    CategoryDao categoryDao = new CategoryDao();
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -119,12 +122,12 @@ public class CustomerServlet extends HttpServlet {
 
 
     private void loginDoGet(HttpServletRequest request, HttpServletResponse response) {
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/user");
+        List<Category> categoryList = categoryDao.getAll();
+        request.setAttribute("categoryList",categoryList);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/user/login.jsp");
         try {
             dispatcher.forward(request, response);
-        } catch (ServletException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+        } catch (ServletException | IOException e) {
             e.printStackTrace();
         }
     }
@@ -197,22 +200,25 @@ public class CustomerServlet extends HttpServlet {
             RequestDispatcher dispatcher = request.getRequestDispatcher("/customers");
                 try {
                     dispatcher.forward(request,response);
-                } catch (ServletException e) {
-                    e.printStackTrace();
-                } catch (IOException e) {
+                } catch (ServletException | IOException e) {
                     e.printStackTrace();
                 }
             }
             else {
-                RequestDispatcher dispatcher = request.getRequestDispatcher("/user");
+                UserServlet.setCustomer(customer);
                 try {
-                    dispatcher.forward(request,response);
-                } catch (ServletException e) {
-                    e.printStackTrace();
+                    response.sendRedirect("/user");
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
             }
+        }else {
+            try {
+                response.sendRedirect("/user/login.jsp");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
         }
 
     }
@@ -243,9 +249,7 @@ public class CustomerServlet extends HttpServlet {
             RequestDispatcher dispatcher = request.getRequestDispatcher("/customer/edit.jsp");
             try {
                 dispatcher.forward(request, response);
-            } catch (ServletException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
+            } catch (ServletException | IOException e) {
                 e.printStackTrace();
             }
         }
@@ -258,7 +262,7 @@ public class CustomerServlet extends HttpServlet {
         String phone = request.getParameter("phone");
         String email = request.getParameter("email");
         String password = request.getParameter("password");
-        String status = request.getParameter("status");
+        String status = "1";
         return new Customer(name, birthday, address, phone, email, password, status);
     }
 
