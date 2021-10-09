@@ -166,7 +166,7 @@
         <div class="col-md-6 col-sm-6 col-xs-12">
           <ul class="list-inline topbar_left hidden-sm hidden-xs">
             <li>
-              <a class="welcome_text">Chào mừng bạn đến với hệ thống siêu thị nội thất Sunmax !</a>
+              <a class="welcome_text">${settings.title}</a>
             </li>
           </ul>
         </div>
@@ -174,30 +174,33 @@
         <div class="col-md-6 col-sm-6 d-list col-xs-12 a-right topbar_right">
           <div class="list-inline a-center f-right">
             <ul>
-              <li>
-                <a href="/tin-tuc" title="Tin tức" class="account_a">
-                  Tin tức
-                </a>
+              <c:choose>
+                <c:when test="${customer==null}">
+                  <li>
+                    <a href="/user?action=register" title="Đăng ký" class="account_a">
+                      <span>Đăng ký</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/user?action=login" title="Đăng nhập" class="account_a">
+                      <span>Đăng nhập</span>
+                    </a>
+                  </li>
+                </c:when>
+                <c:otherwise>
+                  <li>
+                    <a class="account_a">
+                      <span>${customer.email}</span>
 
-              </li>
-              <li>
-                <a href="/lien-he" title="Liên hệ" class="account_a">
-                  Liên hệ
-                </a>
-              </li>
-
-              <li>
-                <a href="/user?action=register" title="Đăng ký" class="account_a">
-                  <span>Đăng ký</span>
-                </a>
-              </li>
-              <li>
-                <a href="/user?action=login" title="Đăng nhập" class="account_a">
-                  <span>Đăng nhập</span>
-                </a>
-              </li>
-
-
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/user?action=logout" title="Đăng nhập" class="account_a">
+                      <span>Đăng xuất</span>
+                    </a>
+                  </li>
+                </c:otherwise>
+              </c:choose>
             </ul>
           </div>
 
@@ -212,14 +215,14 @@
         <div class="content_header">
           <div class="header-main">
             <div class="menu-bar-h nav-mobile-button hidden-md hidden-lg">
-              <a href="#nav-mobile"><img src="user/image/i_menubar.png" alt="menu bar" /></a>
+              <a href="#nav-mobile"><img src="user/image/i_menubar.png" alt="menu bar"/></a>
             </div>
             <div class="col-lg-3 col-md-3">
               <div class="logo">
 
 
-                <a href="/" class="logo-wrapper ">
-                  <img src="user/image/logo.png" alt="logo ">
+                <a href="/user" class="logo-wrapper ">
+                  <img src="user/image/${settings.logo}" alt="logo ">
                 </a>
 
               </div>
@@ -264,10 +267,12 @@
                         <div class="search_item active" data-coll-id="0">Tất cả</div>
                       </div>
                     </div>
-                    <input type="search" name="query" value="" placeholder="Bạn muốn tìm gì... " class="input-group-field st-default-search-input search-text" autocomplete="off">
+                    <input type="search" name="query" value="" placeholder="Bạn muốn tìm gì... "
+                           class="input-group-field st-default-search-input search-text"
+                           autocomplete="off">
                     <span class="input-group-btn">
 			<button class="btn icon-fallback-text">
-				<span class="fa fa-search" ></span>
+				<span class="fa fa-search"></span>
 			</button>
 		</span>
                   </form>
@@ -279,47 +284,23 @@
                 <div class="header-acount hidden-lg-down">
                   <div class="wishlist_header hidden-xs hidden-sm">
 
-                    <div class="img_hotline"><img alt="Wishlist" src="user/image/icon_phone.png"/></div>
+                    <div class="img_hotline"><img alt="Wishlist" src="user/image/icon_phone.png"/>
+                    </div>
 
-                    <span class="text_hotline">Hotline:</span> <a class="hai01" href="tel:${settings.hotline}">${settings.hotline}</a>
+                    <span class="text_hotline">Hotline:</span> <a class="hai01"
+                                                                  href="tel:${settings.hotline}">${settings.hotline}</a>
 
 
                   </div>
                   <div class="top-cart-contain f-right hidden-xs hidden-sm visible-md visible-lg">
                     <div class="mini-cart text-xs-center">
                       <div class="heading-cart">
-                        <a class="bg_cart" href="/cart" title="Giỏ hàng">
+                        <a class="bg_cart" href="/user?action=cart" title="Giỏ hàng">
                           <img alt="Giỏ hàng" src="user/image/icon_hovercart.png"/>
-                          <span class="text-giohang hidden-xs">Giỏ hàng:</span>
-                          (<span class="count_item count_item_pr">0</span>)
+                          <span class="text-giohang hidden-xs">Giỏ hàng</span>
+                          (<span class="count_item count_item_pr">${size}</span>)
+
                         </a>
-                      </div>
-                      <div class="top-cart-content">
-                        <ul id="cart-sidebar" class="mini-products-list count_li">
-                          <li class="list-item">
-                            <ul></ul>
-                          </li>
-                          <li class="action">
-                            <ul>
-                              <li class="li-fix-1">
-                                <div class="top-subtotal">
-                                  Tổng tiền thanh toán:
-                                  <span class="price"></span>
-                                </div>
-                              </li>
-                              <li class="li-fix-2" style="">
-                                <div class="actions">
-                                  <a href="/cart" class="btn btn-primary" title="Giỏ hàng">
-                                    <span>Giỏ hàng</span>
-                                  </a>
-                                  <a href="/checkout" class="btn btn-checkout btn-gray" title="Thanh toán">
-                                    <span>Thanh toán</span>
-                                  </a>
-                                </div>
-                              </li>
-                            </ul>
-                          </li>
-                        </ul>
                       </div>
                     </div>
                   </div>
@@ -342,10 +323,11 @@
               <form action="/search" method="get" class="input-group search-bar" role="search">
                 <input type="hidden" name="type" value="product">
 
-                <input type="search" name="query" value="" placeholder="Tìm kiếm sản phẩm..." class="input-group-field">
+                <input type="search" name="query" value="" placeholder="Tìm kiếm sản phẩm..."
+                       class="input-group-field">
                 <span class="input-group-btn">
 									<button type="submit" class="btn icon-fallback-text">
-										<span class="fa fa-search" ></span>
+										<span class="fa fa-search"></span>
 									</button>
 								</span>
               </form>
@@ -358,60 +340,57 @@
 
   <div class="bg-header-nav hidden-xs hidden-sm">
     <div class="container relative">
-      <div class= "row row-noGutter-2">
+      <div class="row row-noGutter-2">
         <nav class="header-nav">
           <ul class="item_big">
 
 
-
-
             <li class="nav-item ">
-              <a class="a-img" href="/phong-khach"><span>Phòng khách</span></a>
+              <a class="a-img" href=""><span>Phòng khách</span><i
+                      class="fa fa-caret-down"></i></a>
               <ul class="item_small hidden-sm hidden-xs">
                 <c:forEach items="${categoryList}" var="category">
-                <li>
-                  <a href="/tham-trang-tri" title="">${category.name}</a>
-                </li>
+                  <c:if test="${category.location == 1}">
+                    <li>
+                      <a href="/user?action=category&categoryId=${category.id}"
+                         title="">${category.name}</a>
+                    </li>
+                  </c:if>
                 </c:forEach>
               </ul>
             </li>
 
 
-
-
-
             <li class="nav-item ">
-              <a class="a-img" href="/phong-bep"><span>Phòng bếp</span></a>
+              <a class="a-img" href=""><span>Phòng Ngủ</span><i
+                      class="fa fa-caret-down"></i></a>
+              <ul class="item_small hidden-sm hidden-xs">
+                <c:forEach items="${categoryList}" var="category">
+                  <c:if test="${category.location == 3}">
+                    <li>
+                      <a href="/user?action=category&categoryId=${category.id}"
+                         title="">${category.name}</a>
+                    </li>
+                  </c:if>
+                </c:forEach>
+              </ul>
             </li>
 
 
-
-
             <li class="nav-item ">
-              <a class="a-img" href="/phong-lam-viec"><span>Phòng làm việc</span></a>
+              <a class="a-img" href=""><span>Phòng Ăn</span><i
+                      class="fa fa-caret-down"></i></a>
+              <ul class="item_small hidden-sm hidden-xs">
+                <c:forEach items="${categoryList}" var="category">
+                  <c:if test="${category.location == 2}">
+                    <li>
+                      <a href="/user?action=category&categoryId=${category.id}"
+                         title="">${category.name}</a>
+                    </li>
+                  </c:if>
+                </c:forEach>
+              </ul>
             </li>
-
-
-
-
-            <li class="nav-item ">
-              <a class="a-img" href="/chan-ga-dem"><span>Chăn ga đệm</span></a>
-            </li>
-
-
-
-
-            <li class="nav-item ">
-              <a class="a-img" href="/ngoai-that"><span>Ngoại thất</span></a>
-            </li>
-
-
-
-
-            <li class="nav-item ">
-              <a class="a-img" href="/do-trang-tri"><span>Đồ trang trí</span></a>
-            </li>
-
 
           </ul>
         </nav>

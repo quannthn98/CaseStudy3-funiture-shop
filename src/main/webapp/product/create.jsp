@@ -14,10 +14,9 @@
         <div class="container-fluid">
             <nav class="navbar navbar-light bg-light">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="https://getbootstrap.com/" target="_blank">
-                        <img src="/img/bootstrap-logo.svg" alt="" width="30" height="24"
+                    <a class="navbar-brand" href="/user" target="_blank">
+                        <img src="/user/image/logo.png" alt="" width="200" height="45"
                              class="d-inline-block align-text-top">
-                        Bootstrap
                     </a>
                 </div>
             </nav>
@@ -59,7 +58,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/dashboard">
+                            <a class="nav-link" href="/orders">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                      fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                      stroke-linejoin="round" class="feather feather-file" aria-hidden="true">
@@ -70,7 +69,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/products">
+                            <a class="nav-link" href="/product">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                      fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                      stroke-linejoin="round" class="feather feather-shopping-cart" aria-hidden="true">
@@ -186,6 +185,7 @@
                             </select>
                         </div>
                         <button type="submit" class="btn btn-primary">Create</button>
+                        <a href="/product" class="btn btn-outline-danger ">Cancel</a>
                     </form>
 
                 </div>
@@ -198,7 +198,7 @@
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-2 my-3 border-top">
         <p class="col-md-4 mb-0 text-muted">© 2021 Company, Inc</p>
         <ul class="nav col-md-4 justify-content-end">
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+            <li class="nav-item"><a href="/user" class="nav-link px-2 text-muted">Home</a></li>
             <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
         </ul>
     </footer>
