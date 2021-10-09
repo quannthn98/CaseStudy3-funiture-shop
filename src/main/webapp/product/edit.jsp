@@ -20,10 +20,9 @@
         <div class="container-fluid">
             <nav class="navbar navbar-light bg-light">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="https://getbootstrap.com/" target="_blank">
-                        <img src="/img/bootstrap-logo.svg" alt="" width="30" height="24"
+                    <a class="navbar-brand" href="/user" target="_blank">
+                        <img src="/user/image/logo.png" alt="" width="200" height="45"
                              class="d-inline-block align-text-top">
-                        Bootstrap
                     </a>
                 </div>
             </nav>

@@ -184,10 +184,8 @@
                         </div>
                         <div class="col-lg-3 col-md-3">
                             <div class="logo">
-
-
-                                <a href="/" class="logo-wrapper ">
-                                    <img src="image/logo.png" alt="logo ">
+                                <a href="/user" class="logo-wrapper ">
+                                    <img src="/user/image/logo.png" alt="logo ">
                                 </a>
 
                             </div>
@@ -249,7 +247,7 @@
                                 <div class="header-acount hidden-lg-down">
                                     <div class="wishlist_header hidden-xs hidden-sm">
 
-                                        <div class="img_hotline"><img alt="Wishlist" src="image/icon_phone.png"/></div>
+                                        <div class="img_hotline"><img alt="Wishlist" src="/user/image/icon_phone.png"/></div>
 
                                         <span class="text_hotline">Hotline:</span> <a class="hai01"
                                                                                       href="tel:0165939688">0165939688</a>
@@ -260,7 +258,7 @@
                                         <div class="mini-cart text-xs-center">
                                             <div class="heading-cart">
                                                 <a class="bg_cart" href="/cart" title="Giỏ hàng">
-                                                    <img alt="Giỏ hàng" src="image/icon_hovercart.png"/>
+                                                    <img alt="Giỏ hàng" src="/user/image/icon_hovercart.png"/>
                                                     <span class="text-giohang hidden-xs">Giỏ hàng:</span>
                                                     (<span class="count_item count_item_pr">0</span>)
                                                 </a>
@@ -569,7 +567,7 @@
                             <ul class="nav navbar-pills">
                                 <li class="nav-item lv1">
                                     <a href="/phong-khach" class="nav-link">Phòng khách <span
-                                            class="count_x">(4)</span></a>
+                                            class="count_x"></span></a>
                                     <i class="fa fa-angle-right"></i>
                                     <ul class="dropdown-menu">
                                         <c:forEach items="${categoryList}" var="category">
@@ -586,7 +584,7 @@
                                 </li>
                                 <li class="nav-item lv1">
                                     <a href="/phong-khach" class="nav-link">Phòng ngủ <span
-                                            class="count_x">(4)</span></a>
+                                            class="count_x"></span></a>
                                     <i class="fa fa-angle-right"></i>
                                     <ul class="dropdown-menu">
                                         <c:forEach items="${categoryList}" var="category">
@@ -604,7 +602,7 @@
 
                                 <li class="nav-item lv1">
                                     <a href="/phong-khach" class="nav-link">Phòng bếp <span
-                                            class="count_x">(4)</span></a>
+                                            class="count_x"></span></a>
                                     <i class="fa fa-angle-right"></i>
                                     <ul class="dropdown-menu">
                                         <c:forEach items="${categoryList}" var="category">
@@ -832,7 +830,7 @@
 
                 <div class="banner-right margin-top-20">
                     <a href="#" title="Banner sidebar">
-                        <img src="image/banner_sidebar.png" class="img-responsive" alt="Banner sidebar">
+                        <img src="/user/image/banner_sidebar.png" class="img-responsive" alt="Banner sidebar">
                     </a>
                 </div>
 
@@ -981,7 +979,7 @@
                             </h4>
                             <div class="footer-widget">
                                 <div class="payment">
-                                    <img src="image/payment.png" alt="Payment"/>
+                                    <img src="/user/image/payment.png" alt="Payment"/>
                                 </div>
                             </div>
                             <h4 class="title-menu tittle_time">

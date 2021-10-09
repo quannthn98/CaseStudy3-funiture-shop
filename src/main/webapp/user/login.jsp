@@ -218,7 +218,7 @@
               <div class="logo">
 
 
-                <a href="/" class="logo-wrapper ">
+                <a href="/user" class="logo-wrapper ">
                   <img src="user/image/logo.png" alt="logo ">
                 </a>
 
